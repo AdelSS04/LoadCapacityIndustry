@@ -33,7 +33,7 @@ namespace DAL
 			Util.Disconnect();
 			return L;
 		}
-		public static Ilot GetMachine(string id)
+		public static Ilot GetIlot(string id)
 		{
 			string requete = String.Format("select * from Ilot where (IlotID ='{0}');", id);
 			OleDbDataReader rdd = Util.lire(requete);

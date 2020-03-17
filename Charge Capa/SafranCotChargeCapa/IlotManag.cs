@@ -51,7 +51,7 @@ namespace SafranCotChargeCapa
 			AddButton.Enabled = false;
 			try
 			{
-				Ilot ur = IlotDBO.GetMachine(IlotIDInput.Text);
+				Ilot ur = IlotDBO.GetIlot(IlotIDInput.Text);
 				IlotNameInput.Text = ur.IlotName;
 				EffInput.Text = ur.Efficiency.ToString();
 				CRMInput.Text = ur.CRM.ToString();
@@ -81,7 +81,7 @@ namespace SafranCotChargeCapa
 			AddButton.Enabled = false;
 			try
 			{
-				Ilot ur = IlotDBO.GetMachine(RoleInput.SelectedItem.ToString());
+				Ilot ur = IlotDBO.GetIlot(RoleInput.SelectedItem.ToString());
 				IlotNameInput.Text = ur.IlotName;
 				EffInput.Text = ur.Efficiency.ToString();
 				CRMInput.Text = ur.CRM.ToString();
