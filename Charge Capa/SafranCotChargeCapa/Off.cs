@@ -41,6 +41,7 @@ namespace SafranCotChargeCapa
 			if (YearSelect.SelectedIndex > -1)
 			{
 				upGraph();
+
 			}
 
 
@@ -172,10 +173,10 @@ namespace SafranCotChargeCapa
 			MessageBox.Show(ex.Message);
 			}*/
 		}
-		List<decimal> xValues = new List<decimal>();
+		List<int> xValues = new List<int>();
 		List<float> yValues = new List<float>();
-		List<double> Capa = new List<double>();
-		
+		List<float> Capa = new List<float>();
+		List<double> PerCV = new List<double>();
 
 		public void upGraph ()
 		{
@@ -214,45 +215,89 @@ namespace SafranCotChargeCapa
 				var query1 = ChTot.Where(person => person.annee == Convert.ToInt32(YearSelect.SelectedItem)).ToList();
 				var LL = query1.GroupBy(t => t.semaine).Select(t => new { ID = t.Key, Value = t.Sum(u => u.ChargT) }).ToList();
 				chartStats.Series.Clear();
+			chart1.Series.Clear();PerCV.Clear();
 				Capa.Clear();
 				xValues.Clear();
 				yValues.Clear();
 				foreach (var item in LL)
 				{
 					xValues.Add(item.ID);
-					yValues.Add(item.Value);
+					yValues.Add(item.Value* (il.CRM / 100));
 					
 				}
 				foreach(Operators opo in op)
 				{
-					Capa.Add(opo.NumberOfOperator * (il.CRM/100) * (il.Efficiency/100) * (1 - (il.IlotRejectedRate/100)) * (1 - (il.TruancyRate/100)) * 7.67 * 5);
+					Capa.Add(opo.NumberOfOperator * (il.Efficiency/100) * (1 - (il.IlotRejectedRate/100)) * (1 - (il.TruancyRate/100)) * 7.67f * 5);
 				}
+				List<Besoin> br = new List<Besoin>();
+				Besoin brr;
+				for (int i = 0; i < yValues.Count; i++)
+				{ PerCV.Add(Math.Round(yValues[i] / Capa[i], 2) * 100);
+					brr = new Besoin 
+					{WeekWork=xValues[i],
+					ActualCharge=yValues[i],
+					AcutalCapa=Capa[i],
+					BesoinH= (Capa[i] - yValues[i]) ,
+
+
+					};br.Add(brr);
+				
+				}
+				brr = new Besoin
+				{
+					WeekWork = br[(br.Count)-1].WeekWork+1,
+					ActualCharge =br.Select(r=>r.ActualCharge).Average(),
+					AcutalCapa = br.Select(r => r.AcutalCapa).Average(),
+					BesoinH = br.Select(r => r.BesoinH).Average(),
+
+
+				}; br.Add(brr);
 				var series = new Series()
 				{
 					ChartType = SeriesChartType.Column,
 					Color = Color.FromArgb(93, 138, 168),
 					IsVisibleInLegend = true,
+					
 					Name = "Charge",
 					LegendText = "Charge",
 
 				};
+				var RatioChargeCapa = new Series()
+				{
+					ChartType = SeriesChartType.Spline,
+					Color = Color.FromArgb(93, 138, 168),
+					IsVisibleInLegend = true,
+					IsValueShownAsLabel = true,
+					Name = "RatioChargeCapa",
+					LegendText = "RatioChargeCapa",
+					BorderWidth = 3,
+
+				};
 				var series1 = new Series()
 				{
-					ChartType = SeriesChartType.Line,
+					ChartType = SeriesChartType.Spline,
 					IsVisibleInLegend = true,
 					BorderDashStyle = ChartDashStyle.Solid,
+					
 					Name = "Capa",
 					LegendText = "Capacité",
-					BorderWidth = 5,
+					BorderWidth = 3,
 					Color = Color.FromArgb(255, 126, 0),
 				};
 
 
 				chartStats.Series.Add(series);
 				chartStats.Series.Add(series1);
+				chart1.Series.Add(RatioChargeCapa);
+				chart1.Series[0].Points.Clear();
+			chart1.ChartAreas[0].AxisX.Interval = 1;
+				chartStats.ChartAreas[0].AxisX.Interval = 1;
 				chartStats.Series[1].Points.Clear();
-				chartStats.Series[0].Points.DataBindXY(xValues, yValues);
+			chart1.Series[0].Points.DataBindXY(xValues, PerCV);
+			chartStats.Series[0].Points.DataBindXY(xValues, yValues);
 				chartStats.Series[1].Points.DataBindXY(xValues, Capa);
+				metroGrid1.DataSource = br;
+				setC();
 
 			}
 			catch (Exception ex)
@@ -268,5 +313,20 @@ namespace SafranCotChargeCapa
 				upGraph();
 			}
 			}
+
+		public void setC ()
+		{
+			foreach (DataGridViewRow row in metroGrid1.Rows)
+			{
+				if (float.Parse(row.Cells[3].Value.ToString()) >= 0)
+					row.Cells[3].Style.BackColor = System.Drawing.Color.Green;
+				else 
+					row.Cells[3].Style.BackColor = System.Drawing.Color.Red;
+			}
+		}
+		private void metroGrid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			
+		}
 	}
 }
