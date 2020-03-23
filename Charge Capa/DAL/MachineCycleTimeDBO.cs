@@ -29,6 +29,28 @@ namespace DAL
 			return ur;
 
 		}
+		public static List<MachineCycleTime> GetOpALLmach(string id)
+		{
+			string requete = String.Format("select * from MachineCycleTime where (OperationID ='{0}');", id);
+			OleDbDataReader rdd = Util.lire(requete);
+			List<MachineCycleTime> ur = new List<MachineCycleTime>();
+			MachineCycleTime OpMach;
+			while (rdd.Read())
+			{
+				OpMach = new MachineCycleTime()
+				{
+					MachineID = rdd.GetString(0),
+					CycleTime = float.Parse(rdd.GetString(2)),
+					OperationID = rdd.GetString(1),
+				};ur.Add(OpMach);
+
+
+			}
+			Util.Disconnect();
+			return ur;
+
+		}
+
 		public static bool DeletAllOperationTime(Operation ur)
 		{
 			string requete = String.Format("delete * from MachineCycleTime where OperationID='{0}' ;", ur.OperationID);

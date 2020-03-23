@@ -69,6 +69,54 @@ namespace DAL
 			return Lur;
 
 		}
+		public static List<Machine> GetAllOpMachine(string id)
+		{
+			List<Machine> Lur = new List<Machine>();
+			string requete = String.Format("select * from Machine where (MachineID ='{0}');", id);
+			OleDbDataReader rdd = Util.lire(requete);
+			Machine ur;
+			while (rdd.Read())
+			{
+				ur = new Machine
+				{
+					MachineID = rdd.GetString(0),
+					Etat = rdd.GetString(2),
+					MachineName = rdd.GetString(1),
+
+					MachineRejectedRate = rdd.GetFloat(4),
+					AvialabilityTime = rdd.GetFloat(3),
+				};
+				Lur.Add(ur);
+
+			}
+			Util.Disconnect();
+			return Lur;
+
+		}
+
+		public static List<MachineOpenDay> GetMachineShiftCalen (string machineid,int Wek,int Yr)
+		{
+			List<MachineOpenDay> Lur = new List<MachineOpenDay>();
+			string requete = String.Format("select * from MachineOpenDay where ((MachineID ='{0}' and Weekk>=12) and Yearr = {2});", machineid,Wek,Yr);
+			OleDbDataReader rdd = Util.lire(requete);
+			MachineOpenDay ur;
+			while (rdd.Read())
+			{
+				ur = new MachineOpenDay
+				{
+					MachineID = rdd.GetString(0),
+					DateYear = rdd.GetInt32(1),
+					DateWeek = rdd.GetInt32(2),
+
+					NumberOfshift = rdd.GetInt32(3),
+					
+				};
+				Lur.Add(ur);
+
+			}
+			Util.Disconnect();
+			return Lur;
+		}
 
 	}
 }

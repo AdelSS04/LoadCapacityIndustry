@@ -30,12 +30,12 @@ namespace DAL
 			rd = cmd.ExecuteReader();
 			return rd;
 		}
-		public static double LireScaler(string req)
+		public static OleDbDataReader LireScaler(string req)
 		{
 			Connect();
 			cmd = new OleDbCommand(req, cn);
-
-			return (double)cmd.ExecuteScalar(); ;
+			rd = cmd.ExecuteReader();
+			return rd ;
 		}
 
 		public static bool miseajour(string req)

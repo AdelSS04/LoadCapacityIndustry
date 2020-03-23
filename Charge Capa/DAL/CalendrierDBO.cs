@@ -30,7 +30,7 @@ namespace DAL
 		public static bool SetCalMach(Machine mach, Calendrier cl)
 		{
 			string requete = String.Format("insert into MachineOpenDay(MachineID,Yearr, Weekk,OpenDayOfWeek)" +
-			   " values ('{0}',{1},{2},{3});", mach.MachineID, cl.DateWeek, cl.OpenDayPerWeek, cl.OpenDayPerWeek);
+			   " values ('{0}',{1},{2},{3});", mach.MachineID,cl.DateYear, cl.DateWeek, cl.OpenDayPerWeek);
 			
 			return Util.miseajour(requete);
 
