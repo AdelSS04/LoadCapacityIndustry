@@ -10,6 +10,6 @@ namespace BEL
     {
         public string ToolsID { get; set; }
         public string ToolsName { get; set; }
-        public int ToolsNumber { get; set; }
+       
     }
 }

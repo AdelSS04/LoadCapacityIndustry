@@ -12,21 +12,25 @@ namespace DAL
 {
 	public class MachineCycleTimeDBO 
 	{
-		public static MachineCycleTime GetMachineCycleTime(string id)
+		public static List<MachineCycleTime> GetMachineCycleTime(string id)
 		{
 			string requete = String.Format("select * from MachineCycleTime where (OperationID ='{0}');", id);
 			OleDbDataReader rdd = Util.lire(requete);
-			MachineCycleTime ur = new MachineCycleTime();
+			List<MachineCycleTime> machCy =new List<MachineCycleTime>();
+			MachineCycleTime ur;
 			while (rdd.Read())
 			{
+				ur = new MachineCycleTime
+				{
 
-				ur.MachineID = rdd.GetString(0);
-				ur.CycleTime = float.Parse(rdd.GetString(2));
-				
+					MachineID = rdd.GetString(0),
+					CycleTime = float.Parse(rdd.GetString(2)),
+					OperationID = rdd.GetString(1),
 
+				};machCy.Add(ur);
 			}
 			Util.Disconnect();
-			return ur;
+			return machCy;
 
 		}
 		public static List<MachineCycleTime> GetOpALLmach(string id)
@@ -76,7 +80,7 @@ namespace DAL
 		}
 		public static bool DeletAllOperationcycleTime(MachineCycleTime ur)
 		{
-			string requete = String.Format("delete * from MachineCycleTime where OperationID='{0}' ;", ur.OperationID);
+			string requete = String.Format("delete * from MachineCycleTime where OperationID='{0}' and MachineID='{1}' ;", ur.OperationID,ur.MachineID);
 
 			return Util.miseajour(requete);
 

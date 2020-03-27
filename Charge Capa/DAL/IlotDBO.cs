@@ -33,6 +33,28 @@ namespace DAL
 			Util.Disconnect();
 			return L;
 		}
+		public static List<OpGroupe> IlotOpgrp(string idpostecharge)
+		{
+			string requete = String.Format("select DISTINCT MCT.GroupName from (select * from ( OperationGroupe AS MCT Inner join Operation AS O ON MCT.OperationID=O.OperationID) inner join Ilot AS D on D.IlotID = O.IlotID where D.IlotID = '{0}');  ", idpostecharge);
+			OleDbDataReader rdd = Util.lire(requete);
+
+
+			List<OpGroupe> L = new List<OpGroupe>();
+			OpGroupe c;
+			while (rdd.Read())
+			{
+				c = new OpGroupe
+				{
+					GrpName = rdd["GroupName"].ToString(),
+				//	OperationID = rdd["OperationID"].ToString(),
+					
+
+				};
+				L.Add(c);
+			}
+			Util.Disconnect();
+			return L;
+		}
 		public static Ilot GetIlot(string id)
 		{
 			string requete = String.Format("select * from Ilot where (IlotID ='{0}');", id);

@@ -44,10 +44,13 @@
     <Compile Include="DemandeOP.cs" />
     <Compile Include="Besoin.cs" />
     <Compile Include="Charge.cs" />
+    <Compile Include="OpGroupe.cs" />
+    <Compile Include="ToolsOpenDay.cs" />
     <Compile Include="MachineOpenDay.cs" />
     <Compile Include="IlotOpenDay.cs" />
     <Compile Include="Calendrier.cs" />
     <Compile Include="Demande.cs" />
+    <Compile Include="OperatorsO.cs" />
     <Compile Include="ToolsOccupationTime.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Tools.cs" />
