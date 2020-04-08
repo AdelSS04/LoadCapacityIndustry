@@ -15,7 +15,7 @@ namespace DAL
 
 		public static bool UpOperatingNumber (OperatorsO op)
 		{
-			string requete = String.Format("update GrpOfOperatorsO set NumberOfOperator={1}" +
+			string requete = String.Format("update GrpOfOperators set NumberOfOperator={1}" +
 				   " where ((OperationID='{0}' and Yearr>={2}) and Weekk>={3}) ;", op.OperationID,op.NumberOfOperator,op.Yearr,op.Weekk);
 
 			return  Util.miseajour(requete);
@@ -23,14 +23,14 @@ namespace DAL
 		}
 		public static bool SetOperatingNumber(OperatorsO op)
 		{
-			string requete = String.Format("insert into GrpOfOperatorsO (OperationID,Yearr,Weekk,NumberOfOperator)  " +
+			string requete = String.Format("insert into GrpOfOperators (OperationID,Yearr,Weekk,NumberOfOperator)  " +
 				"values ('{0}',{1},{2},{3});", op.OperationID, op.Yearr, op.Weekk, op.NumberOfOperator);
 
 			return Util.miseajour(requete);
 
 		}
 
-
+	
 
 	}
 }

@@ -35,20 +35,20 @@ namespace SafranCotChargeCapa
 
 				List<Ilot> il = IlotDBO.GetAllIlot();
 				foreach (Ilot u in il)
-				{// MessageBox.Show(u.IlotID);
+				{
 					
 					IlotIDS.Items.Add(u.IlotID);
 				}
 				List<Machine> mach = MachineDBO.GetAllMachine();
 				foreach (Machine u in mach)
-				{// MessageBox.Show(u.IlotID);
+				{
 					MachineSelc.Items.Add(u.MachineID);
 				}
 				List<Operation> op = OperationDBO.GetAllOperationName();
 				var DistinctItems = op.Select(x => x.OperationID).Distinct();
 
 				foreach (var opp in DistinctItems)
-				{// MessageBox.Show(u.IlotID);
+				{
 					InputOperation.Items.Add(opp.ToString());
 				}
 				Listitem = PRoductIDSelect.Items.Count;
@@ -107,7 +107,7 @@ namespace SafranCotChargeCapa
 				if (Lur.Count.ToString() != "0")
 				{
 					EffInput.Text = Lur[0].ManuelCycleTime.ToString();
-
+					
 
 					foreach (Operation op in Lur)
 					{
@@ -123,8 +123,9 @@ namespace SafranCotChargeCapa
 					List<ToolsOccupationTime> ToolsOccupationTimeList = ToolsOccupationTimeDBO.GettoolsOccupationTimes(opname);
 					machineCycleList.DataSource = machineCycleTimesList;
 					outilsgrid.DataSource = ToolsOccupationTimeList;
-
-
+					int index = IlotIDS.FindString(Lur[0].IlotID);
+					IlotIDS.SelectedIndex = index;
+					MachineIDInput.Text = InputOperation.SelectedItem.ToString();
 					//
 
 
@@ -148,6 +149,7 @@ namespace SafranCotChargeCapa
 		private void RoleInput_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			searchOp(InputOperation.SelectedItem.ToString());
+			
 		}
 
 		private void MachineIDInput_ButtonClick(object sender, EventArgs e)
@@ -167,6 +169,10 @@ namespace SafranCotChargeCapa
 
 				OperationDBO.DeletAllOperation(op);
 				MachineCycleTimeDBO.DeletAllOperationTime(op);
+				OpGroupeDBO.DeletGrp(op);
+				OperationDBO.DeletToolsOperation(op);
+				OperationDBO.DeletMachineOperation(op);
+
 				MessageBox.Show("done !!");
 
 			}
@@ -178,6 +184,11 @@ namespace SafranCotChargeCapa
 
 		private void AddButton_Click(object sender, EventArgs e)
 		{
+			string opname;
+			if (MachineIDInput.Text.Length == 0)
+				opname = InputOperation.SelectedItem.ToString();
+			else
+				opname = MachineIDInput.Text;
 			try
 			{
 				List<Operation> op = new List<Operation>();
@@ -189,7 +200,7 @@ namespace SafranCotChargeCapa
 						
 						Operation opp = new Operation
 						{
-							OperationID = MachineIDInput.Text,
+							OperationID = opname,
 							IlotID = IlotIDS.SelectedItem.ToString(),
 							ManuelCycleTime = float.Parse(EffInput.Text.Trim(), System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
 							ProductID = PRoductIDSelect.Items[i].ToString(),
@@ -201,7 +212,9 @@ namespace SafranCotChargeCapa
 				{
 				
 					OperationDBO.AddOperation(oo);
+					
 				}
+				OpGroupeDBO.AddPosteCharge(opname, metroComboBox1.SelectedItem.ToString());
 				MessageBox.Show("done !!");
 				
 			}
@@ -332,13 +345,15 @@ namespace SafranCotChargeCapa
 				{
 
 					OperationID = opname,
-					ToolsID = MachineSelc.Text,
+					ToolsID = metroComboBox2.SelectedItem.ToString(),
 
 				};
 
-				ToolsOccupationTimeDBO.DeletAllOperationOccTime(op);
+				if(ToolsOccupationTimeDBO.DeletAllOperationOccTime(op))
+					MessageBox.Show("done !!");
+				else
+					MessageBox.Show("404");
 
-				MessageBox.Show("done !!");
 
 			}
 			catch (Exception ex)
@@ -355,8 +370,10 @@ namespace SafranCotChargeCapa
 			{
 				dem = outilsgrid.DataSource as List<ToolsOccupationTime>;
 				foreach (ToolsOccupationTime d in dem)
-					ToolsOccupationTimeDBO.UpOccTime(d);
+					if(ToolsOccupationTimeDBO.UpOccTime(d))
 				MessageBox.Show("done !");
+				else
+						MessageBox.Show("404");
 			}
 			catch (Exception ex)
 			{
@@ -397,22 +414,143 @@ namespace SafranCotChargeCapa
 
 		private void metroLabel12_Click(object sender, EventArgs e)
 		{
-			IlotManag ilot = new IlotManag();
-			ilot.Show();
+			Form formBackground = new Form();
+			try
+			{
+				using (IlotManag uu = new IlotManag())
+				{
+					formBackground.StartPosition = FormStartPosition.Manual;
+					formBackground.FormBorderStyle = FormBorderStyle.None;
+					formBackground.Opacity = .50d;
+					formBackground.BackColor = Color.Black;
+					formBackground.WindowState = FormWindowState.Maximized;
+					formBackground.TopMost = true;
+					formBackground.Location = this.Location;
+					formBackground.ShowInTaskbar = false;
+					formBackground.Show();
+
+					uu.Owner = formBackground;
+					uu.ShowDialog();
+
+					formBackground.Dispose();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			finally
+			{
+
+				formBackground.Dispose();
+				List<Ilot> il = IlotDBO.GetAllIlot();
+				IlotIDS.Items.Clear();
+				foreach (Ilot u in il)
+				{IlotIDS.Items.Add(u.IlotID);
+				}
+
+
+			}
 
 		}
 
 		private void metroLabel13_Click(object sender, EventArgs e)
 		{
-			IlotManag ilot = new IlotManag();
-			ilot.Show();
+
+			Form formBackground = new Form();
+			try
+			{
+				using (IlotManag uu = new IlotManag())
+				{
+					formBackground.StartPosition = FormStartPosition.Manual;
+					formBackground.FormBorderStyle = FormBorderStyle.None;
+					formBackground.Opacity = .50d;
+					formBackground.BackColor = Color.Black;
+					formBackground.WindowState = FormWindowState.Maximized;
+					formBackground.TopMost = true;
+					formBackground.Location = this.Location;
+					formBackground.ShowInTaskbar = false;
+					formBackground.Show();
+
+					uu.Owner = formBackground;
+					uu.ShowDialog();
+
+					formBackground.Dispose();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			finally
+			{
+				formBackground.Dispose();
+			}
+			
 		}
 
 		private void IlotIDS_SelectedIndexChanged(object sender, EventArgs e)
 		{
+			metroComboBox1.Items.Clear();
 			List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(IlotIDS.SelectedItem.ToString());
 			foreach (OpGroupe o in IlotGrpOFOP)
 				metroComboBox1.Items.Add(o.GrpName);
+		}
+		
+		private void metroTile1_Click_1(object sender, EventArgs e)
+		{
+			try
+			{
+				Operation oppp = new Operation
+				{
+					OperationID = MachineIDInput.Text,
+				
+
+				};
+				OperationDBO.DeletAllOperation(oppp);
+				List<Operation> op = new List<Operation>();
+				for (int i = 0; i < Listitem; i++)
+				{
+
+					if (PRoductIDSelect.GetItemChecked(i))
+					{
+
+						Operation opp = new Operation
+						{
+							OperationID = MachineIDInput.Text,
+							IlotID = IlotIDS.SelectedItem.ToString(),
+							ManuelCycleTime = float.Parse(EffInput.Text.Trim(), System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
+							ProductID = PRoductIDSelect.Items[i].ToString(),
+
+						}; op.Add(opp);
+					}
+				}
+				foreach (Operation oo in op)
+				{
+
+					OperationDBO.AddOperation(oo);
+					OpGroupeDBO.UpdateOperationGrp(oo.OperationID, metroComboBox1.SelectedItem.ToString());
+					
+				}
+				MessageBox.Show("done !!");
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void metroTile2_Click(object sender, EventArgs e)
+		{
+			ManOperation mm = new ManOperation( );
+			mm.Show();
+			this.Hide();
+		}
+
+		private void ManOperation_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Application.Exit();
 		}
 	}
 }

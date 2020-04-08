@@ -87,7 +87,20 @@ namespace DAL
 			return Util.miseajour(requete);
 
 		}
-		
+		public static bool DeletToolsOperation(Operation ur)
+		{
+			string requete = String.Format("delete * from ToolsOccupationTime where OperationID='{0}' ;", ur.OperationID);
+
+			return Util.miseajour(requete);
+
+		}
+		public static bool DeletMachineOperation(Operation ur)
+		{
+			string requete = String.Format("delete * from MachineCycleTime where OperationID='{0}';", ur.OperationID);
+
+			return Util.miseajour(requete);
+
+		}
 		public static bool AddOperation(Operation ur)
 		{
 			string requete = String.Format("insert into operation(IlotID, OperationID, ManuelCycleTime,ProductID)" +
@@ -96,6 +109,13 @@ namespace DAL
 			return Util.miseajour(requete);
 			//return requete;
 		}
+		public static bool UpdateOperation(Operation op)
+		{
+			string requete = String.Format("update Operation set (IlotID={0},ManuelCycleTime={1},ProductID={3})" +
+				   " where OperationID='{2}' ) ;", op.IlotID, op.ManuelCycleTime, op.OperationID, op.ProductID);
 
+			return Util.miseajour(requete);
+
+		}
 	}
 }

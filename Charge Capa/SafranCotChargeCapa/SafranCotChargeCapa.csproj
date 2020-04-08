@@ -227,6 +227,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8_add_new_48.png" />
+    <None Include="Resources\add_new_52px.png" />
+    <None Include="Resources\add_new_26px.png" />
+    <None Include="Resources\add_50px.png" />
+    <None Include="Resources\add_new_104px.png" />
     <None Include="Resources\trash_26px.png" />
     <None Include="Resources\refresh_26px.png" />
     <None Include="Resources\save_26px2.png" />

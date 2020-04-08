@@ -35,7 +35,7 @@ namespace DAL
 		}
 		public static List<OpGroupe> IlotOpgrp(string idpostecharge)
 		{
-			string requete = String.Format("select DISTINCT MCT.GroupName from (select * from ( OperationGroupe AS MCT Inner join Operation AS O ON MCT.OperationID=O.OperationID) inner join Ilot AS D on D.IlotID = O.IlotID where D.IlotID = '{0}');  ", idpostecharge);
+			string requete = String.Format("select  DISTINCT MCT.GroupName from (select * from ( OperationGroupe AS MCT Inner join Operation AS O ON MCT.OperationID=O.OperationID) inner join Ilot AS D on D.IlotID = O.IlotID where D.IlotID = '{0}');  ", idpostecharge);
 			OleDbDataReader rdd = Util.lire(requete);
 
 
@@ -47,8 +47,6 @@ namespace DAL
 				{
 					GrpName = rdd["GroupName"].ToString(),
 				//	OperationID = rdd["OperationID"].ToString(),
-					
-
 				};
 				L.Add(c);
 			}

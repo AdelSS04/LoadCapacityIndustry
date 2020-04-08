@@ -28,14 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -43,14 +43,7 @@
 			this.EffInput = new MetroFramework.Controls.MetroTextBox();
 			this.InputOperation = new MetroFramework.Controls.MetroComboBox();
 			this.PRoductIDSelect = new System.Windows.Forms.CheckedListBox();
-			this.DelAll = new MetroFramework.Controls.MetroTile();
-			this.SaveUpdate = new MetroFramework.Controls.MetroTile();
-			this.AddButton = new MetroFramework.Controls.MetroTile();
-			this.MachineIDInput = new MetroFramework.Controls.MetroTextBox();
 			this.IlotIDS = new MetroFramework.Controls.MetroComboBox();
-			this.metroTile4 = new MetroFramework.Controls.MetroTile();
-			this.metroTile5 = new MetroFramework.Controls.MetroTile();
-			this.metroTile6 = new MetroFramework.Controls.MetroTile();
 			this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
 			this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
 			this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -62,10 +55,7 @@
 			this.OpSel = new System.Windows.Forms.NumericUpDown();
 			this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
 			this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-			this.DelMach = new MetroFramework.Controls.MetroTile();
 			this.machineCycleList = new MetroFramework.Controls.MetroGrid();
-			this.SaveMach = new MetroFramework.Controls.MetroTile();
-			this.AddMach = new MetroFramework.Controls.MetroTile();
 			this.HideMach = new System.Windows.Forms.Label();
 			this.MachineSelc = new MetroFramework.Controls.MetroComboBox();
 			this.MachineCycleTime = new MetroFramework.Controls.MetroTextBox();
@@ -73,11 +63,22 @@
 			this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
 			this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
 			this.outilsgrid = new MetroFramework.Controls.MetroGrid();
-			this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
 			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+			this.metroTile2 = new MetroFramework.Controls.MetroTile();
+			this.metroTile1 = new MetroFramework.Controls.MetroTile();
+			this.DelMach = new MetroFramework.Controls.MetroTile();
+			this.SaveMach = new MetroFramework.Controls.MetroTile();
+			this.AddMach = new MetroFramework.Controls.MetroTile();
+			this.metroTile4 = new MetroFramework.Controls.MetroTile();
+			this.metroTile5 = new MetroFramework.Controls.MetroTile();
+			this.metroTile6 = new MetroFramework.Controls.MetroTile();
+			this.DelAll = new MetroFramework.Controls.MetroTile();
+			this.SaveUpdate = new MetroFramework.Controls.MetroTile();
+			this.AddButton = new MetroFramework.Controls.MetroTile();
+			this.MachineIDInput = new MetroFramework.Controls.MetroTextBox();
 			((System.ComponentModel.ISupportInitialize)(this.YearSel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.WeekSel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.OpSel)).BeginInit();
@@ -166,7 +167,11 @@
 			// 
 			// InputOperation
 			// 
+			this.InputOperation.AllowDrop = true;
+			this.InputOperation.DropDownHeight = 100;
+			this.InputOperation.DropDownWidth = 100;
 			this.InputOperation.FormattingEnabled = true;
+			this.InputOperation.IntegralHeight = false;
 			this.InputOperation.ItemHeight = 23;
 			this.InputOperation.Location = new System.Drawing.Point(573, 80);
 			this.InputOperation.Name = "InputOperation";
@@ -183,91 +188,6 @@
 			this.PRoductIDSelect.Size = new System.Drawing.Size(334, 79);
 			this.PRoductIDSelect.TabIndex = 15;
 			// 
-			// DelAll
-			// 
-			this.DelAll.ActiveControl = null;
-			this.DelAll.Location = new System.Drawing.Point(696, 26);
-			this.DelAll.Name = "DelAll";
-			this.DelAll.Size = new System.Drawing.Size(112, 38);
-			this.DelAll.Style = MetroFramework.MetroColorStyle.Red;
-			this.DelAll.TabIndex = 42;
-			this.DelAll.Text = "Supprimer";
-			this.DelAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.DelAll.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
-			this.DelAll.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.DelAll.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.DelAll.UseSelectable = true;
-			this.DelAll.UseTileImage = true;
-			this.DelAll.Click += new System.EventHandler(this.DelAll_Click);
-			// 
-			// SaveUpdate
-			// 
-			this.SaveUpdate.ActiveControl = null;
-			this.SaveUpdate.Location = new System.Drawing.Point(573, 26);
-			this.SaveUpdate.Name = "SaveUpdate";
-			this.SaveUpdate.Size = new System.Drawing.Size(112, 38);
-			this.SaveUpdate.TabIndex = 41;
-			this.SaveUpdate.Text = "Mise à jour";
-			this.SaveUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.SaveUpdate.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
-			this.SaveUpdate.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.SaveUpdate.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.SaveUpdate.UseSelectable = true;
-			this.SaveUpdate.UseTileImage = true;
-			this.SaveUpdate.Click += new System.EventHandler(this.SaveUpdate_Click);
-			// 
-			// AddButton
-			// 
-			this.AddButton.ActiveControl = null;
-			this.AddButton.Location = new System.Drawing.Point(445, 26);
-			this.AddButton.Name = "AddButton";
-			this.AddButton.Size = new System.Drawing.Size(112, 38);
-			this.AddButton.TabIndex = 40;
-			this.AddButton.Text = "Sauvegarde";
-			this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.AddButton.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
-			this.AddButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.AddButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.AddButton.UseSelectable = true;
-			this.AddButton.UseTileImage = true;
-			this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-			// 
-			// MachineIDInput
-			// 
-			// 
-			// 
-			// 
-			this.MachineIDInput.CustomButton.Image = null;
-			this.MachineIDInput.CustomButton.Location = new System.Drawing.Point(123, 1);
-			this.MachineIDInput.CustomButton.Name = "";
-			this.MachineIDInput.CustomButton.Size = new System.Drawing.Size(21, 21);
-			this.MachineIDInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-			this.MachineIDInput.CustomButton.TabIndex = 1;
-			this.MachineIDInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.MachineIDInput.CustomButton.UseSelectable = true;
-			this.MachineIDInput.DisplayIcon = true;
-			this.MachineIDInput.Icon = global::SafranCotChargeCapa.Properties.Resources.search_24px;
-			this.MachineIDInput.IconRight = true;
-			this.MachineIDInput.Lines = new string[0];
-			this.MachineIDInput.Location = new System.Drawing.Point(205, 86);
-			this.MachineIDInput.MaxLength = 32767;
-			this.MachineIDInput.Name = "MachineIDInput";
-			this.MachineIDInput.PasswordChar = '\0';
-			this.MachineIDInput.PromptText = "Operation ID";
-			this.MachineIDInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.MachineIDInput.SelectedText = "";
-			this.MachineIDInput.SelectionLength = 0;
-			this.MachineIDInput.SelectionStart = 0;
-			this.MachineIDInput.ShortcutsEnabled = true;
-			this.MachineIDInput.ShowButton = true;
-			this.MachineIDInput.Size = new System.Drawing.Size(145, 23);
-			this.MachineIDInput.TabIndex = 12;
-			this.MachineIDInput.UseSelectable = true;
-			this.MachineIDInput.WaterMark = "Operation ID";
-			this.MachineIDInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			this.MachineIDInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-			this.MachineIDInput.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.MachineIDInput_ButtonClick);
-			// 
 			// IlotIDS
 			// 
 			this.IlotIDS.FormattingEnabled = true;
@@ -279,64 +199,18 @@
 			this.IlotIDS.UseSelectable = true;
 			this.IlotIDS.SelectedIndexChanged += new System.EventHandler(this.IlotIDS_SelectedIndexChanged);
 			// 
-			// metroTile4
-			// 
-			this.metroTile4.ActiveControl = null;
-			this.metroTile4.Enabled = false;
-			this.metroTile4.Location = new System.Drawing.Point(711, 102);
-			this.metroTile4.Name = "metroTile4";
-			this.metroTile4.Size = new System.Drawing.Size(112, 38);
-			this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
-			this.metroTile4.TabIndex = 62;
-			this.metroTile4.Text = "Supprimer";
-			this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.metroTile4.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
-			this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.metroTile4.UseSelectable = true;
-			this.metroTile4.UseTileImage = true;
-			this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
-			// 
-			// metroTile5
-			// 
-			this.metroTile5.ActiveControl = null;
-			this.metroTile5.Enabled = false;
-			this.metroTile5.Location = new System.Drawing.Point(593, 102);
-			this.metroTile5.Name = "metroTile5";
-			this.metroTile5.Size = new System.Drawing.Size(112, 38);
-			this.metroTile5.TabIndex = 61;
-			this.metroTile5.Text = "Mise à jour";
-			this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.metroTile5.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
-			this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.metroTile5.UseSelectable = true;
-			this.metroTile5.UseTileImage = true;
-			this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
-			// 
-			// metroTile6
-			// 
-			this.metroTile6.ActiveControl = null;
-			this.metroTile6.Location = new System.Drawing.Point(466, 102);
-			this.metroTile6.Name = "metroTile6";
-			this.metroTile6.Size = new System.Drawing.Size(112, 38);
-			this.metroTile6.TabIndex = 60;
-			this.metroTile6.Text = "Sauvegarde";
-			this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.metroTile6.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
-			this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.metroTile6.UseSelectable = true;
-			this.metroTile6.UseTileImage = true;
-			this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
-			// 
 			// metroComboBox2
 			// 
+			this.metroComboBox2.AllowDrop = true;
+			this.metroComboBox2.DropDownHeight = 100;
+			this.metroComboBox2.DropDownWidth = 100;
+			this.metroComboBox2.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
 			this.metroComboBox2.FormattingEnabled = true;
+			this.metroComboBox2.IntegralHeight = false;
 			this.metroComboBox2.ItemHeight = 23;
 			this.metroComboBox2.Location = new System.Drawing.Point(647, 13);
 			this.metroComboBox2.Name = "metroComboBox2";
-			this.metroComboBox2.Size = new System.Drawing.Size(121, 29);
+			this.metroComboBox2.Size = new System.Drawing.Size(244, 29);
 			this.metroComboBox2.TabIndex = 59;
 			this.metroComboBox2.UseSelectable = true;
 			// 
@@ -469,10 +343,9 @@
 			// 
 			this.metroTabControl1.Controls.Add(this.metroTabPage1);
 			this.metroTabControl1.Controls.Add(this.metroTabPage2);
-			this.metroTabControl1.Controls.Add(this.metroTabPage3);
 			this.metroTabControl1.Location = new System.Drawing.Point(4, 250);
 			this.metroTabControl1.Name = "metroTabControl1";
-			this.metroTabControl1.SelectedIndex = 0;
+			this.metroTabControl1.SelectedIndex = 1;
 			this.metroTabControl1.Size = new System.Drawing.Size(993, 224);
 			this.metroTabControl1.TabIndex = 62;
 			this.metroTabControl1.UseSelectable = true;
@@ -500,24 +373,6 @@
 			this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
 			this.metroTabPage1.VerticalScrollbarSize = 10;
 			// 
-			// DelMach
-			// 
-			this.DelMach.ActiveControl = null;
-			this.DelMach.Enabled = false;
-			this.DelMach.Location = new System.Drawing.Point(558, 104);
-			this.DelMach.Name = "DelMach";
-			this.DelMach.Size = new System.Drawing.Size(112, 38);
-			this.DelMach.Style = MetroFramework.MetroColorStyle.Red;
-			this.DelMach.TabIndex = 55;
-			this.DelMach.Text = "Supprimer";
-			this.DelMach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.DelMach.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
-			this.DelMach.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.DelMach.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.DelMach.UseSelectable = true;
-			this.DelMach.UseTileImage = true;
-			this.DelMach.Click += new System.EventHandler(this.metroTile1_Click);
-			// 
 			// machineCycleList
 			// 
 			this.machineCycleList.AllowUserToResizeRows = false;
@@ -525,83 +380,50 @@
 			this.machineCycleList.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.machineCycleList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.machineCycleList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.machineCycleList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+			dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.machineCycleList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
 			this.machineCycleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.machineCycleList.DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+			dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.machineCycleList.DefaultCellStyle = dataGridViewCellStyle26;
 			this.machineCycleList.EnableHeadersVisualStyles = false;
 			this.machineCycleList.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
 			this.machineCycleList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.machineCycleList.Location = new System.Drawing.Point(3, 3);
 			this.machineCycleList.Name = "machineCycleList";
 			this.machineCycleList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.machineCycleList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+			dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.machineCycleList.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
 			this.machineCycleList.RowHeadersVisible = false;
 			this.machineCycleList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle4.Format = "N2";
-			dataGridViewCellStyle4.NullValue = null;
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.machineCycleList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+			dataGridViewCellStyle28.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle28.Format = "N2";
+			dataGridViewCellStyle28.NullValue = null;
+			dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.machineCycleList.RowsDefaultCellStyle = dataGridViewCellStyle28;
 			this.machineCycleList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
 			this.machineCycleList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.machineCycleList.ShowEditingIcon = false;
 			this.machineCycleList.Size = new System.Drawing.Size(395, 216);
 			this.machineCycleList.TabIndex = 62;
-			// 
-			// SaveMach
-			// 
-			this.SaveMach.ActiveControl = null;
-			this.SaveMach.Enabled = false;
-			this.SaveMach.Location = new System.Drawing.Point(676, 104);
-			this.SaveMach.Name = "SaveMach";
-			this.SaveMach.Size = new System.Drawing.Size(112, 38);
-			this.SaveMach.TabIndex = 54;
-			this.SaveMach.Text = "Mise à jour";
-			this.SaveMach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.SaveMach.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
-			this.SaveMach.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.SaveMach.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.SaveMach.UseSelectable = true;
-			this.SaveMach.UseTileImage = true;
-			this.SaveMach.Click += new System.EventHandler(this.SaveMach_Click);
-			// 
-			// AddMach
-			// 
-			this.AddMach.ActiveControl = null;
-			this.AddMach.Location = new System.Drawing.Point(429, 104);
-			this.AddMach.Name = "AddMach";
-			this.AddMach.Size = new System.Drawing.Size(112, 38);
-			this.AddMach.TabIndex = 53;
-			this.AddMach.Text = "Sauvegarde";
-			this.AddMach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.AddMach.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
-			this.AddMach.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.AddMach.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.AddMach.UseSelectable = true;
-			this.AddMach.UseTileImage = true;
-			this.AddMach.Click += new System.EventHandler(this.AddMach_Click);
 			// 
 			// HideMach
 			// 
@@ -704,64 +526,50 @@
 			this.outilsgrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.outilsgrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.outilsgrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.outilsgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+			dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.outilsgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
 			this.outilsgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.outilsgrid.DefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+			dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.outilsgrid.DefaultCellStyle = dataGridViewCellStyle30;
 			this.outilsgrid.EnableHeadersVisualStyles = false;
 			this.outilsgrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
 			this.outilsgrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.outilsgrid.Location = new System.Drawing.Point(15, 3);
 			this.outilsgrid.Name = "outilsgrid";
 			this.outilsgrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-			dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.outilsgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+			dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.outilsgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
 			this.outilsgrid.RowHeadersVisible = false;
 			this.outilsgrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle8.Format = "N2";
-			dataGridViewCellStyle8.NullValue = null;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.outilsgrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+			dataGridViewCellStyle32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle32.Format = "N2";
+			dataGridViewCellStyle32.NullValue = null;
+			dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.outilsgrid.RowsDefaultCellStyle = dataGridViewCellStyle32;
 			this.outilsgrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
 			this.outilsgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.outilsgrid.ShowEditingIcon = false;
 			this.outilsgrid.Size = new System.Drawing.Size(428, 161);
 			this.outilsgrid.TabIndex = 63;
-			// 
-			// metroTabPage3
-			// 
-			this.metroTabPage3.HorizontalScrollbarBarColor = true;
-			this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-			this.metroTabPage3.HorizontalScrollbarSize = 10;
-			this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
-			this.metroTabPage3.Name = "metroTabPage3";
-			this.metroTabPage3.Size = new System.Drawing.Size(985, 182);
-			this.metroTabPage3.TabIndex = 2;
-			this.metroTabPage3.Text = "Analyse des besions";
-			this.metroTabPage3.VerticalScrollbarBarColor = true;
-			this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-			this.metroTabPage3.VerticalScrollbarSize = 10;
 			// 
 			// metroComboBox1
 			// 
@@ -804,11 +612,233 @@
 			this.metroLabel13.Text = "ajouter";
 			this.metroLabel13.Click += new System.EventHandler(this.metroLabel13_Click);
 			// 
+			// metroTile2
+			// 
+			this.metroTile2.ActiveControl = null;
+			this.metroTile2.Location = new System.Drawing.Point(332, 26);
+			this.metroTile2.Name = "metroTile2";
+			this.metroTile2.Size = new System.Drawing.Size(112, 38);
+			this.metroTile2.TabIndex = 68;
+			this.metroTile2.Text = "Add";
+			this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile2.TileImage = global::SafranCotChargeCapa.Properties.Resources.icons8_add_new_48;
+			this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile2.UseSelectable = true;
+			this.metroTile2.UseTileImage = true;
+			this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
+			// 
+			// metroTile1
+			// 
+			this.metroTile1.ActiveControl = null;
+			this.metroTile1.Location = new System.Drawing.Point(573, 26);
+			this.metroTile1.Name = "metroTile1";
+			this.metroTile1.Size = new System.Drawing.Size(117, 38);
+			this.metroTile1.TabIndex = 67;
+			this.metroTile1.Text = "Mise à jour";
+			this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile1.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
+			this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile1.UseSelectable = true;
+			this.metroTile1.UseStyleColors = true;
+			this.metroTile1.UseTileImage = true;
+			this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
+			// 
+			// DelMach
+			// 
+			this.DelMach.ActiveControl = null;
+			this.DelMach.Enabled = false;
+			this.DelMach.Location = new System.Drawing.Point(558, 104);
+			this.DelMach.Name = "DelMach";
+			this.DelMach.Size = new System.Drawing.Size(112, 38);
+			this.DelMach.Style = MetroFramework.MetroColorStyle.Red;
+			this.DelMach.TabIndex = 55;
+			this.DelMach.Text = "Supprimer";
+			this.DelMach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.DelMach.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
+			this.DelMach.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.DelMach.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.DelMach.UseSelectable = true;
+			this.DelMach.UseTileImage = true;
+			this.DelMach.Click += new System.EventHandler(this.metroTile1_Click);
+			// 
+			// SaveMach
+			// 
+			this.SaveMach.ActiveControl = null;
+			this.SaveMach.Enabled = false;
+			this.SaveMach.Location = new System.Drawing.Point(676, 104);
+			this.SaveMach.Name = "SaveMach";
+			this.SaveMach.Size = new System.Drawing.Size(112, 38);
+			this.SaveMach.TabIndex = 54;
+			this.SaveMach.Text = "Mise à jour";
+			this.SaveMach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.SaveMach.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
+			this.SaveMach.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.SaveMach.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.SaveMach.UseSelectable = true;
+			this.SaveMach.UseTileImage = true;
+			this.SaveMach.Click += new System.EventHandler(this.SaveMach_Click);
+			// 
+			// AddMach
+			// 
+			this.AddMach.ActiveControl = null;
+			this.AddMach.Location = new System.Drawing.Point(429, 104);
+			this.AddMach.Name = "AddMach";
+			this.AddMach.Size = new System.Drawing.Size(112, 38);
+			this.AddMach.TabIndex = 53;
+			this.AddMach.Text = "Sauvegarde";
+			this.AddMach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.AddMach.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
+			this.AddMach.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.AddMach.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.AddMach.UseSelectable = true;
+			this.AddMach.UseTileImage = true;
+			this.AddMach.Click += new System.EventHandler(this.AddMach_Click);
+			// 
+			// metroTile4
+			// 
+			this.metroTile4.ActiveControl = null;
+			this.metroTile4.Location = new System.Drawing.Point(711, 102);
+			this.metroTile4.Name = "metroTile4";
+			this.metroTile4.Size = new System.Drawing.Size(112, 38);
+			this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
+			this.metroTile4.TabIndex = 62;
+			this.metroTile4.Text = "Supprimer";
+			this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile4.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
+			this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile4.UseSelectable = true;
+			this.metroTile4.UseTileImage = true;
+			this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
+			// 
+			// metroTile5
+			// 
+			this.metroTile5.ActiveControl = null;
+			this.metroTile5.Location = new System.Drawing.Point(593, 102);
+			this.metroTile5.Name = "metroTile5";
+			this.metroTile5.Size = new System.Drawing.Size(112, 38);
+			this.metroTile5.TabIndex = 61;
+			this.metroTile5.Text = "Mise à jour";
+			this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile5.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
+			this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile5.UseSelectable = true;
+			this.metroTile5.UseTileImage = true;
+			this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
+			// 
+			// metroTile6
+			// 
+			this.metroTile6.ActiveControl = null;
+			this.metroTile6.Location = new System.Drawing.Point(466, 102);
+			this.metroTile6.Name = "metroTile6";
+			this.metroTile6.Size = new System.Drawing.Size(112, 38);
+			this.metroTile6.TabIndex = 60;
+			this.metroTile6.Text = "Sauvegarde";
+			this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile6.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
+			this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile6.UseSelectable = true;
+			this.metroTile6.UseTileImage = true;
+			this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
+			// 
+			// DelAll
+			// 
+			this.DelAll.ActiveControl = null;
+			this.DelAll.Location = new System.Drawing.Point(696, 26);
+			this.DelAll.Name = "DelAll";
+			this.DelAll.Size = new System.Drawing.Size(112, 38);
+			this.DelAll.Style = MetroFramework.MetroColorStyle.Red;
+			this.DelAll.TabIndex = 42;
+			this.DelAll.Text = "Supprimer";
+			this.DelAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.DelAll.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
+			this.DelAll.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.DelAll.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.DelAll.UseSelectable = true;
+			this.DelAll.UseTileImage = true;
+			this.DelAll.Click += new System.EventHandler(this.DelAll_Click);
+			// 
+			// SaveUpdate
+			// 
+			this.SaveUpdate.ActiveControl = null;
+			this.SaveUpdate.Location = new System.Drawing.Point(474, 206);
+			this.SaveUpdate.Name = "SaveUpdate";
+			this.SaveUpdate.Size = new System.Drawing.Size(204, 38);
+			this.SaveUpdate.Style = MetroFramework.MetroColorStyle.Green;
+			this.SaveUpdate.TabIndex = 41;
+			this.SaveUpdate.Text = "Mise à jour des operateus";
+			this.SaveUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.SaveUpdate.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
+			this.SaveUpdate.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.SaveUpdate.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.SaveUpdate.UseSelectable = true;
+			this.SaveUpdate.UseStyleColors = true;
+			this.SaveUpdate.UseTileImage = true;
+			this.SaveUpdate.Click += new System.EventHandler(this.SaveUpdate_Click);
+			// 
+			// AddButton
+			// 
+			this.AddButton.ActiveControl = null;
+			this.AddButton.Location = new System.Drawing.Point(455, 26);
+			this.AddButton.Name = "AddButton";
+			this.AddButton.Size = new System.Drawing.Size(112, 38);
+			this.AddButton.TabIndex = 40;
+			this.AddButton.Text = "Sauvegarde";
+			this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.AddButton.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
+			this.AddButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.AddButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.AddButton.UseSelectable = true;
+			this.AddButton.UseTileImage = true;
+			this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+			// 
+			// MachineIDInput
+			// 
+			// 
+			// 
+			// 
+			this.MachineIDInput.CustomButton.Image = null;
+			this.MachineIDInput.CustomButton.Location = new System.Drawing.Point(123, 1);
+			this.MachineIDInput.CustomButton.Name = "";
+			this.MachineIDInput.CustomButton.Size = new System.Drawing.Size(21, 21);
+			this.MachineIDInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+			this.MachineIDInput.CustomButton.TabIndex = 1;
+			this.MachineIDInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.MachineIDInput.CustomButton.UseSelectable = true;
+			this.MachineIDInput.DisplayIcon = true;
+			this.MachineIDInput.Icon = global::SafranCotChargeCapa.Properties.Resources.search_24px;
+			this.MachineIDInput.IconRight = true;
+			this.MachineIDInput.Lines = new string[0];
+			this.MachineIDInput.Location = new System.Drawing.Point(205, 86);
+			this.MachineIDInput.MaxLength = 32767;
+			this.MachineIDInput.Name = "MachineIDInput";
+			this.MachineIDInput.PasswordChar = '\0';
+			this.MachineIDInput.PromptText = "Operation ID";
+			this.MachineIDInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.MachineIDInput.SelectedText = "";
+			this.MachineIDInput.SelectionLength = 0;
+			this.MachineIDInput.SelectionStart = 0;
+			this.MachineIDInput.ShortcutsEnabled = true;
+			this.MachineIDInput.ShowButton = true;
+			this.MachineIDInput.Size = new System.Drawing.Size(145, 23);
+			this.MachineIDInput.TabIndex = 12;
+			this.MachineIDInput.UseSelectable = true;
+			this.MachineIDInput.WaterMark = "Operation ID";
+			this.MachineIDInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			this.MachineIDInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+			this.MachineIDInput.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.MachineIDInput_ButtonClick);
+			// 
 			// ManOperation
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1007, 544);
+			this.Controls.Add(this.metroTile2);
+			this.Controls.Add(this.metroTile1);
 			this.Controls.Add(this.metroLabel13);
 			this.Controls.Add(this.metroLabel12);
 			this.Controls.Add(this.metroComboBox1);
@@ -833,6 +863,7 @@
 			this.Controls.Add(this.metroLabel1);
 			this.Name = "ManOperation";
 			this.Text = "Gestion des operations";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManOperation_FormClosed);
 			this.Load += new System.EventHandler(this.ManOperation_Load);
 			((System.ComponentModel.ISupportInitialize)(this.YearSel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.WeekSel)).EndInit();
@@ -887,11 +918,12 @@
 		private MetroFramework.Controls.MetroLabel metroLabel5;
 		private MetroFramework.Controls.MetroLabel metroLabel6;
 		private MetroFramework.Controls.MetroTabPage metroTabPage2;
-		private MetroFramework.Controls.MetroTabPage metroTabPage3;
 		private MetroFramework.Controls.MetroGrid outilsgrid;
 		private MetroFramework.Controls.MetroComboBox metroComboBox1;
 		private MetroFramework.Controls.MetroLabel metroLabel11;
 		private MetroFramework.Controls.MetroLabel metroLabel12;
 		private MetroFramework.Controls.MetroLabel metroLabel13;
+		private MetroFramework.Controls.MetroTile metroTile1;
+		private MetroFramework.Controls.MetroTile metroTile2;
 	}
 }

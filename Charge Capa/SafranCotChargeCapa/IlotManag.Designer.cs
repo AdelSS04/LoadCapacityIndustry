@@ -474,6 +474,7 @@
 			this.Controls.Add(this.metroLabel1);
 			this.Name = "IlotManag";
 			this.Text = "IlotManag";
+			this.TopMost = true;
 			this.Load += new System.EventHandler(this.IlotManag_Load);
 			((System.ComponentModel.ISupportInitialize)(this.YearSel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.WeekSel)).EndInit();
