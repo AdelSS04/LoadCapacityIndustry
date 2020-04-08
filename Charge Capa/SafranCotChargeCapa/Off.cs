@@ -70,7 +70,9 @@ namespace SafranCotChargeCapa
 		List<float> yValues = new List<float>();
 		List<float> Capa = new List<float>();
 		List<double> PerCV = new List<double>();
+		List<double> PerTools = new List<double>();
 		List<double> MachCapa = new List<double>();
+		List<double>ToolsCapa = new List<double>();
 		List<Operators> op;
 		List<Operation> OP;
 		List<Demande> dmm1;
@@ -141,15 +143,13 @@ namespace SafranCotChargeCapa
 					};br.Add(brr);
 				
 				}
-				brr = new Besoin
-				{
-					WeekWork = br[(br.Count)-1].WeekWork+1,
-					ActualCharge =br.Select(r=>r.ActualCharge).Average(),
-					AcutalCapa = br.Select(r => r.AcutalCapa).Average(),
-					BesoinH = br.Select(r => r.BesoinH).Average(),
-
-
-				}; br.Add(brr);
+				metroLabel8.Text =Math.Round( br.Select(r => r.ActualCharge).Average(),2).ToString() + "H/semaine";
+				metroLabel7.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() + "H/semaine";
+				metroLabel9.Text = Math.Round(br.Select(r => r.BesoinH).Average(), 2).ToString() + "H/semaine";
+				if (br.Select(r => r.BesoinH).Average() > 0)
+					metroLabel9.ForeColor = System.Drawing.Color.Green;
+				else
+					metroLabel9.ForeColor = System.Drawing.Color.Red;
 				var series = new Series()
 				{
 					ChartType = SeriesChartType.Column,
@@ -232,6 +232,16 @@ namespace SafranCotChargeCapa
 					row.Cells[3].Style.BackColor = System.Drawing.Color.Red;
 			}
 		}
+		public void setTools()
+		{
+			foreach (DataGridViewRow row in metroGrid3.Rows)
+			{
+				if (float.Parse(row.Cells[3].Value.ToString()) >= 0)
+					row.Cells[3].Style.BackColor = System.Drawing.Color.Green;
+				else
+					row.Cells[3].Style.BackColor = System.Drawing.Color.Red;
+			}
+		}
 		private void metroGrid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			
@@ -305,15 +315,13 @@ namespace SafranCotChargeCapa
 					}; br.Add(brr);
 
 				}
-				brr = new Besoin
-				{
-					WeekWork = br[(br.Count) - 1].WeekWork + 1,
-					ActualCharge = br.Select(r => r.ActualCharge).Average(),
-					AcutalCapa = br.Select(r => r.AcutalCapa).Average(),
-					BesoinH = br.Select(r => r.BesoinH).Average(),
-
-
-				}; br.Add(brr);
+				metroLabel11.Text = Math.Round(br.Select(r => r.ActualCharge).Average(), 2).ToString() + "H/semaine";
+				metroLabel12.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() + "H/semaine";
+				metroLabel10.Text = Math.Round(br.Select(r => r.BesoinH).Average(), 2).ToString() + "H/semaine";
+				if (br.Select(r => r.BesoinH).Average() > 0)
+					metroLabel10.ForeColor = System.Drawing.Color.Green;
+				else
+					metroLabel10.ForeColor = System.Drawing.Color.Red;
 				metroGrid2.DataSource = br;
 				setB();
 			}
@@ -351,7 +359,128 @@ namespace SafranCotChargeCapa
 			{
 				MachineList.Items.Add(machine.MachineID);
 			}
+			//List<string> ToolsName = ToolsDBO.ListToolsOfGrp(metroComboBox2.SelectedItem.ToString());
+			//metroComboBox3.Items.AddRange(ToolsName.ToArray());
 			setB();
+		}
+
+		private void metroLabel1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void metroComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+		{ try
+			{
+				List<Tools> toolsList = ToolsDBO.ListToolsOfGrp(metroComboBox2.SelectedItem.ToString());
+				List<DemandeOP> AllDem =new List<DemandeOP>();
+				List < DemandeOP > OnlyOneDem = new List<DemandeOP>();
+				List<ToolsOpenDay> OneTollsOpen = new List<ToolsOpenDay>();
+				List<List<ToolsOpenDay>> AllTollsOpen = new List<List<ToolsOpenDay>>();
+				foreach (Tools tools in toolsList)
+				{
+					OneTollsOpen = ToolsDBO.GetToolsOpenDay(tools.ToolsID, System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), Convert.ToInt32(YearSelect.SelectedItem));
+					;
+
+					OnlyOneDem = (ToolsDBO.GetDemandeOPTools(tools.ToolsID));
+					AllDem.AddRange(OnlyOneDem);
+					AllTollsOpen.Add(OneTollsOpen);
+				}
+
+				var FinaleAllDemande = AllDem.GroupBy(x =>new { x.OperationID, x.WeekDem }).Select(y => y.First());
+				var FinaleCharge = FinaleAllDemande.GroupBy(t => t.WeekDem).Select(t => new { ID = t.Key, Value = t.Sum(u => u.CycleTime * u.somm) }).ToList();
+				
+
+					
+					var series = new Series()
+					{
+						ChartType = SeriesChartType.Column,
+						Color = Color.FromArgb(93, 138, 168),
+						IsVisibleInLegend = true,
+
+						Name = "Charge",
+						LegendText = "Charge",
+
+					};
+					var series1 = new Series()
+					{
+						ChartType = SeriesChartType.Spline,
+						IsVisibleInLegend = true,
+						BorderDashStyle = ChartDashStyle.Solid,
+
+						Name = "Capa",
+						LegendText = "Capacité",
+						BorderWidth = 3,
+						Color = Color.FromArgb(255, 126, 0),
+					};
+				List<int> Xval = new List<int>();
+				List<double> chr = new List<double>();
+				foreach (var k in FinaleCharge)
+				{
+					chr.Add(Math.Round((k.Value) + (((il.CRM) / 100) * k.Value), 1));
+					Xval.Add(k.ID);
+				}
+				MachCapa.Clear();
+				List<int> inn = new List<int>();
+				int longeurList = AllTollsOpen.Count();
+				int longeurelement = AllTollsOpen[0].Count();
+				for (int k = 0; k < longeurelement; k++)
+				{
+					inn.Clear();
+					for (int i = 0; i < longeurList; i++)
+					{
+						inn.Add(AllTollsOpen[i][k].OpenDay);
+				    }
+					ToolsCapa.Add(inn.Sum() * 24);
+					
+				}
+
+				chart3.Series.Clear();
+				chart3.Series.Add(series);
+				chart3.Series.Add(series1);
+				chart3.Series[0].Points.Clear(); chart3.Series[1].Points.Clear();
+				chart3.ChartAreas[0].AxisX.Interval = 1;
+
+				chart3.Series[0].Points.DataBindXY(Xval, chr);
+				chart3.Series[1].Points.DataBindXY(Xval, ToolsCapa);
+				List<Besoin> br = new List<Besoin>();
+				Besoin brr;
+				for (int i = 0; i < chr.Count; i++)
+				{
+					PerTools.Add(Math.Round(chr[i] / ToolsCapa[i], 2) * 100);
+					brr = new Besoin
+					{
+						WeekWork = Xval[i],
+						ActualCharge = float.Parse(chr[i].ToString()),
+						AcutalCapa = float.Parse(ToolsCapa[i].ToString()),
+						BesoinH = float.Parse(ToolsCapa[i].ToString()) - float.Parse(chr[i].ToString()),
+
+
+					}; br.Add(brr);
+
+				}
+				metroLabel17.Text = Math.Round(br.Select(r => r.ActualCharge).Average(), 2).ToString() + "H/semaine";
+				metroLabel18.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() + "H/semaine";
+				metroLabel16.Text = Math.Round(br.Select(r => r.BesoinH).Average(), 2).ToString() + "H/semaine";
+				if (br.Select(r => r.BesoinH).Average() > 0)
+					metroLabel16.ForeColor = System.Drawing.Color.Green;
+				else
+					metroLabel16.ForeColor = System.Drawing.Color.Red;
+
+				metroGrid3.DataSource = br;
+			setTools(); 
+				
+					
+					
+				
+				
+					
+					
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }

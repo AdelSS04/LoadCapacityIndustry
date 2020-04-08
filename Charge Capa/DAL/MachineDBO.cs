@@ -97,7 +97,7 @@ namespace DAL
 		public static List<MachineOpenDay> GetMachineShiftCalen (string machineid,int Wek,int Yr)
 		{
 			List<MachineOpenDay> Lur = new List<MachineOpenDay>();
-			string requete = String.Format("select * from MachineOpenDay where ((MachineID ='{0}' and Weekk>=12) and Yearr = {2});", machineid,Wek,Yr);
+			string requete = String.Format("select * from MachineOpenDay where ((MachineID ='{0}' and WeekT>=12) and YearT = {2});", machineid,Wek,Yr);
 			OleDbDataReader rdd = Util.lire(requete);
 			MachineOpenDay ur;
 			while (rdd.Read())
@@ -105,8 +105,8 @@ namespace DAL
 				ur = new MachineOpenDay
 				{
 					MachineID = rdd.GetString(0),
-					DateYear = rdd.GetInt32(1),
-					DateWeek = rdd.GetInt32(2),
+					YearT = rdd.GetInt32(1),
+					WeekT = rdd.GetInt32(2),
 
 					NumberOfshift = rdd.GetInt32(3),
 					
