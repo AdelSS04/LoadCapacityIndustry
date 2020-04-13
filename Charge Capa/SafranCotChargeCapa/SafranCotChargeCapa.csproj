@@ -94,6 +94,12 @@
     <Compile Include="IlotManag.Designer.cs">
       <DependentUpon>IlotManag.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagPoste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagPoste.Designer.cs">
+      <DependentUpon>ManagPoste.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageTools.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="IlotManag.resx">
       <DependentUpon>IlotManag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagPoste.resx">
+      <DependentUpon>ManagPoste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageTools.resx">
       <DependentUpon>ManageTools.cs</DependentUpon>

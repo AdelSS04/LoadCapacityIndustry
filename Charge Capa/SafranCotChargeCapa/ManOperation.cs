@@ -22,8 +22,8 @@ namespace SafranCotChargeCapa
 		int Listitem;
 		private void ManOperation_Load(object sender, EventArgs e)
 		{
-			try
-			{
+		//	try
+			//{
 				List<Tools> machh = ToolsDBO.GetAllTools();
 				foreach (Tools u in machh)
 				{
@@ -53,11 +53,11 @@ namespace SafranCotChargeCapa
 				}
 				Listitem = PRoductIDSelect.Items.Count;
 				
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		MessageBox.Show(ex.Message);
+			//}
 		}
 
 		private void metroUserControl1_Load(object sender, EventArgs e)
@@ -95,8 +95,8 @@ namespace SafranCotChargeCapa
 		}
 		public void searchOp(string opname)
 		{
-			try
-			{
+		//	try
+		//	{
 				List<Operation> Lur = OperationDBO.GetOperation(opname);
 				for (int i = 0; i < PRoductIDSelect.Items.Count; i++)
 				{
@@ -123,8 +123,8 @@ namespace SafranCotChargeCapa
 					List<ToolsOccupationTime> ToolsOccupationTimeList = ToolsOccupationTimeDBO.GettoolsOccupationTimes(opname);
 					machineCycleList.DataSource = machineCycleTimesList;
 					outilsgrid.DataSource = ToolsOccupationTimeList;
-					int index = IlotIDS.FindString(Lur[0].IlotID);
-					IlotIDS.SelectedIndex = index;
+					////int index = IlotIDS.FindString(Lur[0].IlotID);//show it later
+					//IlotIDS.SelectedIndex = index;
 					MachineIDInput.Text = InputOperation.SelectedItem.ToString();
 					//
 
@@ -140,11 +140,11 @@ namespace SafranCotChargeCapa
 				else
 				{ MessageBox.Show("404 not found"); }
 
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		MessageBox.Show(ex.Message);
+		//	}
 		}
 		private void RoleInput_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -189,8 +189,8 @@ namespace SafranCotChargeCapa
 				opname = InputOperation.SelectedItem.ToString();
 			else
 				opname = MachineIDInput.Text;
-			try
-			{
+		//	try
+		//	{
 				List<Operation> op = new List<Operation>();
 				for (int i = 0; i < Listitem; i++)
 				{
@@ -201,7 +201,7 @@ namespace SafranCotChargeCapa
 						Operation opp = new Operation
 						{
 							OperationID = opname,
-							IlotID = IlotIDS.SelectedItem.ToString(),
+							
 							ManuelCycleTime = float.Parse(EffInput.Text.Trim(), System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
 							ProductID = PRoductIDSelect.Items[i].ToString(),
 
@@ -214,14 +214,14 @@ namespace SafranCotChargeCapa
 					OperationDBO.AddOperation(oo);
 					
 				}
-				OpGroupeDBO.AddPosteCharge(opname, metroComboBox1.SelectedItem.ToString());
+				OpGroupeDBO.AddPosteCharge(opname, metroComboBox1.SelectedItem.ToString(),"fix");
 				MessageBox.Show("done !!");
 				
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
+			//}
+			//catch (Exception ex)
+		//	{
+		//		MessageBox.Show(ex.Message);
+			//}
 		}
 
 		private void AddMach_Click(object sender, EventArgs e)
@@ -290,8 +290,8 @@ namespace SafranCotChargeCapa
 				OperatorsO op = new OperatorsO
 				{
 					OperationID = opname,
-					Yearr = int.Parse(YearSel.Value.ToString()),
-					Weekk = int.Parse(WeekSel.Value.ToString()),
+					YearT = int.Parse(YearSel.Value.ToString()),
+					WeekT = int.Parse(WeekSel.Value.ToString()),
 					NumberOfOperator = int.Parse(OpSel.Value.ToString()),
 
 				};
@@ -300,7 +300,7 @@ namespace SafranCotChargeCapa
 				Calendar cal = dfi.Calendar;
 				for (int i = 0; i <= cal.GetWeekOfYear(date1, dfi.CalendarWeekRule, DayOfWeek.Monday); i++)
 				{
-					op.Weekk = i;
+					op.WeekT = i;
 					OperatorsODBO.SetOperatingNumber(op);
 				}
 				MessageBox.Show("Add done !!");
@@ -316,8 +316,8 @@ namespace SafranCotChargeCapa
 					OperatorsO op = new OperatorsO
 					{
 						OperationID = opname,
-						Yearr = int.Parse(YearSel.Value.ToString()),
-						Weekk = int.Parse(WeekSel.Value.ToString()),
+						YearT = int.Parse(YearSel.Value.ToString()),
+						WeekT = int.Parse(WeekSel.Value.ToString()),
 						NumberOfOperator = int.Parse(OpSel.Value.ToString()),
 
 					};
@@ -493,8 +493,9 @@ namespace SafranCotChargeCapa
 		{
 			metroComboBox1.Items.Clear();
 			List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(IlotIDS.SelectedItem.ToString());
-			foreach (OpGroupe o in IlotGrpOFOP)
-				metroComboBox1.Items.Add(o.GrpName);
+			var DistinctItems = IlotGrpOFOP.Select(x => x.GrpName).Distinct();
+			foreach (var o in DistinctItems)
+				metroComboBox1.Items.Add(o.ToString());
 		}
 		
 		private void metroTile1_Click_1(object sender, EventArgs e)
@@ -518,7 +519,7 @@ namespace SafranCotChargeCapa
 						Operation opp = new Operation
 						{
 							OperationID = MachineIDInput.Text,
-							IlotID = IlotIDS.SelectedItem.ToString(),
+						
 							ManuelCycleTime = float.Parse(EffInput.Text.Trim(), System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
 							ProductID = PRoductIDSelect.Items[i].ToString(),
 

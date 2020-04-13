@@ -11,7 +11,7 @@ namespace BEL
         public string IlotID { get; set; }
         public int DayOfWorking { get; set; }
         public int NumberOfOperator { get; set; }
-        public int Yearr { get; set; }
-        public int Weekk { get; set; }
+        public int YearT { get; set; }
+        public int WeekT { get; set; }
     }
 }

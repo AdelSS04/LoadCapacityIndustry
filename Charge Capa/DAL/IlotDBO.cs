@@ -11,31 +11,10 @@ using System.Threading.Tasks;
 namespace DAL
 {
 	public class IlotDBO {
-		public static List<Operation> ListeOpePostChar(string idpostecharge)
-		{
-			string requete = String.Format("select * from operation where IlotID ='{0}'   ;", idpostecharge);
-			OleDbDataReader rd = Util.lire(requete);
-
-
-			List<Operation> L = new List<Operation>();
-			Operation c;
-			while (rd.Read())
-			{
-				c = new Operation
-				{IlotID = rd.GetString(0),
-					OperationID=rd.GetString(1),
-					ManuelCycleTime=float.Parse(rd.GetString(2)),
-					ProductID=rd.GetString(3),
-
-				};
-				L.Add(c);
-			}
-			Util.Disconnect();
-			return L;
-		}
+		
 		public static List<OpGroupe> IlotOpgrp(string idpostecharge)
 		{
-			string requete = String.Format("select  DISTINCT MCT.GroupName from (select * from ( OperationGroupe AS MCT Inner join Operation AS O ON MCT.OperationID=O.OperationID) inner join Ilot AS D on D.IlotID = O.IlotID where D.IlotID = '{0}');  ", idpostecharge);
+			string requete = String.Format("select * from OperationGroupe where IlotID ='{0}';  ", idpostecharge);
 			OleDbDataReader rdd = Util.lire(requete);
 
 
@@ -46,7 +25,9 @@ namespace DAL
 				c = new OpGroupe
 				{
 					GrpName = rdd["GroupName"].ToString(),
-				//	OperationID = rdd["OperationID"].ToString(),
+					IlotID= rdd["IlotID"].ToString(),
+					OperationID = rdd["OperationID"].ToString(),
+					//	OperationID = rdd["OperationID"].ToString(),
 				};
 				L.Add(c);
 			}
