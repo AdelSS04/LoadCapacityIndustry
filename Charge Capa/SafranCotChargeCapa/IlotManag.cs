@@ -153,8 +153,8 @@ namespace SafranCotChargeCapa
 				Operators op = new Operators
 				{
 					IlotID = IlotIDInput.Text,
-					Yearr = int.Parse(YearSel.Value.ToString()),
-					Weekk = int.Parse(WeekSel.Value.ToString()),
+					YearT = int.Parse(YearSel.Value.ToString()),
+					WeekT = int.Parse(WeekSel.Value.ToString()),
 					NumberOfOperator = int.Parse(OpSel.Value.ToString()),
 
 				};

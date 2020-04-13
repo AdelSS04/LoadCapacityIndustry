@@ -13,8 +13,8 @@ namespace DAL
 	public class CalendrierDBO {
 	public static bool SetCal (Calendrier cl)
 		{
-			 string requete = String.Format("insert into Calendrier(Yearr, Weekk,OpenDayOfWeek)" +
-				" values ({0},{1},{2});",cl.DateYear,cl.DateWeek,cl.OpenDayPerWeek );
+			 string requete = String.Format("insert into Calendrier(YearT, WeekT,OpenDayOfWeek)" +
+				" values ({0},{1},{2});",cl.YearT,cl.WeekT,cl.OpenDayPerWeek );
 			
 			return	 Util.miseajour(requete);
 			
@@ -22,15 +22,15 @@ namespace DAL
 		}
 		public static bool DeletAllCall(int yr)
 		{
-			string requete = String.Format("delete * from Calendrier where Yearr={0} ;", yr);
+			string requete = String.Format("delete * from Calendrier where YearT={0} ;", yr);
 
 			return Util.miseajour(requete);
 
 		}
 		public static bool SetCalMach(Machine mach, Calendrier cl)
 		{
-			string requete = String.Format("insert into MachineOpenDay(MachineID,Yearr, Weekk,OpenDayOfWeek)" +
-			   " values ('{0}',{1},{2},{3});", mach.MachineID,cl.DateYear, cl.DateWeek, cl.OpenDayPerWeek);
+			string requete = String.Format("insert into MachineOpenDay(MachineID,YearT, WeekT,OpenDayOfWeek)" +
+			   " values ('{0}',{1},{2},{3});", mach.MachineID,cl.YearT, cl.WeekT, cl.OpenDayPerWeek);
 			
 			return Util.miseajour(requete);
 
@@ -39,7 +39,7 @@ namespace DAL
 		public static List<Calendrier> GetAllUSer(int yearz)
 		{
 			List<Calendrier> Lur = new List<Calendrier>();
-			string requete = String.Format("select * from Calendrier where Yearr={0} ;", yearz);
+			string requete = String.Format("select * from Calendrier where YearT={0} ;", yearz);
 			OleDbDataReader rdd = Util.lire(requete);
 			Calendrier ur;
 			while (rdd.Read())
@@ -47,8 +47,8 @@ namespace DAL
 				ur = new Calendrier
 				{
 					DateID=rdd.GetInt32(0),
-					DateWeek=rdd.GetInt32(2),
-					DateYear=rdd.GetInt32(1),
+					WeekT=rdd.GetInt32(2),
+					YearT=rdd.GetInt32(1),
 					OpenDayPerWeek=rdd.GetInt32(3),
 					
 				};

@@ -106,5 +106,74 @@ namespace DAL
 
 		}
 
+		public static List<Tools> ListToolsOfGrp(string idpostecharge)
+		{
+			string requete = String.Format("SELECT Tools.ToolsID,Tools.ToolsName FROM Tools INNER JOIN ( ToolsOccupationTime INNER JOIN (Operation INNER JOIN OperationGroupe ON Operation.OperationID = OperationGroupe.OperationID ) ON ToolsOccupationTime.OperationID = Operation.OperationID) ON Tools.ToolsID = ToolsOccupationTime.ToolsID where OperationGroupe.GroupName='{0}' ;", idpostecharge);
+			OleDbDataReader rd = Util.lire(requete);
+
+
+			List<Tools> L = new List<Tools>();
+			Tools tools;
+			while (rd.Read())
+			{
+				tools = new Tools
+				{
+					ToolsID = rd["ToolsID"].ToString(),
+					ToolsName = rd["ToolsName"].ToString(),
+				};
+				L.Add(tools);
+			}
+			
+		
+			Util.Disconnect();
+			return L;
+		}
+		public static List<DemandeOP> GetDemandeOPTools(string id)
+		{
+			List<DemandeOP> Lur = new List<DemandeOP>();
+			string requete = String.Format("select sum(DemandeQTE),O.OperationID,WeekDem,MCT.OccupationTime from (select * from ( ToolsOccupationTime AS MCT Inner join Operation AS O ON MCT.OperationID=O.OperationID) inner join Demande AS D on D.ProductID=O.ProductID where MCT.ToolsID='{0}' and D.WeekDem>=12 ) group by  O.OperationID,WeekDem,MCT.OccupationTime;", id);
+			OleDbDataReader rdd = Util.lire(requete);
+			DemandeOP ur;
+			while (rdd.Read())
+			{
+				ur = new DemandeOP
+				{
+					OperationID = rdd["OperationID"].ToString(),
+					somm = int.Parse(rdd["Expr1000"].ToString()),
+					WeekDem = int.Parse(rdd["WeekDem"].ToString()),
+					CycleTime = float.Parse(rdd["OccupationTime"].ToString()),
+
+				};
+				Lur.Add(ur);
+
+			}
+			Util.Disconnect();
+			return Lur;
+
+
+		}
+		public static List<ToolsOpenDay> GetToolsOpenDay(string machineid, int Wek, int Yr)
+		{
+			List<ToolsOpenDay> Lur = new List<ToolsOpenDay>();
+			string requete = String.Format("select * from ToolsOpenDay where ((ToolsID ='{0}' and WeekT>=12) and YearT = {2});", machineid, Wek, Yr);
+			OleDbDataReader rdd = Util.lire(requete);
+			ToolsOpenDay ur;
+			while (rdd.Read())
+			{
+				ur = new ToolsOpenDay
+				{
+					ToolsID = rdd.GetString(0),
+					YearT = rdd.GetInt32(1),
+					WeekT = rdd.GetInt32(2),
+
+					OpenDay = rdd.GetInt32(3),
+
+				};
+				Lur.Add(ur);
+
+			}
+			Util.Disconnect();
+			return Lur;
+		}
 	}
 }

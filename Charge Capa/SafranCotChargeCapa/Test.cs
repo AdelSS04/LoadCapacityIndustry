@@ -108,8 +108,8 @@ namespace SafranCotChargeCapa
 
 						dm = new Calendrier
 						{
-							DateWeek = Convert.ToInt32(reader[3]),
-							DateYear = Convert.ToInt32(reader[2]),
+							WeekT = Convert.ToInt32(reader[3]),
+							YearT = Convert.ToInt32(reader[2]),
 							OpenDayPerWeek = Convert.ToInt32(reader[0]),
 							DateID = Convert.ToInt32(reader[1]),
 
@@ -202,8 +202,8 @@ namespace SafranCotChargeCapa
 					
 						Calendrier dd = new Calendrier
 						{
-							DateWeek = int.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString()),
-							DateYear = int.Parse(dataGridView1.Rows[j].Cells[1].Value.ToString()),
+							WeekT = int.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString()),
+							YearT = int.Parse(dataGridView1.Rows[j].Cells[1].Value.ToString()),
 							OpenDayPerWeek = int.Parse(dataGridView1.Rows[j].Cells[0].Value.ToString()),
 						};
 
