@@ -60,8 +60,9 @@ namespace SafranCotChargeCapa
 			{
 				metroComboBox2.Items.Clear();
 				List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(metroComboBox1.SelectedItem.ToString());
-				foreach (OpGroupe o in IlotGrpOFOP)
-					metroComboBox2.Items.Add(o.GrpName);
+				var DistinctItems = IlotGrpOFOP.Select(x => x.GrpName).Distinct();
+				foreach (var o in DistinctItems)
+					metroComboBox2.Items.Add(o.ToString());
 
 			}
 

@@ -21,9 +21,9 @@ namespace DAL
 			{
 				ur = new Operation
 				{
-					IlotID = rdd.GetString(0),
-				ManuelCycleTime = float.Parse(rdd.GetString(2)),
-				ProductID = rdd.GetString(3)
+				
+				ManuelCycleTime = float.Parse(rdd.GetString(1)),
+				ProductID = rdd.GetString(2)
 			};
 			Lur.Add(ur);
 
@@ -67,10 +67,10 @@ namespace DAL
 			while (rdd.Read())
 			{
 				ur = new Operation
-				{OperationID = rdd.GetString(1),
-					IlotID = rdd.GetString(0),
-					ManuelCycleTime = float.Parse(rdd.GetString(2)),
-					ProductID = rdd.GetString(3)
+				{OperationID = rdd.GetString(0),
+					
+					ManuelCycleTime = float.Parse(rdd.GetString(1)),
+					ProductID = rdd.GetString(2)
 				};
 				Lur.Add(ur);
 
@@ -87,15 +87,35 @@ namespace DAL
 			return Util.miseajour(requete);
 
 		}
-		
+		public static bool DeletToolsOperation(Operation ur)
+		{
+			string requete = String.Format("delete * from ToolsOccupationTime where OperationID='{0}' ;", ur.OperationID);
+
+			return Util.miseajour(requete);
+
+		}
+		public static bool DeletMachineOperation(Operation ur)
+		{
+			string requete = String.Format("delete * from MachineCycleTime where OperationID='{0}';", ur.OperationID);
+
+			return Util.miseajour(requete);
+
+		}
 		public static bool AddOperation(Operation ur)
 		{
-			string requete = String.Format("insert into operation(IlotID, OperationID, ManuelCycleTime,ProductID)" +
-				" values ('{0}','{1}','{2}','{3}');", ur.IlotID, ur.OperationID, ur.ManuelCycleTime, ur.ProductID);
+			string requete = String.Format("insert into operation(OperationID,ManuelCycleTime,ProductID)" +
+				" values ('{0}','{1}','{2}');", ur.OperationID, ur.ManuelCycleTime, ur.ProductID);
 
 			return Util.miseajour(requete);
 			//return requete;
 		}
+		public static bool UpdateOperation(Operation op)
+		{
+			string requete = String.Format("update Operation set (ManuelCycleTime={0},ProductID={2})" +
+				   " where OperationID='{1}' ) ;",  op.ManuelCycleTime, op.OperationID, op.ProductID);
 
+			return Util.miseajour(requete);
+
+		}
 	}
 }

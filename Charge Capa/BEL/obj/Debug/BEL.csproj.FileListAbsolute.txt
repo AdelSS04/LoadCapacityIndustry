@@ -2,4 +2,3 @@ C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\bin\Debug\BEL.dll
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\bin\Debug\BEL.pdb
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\obj\Debug\BEL.dll
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\obj\Debug\BEL.pdb
-C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\obj\Debug\BEL.csprojAssemblyReference.cache

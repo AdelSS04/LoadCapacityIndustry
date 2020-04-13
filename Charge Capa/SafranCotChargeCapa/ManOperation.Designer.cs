@@ -43,23 +43,11 @@
 			this.EffInput = new MetroFramework.Controls.MetroTextBox();
 			this.InputOperation = new MetroFramework.Controls.MetroComboBox();
 			this.PRoductIDSelect = new System.Windows.Forms.CheckedListBox();
-			this.DelAll = new MetroFramework.Controls.MetroTile();
-			this.SaveUpdate = new MetroFramework.Controls.MetroTile();
-			this.AddButton = new MetroFramework.Controls.MetroTile();
-			this.MachineIDInput = new MetroFramework.Controls.MetroTextBox();
 			this.IlotIDS = new MetroFramework.Controls.MetroComboBox();
-			this.metroTile4 = new MetroFramework.Controls.MetroTile();
-			this.metroTile5 = new MetroFramework.Controls.MetroTile();
-			this.metroTile6 = new MetroFramework.Controls.MetroTile();
 			this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
 			this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
 			this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-			this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-			this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-			this.YearSel = new System.Windows.Forms.NumericUpDown();
-			this.WeekSel = new System.Windows.Forms.NumericUpDown();
-			this.OpSel = new System.Windows.Forms.NumericUpDown();
 			this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
 			this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
 			this.DelMach = new MetroFramework.Controls.MetroTile();
@@ -73,14 +61,18 @@
 			this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
 			this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
 			this.outilsgrid = new MetroFramework.Controls.MetroGrid();
-			this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+			this.metroTile4 = new MetroFramework.Controls.MetroTile();
+			this.metroTile5 = new MetroFramework.Controls.MetroTile();
+			this.metroTile6 = new MetroFramework.Controls.MetroTile();
 			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-			((System.ComponentModel.ISupportInitialize)(this.YearSel)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.WeekSel)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.OpSel)).BeginInit();
+			this.metroTile2 = new MetroFramework.Controls.MetroTile();
+			this.metroTile1 = new MetroFramework.Controls.MetroTile();
+			this.DelAll = new MetroFramework.Controls.MetroTile();
+			this.AddButton = new MetroFramework.Controls.MetroTile();
+			this.MachineIDInput = new MetroFramework.Controls.MetroTextBox();
 			this.metroTabControl1.SuspendLayout();
 			this.metroTabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.machineCycleList)).BeginInit();
@@ -166,7 +158,11 @@
 			// 
 			// InputOperation
 			// 
+			this.InputOperation.AllowDrop = true;
+			this.InputOperation.DropDownHeight = 100;
+			this.InputOperation.DropDownWidth = 100;
 			this.InputOperation.FormattingEnabled = true;
+			this.InputOperation.IntegralHeight = false;
 			this.InputOperation.ItemHeight = 23;
 			this.InputOperation.Location = new System.Drawing.Point(573, 80);
 			this.InputOperation.Name = "InputOperation";
@@ -183,91 +179,6 @@
 			this.PRoductIDSelect.Size = new System.Drawing.Size(334, 79);
 			this.PRoductIDSelect.TabIndex = 15;
 			// 
-			// DelAll
-			// 
-			this.DelAll.ActiveControl = null;
-			this.DelAll.Location = new System.Drawing.Point(696, 26);
-			this.DelAll.Name = "DelAll";
-			this.DelAll.Size = new System.Drawing.Size(112, 38);
-			this.DelAll.Style = MetroFramework.MetroColorStyle.Red;
-			this.DelAll.TabIndex = 42;
-			this.DelAll.Text = "Supprimer";
-			this.DelAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.DelAll.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
-			this.DelAll.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.DelAll.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.DelAll.UseSelectable = true;
-			this.DelAll.UseTileImage = true;
-			this.DelAll.Click += new System.EventHandler(this.DelAll_Click);
-			// 
-			// SaveUpdate
-			// 
-			this.SaveUpdate.ActiveControl = null;
-			this.SaveUpdate.Location = new System.Drawing.Point(573, 26);
-			this.SaveUpdate.Name = "SaveUpdate";
-			this.SaveUpdate.Size = new System.Drawing.Size(112, 38);
-			this.SaveUpdate.TabIndex = 41;
-			this.SaveUpdate.Text = "Mise à jour";
-			this.SaveUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.SaveUpdate.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
-			this.SaveUpdate.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.SaveUpdate.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.SaveUpdate.UseSelectable = true;
-			this.SaveUpdate.UseTileImage = true;
-			this.SaveUpdate.Click += new System.EventHandler(this.SaveUpdate_Click);
-			// 
-			// AddButton
-			// 
-			this.AddButton.ActiveControl = null;
-			this.AddButton.Location = new System.Drawing.Point(445, 26);
-			this.AddButton.Name = "AddButton";
-			this.AddButton.Size = new System.Drawing.Size(112, 38);
-			this.AddButton.TabIndex = 40;
-			this.AddButton.Text = "Sauvegarde";
-			this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.AddButton.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
-			this.AddButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.AddButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.AddButton.UseSelectable = true;
-			this.AddButton.UseTileImage = true;
-			this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-			// 
-			// MachineIDInput
-			// 
-			// 
-			// 
-			// 
-			this.MachineIDInput.CustomButton.Image = null;
-			this.MachineIDInput.CustomButton.Location = new System.Drawing.Point(123, 1);
-			this.MachineIDInput.CustomButton.Name = "";
-			this.MachineIDInput.CustomButton.Size = new System.Drawing.Size(21, 21);
-			this.MachineIDInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-			this.MachineIDInput.CustomButton.TabIndex = 1;
-			this.MachineIDInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.MachineIDInput.CustomButton.UseSelectable = true;
-			this.MachineIDInput.DisplayIcon = true;
-			this.MachineIDInput.Icon = global::SafranCotChargeCapa.Properties.Resources.search_24px;
-			this.MachineIDInput.IconRight = true;
-			this.MachineIDInput.Lines = new string[0];
-			this.MachineIDInput.Location = new System.Drawing.Point(205, 86);
-			this.MachineIDInput.MaxLength = 32767;
-			this.MachineIDInput.Name = "MachineIDInput";
-			this.MachineIDInput.PasswordChar = '\0';
-			this.MachineIDInput.PromptText = "Operation ID";
-			this.MachineIDInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.MachineIDInput.SelectedText = "";
-			this.MachineIDInput.SelectionLength = 0;
-			this.MachineIDInput.SelectionStart = 0;
-			this.MachineIDInput.ShortcutsEnabled = true;
-			this.MachineIDInput.ShowButton = true;
-			this.MachineIDInput.Size = new System.Drawing.Size(145, 23);
-			this.MachineIDInput.TabIndex = 12;
-			this.MachineIDInput.UseSelectable = true;
-			this.MachineIDInput.WaterMark = "Operation ID";
-			this.MachineIDInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			this.MachineIDInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-			this.MachineIDInput.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.MachineIDInput_ButtonClick);
-			// 
 			// IlotIDS
 			// 
 			this.IlotIDS.FormattingEnabled = true;
@@ -279,64 +190,18 @@
 			this.IlotIDS.UseSelectable = true;
 			this.IlotIDS.SelectedIndexChanged += new System.EventHandler(this.IlotIDS_SelectedIndexChanged);
 			// 
-			// metroTile4
-			// 
-			this.metroTile4.ActiveControl = null;
-			this.metroTile4.Enabled = false;
-			this.metroTile4.Location = new System.Drawing.Point(711, 102);
-			this.metroTile4.Name = "metroTile4";
-			this.metroTile4.Size = new System.Drawing.Size(112, 38);
-			this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
-			this.metroTile4.TabIndex = 62;
-			this.metroTile4.Text = "Supprimer";
-			this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.metroTile4.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
-			this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.metroTile4.UseSelectable = true;
-			this.metroTile4.UseTileImage = true;
-			this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
-			// 
-			// metroTile5
-			// 
-			this.metroTile5.ActiveControl = null;
-			this.metroTile5.Enabled = false;
-			this.metroTile5.Location = new System.Drawing.Point(593, 102);
-			this.metroTile5.Name = "metroTile5";
-			this.metroTile5.Size = new System.Drawing.Size(112, 38);
-			this.metroTile5.TabIndex = 61;
-			this.metroTile5.Text = "Mise à jour";
-			this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.metroTile5.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
-			this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.metroTile5.UseSelectable = true;
-			this.metroTile5.UseTileImage = true;
-			this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
-			// 
-			// metroTile6
-			// 
-			this.metroTile6.ActiveControl = null;
-			this.metroTile6.Location = new System.Drawing.Point(466, 102);
-			this.metroTile6.Name = "metroTile6";
-			this.metroTile6.Size = new System.Drawing.Size(112, 38);
-			this.metroTile6.TabIndex = 60;
-			this.metroTile6.Text = "Sauvegarde";
-			this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.metroTile6.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
-			this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-			this.metroTile6.UseSelectable = true;
-			this.metroTile6.UseTileImage = true;
-			this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
-			// 
 			// metroComboBox2
 			// 
+			this.metroComboBox2.AllowDrop = true;
+			this.metroComboBox2.DropDownHeight = 100;
+			this.metroComboBox2.DropDownWidth = 100;
+			this.metroComboBox2.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
 			this.metroComboBox2.FormattingEnabled = true;
+			this.metroComboBox2.IntegralHeight = false;
 			this.metroComboBox2.ItemHeight = 23;
 			this.metroComboBox2.Location = new System.Drawing.Point(647, 13);
 			this.metroComboBox2.Name = "metroComboBox2";
-			this.metroComboBox2.Size = new System.Drawing.Size(121, 29);
+			this.metroComboBox2.Size = new System.Drawing.Size(244, 29);
 			this.metroComboBox2.TabIndex = 59;
 			this.metroComboBox2.UseSelectable = true;
 			// 
@@ -394,85 +259,13 @@
 			this.metroLabel8.TabIndex = 57;
 			this.metroLabel8.Text = "Temps de cycle ";
 			// 
-			// metroLabel9
-			// 
-			this.metroLabel9.AutoSize = true;
-			this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-			this.metroLabel9.Location = new System.Drawing.Point(322, 212);
-			this.metroLabel9.Name = "metroLabel9";
-			this.metroLabel9.Size = new System.Drawing.Size(71, 19);
-			this.metroLabel9.TabIndex = 61;
-			this.metroLabel9.Text = "de l\'année";
-			// 
-			// metroLabel10
-			// 
-			this.metroLabel10.AutoSize = true;
-			this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-			this.metroLabel10.Location = new System.Drawing.Point(61, 211);
-			this.metroLabel10.Name = "metroLabel10";
-			this.metroLabel10.Size = new System.Drawing.Size(207, 19);
-			this.metroLabel10.TabIndex = 60;
-			this.metroLabel10.Text = "Operateur à partir de la semaine";
-			// 
-			// YearSel
-			// 
-			this.YearSel.Location = new System.Drawing.Point(398, 212);
-			this.YearSel.Maximum = new decimal(new int[] {
-            2050,
-            0,
-            0,
-            0});
-			this.YearSel.Minimum = new decimal(new int[] {
-            2020,
-            0,
-            0,
-            0});
-			this.YearSel.Name = "YearSel";
-			this.YearSel.Size = new System.Drawing.Size(48, 20);
-			this.YearSel.TabIndex = 59;
-			this.YearSel.Value = new decimal(new int[] {
-            2020,
-            0,
-            0,
-            0});
-			// 
-			// WeekSel
-			// 
-			this.WeekSel.Location = new System.Drawing.Point(274, 212);
-			this.WeekSel.Maximum = new decimal(new int[] {
-            56,
-            0,
-            0,
-            0});
-			this.WeekSel.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.WeekSel.Name = "WeekSel";
-			this.WeekSel.Size = new System.Drawing.Size(38, 20);
-			this.WeekSel.TabIndex = 58;
-			this.WeekSel.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			// 
-			// OpSel
-			// 
-			this.OpSel.Location = new System.Drawing.Point(17, 211);
-			this.OpSel.Name = "OpSel";
-			this.OpSel.Size = new System.Drawing.Size(38, 20);
-			this.OpSel.TabIndex = 57;
-			// 
 			// metroTabControl1
 			// 
 			this.metroTabControl1.Controls.Add(this.metroTabPage1);
 			this.metroTabControl1.Controls.Add(this.metroTabPage2);
-			this.metroTabControl1.Controls.Add(this.metroTabPage3);
 			this.metroTabControl1.Location = new System.Drawing.Point(4, 250);
 			this.metroTabControl1.Name = "metroTabControl1";
-			this.metroTabControl1.SelectedIndex = 0;
+			this.metroTabControl1.SelectedIndex = 1;
 			this.metroTabControl1.Size = new System.Drawing.Size(993, 224);
 			this.metroTabControl1.TabIndex = 62;
 			this.metroTabControl1.UseSelectable = true;
@@ -749,19 +542,54 @@
 			this.outilsgrid.Size = new System.Drawing.Size(428, 161);
 			this.outilsgrid.TabIndex = 63;
 			// 
-			// metroTabPage3
+			// metroTile4
 			// 
-			this.metroTabPage3.HorizontalScrollbarBarColor = true;
-			this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-			this.metroTabPage3.HorizontalScrollbarSize = 10;
-			this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
-			this.metroTabPage3.Name = "metroTabPage3";
-			this.metroTabPage3.Size = new System.Drawing.Size(985, 182);
-			this.metroTabPage3.TabIndex = 2;
-			this.metroTabPage3.Text = "Analyse des besions";
-			this.metroTabPage3.VerticalScrollbarBarColor = true;
-			this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-			this.metroTabPage3.VerticalScrollbarSize = 10;
+			this.metroTile4.ActiveControl = null;
+			this.metroTile4.Location = new System.Drawing.Point(711, 102);
+			this.metroTile4.Name = "metroTile4";
+			this.metroTile4.Size = new System.Drawing.Size(112, 38);
+			this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
+			this.metroTile4.TabIndex = 62;
+			this.metroTile4.Text = "Supprimer";
+			this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile4.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
+			this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile4.UseSelectable = true;
+			this.metroTile4.UseTileImage = true;
+			this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
+			// 
+			// metroTile5
+			// 
+			this.metroTile5.ActiveControl = null;
+			this.metroTile5.Location = new System.Drawing.Point(593, 102);
+			this.metroTile5.Name = "metroTile5";
+			this.metroTile5.Size = new System.Drawing.Size(112, 38);
+			this.metroTile5.TabIndex = 61;
+			this.metroTile5.Text = "Mise à jour";
+			this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile5.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
+			this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile5.UseSelectable = true;
+			this.metroTile5.UseTileImage = true;
+			this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
+			// 
+			// metroTile6
+			// 
+			this.metroTile6.ActiveControl = null;
+			this.metroTile6.Location = new System.Drawing.Point(466, 102);
+			this.metroTile6.Name = "metroTile6";
+			this.metroTile6.Size = new System.Drawing.Size(112, 38);
+			this.metroTile6.TabIndex = 60;
+			this.metroTile6.Text = "Sauvegarde";
+			this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile6.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
+			this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile6.UseSelectable = true;
+			this.metroTile6.UseTileImage = true;
+			this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
 			// 
 			// metroComboBox1
 			// 
@@ -804,24 +632,122 @@
 			this.metroLabel13.Text = "ajouter";
 			this.metroLabel13.Click += new System.EventHandler(this.metroLabel13_Click);
 			// 
+			// metroTile2
+			// 
+			this.metroTile2.ActiveControl = null;
+			this.metroTile2.Location = new System.Drawing.Point(332, 26);
+			this.metroTile2.Name = "metroTile2";
+			this.metroTile2.Size = new System.Drawing.Size(112, 38);
+			this.metroTile2.TabIndex = 68;
+			this.metroTile2.Text = "Add";
+			this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile2.TileImage = global::SafranCotChargeCapa.Properties.Resources.icons8_add_new_48;
+			this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile2.UseSelectable = true;
+			this.metroTile2.UseTileImage = true;
+			this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
+			// 
+			// metroTile1
+			// 
+			this.metroTile1.ActiveControl = null;
+			this.metroTile1.Location = new System.Drawing.Point(573, 26);
+			this.metroTile1.Name = "metroTile1";
+			this.metroTile1.Size = new System.Drawing.Size(117, 38);
+			this.metroTile1.TabIndex = 67;
+			this.metroTile1.Text = "Mise à jour";
+			this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.metroTile1.TileImage = global::SafranCotChargeCapa.Properties.Resources.refresh_26px;
+			this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.metroTile1.UseSelectable = true;
+			this.metroTile1.UseStyleColors = true;
+			this.metroTile1.UseTileImage = true;
+			this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
+			// 
+			// DelAll
+			// 
+			this.DelAll.ActiveControl = null;
+			this.DelAll.Location = new System.Drawing.Point(696, 26);
+			this.DelAll.Name = "DelAll";
+			this.DelAll.Size = new System.Drawing.Size(112, 38);
+			this.DelAll.Style = MetroFramework.MetroColorStyle.Red;
+			this.DelAll.TabIndex = 42;
+			this.DelAll.Text = "Supprimer";
+			this.DelAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.DelAll.TileImage = global::SafranCotChargeCapa.Properties.Resources.trash_26px;
+			this.DelAll.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.DelAll.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.DelAll.UseSelectable = true;
+			this.DelAll.UseTileImage = true;
+			this.DelAll.Click += new System.EventHandler(this.DelAll_Click);
+			// 
+			// AddButton
+			// 
+			this.AddButton.ActiveControl = null;
+			this.AddButton.Location = new System.Drawing.Point(455, 26);
+			this.AddButton.Name = "AddButton";
+			this.AddButton.Size = new System.Drawing.Size(112, 38);
+			this.AddButton.TabIndex = 40;
+			this.AddButton.Text = "Sauvegarde";
+			this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.AddButton.TileImage = global::SafranCotChargeCapa.Properties.Resources.save_26px2;
+			this.AddButton.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.AddButton.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+			this.AddButton.UseSelectable = true;
+			this.AddButton.UseTileImage = true;
+			this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+			// 
+			// MachineIDInput
+			// 
+			// 
+			// 
+			// 
+			this.MachineIDInput.CustomButton.Image = null;
+			this.MachineIDInput.CustomButton.Location = new System.Drawing.Point(123, 1);
+			this.MachineIDInput.CustomButton.Name = "";
+			this.MachineIDInput.CustomButton.Size = new System.Drawing.Size(21, 21);
+			this.MachineIDInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+			this.MachineIDInput.CustomButton.TabIndex = 1;
+			this.MachineIDInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.MachineIDInput.CustomButton.UseSelectable = true;
+			this.MachineIDInput.DisplayIcon = true;
+			this.MachineIDInput.Icon = global::SafranCotChargeCapa.Properties.Resources.search_24px;
+			this.MachineIDInput.IconRight = true;
+			this.MachineIDInput.Lines = new string[0];
+			this.MachineIDInput.Location = new System.Drawing.Point(205, 86);
+			this.MachineIDInput.MaxLength = 32767;
+			this.MachineIDInput.Name = "MachineIDInput";
+			this.MachineIDInput.PasswordChar = '\0';
+			this.MachineIDInput.PromptText = "Operation ID";
+			this.MachineIDInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.MachineIDInput.SelectedText = "";
+			this.MachineIDInput.SelectionLength = 0;
+			this.MachineIDInput.SelectionStart = 0;
+			this.MachineIDInput.ShortcutsEnabled = true;
+			this.MachineIDInput.ShowButton = true;
+			this.MachineIDInput.Size = new System.Drawing.Size(145, 23);
+			this.MachineIDInput.TabIndex = 12;
+			this.MachineIDInput.UseSelectable = true;
+			this.MachineIDInput.WaterMark = "Operation ID";
+			this.MachineIDInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			this.MachineIDInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+			this.MachineIDInput.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.MachineIDInput_ButtonClick);
+			// 
 			// ManOperation
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1007, 544);
+			this.Controls.Add(this.metroTile2);
+			this.Controls.Add(this.metroTile1);
 			this.Controls.Add(this.metroLabel13);
 			this.Controls.Add(this.metroLabel12);
 			this.Controls.Add(this.metroComboBox1);
 			this.Controls.Add(this.metroLabel11);
 			this.Controls.Add(this.metroTabControl1);
-			this.Controls.Add(this.metroLabel9);
-			this.Controls.Add(this.metroLabel10);
-			this.Controls.Add(this.YearSel);
-			this.Controls.Add(this.WeekSel);
-			this.Controls.Add(this.OpSel);
 			this.Controls.Add(this.IlotIDS);
 			this.Controls.Add(this.DelAll);
-			this.Controls.Add(this.SaveUpdate);
 			this.Controls.Add(this.AddButton);
 			this.Controls.Add(this.PRoductIDSelect);
 			this.Controls.Add(this.EffInput);
@@ -833,10 +759,8 @@
 			this.Controls.Add(this.metroLabel1);
 			this.Name = "ManOperation";
 			this.Text = "Gestion des operations";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManOperation_FormClosed);
 			this.Load += new System.EventHandler(this.ManOperation_Load);
-			((System.ComponentModel.ISupportInitialize)(this.YearSel)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.WeekSel)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.OpSel)).EndInit();
 			this.metroTabControl1.ResumeLayout(false);
 			this.metroTabPage1.ResumeLayout(false);
 			this.metroTabPage1.PerformLayout();
@@ -859,7 +783,6 @@
 		private MetroFramework.Controls.MetroTextBox MachineIDInput;
 		private MetroFramework.Controls.MetroComboBox InputOperation;
 		private System.Windows.Forms.CheckedListBox PRoductIDSelect;
-		private MetroFramework.Controls.MetroTile SaveUpdate;
 		private MetroFramework.Controls.MetroTile AddButton;
 		private MetroFramework.Controls.MetroTile DelAll;
 		private MetroFramework.Controls.MetroComboBox IlotIDS;
@@ -870,11 +793,6 @@
 		private MetroFramework.Controls.MetroTextBox metroTextBox2;
 		private MetroFramework.Controls.MetroLabel metroLabel7;
 		private MetroFramework.Controls.MetroLabel metroLabel8;
-		private MetroFramework.Controls.MetroLabel metroLabel9;
-		private MetroFramework.Controls.MetroLabel metroLabel10;
-		private System.Windows.Forms.NumericUpDown YearSel;
-		private System.Windows.Forms.NumericUpDown WeekSel;
-		private System.Windows.Forms.NumericUpDown OpSel;
 		private MetroFramework.Controls.MetroTabControl metroTabControl1;
 		private MetroFramework.Controls.MetroTabPage metroTabPage1;
 		private MetroFramework.Controls.MetroTile DelMach;
@@ -887,11 +805,12 @@
 		private MetroFramework.Controls.MetroLabel metroLabel5;
 		private MetroFramework.Controls.MetroLabel metroLabel6;
 		private MetroFramework.Controls.MetroTabPage metroTabPage2;
-		private MetroFramework.Controls.MetroTabPage metroTabPage3;
 		private MetroFramework.Controls.MetroGrid outilsgrid;
 		private MetroFramework.Controls.MetroComboBox metroComboBox1;
 		private MetroFramework.Controls.MetroLabel metroLabel11;
 		private MetroFramework.Controls.MetroLabel metroLabel12;
 		private MetroFramework.Controls.MetroLabel metroLabel13;
+		private MetroFramework.Controls.MetroTile metroTile1;
+		private MetroFramework.Controls.MetroTile metroTile2;
 	}
 }

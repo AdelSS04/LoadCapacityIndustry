@@ -1,6 +1,7 @@
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.csprojAssemblyReference.cache
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.csproj.ResolveComReference.cache
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.IlotManag.resources
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.ManagPoste.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.ManageTools.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.ManOperation.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.Off.resources
