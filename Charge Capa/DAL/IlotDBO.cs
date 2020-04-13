@@ -12,9 +12,9 @@ namespace DAL
 {
 	public class IlotDBO {
 		
-		public static List<OpGroupe> IlotOpgrp(string idpostecharge)
+		public static List<OpGroupe> IlotOpgrp(string bb)
 		{
-			string requete = String.Format("select * from OperationGroupe where IlotID ='{0}';  ", idpostecharge);
+			string requete = String.Format("select * from OperationGroupe where IlotID='{0}' ;  ",bb);
 			OleDbDataReader rdd = Util.lire(requete);
 
 

@@ -11,19 +11,42 @@ using System.Threading.Tasks;
 namespace DAL
 {
 	public class OpGroupeDBO {
-		public static List<PosteCharge> GetAllTools()
+		public static List<OpGroupe> GetPosteName()
 		{
-			List<PosteCharge> Lur = new List<PosteCharge>();
-			string requete = String.Format("select * from PosteCharge ;");
+			List<OpGroupe> Lur = new List<OpGroupe>();
+			string requete = String.Format("select * from OperationGroupe ;");
 			OleDbDataReader rdd = Util.lire(requete);
-			PosteCharge ur;
+			OpGroupe ur;
 			while (rdd.Read())
 			{
-				ur = new PosteCharge
+				ur = new OpGroupe
 				{
-					GroupID = rdd.GetString(1),
+					GrpName = rdd.GetString(0),
 
-					GroupName = rdd.GetString(0),
+					IlotID = rdd.GetString(2),
+					
+				};
+				Lur.Add(ur);
+
+			}
+			Util.Disconnect();
+			return Lur;
+
+
+		}
+		public static List<OpGroupe> GetOpGroupes(string id)
+		{
+			List<OpGroupe> Lur = new List<OpGroupe>();
+			string requete = String.Format("select DISTINCT GroupName from OperationGroupe where (IlotID='{0}');", id);
+			OleDbDataReader rdd = Util.lire(requete);
+			OpGroupe ur;
+			while (rdd.Read())
+			{
+				ur = new OpGroupe
+				{
+					GrpName = rdd["GroupName"].ToString(),
+
+
 				};
 				Lur.Add(ur);
 
@@ -32,15 +55,15 @@ namespace DAL
 			return Lur;
 
 		}
-		public static PosteCharge GetPoste(string id)
+		public static OpGroupe GetPoste(string id)
 		{
-			string requete = String.Format("select * from PosteCharge where (GroupName ='{0}');", id);
+			string requete = String.Format("select * from OperationGroupe where (GroupName ='{0}');", id);
 			OleDbDataReader rdd = Util.lire(requete);
-			PosteCharge ur = new PosteCharge();
+			OpGroupe ur = new OpGroupe();
 			while (rdd.Read())
 			{
 
-				ur.GroupID = rdd.GetString(1);
+				ur.GrpName = rdd.GetString(1);
 
 
 			}
@@ -103,13 +126,13 @@ namespace DAL
 			Util.Disconnect();
 			return L;
 		}
-		public static bool AddNewPosteCharge(PosteCharge pc)
+		public static bool AddNewPosteCharge(OpGroupe pc)
 		{
-			string requete = String.Format("insert into PosteCharge (GroupID, GroupName)" +
-				" values ('{0}','{1}');", pc.GroupID,pc.GroupName);
+			string requete = String.Format("insert into OperationGroupe (IlotID, GroupName)" +
+				" values ('{0}','{1}');", pc.IlotID,pc.GrpName);
 
 			return Util.miseajour(requete);
-			//return requete;
+			
 		}
 
 		public static bool UpOpenDay(OperatorsO op)
@@ -121,10 +144,10 @@ namespace DAL
 			//return requete;
 		}
 
-		public static bool AddPosteCharge(string opname,string postename,string ilot)
+		public static bool AddPosteCharge(string opname,string ilot,string ff)
 		{
-			string requete = String.Format("insert into PosteCharge (OperationID, GroupName,IlotID)" +
-				" values ('{0}','{1}','{2}');", opname,postename,ilot);
+			string requete = String.Format("insert into OperationGroupe (OperationID, GroupName,IlotID)" +
+				" values ('{0}','{1}','{2}');", opname, ff, ilot);
 
 			return Util.miseajour(requete);
 			//return requete;

@@ -27,10 +27,16 @@ namespace SafranCotChargeCapa
 			}
 		private void ManageMachine_Load(object sender, EventArgs e)
 		{
-			List<PosteCharge> mach = OpGroupeDBO.GetAllTools();
-			foreach (PosteCharge u in mach)
+			/*List<OpGroupe> mach = OpGroupeDBO.GetPosteName();
+			foreach (OpGroupe u in mach)
 			{
-				metroComboBox2.Items.Add(u.GroupName);
+				metroComboBox2.Items.Add(u.GrpName);
+			}*/
+			List<Ilot> il = IlotDBO.GetAllIlot();
+			foreach (Ilot u in il)
+			{
+
+				metroComboBox1.Items.Add(u.IlotID);
 			}
 		}
 
@@ -55,13 +61,11 @@ namespace SafranCotChargeCapa
 		{
 			try
 			{
-				PosteCharge ur = new PosteCharge
+				OpGroupe ur = new OpGroupe
 				{
-					GroupName = IlotNameInput.Text,
-					
+					GrpName = IlotIDInput.Text,
+					IlotID=metroComboBox1.SelectedItem.ToString(),
 
-					GroupID = IlotIDInput.Text,
-					
 				};
 
 				OpGroupeDBO.AddNewPosteCharge(ur);
@@ -152,10 +156,23 @@ namespace SafranCotChargeCapa
 
 		private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			IlotNameInput.Text = ToolsDBO.GetTools(metroComboBox2.SelectedItem.ToString()).ToolsName;
-			SaveUpdate.Enabled = true;
+			outilsgrid.DataSource = null;
+			IlotIDInput.Text = metroComboBox2.SelectedItem.ToString();
+
+
 			outilsgrid.DataSource = OpGroupeDBO.GetAllPosteOpenDay(metroComboBox2.SelectedItem.ToString(), DateTime.Now.Year, System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
-			metroTile1.Enabled = true;
+		
+		}
+
+		private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			metroComboBox2.Items.Clear();
+			List<OpGroupe> mach = OpGroupeDBO.GetOpGroupes(metroComboBox1.SelectedItem.ToString());
+			foreach (OpGroupe u in mach)
+			{
+				metroComboBox2.Items.Add(u.GrpName);
+			}
+			outilsgrid.DataSource = null;
 		}
 	}
 }

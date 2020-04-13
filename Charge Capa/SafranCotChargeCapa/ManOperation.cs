@@ -131,7 +131,7 @@ namespace SafranCotChargeCapa
 
 
 					AddButton.Enabled = false;
-					SaveUpdate.Enabled = true;
+					
 					DelMach.Enabled = true;
 					SaveMach.Enabled = true;
 					DelAll.Enabled = true;
@@ -189,8 +189,8 @@ namespace SafranCotChargeCapa
 				opname = InputOperation.SelectedItem.ToString();
 			else
 				opname = MachineIDInput.Text;
-		//	try
-		//	{
+			try
+			{
 				List<Operation> op = new List<Operation>();
 				for (int i = 0; i < Listitem; i++)
 				{
@@ -208,20 +208,28 @@ namespace SafranCotChargeCapa
 						}; op.Add(opp);
 					}
 				}
+				bool azer=false;
 				foreach (Operation oo in op)
 				{
-				
-					OperationDBO.AddOperation(oo);
+
+					azer =	OperationDBO.AddOperation(oo) ;
 					
 				}
-				OpGroupeDBO.AddPosteCharge(opname, metroComboBox1.SelectedItem.ToString(),"fix");
-				MessageBox.Show("done !!");
-				
-			//}
-			//catch (Exception ex)
-		//	{
-		//		MessageBox.Show(ex.Message);
-			//}
+				if (!azer)
+				{
+					MessageBox.Show("404");
+
+				}
+				else
+				{
+					OpGroupeDBO.AddPosteCharge(opname, IlotIDS.SelectedItem.ToString(), metroComboBox1.SelectedItem.ToString());
+					MessageBox.Show("done !!");
+				}
+			}
+			catch (Exception ex)
+		{
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void AddMach_Click(object sender, EventArgs e)
@@ -280,55 +288,6 @@ namespace SafranCotChargeCapa
 
 		private void SaveUpdate_Click(object sender, EventArgs e)
 		{
-			try
-			{
-				string opname;
-				if (MachineIDInput.Text.Length == 0)
-					opname = InputOperation.SelectedItem.ToString();
-				else
-					opname = MachineIDInput.Text;
-				OperatorsO op = new OperatorsO
-				{
-					OperationID = opname,
-					YearT = int.Parse(YearSel.Value.ToString()),
-					WeekT = int.Parse(WeekSel.Value.ToString()),
-					NumberOfOperator = int.Parse(OpSel.Value.ToString()),
-
-				};
-				DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
-				DateTime date1 = new DateTime(DateTime.Now.Year, 12, 31);
-				Calendar cal = dfi.Calendar;
-				for (int i = 0; i <= cal.GetWeekOfYear(date1, dfi.CalendarWeekRule, DayOfWeek.Monday); i++)
-				{
-					op.WeekT = i;
-					OperatorsODBO.SetOperatingNumber(op);
-				}
-				MessageBox.Show("Add done !!");
-			}
-			catch (Exception ex)
-			{
-				try {
-					string opname;
-					if (MachineIDInput.Text.Length == 0)
-						opname = InputOperation.SelectedItem.ToString();
-					else
-						opname = MachineIDInput.Text;
-					OperatorsO op = new OperatorsO
-					{
-						OperationID = opname,
-						YearT = int.Parse(YearSel.Value.ToString()),
-						WeekT = int.Parse(WeekSel.Value.ToString()),
-						NumberOfOperator = int.Parse(OpSel.Value.ToString()),
-
-					};
-					OperatorsODBO.UpOperatingNumber(op);
-				MessageBox.Show("Up done !!");
-			}
-				catch (Exception exx)
-				{
-					MessageBox.Show(exx.Message);
-				}
-			}
 			}
 
 		private void metroTile4_Click(object sender, EventArgs e)
@@ -460,7 +419,7 @@ namespace SafranCotChargeCapa
 			Form formBackground = new Form();
 			try
 			{
-				using (IlotManag uu = new IlotManag())
+				using (ManagPoste uu = new ManagPoste())
 				{
 					formBackground.StartPosition = FormStartPosition.Manual;
 					formBackground.FormBorderStyle = FormBorderStyle.None;
@@ -485,6 +444,16 @@ namespace SafranCotChargeCapa
 			finally
 			{
 				formBackground.Dispose();
+				
+				metroComboBox1.Items.Clear();
+				if (IlotIDS.SelectedIndex > -1)
+				{ List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(IlotIDS.SelectedItem.ToString());
+					var DistinctItems = IlotGrpOFOP.Select(x => x.GrpName).Distinct();
+					foreach (var o in DistinctItems)
+						metroComboBox1.Items.Add(o.ToString());
+				}
+
+
 			}
 			
 		}

@@ -16,7 +16,7 @@ namespace SafranCotChargeCapa
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new ManagPoste());
+			Application.Run(new ManOperation());
 		}
 	}
 }

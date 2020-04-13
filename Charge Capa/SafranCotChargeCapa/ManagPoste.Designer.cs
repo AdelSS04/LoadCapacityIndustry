@@ -34,7 +34,6 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-			this.IlotNameInput = new MetroFramework.Controls.MetroTextBox();
 			this.IlotIDInput = new MetroFramework.Controls.MetroTextBox();
 			this.SaveUpdate = new MetroFramework.Controls.MetroTile();
 			this.AddButton = new MetroFramework.Controls.MetroTile();
@@ -46,6 +45,7 @@
 			this.metroTile1 = new MetroFramework.Controls.MetroTile();
 			this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
 			this.outilsgrid = new MetroFramework.Controls.MetroGrid();
+			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.YearSel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.WeekSel)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.OpSel)).BeginInit();
@@ -68,41 +68,9 @@
 			this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
 			this.metroLabel2.Location = new System.Drawing.Point(23, 103);
 			this.metroLabel2.Name = "metroLabel2";
-			this.metroLabel2.Size = new System.Drawing.Size(95, 19);
+			this.metroLabel2.Size = new System.Drawing.Size(36, 19);
 			this.metroLabel2.TabIndex = 31;
-			this.metroLabel2.Text = "Nom de Poste";
-			// 
-			// IlotNameInput
-			// 
-			// 
-			// 
-			// 
-			this.IlotNameInput.CustomButton.Image = null;
-			this.IlotNameInput.CustomButton.Location = new System.Drawing.Point(123, 1);
-			this.IlotNameInput.CustomButton.Name = "";
-			this.IlotNameInput.CustomButton.Size = new System.Drawing.Size(21, 21);
-			this.IlotNameInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-			this.IlotNameInput.CustomButton.TabIndex = 1;
-			this.IlotNameInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.IlotNameInput.CustomButton.UseSelectable = true;
-			this.IlotNameInput.CustomButton.Visible = false;
-			this.IlotNameInput.Lines = new string[0];
-			this.IlotNameInput.Location = new System.Drawing.Point(175, 98);
-			this.IlotNameInput.MaxLength = 32767;
-			this.IlotNameInput.Name = "IlotNameInput";
-			this.IlotNameInput.PasswordChar = '\0';
-			this.IlotNameInput.PromptText = "Nom de l\'outil";
-			this.IlotNameInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.IlotNameInput.SelectedText = "";
-			this.IlotNameInput.SelectionLength = 0;
-			this.IlotNameInput.SelectionStart = 0;
-			this.IlotNameInput.ShortcutsEnabled = true;
-			this.IlotNameInput.Size = new System.Drawing.Size(145, 23);
-			this.IlotNameInput.TabIndex = 35;
-			this.IlotNameInput.UseSelectable = true;
-			this.IlotNameInput.WaterMark = "Nom de l\'outil";
-			this.IlotNameInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			this.IlotNameInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+			this.metroLabel2.Text = "Ilot :";
 			// 
 			// IlotIDInput
 			// 
@@ -121,7 +89,7 @@
 			this.IlotIDInput.Icon = global::SafranCotChargeCapa.Properties.Resources.search_24px;
 			this.IlotIDInput.IconRight = true;
 			this.IlotIDInput.Lines = new string[0];
-			this.IlotIDInput.Location = new System.Drawing.Point(175, 53);
+			this.IlotIDInput.Location = new System.Drawing.Point(471, 56);
 			this.IlotIDInput.MaxLength = 32767;
 			this.IlotIDInput.Name = "IlotIDInput";
 			this.IlotIDInput.PasswordChar = '\0';
@@ -143,7 +111,6 @@
 			// SaveUpdate
 			// 
 			this.SaveUpdate.ActiveControl = null;
-			this.SaveUpdate.Enabled = false;
 			this.SaveUpdate.Location = new System.Drawing.Point(159, 335);
 			this.SaveUpdate.Name = "SaveUpdate";
 			this.SaveUpdate.Size = new System.Drawing.Size(112, 38);
@@ -247,7 +214,6 @@
 			// metroTile1
 			// 
 			this.metroTile1.ActiveControl = null;
-			this.metroTile1.Enabled = false;
 			this.metroTile1.Location = new System.Drawing.Point(314, 335);
 			this.metroTile1.Name = "metroTile1";
 			this.metroTile1.Size = new System.Drawing.Size(169, 38);
@@ -267,7 +233,7 @@
 			this.metroComboBox2.AllowDrop = true;
 			this.metroComboBox2.FormattingEnabled = true;
 			this.metroComboBox2.ItemHeight = 23;
-			this.metroComboBox2.Location = new System.Drawing.Point(346, 50);
+			this.metroComboBox2.Location = new System.Drawing.Point(175, 56);
 			this.metroComboBox2.Name = "metroComboBox2";
 			this.metroComboBox2.Size = new System.Drawing.Size(273, 29);
 			this.metroComboBox2.TabIndex = 69;
@@ -326,11 +292,24 @@
 			this.outilsgrid.Size = new System.Drawing.Size(619, 146);
 			this.outilsgrid.TabIndex = 67;
 			// 
+			// metroComboBox1
+			// 
+			this.metroComboBox1.AllowDrop = true;
+			this.metroComboBox1.FormattingEnabled = true;
+			this.metroComboBox1.ItemHeight = 23;
+			this.metroComboBox1.Location = new System.Drawing.Point(175, 93);
+			this.metroComboBox1.Name = "metroComboBox1";
+			this.metroComboBox1.Size = new System.Drawing.Size(273, 29);
+			this.metroComboBox1.TabIndex = 70;
+			this.metroComboBox1.UseSelectable = true;
+			this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+			// 
 			// ManagPoste
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(665, 385);
+			this.Controls.Add(this.metroComboBox1);
 			this.Controls.Add(this.metroComboBox2);
 			this.Controls.Add(this.metroTile1);
 			this.Controls.Add(this.outilsgrid);
@@ -341,7 +320,6 @@
 			this.Controls.Add(this.OpSel);
 			this.Controls.Add(this.SaveUpdate);
 			this.Controls.Add(this.AddButton);
-			this.Controls.Add(this.IlotNameInput);
 			this.Controls.Add(this.IlotIDInput);
 			this.Controls.Add(this.metroLabel2);
 			this.Controls.Add(this.metroLabel1);
@@ -349,6 +327,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "ManagPoste";
 			this.Text = "Gestion des poste de charge";
+			this.TopMost = true;
 			this.Load += new System.EventHandler(this.ManageMachine_Load);
 			((System.ComponentModel.ISupportInitialize)(this.YearSel)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.WeekSel)).EndInit();
@@ -362,7 +341,6 @@
 		#endregion
 		private MetroFramework.Controls.MetroLabel metroLabel1;
 		private MetroFramework.Controls.MetroLabel metroLabel2;
-		private MetroFramework.Controls.MetroTextBox IlotNameInput;
 		private MetroFramework.Controls.MetroTextBox IlotIDInput;
 		private MetroFramework.Controls.MetroTile SaveUpdate;
 		private MetroFramework.Controls.MetroTile AddButton;
@@ -374,5 +352,6 @@
 		private MetroFramework.Controls.MetroTile metroTile1;
 		private MetroFramework.Controls.MetroComboBox metroComboBox2;
 		private MetroFramework.Controls.MetroGrid outilsgrid;
+		private MetroFramework.Controls.MetroComboBox metroComboBox1;
 	}
 }

@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PosteCharge.cs" />
     <Compile Include="DemandeOP.cs" />
     <Compile Include="Besoin.cs" />
     <Compile Include="Charge.cs" />
