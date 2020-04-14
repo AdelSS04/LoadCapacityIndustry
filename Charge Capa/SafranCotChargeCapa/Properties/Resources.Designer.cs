@@ -123,6 +123,26 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_dashboard_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_dashboard_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_database_administrator_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_database_administrator_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_save_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8_save_16", resourceCulture);
@@ -146,6 +166,26 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap icons8_save_162 {
             get {
                 object obj = ResourceManager.GetObject("icons8_save_162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Safran {
+            get {
+                object obj = ResourceManager.GetObject("Logo-Safran", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwave {
+            get {
+                object obj = ResourceManager.GetObject("pngwave", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -13,7 +13,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SafranCotChargeCapa
 {
-	public partial class Off : MetroFramework.Forms.MetroForm
+	public partial class Off : Form//MetroFramework.Forms.MetroForm
 	{
 		public Off()
 		{
@@ -133,8 +133,12 @@ namespace SafranCotChargeCapa
 				List<Besoin> br = new List<Besoin>();
 				Besoin brr;
 				for (int i = 0; i < yValues.Count; i++)
-				{ PerCV.Add(Math.Round(yValues[i] / Capa[i], 2) * 100);
-					brr = new Besoin 
+				{ if (Capa[i] != 0)
+						PerCV.Add(Math.Round(yValues[i] / Capa[i], 2) * 100);
+					else
+						PerCV.Add(0);
+
+											brr = new Besoin 
 					{WeekWork=xValues[i],
 					ActualCharge=yValues[i],
 					AcutalCapa=Capa[i],
@@ -147,10 +151,11 @@ namespace SafranCotChargeCapa
 				metroLabel8.Text =Math.Round( br.Select(r => r.ActualCharge).Average(),2).ToString() + "H/semaine";
 				metroLabel7.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() + "H/semaine";
 				metroLabel9.Text = Math.Round(br.Select(r => r.BesoinH).Average(), 2).ToString() + "H/semaine";
-				if (br.Select(r => r.BesoinH).Average() > 0)
-					metroLabel9.ForeColor = System.Drawing.Color.Green;
-				else
-					metroLabel9.ForeColor = System.Drawing.Color.Red;
+			if (br.Select(r => r.BesoinH).Average() > 0)
+				metroLabel9.ForeColor = System.Drawing.Color.Green;
+			else
+				metroLabel9.ForeColor = System.Drawing.Color.Red;
+			
 				var series = new Series()
 				{
 					ChartType = SeriesChartType.Column,
@@ -184,7 +189,7 @@ namespace SafranCotChargeCapa
 					Color = Color.FromArgb(255, 126, 0),
 				};
 
-
+			
 				chartStats.Series.Add(series);
 				chartStats.Series.Add(series1);
 				chart1.Series.Add(RatioChargeCapa);
@@ -192,12 +197,19 @@ namespace SafranCotChargeCapa
 			chart1.ChartAreas[0].AxisX.Interval = 1;
 				chartStats.ChartAreas[0].AxisX.Interval = 1;
 				chartStats.Series[1].Points.Clear();
-			chart1.Series[0].Points.DataBindXY(xValues, PerCV);
-			chartStats.Series[0].Points.DataBindXY(xValues, yValues);
+				//MessageBox.Show(xValues.Count.ToString() + PerCV.Count.ToString());
+				/*	for ( int i =0; i< xValues.Count;i++)
+					{
+						MessageBox.Show("serie 1 xvalue" + xValues[i].ToString() + " percv = " + PerCV[i].ToString());
+						MessageBox.Show("------------" + xValues[i].ToString() + " yValues = " + yValues[i].ToString());
+					}*/
+				
+				chart1.Series[0].Points.DataBindXY(xValues, PerCV);
+		chartStats.Series[0].Points.DataBindXY(xValues, yValues);
 				chartStats.Series[1].Points.DataBindXY(xValues, Capa);
 				metroGrid1.DataSource = br;
 				setC();
-
+				
 			}
 			catch (Exception ex)
 			{

@@ -30,3 +30,5 @@ C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\bin\x
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.csproj.CopyComplete
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.exe
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.pdb
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.Form1.resources
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.HomeDashbord.resources

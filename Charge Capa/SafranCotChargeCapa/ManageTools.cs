@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace SafranCotChargeCapa
 {
-	public partial class ManageTools : MetroFramework.Forms.MetroForm
+	public partial class ManageTools : Form//MetroFramework.Forms.MetroForm
 	{
 		public ManageTools()
 		{

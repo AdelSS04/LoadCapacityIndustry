@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace SafranCotChargeCapa
 {
-	public partial class IlotManag : MetroFramework.Forms.MetroForm
+	public partial class IlotManag :Form // MetroFramework.Forms.MetroForm
 	{
 		public IlotManag()
 		{
