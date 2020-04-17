@@ -417,7 +417,7 @@ namespace SafranCotChargeCapa
 			Form formBackground = new Form();
 			try
 			{
-				using (ManagPoste uu = new ManagPoste())
+			/*	using (ManagPoste uu = new ManagPoste())
 				{
 					formBackground.StartPosition = FormStartPosition.Manual;
 					formBackground.FormBorderStyle = FormBorderStyle.None;
@@ -433,7 +433,7 @@ namespace SafranCotChargeCapa
 					uu.ShowDialog();
 
 					formBackground.Dispose();
-				}
+				}*/
 			}
 			catch (Exception ex)
 			{
@@ -519,6 +519,16 @@ namespace SafranCotChargeCapa
 		private void ManOperation_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			Application.Exit();
+		}
+
+		private void MachineSelc_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

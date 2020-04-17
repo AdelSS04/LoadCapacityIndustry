@@ -50,7 +50,7 @@ namespace SafranCotChargeCapa
 		{
 			try
 			{
-			//	GetIlot
+			
 				List<User> ur = UserDBO.GetAllUSer();
 				foreach (User u in ur)
 				{ checkedListBox1.Items.Add(u.UserID); }
@@ -153,6 +153,8 @@ namespace SafranCotChargeCapa
 					List<Ilot> il = IlotDBO.GetAllIlot();
 					foreach (Ilot i in il)
 						metroComboBox1.Items.Add(i.IlotID);
+
+					dataGridView1.DataSource = il;
 					MessageBox.Show("done");
 				}
 				else

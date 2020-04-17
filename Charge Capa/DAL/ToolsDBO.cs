@@ -11,8 +11,23 @@ using System.Threading.Tasks;
 namespace DAL
 {
 	public class ToolsDBO {
-		
-			public static bool AddTools(Tools ur)
+		public static bool UpdateTools(Tools ur)
+		{
+			string requete = String.Format("update Tools set ToolsName='{1}'" +
+				" where ToolsID='{0}' ;",ur.ToolsID,ur.ToolsName);
+
+			return Util.miseajour(requete);
+
+		}
+		public static bool DeletTools(string id)
+		{
+			string requete = String.Format("delete * from Tools " +
+				" where ToolsID='{0}' ;", id);
+
+			return Util.miseajour(requete);
+
+		}
+		public static bool AddTools(Tools ur)
 			{
 				string requete = String.Format("insert into Tools(ToolsID, ToolsName)" +
 					" values ('{0}','{1}');", ur.ToolsID, ur.ToolsName);
@@ -38,8 +53,16 @@ namespace DAL
 		}
 		public static bool UpOperatingNumber(ToolsOpenDay op)
 		{
-			string requete = String.Format("update ToolsOpenDay set OpenDay={1}" +
-				   " where ((ToolsID='{0}' and YearT>={2}) and WeekT>={3}) ;", op.OpenDay, op.ToolsID, op.YearT, op.WeekT);
+			string requete = String.Format("update ToolsOpenDay set OpenDay={0}" +
+				   " where ((ToolsID='{1}' and YearT={2}) and WeekT={3}) ;", op.OpenDay, op.ToolsID, op.YearT, op.WeekT);
+
+			return Util.miseajour(requete);
+
+		}
+		public static bool UpAllOperatingNumber(ToolsOpenDay op)
+		{
+			string requete = String.Format("update ToolsOpenDay set OpenDay={0}" +
+				   " where ((ToolsID='{1}' and YearT={2}) and WeekT>={3}) ;", op.OpenDay, op.ToolsID, op.YearT, op.WeekT);
 
 			return Util.miseajour(requete);
 
@@ -69,7 +92,7 @@ namespace DAL
 		public static List<ToolsOpenDay> GetAllToolsOpenDay(string ToID, int yrr,int Wkk)
 		{
 			List<ToolsOpenDay> Lur = new List<ToolsOpenDay>();
-			string requete = String.Format("select * from ToolsOpenDay where (ToolsID='{0}'  and YearT>={1}) and WeekT>={2};", ToID, yrr, Wkk);
+			string requete = String.Format("select * from ToolsOpenDay where (ToolsID='{0}'  and YearT={1}) and WeekT>={2};", ToID, yrr, Wkk);
 			OleDbDataReader rdd = Util.lire(requete);
 			ToolsOpenDay ur;
 			while (rdd.Read())
@@ -96,7 +119,7 @@ namespace DAL
 			Tools ur = new Tools();
 			while (rdd.Read())
 			{
-
+				ur.ToolsID = rdd.GetString(0);
 				ur.ToolsName = rdd.GetString(1);
 				
 

@@ -33,13 +33,13 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.UpButton = new System.Windows.Forms.Button();
+			this.DelButton = new System.Windows.Forms.Button();
 			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.UpButton = new System.Windows.Forms.Button();
-			this.DelButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -95,72 +95,6 @@
 			this.panel1.Size = new System.Drawing.Size(934, 47);
 			this.panel1.TabIndex = 1;
 			// 
-			// metroLabel1
-			// 
-			this.metroLabel1.AutoSize = true;
-			this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-			this.metroLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.metroLabel1.Location = new System.Drawing.Point(0, 9);
-			this.metroLabel1.Name = "metroLabel1";
-			this.metroLabel1.Size = new System.Drawing.Size(175, 25);
-			this.metroLabel1.TabIndex = 1;
-			this.metroLabel1.Text = "veuillez choisir un ilot";
-			this.metroLabel1.UseCustomBackColor = true;
-			this.metroLabel1.UseCustomForeColor = true;
-			// 
-			// metroComboBox1
-			// 
-			this.metroComboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-			this.metroComboBox1.Cursor = System.Windows.Forms.Cursors.Default;
-			this.metroComboBox1.DisplayFocus = true;
-			this.metroComboBox1.DropDownHeight = 210;
-			this.metroComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.metroComboBox1.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
-			this.metroComboBox1.ForeColor = System.Drawing.Color.Red;
-			this.metroComboBox1.FormattingEnabled = true;
-			this.metroComboBox1.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-			this.metroComboBox1.IntegralHeight = false;
-			this.metroComboBox1.ItemHeight = 23;
-			this.metroComboBox1.Location = new System.Drawing.Point(181, 9);
-			this.metroComboBox1.Name = "metroComboBox1";
-			this.metroComboBox1.Size = new System.Drawing.Size(160, 29);
-			this.metroComboBox1.TabIndex = 0;
-			this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.metroComboBox1.UseCustomBackColor = true;
-			this.metroComboBox1.UseCustomForeColor = true;
-			this.metroComboBox1.UseSelectable = true;
-			this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
-			// 
-			// checkedListBox1
-			// 
-			this.checkedListBox1.FormattingEnabled = true;
-			this.checkedListBox1.Location = new System.Drawing.Point(17, 21);
-			this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.checkedListBox1.Name = "checkedListBox1";
-			this.checkedListBox1.Size = new System.Drawing.Size(196, 148);
-			this.checkedListBox1.TabIndex = 15;
-			this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.dataGridView1);
-			this.groupBox1.Location = new System.Drawing.Point(0, 54);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(535, 180);
-			this.groupBox1.TabIndex = 16;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Information numeriques";
-			// 
-			// groupBox2
-			// 
-			this.groupBox2.Controls.Add(this.checkedListBox1);
-			this.groupBox2.Location = new System.Drawing.Point(718, 54);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(226, 180);
-			this.groupBox2.TabIndex = 17;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Responsable d\'ilot";
-			// 
 			// UpButton
 			// 
 			this.UpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(184)))), ((int)(((byte)(81)))));
@@ -199,6 +133,72 @@
 			this.DelButton.UseVisualStyleBackColor = false;
 			this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
 			// 
+			// metroLabel1
+			// 
+			this.metroLabel1.AutoSize = true;
+			this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+			this.metroLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.metroLabel1.Location = new System.Drawing.Point(0, 9);
+			this.metroLabel1.Name = "metroLabel1";
+			this.metroLabel1.Size = new System.Drawing.Size(176, 25);
+			this.metroLabel1.TabIndex = 1;
+			this.metroLabel1.Text = "Veuillez choisir un ilot";
+			this.metroLabel1.UseCustomBackColor = true;
+			this.metroLabel1.UseCustomForeColor = true;
+			// 
+			// metroComboBox1
+			// 
+			this.metroComboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.metroComboBox1.Cursor = System.Windows.Forms.Cursors.Default;
+			this.metroComboBox1.DisplayFocus = true;
+			this.metroComboBox1.DropDownHeight = 210;
+			this.metroComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.metroComboBox1.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
+			this.metroComboBox1.ForeColor = System.Drawing.Color.Red;
+			this.metroComboBox1.FormattingEnabled = true;
+			this.metroComboBox1.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.metroComboBox1.IntegralHeight = false;
+			this.metroComboBox1.ItemHeight = 23;
+			this.metroComboBox1.Location = new System.Drawing.Point(181, 9);
+			this.metroComboBox1.Name = "metroComboBox1";
+			this.metroComboBox1.Size = new System.Drawing.Size(160, 29);
+			this.metroComboBox1.TabIndex = 0;
+			this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.metroComboBox1.UseCustomBackColor = true;
+			this.metroComboBox1.UseCustomForeColor = true;
+			this.metroComboBox1.UseSelectable = true;
+			this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+			// 
+			// checkedListBox1
+			// 
+			this.checkedListBox1.FormattingEnabled = true;
+			this.checkedListBox1.Location = new System.Drawing.Point(17, 21);
+			this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
+			this.checkedListBox1.Name = "checkedListBox1";
+			this.checkedListBox1.Size = new System.Drawing.Size(196, 148);
+			this.checkedListBox1.TabIndex = 15;
+			this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.dataGridView1);
+			this.groupBox1.Location = new System.Drawing.Point(0, 54);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(535, 180);
+			this.groupBox1.TabIndex = 16;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Information numeriques";
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.checkedListBox1);
+			this.groupBox2.Location = new System.Drawing.Point(718, 54);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(226, 180);
+			this.groupBox2.TabIndex = 17;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Responsable d\'ilot";
+			// 
 			// IlotUpdate
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -209,7 +209,7 @@
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "IlotUpdate";
 			this.Text = "IlotManag";
 			this.TopMost = true;

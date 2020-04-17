@@ -91,6 +91,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,41 +109,71 @@
     <Compile Include="HomeDashbord.Designer.cs">
       <DependentUpon>HomeDashbord.cs</DependentUpon>
     </Compile>
-    <Compile Include="IlotManag.cs">
+    <Compile Include="Operation\AddOp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IlotManag.Designer.cs">
+    <Compile Include="Operation\AddOp.Designer.cs">
+      <DependentUpon>AddOp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ManOp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\ManOp.Designer.cs">
+      <DependentUpon>ManOp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poste\AddPoste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poste\AddPoste.Designer.cs">
+      <DependentUpon>AddPoste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poste\ManPoste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poste\ManPoste.Designer.cs">
+      <DependentUpon>ManPoste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ManagTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ManagTools.Designer.cs">
+      <DependentUpon>ManagTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AddTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\AddTools.Designer.cs">
+      <DependentUpon>AddTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine\AddMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine\AddMachine.Designer.cs">
+      <DependentUpon>AddMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ilot\IlotManag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ilot\IlotManag.Designer.cs">
       <DependentUpon>IlotManag.cs</DependentUpon>
     </Compile>
-    <Compile Include="IlotUpdate.cs">
+    <Compile Include="Ilot\IlotUpdate.cs">
       <SubType>Form</SubType>
       <Generator>Update</Generator>
     </Compile>
-    <Compile Include="IlotUpdate.Designer.cs">
+    <Compile Include="Ilot\IlotUpdate.Designer.cs">
       <DependentUpon>IlotUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageMachine.cs">
+    <Compile Include="Machine\ManageMachine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageMachine.Designer.cs">
+    <Compile Include="Machine\ManageMachine.Designer.cs">
       <DependentUpon>ManageMachine.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTools.cs">
+    <Compile Include="Operation\ManOperation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageTools.Designer.cs">
-      <DependentUpon>ManageTools.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManagPoste.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManagPoste.Designer.cs">
-      <DependentUpon>ManagPoste.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManOperation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManOperation.Designer.cs">
+    <Compile Include="Operation\ManOperation.Designer.cs">
       <DependentUpon>ManOperation.cs</DependentUpon>
     </Compile>
     <Compile Include="Off.cs">
@@ -148,6 +184,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -155,22 +194,37 @@
     <EmbeddedResource Include="HomeDashbord.resx">
       <DependentUpon>HomeDashbord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IlotManag.resx">
+    <EmbeddedResource Include="Operation\AddOp.resx">
+      <DependentUpon>AddOp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\ManOp.resx">
+      <DependentUpon>ManOp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poste\AddPoste.resx">
+      <DependentUpon>AddPoste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poste\ManPoste.resx">
+      <DependentUpon>ManPoste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ManagTools.resx">
+      <DependentUpon>ManagTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\AddTools.resx">
+      <DependentUpon>AddTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Machine\AddMachine.resx">
+      <DependentUpon>AddMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ilot\IlotManag.resx">
       <DependentUpon>IlotManag.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IlotUpdate.resx">
+    <EmbeddedResource Include="Ilot\IlotUpdate.resx">
       <DependentUpon>IlotUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageMachine.resx">
+    <EmbeddedResource Include="Machine\ManageMachine.resx">
       <DependentUpon>ManageMachine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageTools.resx">
-      <DependentUpon>ManageTools.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManagPoste.resx">
-      <DependentUpon>ManagPoste.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManOperation.resx">
+    <EmbeddedResource Include="Operation\ManOperation.resx">
       <DependentUpon>ManOperation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Off.resx">
@@ -241,6 +295,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\info_32px.png" />
+    <None Include="Resources\close_window_32px.png" />
+    <None Include="Resources\full_screen_32px.png" />
+    <None Include="Resources\fit_to_width_32px.png" />
+    <None Include="Resources\scissors_32px.png" />
+    <None Include="Resources\add_new_32px.png" />
+    <None Include="Resources\workflow_32px.png" />
+    <None Include="Resources\box_32px.png" />
+    <None Include="Resources\robot_2_32px.png" />
     <None Include="Resources\robot_32px.png" />
     <None Include="Resources\add_32px.png" />
     <None Include="Resources\edit_property_32px.png" />

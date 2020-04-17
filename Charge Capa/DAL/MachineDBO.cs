@@ -27,6 +27,14 @@ namespace DAL
 			return Util.miseajour(requete);
 
 		}
+		public static bool DeletMachine(string id )
+		{
+			string requete = String.Format("delete * from Machine " +
+				" where MachineID='{0}' ;", id);
+
+			return Util.miseajour(requete);
+
+		}
 		public static Machine GetMachine(string id)
 		{
 			string requete = String.Format("select * from Machine where (MachineID ='{0}');", id);
@@ -37,9 +45,9 @@ namespace DAL
 
 				ur.Etat = rdd.GetString(2);
 				ur.MachineName = rdd.GetString(1);
-
-				ur.MachineRejectedRate = rdd.GetFloat(4);
-				ur.AvialabilityTime= rdd.GetFloat(3);
+				ur.MachineID = rdd.GetString(0);
+				ur.MachineRejectedRate = rdd.GetFloat(3);
+				
 
 			}
 			Util.Disconnect();
@@ -59,8 +67,8 @@ namespace DAL
 					Etat = rdd.GetString(2),
 				MachineName = rdd.GetString(1),
 
-				MachineRejectedRate = rdd.GetFloat(4),
-				AvialabilityTime = rdd.GetFloat(3),
+				MachineRejectedRate = rdd.GetFloat(3),
+				
 			};
 				Lur.Add(ur);
 
@@ -83,8 +91,8 @@ namespace DAL
 					Etat = rdd.GetString(2),
 					MachineName = rdd.GetString(1),
 
-					MachineRejectedRate = rdd.GetFloat(4),
-					AvialabilityTime = rdd.GetFloat(3),
+					MachineRejectedRate = rdd.GetFloat(3),
+					
 				};
 				Lur.Add(ur);
 
@@ -97,7 +105,7 @@ namespace DAL
 		public static List<MachineOpenDay> GetMachineShiftCalen (string machineid,int Wek,int Yr)
 		{
 			List<MachineOpenDay> Lur = new List<MachineOpenDay>();
-			string requete = String.Format("select * from MachineOpenDay where ((MachineID ='{0}' and WeekT>{1}) and YearT = {2});", machineid,Wek,Yr);
+			string requete = String.Format("select * from MachineOpenDay where ((MachineID ='{0}' and WeekT>{1}) and YearT = {2}) order by WeekT;", machineid,Wek,Yr);
 			OleDbDataReader rdd = Util.lire(requete);
 			MachineOpenDay ur;
 			while (rdd.Read())
@@ -109,7 +117,8 @@ namespace DAL
 					WeekT = rdd.GetInt32(2),
 
 					NumberOfshift = rdd.GetInt32(3),
-					
+					OpenDay = rdd.GetInt32(4),
+
 				};
 				Lur.Add(ur);
 
@@ -117,6 +126,29 @@ namespace DAL
 			Util.Disconnect();
 			return Lur;
 		}
+		public static bool UpdateMachineOpenDay(MachineOpenDay ur)
+		{
+			string requete = String.Format("update MachineOpenDay set NumberOfshift={3},OpenDay={4}" +
+				" where ((MachineID='{0}' and YearT={1}) and WeekT={2}) ;", ur.MachineID,ur.YearT,ur.WeekT,ur.NumberOfshift, ur.OpenDay);
 
+			return Util.miseajour(requete);
+
+		}
+		public static bool UpdateAllMachineOpenDay(MachineOpenDay ur)
+		{
+			string requete = String.Format("update MachineOpenDay set NumberOfshift={3},OpenDay={4}" +
+				" where ((MachineID='{0}' and YearT={1}) and WeekT>={2}) ;", ur.MachineID, ur.YearT, ur.WeekT, ur.NumberOfshift,ur.OpenDay);
+
+			return Util.miseajour(requete);
+
+		}
+		public static bool SetOpenDay(MachineOpenDay op)
+		{
+			string requete = String.Format("insert into MachineOpenDay (MachineID,YearT,WeekT,OpenDay,NumberOfshift)  " +
+				"values ('{0}',{1},{2},{3},{4});", op.MachineID, op.YearT, op.WeekT, op.OpenDay,op.NumberOfshift);
+
+			return Util.miseajour(requete);
+
+		}
 	}
 }

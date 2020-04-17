@@ -113,6 +113,16 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_new_32px {
+            get {
+                object obj = ResourceManager.GetObject("add_new_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_new_52px {
             get {
                 object obj = ResourceManager.GetObject("add_new_52px", resourceCulture);
@@ -123,9 +133,29 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap box_32px {
+            get {
+                object obj = ResourceManager.GetObject("box_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Capture {
             get {
                 object obj = ResourceManager.GetObject("Capture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_window_32px {
+            get {
+                object obj = ResourceManager.GetObject("close_window_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +186,26 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap edit_property_32px {
             get {
                 object obj = ResourceManager.GetObject("edit_property_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fit_to_width_32px {
+            get {
+                object obj = ResourceManager.GetObject("fit_to_width_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_screen_32px {
+            get {
+                object obj = ResourceManager.GetObject("full_screen_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +273,16 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap info_32px {
+            get {
+                object obj = ResourceManager.GetObject("info_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Safran {
             get {
                 object obj = ResourceManager.GetObject("Logo-Safran", resourceCulture);
@@ -256,6 +316,16 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap restart_20px {
             get {
                 object obj = ResourceManager.GetObject("restart_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap robot_2_32px {
+            get {
+                object obj = ResourceManager.GetObject("robot_2_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,6 +403,16 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap scissors_32px {
+            get {
+                object obj = ResourceManager.GetObject("scissors_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search_24px {
             get {
                 object obj = ResourceManager.GetObject("search_24px", resourceCulture);
@@ -356,6 +436,16 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap trash_26px {
             get {
                 object obj = ResourceManager.GetObject("trash_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap workflow_32px {
+            get {
+                object obj = ResourceManager.GetObject("workflow_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

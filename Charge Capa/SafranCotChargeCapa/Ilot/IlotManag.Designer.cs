@@ -91,7 +91,7 @@
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.checkedListBox1);
-			this.groupBox2.Location = new System.Drawing.Point(404, 57);
+			this.groupBox2.Location = new System.Drawing.Point(404, 53);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(226, 180);
 			this.groupBox2.TabIndex = 18;
@@ -152,6 +152,8 @@
 			this.IlotAbs.Size = new System.Drawing.Size(246, 23);
 			this.IlotAbs.TabIndex = 6;
 			this.IlotAbs.UseSystemPasswordChar = false;
+			this.IlotAbs.Click += new System.EventHandler(this.IlotAbs_Click);
+			this.IlotAbs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IlotAbs_KeyPress);
 			// 
 			// IlotRej
 			// 
@@ -167,6 +169,8 @@
 			this.IlotRej.Size = new System.Drawing.Size(246, 23);
 			this.IlotRej.TabIndex = 5;
 			this.IlotRej.UseSystemPasswordChar = false;
+			this.IlotRej.Click += new System.EventHandler(this.IlotRej_Click);
+			this.IlotRej.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IlotRej_KeyPress);
 			// 
 			// IlotCRM
 			// 
@@ -182,6 +186,8 @@
 			this.IlotCRM.Size = new System.Drawing.Size(246, 23);
 			this.IlotCRM.TabIndex = 4;
 			this.IlotCRM.UseSystemPasswordChar = false;
+			this.IlotCRM.Click += new System.EventHandler(this.IlotCRM_Click);
+			this.IlotCRM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IlotCRM_KeyPress);
 			// 
 			// IlotEff
 			// 
