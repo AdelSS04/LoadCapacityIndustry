@@ -44,6 +44,7 @@
     <Compile Include="DemandeOP.cs" />
     <Compile Include="Besoin.cs" />
     <Compile Include="Charge.cs" />
+    <Compile Include="ManuelCycleTime.cs" />
     <Compile Include="OpGroupe.cs" />
     <Compile Include="ToolsOpenDay.cs" />
     <Compile Include="MachineOpenDay.cs" />
@@ -59,9 +60,7 @@
     <Compile Include="Operation.cs" />
     <Compile Include="MachineCycleTime.cs" />
     <Compile Include="Ilot.cs" />
-    <Compile Include="AvailabilityMachine.cs" />
     <Compile Include="Machine.cs" />
-    <Compile Include="AvailabilityTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

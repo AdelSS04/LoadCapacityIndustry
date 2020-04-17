@@ -97,19 +97,21 @@ namespace SafranCotChargeCapa
 		{
 		//	try
 		//	{
-				List<Operation> Lur = OperationDBO.GetOperation(opname);
+				Operation OperationData = OperationDBO.GetOperationData(opname);
+			List < ManuelCycleTime > OpAllData= ManuelCycleTimeDBO.GetAllOperationProduct(opname);
+
 				for (int i = 0; i < PRoductIDSelect.Items.Count; i++)
 				{
 					PRoductIDSelect.SetItemChecked(i, false);
 
 				}
 
-				if (Lur.Count.ToString() != "0")
+				if (OpAllData.Count.ToString() != "0")
 				{
-					EffInput.Text = Lur[0].ManuelCycleTime.ToString();
+					EffInput.Text = OpAllData[0].ManuelCycleTimeT.ToString();
 					
 
-					foreach (Operation op in Lur)
+					foreach (ManuelCycleTime op in OpAllData)
 					{
 						for (int i = 0; i < PRoductIDSelect.Items.Count; i++)
 						{
@@ -159,7 +161,7 @@ namespace SafranCotChargeCapa
 
 		private void DelAll_Click(object sender, EventArgs e)
 		{
-			try
+	try
 			{
 				Operation op = new Operation
 				{
@@ -167,12 +169,8 @@ namespace SafranCotChargeCapa
 					OperationID = MachineIDInput.Text,
 				};
 
-				OperationDBO.DeletAllOperation(op);
-				MachineCycleTimeDBO.DeletAllOperationTime(op);
-				OpGroupeDBO.DeletGrp(op);
-				OperationDBO.DeletToolsOperation(op);
-				OperationDBO.DeletMachineOperation(op);
-
+				OperationDBO.DeletOp(op);
+				
 				MessageBox.Show("done !!");
 
 			}
@@ -191,40 +189,40 @@ namespace SafranCotChargeCapa
 				opname = MachineIDInput.Text;
 			try
 			{
-				List<Operation> op = new List<Operation>();
+				Operation operation = new Operation
+				{
+					OperationID = opname,
+					GroupID = metroComboBox1.SelectedItem.ToString(),
+				};
+				List<ManuelCycleTime> op = new List<ManuelCycleTime>();
 				for (int i = 0; i < Listitem; i++)
 				{
 					
 					if (PRoductIDSelect.GetItemChecked(i))
 					{
-						
-						Operation opp = new Operation
+
+						ManuelCycleTime opp = new ManuelCycleTime
 						{
 							OperationID = opname,
 							
-							ManuelCycleTime = float.Parse(EffInput.Text.Trim(), System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
+							ManuelCycleTimeT = float.Parse(EffInput.Text.Trim(), System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
 							ProductID = PRoductIDSelect.Items[i].ToString(),
 
 						}; op.Add(opp);
 					}
 				}
 				bool azer=false;
-				foreach (Operation oo in op)
-				{
+				
+				
 
-					azer =	OperationDBO.AddOperation(oo) ;
-					
-				}
-				if (!azer)
-				{
-					MessageBox.Show("404");
+				azer = OperationDBO.AddOperation(operation);//ManuelCycleTimeDBO.AddOperationData(oo) ;
 
-				}
-				else
-				{
-					OpGroupeDBO.AddPosteCharge(opname, IlotIDS.SelectedItem.ToString(), metroComboBox1.SelectedItem.ToString());
+
+				foreach (ManuelCycleTime cy in op)
+				{ 
+				ManuelCycleTimeDBO.AddOperationData(cy); }
 					MessageBox.Show("done !!");
-				}
+				
 			}
 			catch (Exception ex)
 		{
@@ -471,34 +469,34 @@ namespace SafranCotChargeCapa
 		{
 			try
 			{
-				Operation oppp = new Operation
+				ManuelCycleTime oppp = new ManuelCycleTime
 				{
 					OperationID = MachineIDInput.Text,
 				
 
 				};
 				OperationDBO.DeletAllOperation(oppp);
-				List<Operation> op = new List<Operation>();
+				List<ManuelCycleTime> op = new List<ManuelCycleTime>();
 				for (int i = 0; i < Listitem; i++)
 				{
 
 					if (PRoductIDSelect.GetItemChecked(i))
 					{
 
-						Operation opp = new Operation
+						ManuelCycleTime opp = new ManuelCycleTime
 						{
 							OperationID = MachineIDInput.Text,
 						
-							ManuelCycleTime = float.Parse(EffInput.Text.Trim(), System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
+							ManuelCycleTimeT = float.Parse(EffInput.Text.Trim(), System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
 							ProductID = PRoductIDSelect.Items[i].ToString(),
 
 						}; op.Add(opp);
 					}
 				}
-				foreach (Operation oo in op)
+				foreach (ManuelCycleTime oo in op)
 				{
 
-					OperationDBO.AddOperation(oo);
+					ManuelCycleTimeDBO.AddOperationData(oo);
 					OpGroupeDBO.UpdateOperationGrp(oo.OperationID, metroComboBox1.SelectedItem.ToString());
 					
 				}

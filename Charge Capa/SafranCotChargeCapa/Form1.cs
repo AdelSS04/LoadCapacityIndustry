@@ -26,7 +26,7 @@ namespace SafranCotChargeCapa
 		{
 			metroPanel2.Visible = false;
 			
-		}
+		}/*
 		private void showSubMenu(Panel subMenu)
 		{
 			if (subMenu.Visible == false)
@@ -54,7 +54,7 @@ namespace SafranCotChargeCapa
 
 			childForm.Parent = this;
 			childForm.Show();
-		}
+		}/*
 
 		private void metroButton1_Click(object sender, EventArgs e)
 		{
@@ -74,7 +74,7 @@ namespace SafranCotChargeCapa
 
 		private void metroButton2_Click(object sender, EventArgs e)
 		{
-			Off MyForm = new Off();
+			//Off MyForm = new Off();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
 			MyForm.Parent = panelChildForm;
@@ -89,7 +89,7 @@ namespace SafranCotChargeCapa
 		private void metroButton3_Click(object sender, EventArgs e)
 		{
 
-			ManagPoste MyForm = new ManagPoste();
+			//ManagPoste MyForm = new ManagPoste();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
 			MyForm.Parent = panelChildForm;
@@ -99,6 +99,6 @@ namespace SafranCotChargeCapa
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront();
 			MyForm.Show();
-		}
+		}*/
 	}
 }

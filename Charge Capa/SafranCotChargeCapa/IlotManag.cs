@@ -9,10 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MaterialSkin.Controls;
 namespace SafranCotChargeCapa
 {
-	public partial class IlotManag :Form // MetroFramework.Forms.MetroForm
+	public partial class IlotManag :Form// MetroFramework.Forms.MetroForm
 	{
 		public IlotManag()
 		{
@@ -26,13 +26,7 @@ namespace SafranCotChargeCapa
 				List<User> ur = UserDBO.GetAllUSer();
 				foreach (User u in ur)
 				{ checkedListBox1.Items.Add(u.UserID); }
-				List<Ilot> il = IlotDBO.GetAllIlot();
-				foreach (Ilot u in il)
-				{
-					RoleInput.Items.Add(u.IlotID);
-				}
-				YearSel.Value = int.Parse(DateTime.Now.Year.ToString());
-				WeekSel.Value = System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday);
+			
 			}
 			catch (Exception ex)
 			{
@@ -45,88 +39,33 @@ namespace SafranCotChargeCapa
 
 		}
 
-		private void metroTextBox1_ButtonClick(object sender, EventArgs e)
-		{
-			Upilot.Enabled = true;
-			AddButton.Enabled = false;
-			try
-			{
-				Ilot ur = IlotDBO.GetIlot(IlotIDInput.Text);
-				IlotNameInput.Text = ur.IlotName;
-				EffInput.Text = ur.Efficiency.ToString();
-				CRMInput.Text = ur.CRM.ToString();
-				AbsRate.Text = ur.TruancyRate.ToString();
-				IlotRejection.Text = ur.IlotRejectedRate.ToString();
+		
+	
+		
 
-				for (int i = 0; i < checkedListBox1.Items.Count; i++)
-				{
-					if (checkedListBox1.Items[i].ToString() == ur.UserID)
-					{ checkedListBox1.SetItemChecked(i, true); }
-					else
-					{ checkedListBox1.SetItemChecked(i, false); }
+	
 
-				}
-				AddButton.Enabled = false;
-				AddButton.Enabled = true;
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
-		}
-
-		private void RoleInput_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			Upilot.Enabled = true;
-			AddButton.Enabled = false;
-			try
-			{
-				Ilot ur = IlotDBO.GetIlot(RoleInput.SelectedItem.ToString());
-				IlotNameInput.Text = ur.IlotName;
-				EffInput.Text = ur.Efficiency.ToString();
-				CRMInput.Text = ur.CRM.ToString();
-				AbsRate.Text = ur.TruancyRate.ToString();
-				IlotRejection.Text = ur.IlotRejectedRate.ToString();
-
-
-				for (int i = 0; i < checkedListBox1.Items.Count; i++)
-				{
-					if (checkedListBox1.Items[i].ToString() == ur.UserID)
-					{ checkedListBox1.SetItemChecked(i, true); }
-					else
-					{ checkedListBox1.SetItemChecked(i, false); }
-
-				}
-				AddButton.Enabled = false;
-				Upilot.Enabled = true;
-				IlotIDInput.Text = RoleInput.SelectedItem.ToString();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
-		}
-
-		private void AddButton_Click(object sender, EventArgs e)
+		private void UpButton_Click(object sender, EventArgs e)
 		{
 			try
 			{
 				Ilot ur = new Ilot
 				{
-					IlotName = IlotNameInput.Text,
-					IlotRejectedRate = float.Parse(IlotRejection.Text),
-					IlotID = IlotIDInput.Text,
-					TruancyRate = float.Parse(AbsRate.Text),
-					Efficiency = float.Parse(EffInput.Text),
-					CRM = float.Parse(CRMInput.Text),
+					IlotName = IlotName.Text,
+					IlotRejectedRate = float.Parse(IlotRej.Text),
+					IlotID = IlotID.Text,
+					TruancyRate = float.Parse(IlotAbs.Text),
+					Efficiency = float.Parse(IlotEff.Text),
+					CRM = float.Parse(IlotCRM.Text),
 					UserID = checkedListBox1.SelectedItem.ToString()
 
 
 				};
-
-				IlotDBO.AddIlot(ur);
+				if(IlotDBO.AddIlot(ur))
 				MessageBox.Show("done !!");
-				
+				else
+					MessageBox.Show("error !!");
+
 			}
 			catch (Exception ex)
 			{
@@ -134,40 +73,42 @@ namespace SafranCotChargeCapa
 			}
 		}
 
-		private void Upilot_Click(object sender, EventArgs e)
+		private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
 		{
-			try
+			if (e.NewValue == CheckState.Checked && checkedListBox1.CheckedItems.Count >= 1)
+				e.NewValue = CheckState.Unchecked;
+		}
+
+		private void IlotEff_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
 			{
-				Ilot ur = new Ilot
-				{
-					IlotName = IlotNameInput.Text,
-					IlotRejectedRate = float.Parse(IlotRejection.Text),
-					IlotID = IlotIDInput.Text,
-					TruancyRate = float.Parse(AbsRate.Text),
-					Efficiency = float.Parse(EffInput.Text),
-					CRM = float.Parse(CRMInput.Text),
-					UserID = checkedListBox1.SelectedItem.ToString()
-
-
-				};
-				Operators op = new Operators
-				{
-					IlotID = IlotIDInput.Text,
-					YearT = int.Parse(YearSel.Value.ToString()),
-					WeekT = int.Parse(WeekSel.Value.ToString()),
-					NumberOfOperator = int.Parse(OpSel.Value.ToString()),
-
-				};
-				IlotDBO.UpdateIlot(ur);
-				OperatorsDBO.UpOperatingNumber(op);
-				MessageBox.Show("done !!");
-				Upilot.Enabled = false;
+				e.Handled = true;
+				//MessageBox.Show("hh");
+				IlotEff.Text = "only number";
+				IlotEff.BackColor = Color.FromArgb(172, 13, 4);
 				
 			}
-			catch (Exception ex)
+
+			// If you want, you can allow decimal (float) numbers
+			if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
 			{
-				MessageBox.Show(ex.Message);
+				e.Handled = true;
 			}
+			if (((IlotEff.Text == "only number") && !(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))) 
+				&& !((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)))
+			{
+				IlotEff.BackColor = Color.White;
+				IlotEff.Text = "";
+			}
+
+		}
+
+	
+		private void IlotEff_Click(object sender, EventArgs e)
+		{if (IlotEff.Text == "only number")
+			{ IlotEff.BackColor = Color.White;
+				IlotEff.Text = ""; }
 		}
 	}
 }

@@ -16,6 +16,7 @@ namespace SafranCotChargeCapa
 		{
 			InitializeComponent();
 			hideSubMenu();
+			hideSuSubbMenu();
 		}
 
 		private void HomeDashbord_Load(object sender, EventArgs e)
@@ -39,7 +40,24 @@ namespace SafranCotChargeCapa
 				subMenu.Visible = false;
 
 		}
+		private void hideSuSubbMenu()
+		{
+			IlotPanel.Visible = false;
+			
 
+		}
+
+		private void showSubSubMenu(Panel subMenu)
+		{
+			if (subMenu.Visible == false)
+			{
+				hideSuSubbMenu();
+				subMenu.Visible = true;
+			}
+			else
+				subMenu.Visible = false;
+
+		}
 		private void Dashbord_Click(object sender, EventArgs e)
 		{
 			showSubMenu(DashbordPanel);
@@ -69,7 +87,7 @@ namespace SafranCotChargeCapa
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			FormPanel.Controls.Clear();
+			 FormPanel.Controls.Clear();
 			//openChildFormInPanel(new Off());
 			Off MyForm = new Off();
 			MyForm.TopLevel = false;
@@ -80,13 +98,14 @@ namespace SafranCotChargeCapa
 			MyForm.Size = FormPanel.ClientSize;
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront();
-			MyForm.Show();
+			MyForm.Show(); 
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
+			showSubSubMenu(IlotPanel);
 			FormPanel.Controls.Clear();
-			IlotManag MyForm = new IlotManag();
+			IlotUpdate MyForm = new IlotUpdate();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
 			MyForm.Parent = FormPanel;
@@ -101,7 +120,7 @@ namespace SafranCotChargeCapa
 		private void button1_Click(object sender, EventArgs e)
 		{
 
-			FormPanel.Controls.Clear();
+			 FormPanel.Controls.Clear();
 			ManOperation MyForm = new ManOperation();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
@@ -111,13 +130,13 @@ namespace SafranCotChargeCapa
 			MyForm.Size = FormPanel.ClientSize;
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront();
-			MyForm.Show();
+			MyForm.Show(); 
 		}
 
 		private void button6_Click(object sender, EventArgs e)
 		{
-			FormPanel.Controls.Clear();
-			ManagPoste MyForm = new ManagPoste();
+			 FormPanel.Controls.Clear();
+			IlotManag MyForm = new IlotManag();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
 			MyForm.Parent = FormPanel;
@@ -126,12 +145,12 @@ namespace SafranCotChargeCapa
 			MyForm.Size = FormPanel.ClientSize;
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront();
-			MyForm.Show();
+			MyForm.Show(); 
 		}
 
 		private void button7_Click(object sender, EventArgs e)
 		{
-			FormPanel.Controls.Clear();
+		 	FormPanel.Controls.Clear();
 			ManageMachine MyForm = new ManageMachine();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
@@ -141,11 +160,11 @@ namespace SafranCotChargeCapa
 			MyForm.Size = FormPanel.ClientSize;
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront();
-			MyForm.Show();
+			MyForm.Show(); 
 		}
 
 		private void button8_Click(object sender, EventArgs e)
-		{
+		{ 
 			FormPanel.Controls.Clear();
 			ManageTools MyForm = new ManageTools();
 			MyForm.TopLevel = false;
@@ -156,12 +175,12 @@ namespace SafranCotChargeCapa
 			MyForm.Size = FormPanel.ClientSize;
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront();
-			MyForm.Show();
+			MyForm.Show(); 
 		}
 
 		private void button9_Click(object sender, EventArgs e)
-		{
-			FormPanel.Controls.Clear();
+		{/*
+			 FormPanel.Controls.Clear();
 			Test MyForm = new Test();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
@@ -171,7 +190,32 @@ namespace SafranCotChargeCapa
 			MyForm.Size = FormPanel.ClientSize;
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront();
+			MyForm.Show(); */
+		}
+
+		private void FormPanel_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+			FormPanel.Controls.Clear();
+			IlotUpdate MyForm = new IlotUpdate();
+			MyForm.TopLevel = false;
+			MyForm.FormBorderStyle = FormBorderStyle.None;
+			MyForm.Parent = FormPanel;
+			MyForm.Top = 0;
+			MyForm.Left = 0;
+			MyForm.Size = FormPanel.ClientSize;
+			MyForm.Dock = DockStyle.Fill;
+			MyForm.BringToFront();
 			MyForm.Show();
+		}
+
+		private void button10_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

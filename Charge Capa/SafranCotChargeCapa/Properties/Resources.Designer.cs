@@ -63,9 +63,29 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_32px {
+            get {
+                object obj = ResourceManager.GetObject("add_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_50px {
             get {
                 object obj = ResourceManager.GetObject("add_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_database_20px {
+            get {
+                object obj = ResourceManager.GetObject("add_database_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +126,36 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap Capture {
             get {
                 object obj = ResourceManager.GetObject("Capture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_trash_20px {
+            get {
+                object obj = ResourceManager.GetObject("delete_trash_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_trash_50px {
+            get {
+                object obj = ResourceManager.GetObject("delete_trash_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_property_32px {
+            get {
+                object obj = ResourceManager.GetObject("edit_property_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +253,26 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap restart_20px {
+            get {
+                object obj = ResourceManager.GetObject("restart_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap robot_32px {
+            get {
+                object obj = ResourceManager.GetObject("robot_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_26px {
             get {
                 object obj = ResourceManager.GetObject("save_26px", resourceCulture);
@@ -266,6 +336,16 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap search_24px {
             get {
                 object obj = ResourceManager.GetObject("search_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_32px {
+            get {
+                object obj = ResourceManager.GetObject("settings_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

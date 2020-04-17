@@ -31,13 +31,13 @@ namespace SafranCotChargeCapa
 			}
 
 		}
-		public float GetTC(List<Operation> ChargePo, string id)
+		public float GetTC(List<ManuelCycleTime> ChargePo, string id)
 		{
 			float C = 0;
-			foreach (Operation Tc in ChargePo)
+			foreach (ManuelCycleTime Tc in ChargePo)
 			{
 				if (Tc.ProductID == id)
-					 C+=Tc.ManuelCycleTime;
+					 C+=Tc.ManuelCycleTimeT;
 			}
 			return C;
 		}
@@ -52,7 +52,7 @@ namespace SafranCotChargeCapa
 			}
 			return C;
 		}
-		List<Operation> ChargePo;
+		List<ManuelCycleTime> ChargePo;
 		List<MachineCycleTime> OpMach;
 		private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -75,20 +75,21 @@ namespace SafranCotChargeCapa
 		List<double> MachCapa = new List<double>();
 		List<double>ToolsCapa = new List<double>();
 		List<Operators> op;
-		List<Operation> OP;
+		List<ManuelCycleTime> OP;
 		List<Demande> dmm1;
 		Ilot il;
 		public void upGraph ()
 		{
-			try
-			{
+			//try
+			//{
 				 il = IlotDBO.GetIlot(metroComboBox1.SelectedItem.ToString());
 				List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(il.IlotID);
 	op = OperatorsDBO.GetOperators(metroComboBox2.SelectedItem.ToString(),Convert.ToInt32(YearSelect.SelectedItem), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
 				OP = OpGroupeDBO.ListOPParGRP(metroComboBox2.SelectedItem.ToString());
+				MessageBox.Show(OP.Count.ToString());
 				List<Demande> dmm = new List<Demande>();
 				dmm1 = new List<Demande>();
-				foreach (Operation optest in OP)
+				foreach (ManuelCycleTime optest in OP)
 				{
 					dmm = (DemandeDBO.GetProductDemande(optest.ProductID, Convert.ToInt32(YearSelect.SelectedItem), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday)));
 					dmm1.AddRange(dmm);
@@ -210,11 +211,11 @@ namespace SafranCotChargeCapa
 				metroGrid1.DataSource = br;
 				setC();
 				
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
+			//}
+			//catch (Exception ex)
+		//	{
+			//	MessageBox.Show(ex.Message);
+			//}
 		}
 
 		private void YearSelect_SelectedItemChanged(object sender, EventArgs e)
@@ -262,12 +263,13 @@ namespace SafranCotChargeCapa
 
 		private void MachineList_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			try
-			{
+			//try
+			//{
 				Machine ActMach = MachineDBO.GetMachine(MachineList.SelectedItem.ToString());
 
-				List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString());
-				List<MachineOpenDay> CapaMach = MachineDBO.GetMachineShiftCalen(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), Convert.ToInt32(YearSelect.SelectedItem));
+				List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
+				List<MachineOpenDay> CapaMach = MachineDBO.GetMachineShiftCalen(MachineList.SelectedItem.ToString(),
+					System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), Convert.ToInt32(YearSelect.SelectedItem));
 
 				var LL = DemO.GroupBy(t => t.WeekDem).Select(t => new { ID = t.Key, Value = t.Sum(u => u.CycleTime * u.somm) }).ToList();
 
@@ -337,11 +339,11 @@ namespace SafranCotChargeCapa
 					metroLabel10.ForeColor = System.Drawing.Color.Red;
 				metroGrid2.DataSource = br;
 				setB();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
+		//	}
+		//	catch (Exception ex)
+			//{
+			//	MessageBox.Show(ex.Message);
+		//	}
 		}
 
 		private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -356,7 +358,7 @@ namespace SafranCotChargeCapa
 			
 			OpMach = new List<MachineCycleTime>();
 			List<Machine> MachInfo = new List<Machine>();
-			foreach (Operation oper in OP)
+			foreach (ManuelCycleTime oper in OP)
 			{
 				OpMach.AddRange(MachineCycleTimeDBO.GetOpALLmach(oper.OperationID));
 

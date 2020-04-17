@@ -11,33 +11,36 @@ using System.Threading.Tasks;
 namespace DAL
 {
 	public class OperationDBO {
-		public static List<Operation>  GetOperation(string id)
-		{
-			List<Operation> Lur = new List<Operation>();
-			string requete = String.Format("select * from Operation where (OperationID ='{0}');", id);
-			OleDbDataReader rdd = Util.lire(requete);
-			Operation ur;
-			while (rdd.Read())
+			public static Operation  GetOperationData(string id)
 			{
-				ur = new Operation
-				{
 				
-				ManuelCycleTime = float.Parse(rdd.GetString(1)),
-				ProductID = rdd.GetString(2)
-			};
-			Lur.Add(ur);
+				string requete = String.Format("select * from Operation where (OperationID ='{0}');", id);
+				OleDbDataReader rdd = Util.lire(requete);
+				Operation ur= new Operation();
+				while (rdd.Read())
+				{
 
-		}
-			Util.Disconnect();
-			return Lur;
-			
+				ur.OperationID = rdd.GetString(0);
+				ur.GroupID = rdd.GetString(1);
 
-		}
+					
+				
 
-		public static List<DemandeOP> GetDemandeOP(string id)
+			}
+				Util.Disconnect();
+				return ur;
+
+
+			}
+
+		public static List<DemandeOP> GetDemandeOP(string id,int ii)
 		{
 			List<DemandeOP> Lur = new List<DemandeOP>();
-			string requete = String.Format("select sum(DemandeQTE),O.OperationID,WeekDem,MCT.CycleTime from (select * from ( MachineCycleTime   AS MCT Inner join Operation AS O ON MCT.OperationID=O.OperationID) inner join Demande AS D on D.ProductID=O.ProductID where MCT.MachineID='{0}' and D.WeekDem>=12 ) group by  O.OperationID,WeekDem,MCT.CycleTime;", id);
+			string requete = String.Format("SELECT sum(DemandeQTE),Operation.OperationID,WeekDem,CycleTime " +
+				"FROM(Operation INNER JOIN MachineCycleTime ON Operation.OperationID = MachineCycleTime.OperationID) INNER JOIN((Product INNER JOIN Demande ON Product.ProductID = Demande.ProductID) " +
+	"INNER JOIN ManuelCycleTime ON Product.ProductID = ManuelCycleTime.ProductID) ON " +
+	"Operation.OperationID = ManuelCycleTime.OperationID where MachineID = '{0}' and WeekDem> {1}  group by  Operation.OperationID,WeekDem,CycleTime" +
+	"", id,ii);
 			OleDbDataReader rdd = Util.lire(requete);
 			DemandeOP ur;
 			while (rdd.Read())
@@ -67,10 +70,10 @@ namespace DAL
 			while (rdd.Read())
 			{
 				ur = new Operation
-				{OperationID = rdd.GetString(0),
-					
-					ManuelCycleTime = float.Parse(rdd.GetString(1)),
-					ProductID = rdd.GetString(2)
+				{
+					OperationID = rdd.GetString(0),
+
+					GroupID = rdd.GetString(1),
 				};
 				Lur.Add(ur);
 
@@ -80,9 +83,16 @@ namespace DAL
 
 		}
 
-		public static bool DeletAllOperation(Operation ur)
+		public static bool DeletAllOperation(ManuelCycleTime ur)
 		{
-			string requete = String.Format("delete * from operation where OperationID='{0}' ;", ur.OperationID);
+			string requete = String.Format("delete * from ManuelCycleTime where OperationID='{0}' ;", ur.OperationID);
+
+			return Util.miseajour(requete);
+
+		}
+		public static bool DeletOp(Operation ur)
+		{
+			string requete = String.Format("delete * from Operation where OperationID='{0}' ;", ur.OperationID);
 
 			return Util.miseajour(requete);
 
@@ -103,19 +113,19 @@ namespace DAL
 		}
 		public static bool AddOperation(Operation ur)
 		{
-			string requete = String.Format("insert into operation(OperationID,ManuelCycleTime,ProductID)" +
-				" values ('{0}','{1}','{2}');", ur.OperationID, ur.ManuelCycleTime, ur.ProductID);
+			string requete = String.Format("insert into operation(OperationID,GroupID)" +
+				" values ('{0}','{1}');", ur.OperationID, ur.GroupID);
 
 			return Util.miseajour(requete);
 			//return requete;
 		}
-		public static bool UpdateOperation(Operation op)
+	/*	public static bool UpdateOperation(Operation op)
 		{
 			string requete = String.Format("update Operation set (ManuelCycleTime={0},ProductID={2})" +
 				   " where OperationID='{1}' ) ;",  op.ManuelCycleTime, op.OperationID, op.ProductID);
 
 			return Util.miseajour(requete);
 
-		}
+		}*/
 	}
 }

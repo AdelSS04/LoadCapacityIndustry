@@ -24,10 +24,9 @@ namespace DAL
 			{
 				c = new OpGroupe
 				{
-					GrpName = rdd["GroupName"].ToString(),
+					GrpName = rdd["GroupID"].ToString(),
 					IlotID= rdd["IlotID"].ToString(),
-					OperationID = rdd["OperationID"].ToString(),
-					//	OperationID = rdd["OperationID"].ToString(),
+				
 				};
 				L.Add(c);
 			}
@@ -54,13 +53,20 @@ namespace DAL
 			return ur;
 
 		}
+		public static bool DeleteIlot(string ilotid )
+		{
+			string requete = String.Format("Delete * from Ilot where IlotID='{0}';", ilotid);
+
+			return Util.miseajour(requete);
+
+		}
 		public static bool AddIlot(Ilot ur)
 		{
 			string requete = String.Format("insert into Ilot(IlotID, IlotName, Efficiency,CRM,TruancyRate,IlotRejectRate,UserID)" +
 				" values ('{0}','{1}',{2},{3},{4},{5},'{6}');", ur.IlotID, ur.IlotName, ur.Efficiency, ur.CRM,ur.TruancyRate,ur.IlotRejectedRate,ur.UserID);
 
 			return Util.miseajour(requete);
-			//return requete;
+			
 		}
 		public static bool UpdateIlot(Ilot ur)
 		{

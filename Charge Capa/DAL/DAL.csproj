@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="OpGroupeDBO.cs" />
     <Compile Include="AvailabilityToolsDBO.cs" />
-    <Compile Include="AvailabilityMachineDBO.cs" />
+    <Compile Include="ManuelCycleTimeDBO.cs" />
     <Compile Include="MachineCycleTimeDBO.cs" />
     <Compile Include="OperatorsODBO.cs" />
     <Compile Include="OperatorsDBO.cs" />
