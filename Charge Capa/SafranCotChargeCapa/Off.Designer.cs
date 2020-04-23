@@ -41,17 +41,16 @@
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.YearSelect = new System.Windows.Forms.DomainUpDown();
 			this.chartStats = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -80,7 +79,6 @@
 			this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
 			this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-			this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
 			this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
 			this.metroTabControl3 = new MetroFramework.Controls.MetroTabControl();
 			this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
@@ -98,6 +96,7 @@
 			this.metroGrid3 = new MetroFramework.Controls.MetroGrid();
 			this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
 			this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+			this.metroGrid2 = new System.Windows.Forms.DataGridView();
 			((System.ComponentModel.ISupportInitialize)(this.chartStats)).BeginInit();
 			this.metroTabControl1.SuspendLayout();
 			this.metroTabPage1.SuspendLayout();
@@ -109,7 +108,6 @@
 			this.metroTabPage4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
 			this.metroTabPage5.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
 			this.metroTabControl3.SuspendLayout();
 			this.metroTabPage6.SuspendLayout();
 			this.metroTabPage7.SuspendLayout();
@@ -118,6 +116,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
 			this.metroTabPage9.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// metroComboBox1
@@ -209,7 +208,7 @@
 			this.metroTabPage1.HorizontalScrollbarSize = 10;
 			this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
 			this.metroTabPage1.Name = "metroTabPage1";
-			this.metroTabPage1.Size = new System.Drawing.Size(1006, 312);
+			this.metroTabPage1.Size = new System.Drawing.Size(1033, 312);
 			this.metroTabPage1.TabIndex = 0;
 			this.metroTabPage1.Text = "Charge/Capa H";
 			this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -261,7 +260,7 @@
 			this.metroTabPage3.HorizontalScrollbarSize = 10;
 			this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
 			this.metroTabPage3.Name = "metroTabPage3";
-			this.metroTabPage3.Size = new System.Drawing.Size(1006, 312);
+			this.metroTabPage3.Size = new System.Drawing.Size(1033, 312);
 			this.metroTabPage3.TabIndex = 2;
 			this.metroTabPage3.Text = "Analyse des besions";
 			this.metroTabPage3.VerticalScrollbarBarColor = true;
@@ -441,13 +440,13 @@
 			// 
 			// metroTabPage5
 			// 
+			this.metroTabPage5.Controls.Add(this.metroGrid2);
 			this.metroTabPage5.Controls.Add(this.metroLabel10);
 			this.metroTabPage5.Controls.Add(this.metroLabel11);
 			this.metroTabPage5.Controls.Add(this.metroLabel12);
 			this.metroTabPage5.Controls.Add(this.metroLabel13);
 			this.metroTabPage5.Controls.Add(this.metroLabel14);
 			this.metroTabPage5.Controls.Add(this.metroLabel15);
-			this.metroTabPage5.Controls.Add(this.metroGrid2);
 			this.metroTabPage5.HorizontalScrollbarBarColor = true;
 			this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
 			this.metroTabPage5.HorizontalScrollbarSize = 10;
@@ -523,58 +522,6 @@
 			this.metroLabel15.Size = new System.Drawing.Size(240, 25);
 			this.metroLabel15.TabIndex = 9;
 			this.metroLabel15.Text = "Capacite moyenne estimatif :";
-			// 
-			// metroGrid2
-			// 
-			this.metroGrid2.AllowUserToResizeRows = false;
-			this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-			this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-			this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle6;
-			this.metroGrid2.EnableHeadersVisualStyles = false;
-			this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			this.metroGrid2.Location = new System.Drawing.Point(2, 36);
-			this.metroGrid2.Name = "metroGrid2";
-			this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-			dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-			this.metroGrid2.RowHeadersVisible = false;
-			this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle8.Format = "N0";
-			dataGridViewCellStyle8.NullValue = null;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.metroGrid2.RowsDefaultCellStyle = dataGridViewCellStyle8;
-			this.metroGrid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.metroGrid2.ShowEditingIcon = false;
-			this.metroGrid2.Size = new System.Drawing.Size(1031, 286);
-			this.metroGrid2.TabIndex = 3;
 			// 
 			// metroComboBox2
 			// 
@@ -766,45 +713,45 @@
 			this.metroGrid3.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.metroGrid3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.metroGrid3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-			dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.metroGrid3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			this.metroGrid3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
 			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
 			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.metroGrid3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-			this.metroGrid3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-			dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.metroGrid3.DefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.metroGrid3.DefaultCellStyle = dataGridViewCellStyle9;
 			this.metroGrid3.EnableHeadersVisualStyles = false;
 			this.metroGrid3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
 			this.metroGrid3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.metroGrid3.Location = new System.Drawing.Point(2, 36);
 			this.metroGrid3.Name = "metroGrid3";
 			this.metroGrid3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-			dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.metroGrid3.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+			dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.metroGrid3.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
 			this.metroGrid3.RowHeadersVisible = false;
 			this.metroGrid3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-			dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle12.Format = "N0";
-			dataGridViewCellStyle12.NullValue = null;
-			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.metroGrid3.RowsDefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+			dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle11.Format = "N0";
+			dataGridViewCellStyle11.NullValue = null;
+			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.metroGrid3.RowsDefaultCellStyle = dataGridViewCellStyle11;
 			this.metroGrid3.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
 			this.metroGrid3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.metroGrid3.ShowEditingIcon = false;
@@ -833,6 +780,40 @@
 			this.metroLabel3.Size = new System.Drawing.Size(65, 25);
 			this.metroLabel3.TabIndex = 14;
 			this.metroLabel3.Text = "Outils :";
+			// 
+			// metroGrid2
+			// 
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle6;
+			this.metroGrid2.EnableHeadersVisualStyles = false;
+			this.metroGrid2.Location = new System.Drawing.Point(8, 9);
+			this.metroGrid2.Name = "metroGrid2";
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			this.metroGrid2.RowHeadersVisible = false;
+			this.metroGrid2.Size = new System.Drawing.Size(391, 160);
+			this.metroGrid2.TabIndex = 74;
 			// 
 			// Off
 			// 
@@ -863,7 +844,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
 			this.metroTabPage5.ResumeLayout(false);
 			this.metroTabPage5.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
 			this.metroTabControl3.ResumeLayout(false);
 			this.metroTabPage6.ResumeLayout(false);
 			this.metroTabPage6.PerformLayout();
@@ -875,6 +855,7 @@
 			this.metroTabPage9.ResumeLayout(false);
 			this.metroTabPage9.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -897,7 +878,6 @@
 		private MetroFramework.Controls.MetroTabPage metroTabPage4;
 		private MetroFramework.Controls.MetroTabPage metroTabPage5;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-		private MetroFramework.Controls.MetroGrid metroGrid2;
 		private MetroFramework.Controls.MetroComboBox metroComboBox2;
 		private MetroFramework.Controls.MetroTabControl metroTabControl3;
 		private MetroFramework.Controls.MetroTabPage metroTabPage6;
@@ -928,5 +908,6 @@
 		private MetroFramework.Controls.MetroLabel metroLabel20;
 		private MetroFramework.Controls.MetroLabel metroLabel21;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+		private System.Windows.Forms.DataGridView metroGrid2;
 	}
 }

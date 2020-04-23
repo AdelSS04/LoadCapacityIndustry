@@ -95,7 +95,7 @@ namespace SafranCotChargeCapa
 				if (state)
 				{
 					MessageBox.Show("done");
-					List<OperatorsO> CapaMach = OpGroupeDBO.GetAllPosteOpenDay(metroComboBox1.SelectedItem.ToString(), DateTime.Now.Year,
+					List<OperatorsO> CapaMach = OpGroupeDBO.GetAllPosteOpenDay(metroComboBox2.SelectedItem.ToString(), DateTime.Now.Year,
 					System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
 					dataGridView2.DataSource = CapaMach;
 					sizeDGV(dataGridView2, groupBox2);
@@ -127,7 +127,7 @@ namespace SafranCotChargeCapa
 				if (OpGroupeDBO.UpOperatingNumber(openDay))
 				{
 					MessageBox.Show("done");
-					List<OperatorsO> CapaMach = OpGroupeDBO.GetAllPosteOpenDay(metroComboBox1.SelectedItem.ToString(), DateTime.Now.Year,
+					List<OperatorsO> CapaMach = OpGroupeDBO.GetAllPosteOpenDay(metroComboBox2.SelectedItem.ToString(), DateTime.Now.Year,
 					System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
 					dataGridView2.DataSource = CapaMach;
 					sizeDGV(dataGridView2, groupBox2);
@@ -213,7 +213,7 @@ namespace SafranCotChargeCapa
 				dataGridView1.DataSource = opGroupes;
 				List<OpGroupeDBO> GetAllPosteOpenDay = new List<OpGroupeDBO>();
 				
-				dataGridView2.DataSource = OpGroupeDBO.GetAllPosteOpenDay(metroComboBox1.SelectedItem.ToString(), DateTime.Now.Year,
+				dataGridView2.DataSource = OpGroupeDBO.GetAllPosteOpenDay(metroComboBox2.SelectedItem.ToString(), DateTime.Now.Year,
 					System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
 
 

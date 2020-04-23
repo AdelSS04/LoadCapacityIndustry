@@ -131,7 +131,8 @@ namespace DAL
 
 		public static List<Tools> ListToolsOfGrp(string idpostecharge)
 		{
-			string requete = String.Format("SELECT Tools.ToolsID,Tools.ToolsName FROM Tools INNER JOIN ( ToolsOccupationTime INNER JOIN (Operation INNER JOIN OperationGroupe ON Operation.OperationID = OperationGroupe.OperationID ) ON ToolsOccupationTime.OperationID = Operation.OperationID) ON Tools.ToolsID = ToolsOccupationTime.ToolsID where OperationGroupe.GroupID='{0}' ;", idpostecharge);
+			string requete = String.Format("SELECT *" +
+				"FROM Tools INNER JOIN((OperationGroupe INNER JOIN Operation ON OperationGroupe.GroupID = Operation.GroupID) INNER JOIN ToolsOccupationTime ON Operation.OperationID = ToolsOccupationTime.OperationID) ON Tools.ToolsID = ToolsOccupationTime.ToolsID where OperationGroupe.GroupID = '{0}';", idpostecharge);
 			OleDbDataReader rd = Util.lire(requete);
 
 
@@ -141,7 +142,7 @@ namespace DAL
 			{
 				tools = new Tools
 				{
-					ToolsID = rd["ToolsID"].ToString(),
+					ToolsID = rd["Tools.ToolsID"].ToString(),
 					ToolsName = rd["ToolsName"].ToString(),
 				};
 				L.Add(tools);
@@ -151,10 +152,17 @@ namespace DAL
 			Util.Disconnect();
 			return L;
 		}
-		public static List<DemandeOP> GetDemandeOPTools(string id)
+		public static List<DemandeOP> GetDemandeOPTools(string id, int wek)
 		{
 			List<DemandeOP> Lur = new List<DemandeOP>();
-			string requete = String.Format("select sum(DemandeQTE),O.OperationID,WeekDem,MCT.OccupationTime from (select * from ( ToolsOccupationTime AS MCT Inner join Operation AS O ON MCT.OperationID=O.OperationID) inner join Demande AS D on D.ProductID=O.ProductID where MCT.ToolsID='{0}' and D.WeekDem>=12 ) group by  O.OperationID,WeekDem,MCT.OccupationTime;", id);
+			string requete = String.Format("SELECT sum(DemandeQTE),Operation.OperationID,WeekDem,OccupationTime " +
+				"FROM(Product INNER JOIN((Operation INNER JOIN(Tools INNER JOIN ToolsOccupationTime ON Tools.ToolsID = ToolsOccupationTime.ToolsID) " +
+	"ON Operation.OperationID = ToolsOccupationTime.OperationID) INNER JOIN ManuelCycleTime ON Operation.OperationID = ManuelCycleTime.OperationID) " +
+ "ON Product.ProductID = ManuelCycleTime.ProductID) INNER JOIN Demande ON Product.ProductID = Demande.ProductID  where(Tools.ToolsID = '{0}' " +
+ "and WeekDem >= {1}) group by Operation.OperationID,WeekDem,OccupationTime;", id, wek);
+
+
+
 			OleDbDataReader rdd = Util.lire(requete);
 			DemandeOP ur;
 			while (rdd.Read())
@@ -178,7 +186,7 @@ namespace DAL
 		public static List<ToolsOpenDay> GetToolsOpenDay(string machineid, int Wek, int Yr)
 		{
 			List<ToolsOpenDay> Lur = new List<ToolsOpenDay>();
-			string requete = String.Format("select * from ToolsOpenDay where ((ToolsID ='{0}' and WeekT>=12) and YearT = {2});", machineid, Wek, Yr);
+			string requete = String.Format("select * from ToolsOpenDay where ((ToolsID ='{0}' and WeekT>={1}) and YearT = {2});", machineid, Wek, Yr);
 			OleDbDataReader rdd = Util.lire(requete);
 			ToolsOpenDay ur;
 			while (rdd.Read())

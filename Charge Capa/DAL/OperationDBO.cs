@@ -39,7 +39,7 @@ namespace DAL
 			string requete = String.Format("SELECT sum(DemandeQTE),Operation.OperationID,WeekDem,CycleTime " +
 				"FROM(Operation INNER JOIN MachineCycleTime ON Operation.OperationID = MachineCycleTime.OperationID) INNER JOIN((Product INNER JOIN Demande ON Product.ProductID = Demande.ProductID) " +
 	"INNER JOIN ManuelCycleTime ON Product.ProductID = ManuelCycleTime.ProductID) ON " +
-	"Operation.OperationID = ManuelCycleTime.OperationID where MachineID = '{0}' and WeekDem> {1}  group by  Operation.OperationID,WeekDem,CycleTime" +
+	"Operation.OperationID = ManuelCycleTime.OperationID where MachineID = '{0}' and WeekDem>= {1}  group by  Operation.OperationID,WeekDem,CycleTime" +
 	"", id,ii);
 			OleDbDataReader rdd = Util.lire(requete);
 			DemandeOP ur;
@@ -64,7 +64,7 @@ namespace DAL
 		public static List<Operation> GetAllOperationName()
 		{
 			List<Operation> Lur = new List<Operation>();
-			string requete = String.Format("select * from Operation;");
+			string requete = String.Format("select * from Operation ORDER BY OperationID DESC;");
 			OleDbDataReader rdd = Util.lire(requete);
 			Operation ur;
 			while (rdd.Read())

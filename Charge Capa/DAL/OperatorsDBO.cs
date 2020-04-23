@@ -23,7 +23,7 @@ namespace DAL
 
 		public static List<Operators> GetOperators(string id, int yrr, int wkk)
 		{
-			string requete = String.Format("select * from GrpOfOperators where (GroupID ='{0}'and YearT={1}) and WeekT>={2} ORDER BY YearT ASC,WeekT ASC ;", id, yrr, wkk);
+			string requete = String.Format("select * from GrpOfOperators where (GroupID ='{0}'and YearT={1}) and WeekT>={2} ORDER BY WeekT ASC ;", id, yrr, wkk);
 			OleDbDataReader rdd = Util.lire(requete);
 			List<Operators> ur = new List<Operators>();
 			Operators o;

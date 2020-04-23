@@ -80,13 +80,13 @@ namespace SafranCotChargeCapa
 		Ilot il;
 		public void upGraph ()
 		{
-			//try
-			//{
+			try
+			{
 				 il = IlotDBO.GetIlot(metroComboBox1.SelectedItem.ToString());
 				List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(il.IlotID);
 	op = OperatorsDBO.GetOperators(metroComboBox2.SelectedItem.ToString(),Convert.ToInt32(YearSelect.SelectedItem), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
 				OP = OpGroupeDBO.ListOPParGRP(metroComboBox2.SelectedItem.ToString());
-				MessageBox.Show(OP.Count.ToString());
+				
 				List<Demande> dmm = new List<Demande>();
 				dmm1 = new List<Demande>();
 				foreach (ManuelCycleTime optest in OP)
@@ -130,7 +130,8 @@ namespace SafranCotChargeCapa
 				foreach(Operators opo in op)
 				{
 					Capa.Add(opo.NumberOfOperator * (il.Efficiency/100) * (1 - (il.IlotRejectedRate/100)) * (1 - (il.TruancyRate/100)) * 7.67f * 5);
-				}
+				
+			}
 				List<Besoin> br = new List<Besoin>();
 				Besoin brr;
 				for (int i = 0; i < yValues.Count; i++)
@@ -138,8 +139,8 @@ namespace SafranCotChargeCapa
 						PerCV.Add(Math.Round(yValues[i] / Capa[i], 2) * 100);
 					else
 						PerCV.Add(0);
-
-											brr = new Besoin 
+				
+					brr = new Besoin 
 					{WeekWork=xValues[i],
 					ActualCharge=yValues[i],
 					AcutalCapa=Capa[i],
@@ -211,11 +212,11 @@ namespace SafranCotChargeCapa
 				metroGrid1.DataSource = br;
 				setC();
 				
-			//}
-			//catch (Exception ex)
-		//	{
-			//	MessageBox.Show(ex.Message);
-			//}
+			}
+			catch (Exception ex)
+		{
+			MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void YearSelect_SelectedItemChanged(object sender, EventArgs e)
@@ -262,88 +263,92 @@ namespace SafranCotChargeCapa
 		}
 
 		private void MachineList_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			//try
-			//{
-				Machine ActMach = MachineDBO.GetMachine(MachineList.SelectedItem.ToString());
-
-				List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
-				List<MachineOpenDay> CapaMach = MachineDBO.GetMachineShiftCalen(MachineList.SelectedItem.ToString(),
-					System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), Convert.ToInt32(YearSelect.SelectedItem));
-
-				var LL = DemO.GroupBy(t => t.WeekDem).Select(t => new { ID = t.Key, Value = t.Sum(u => u.CycleTime * u.somm) }).ToList();
-
-				var series = new Series()
+		{if (MachineList.SelectedItem.ToString() == "PressePorte1")
+				UpPresse1();
+			else
+			{
+				try
 				{
-					ChartType = SeriesChartType.Column,
-					Color = Color.FromArgb(93, 138, 168),
-					IsVisibleInLegend = true,
+					Machine ActMach = MachineDBO.GetMachine(MachineList.SelectedItem.ToString());
 
-					Name = "Charge",
-					LegendText = "Charge",
+					List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
+					List<MachineOpenDay> CapaMach = MachineDBO.GetMachineShiftCalen(MachineList.SelectedItem.ToString(),
+						System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), Convert.ToInt32(YearSelect.SelectedItem));
 
-				};
-				var series1 = new Series()
-				{
-					ChartType = SeriesChartType.Spline,
-					IsVisibleInLegend = true,
-					BorderDashStyle = ChartDashStyle.Solid,
+					var LL = DemO.GroupBy(t => t.WeekDem).Select(t => new { ID = t.Key, Value = t.Sum(u => u.CycleTime * u.somm) }).ToList();
 
-					Name = "Capa",
-					LegendText = "Capacité",
-					BorderWidth = 3,
-					Color = Color.FromArgb(255, 126, 0),
-				};
-				List<int> Xval = new List<int>();
-				List<double> chr = new List<double>();
-				foreach (var k in LL)
-				{
-					chr.Add(Math.Round((k.Value)  +(((il.CRM) / 100) * k.Value), 1));
-					Xval.Add(k.ID);
-				}
-				MachCapa.Clear();
-				foreach (MachineOpenDay k in CapaMach)
-				{
-					MachCapa.Add(k.NumberOfshift * (il.Efficiency / 100) * (1 - (ActMach.MachineRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f * 3);
-				}
-				chart2.Series.Clear();
-				chart2.Series.Add(series);
-				chart2.Series.Add(series1);
-				chart2.Series[0].Points.Clear(); chart2.Series[1].Points.Clear();
-				chart2.ChartAreas[0].AxisX.Interval = 1;
-
-				chart2.Series[0].Points.DataBindXY(Xval, chr);
-				chart2.Series[1].Points.DataBindXY(Xval, MachCapa);
-				List<Besoin> br = new List<Besoin>();
-				Besoin brr;
-				for (int i = 0; i < chr.Count; i++)
-				{
-					PerCV.Add(Math.Round(chr[i] / MachCapa[i], 2) * 100);
-					brr = new Besoin
+					var series = new Series()
 					{
-						WeekWork = Xval[i],
-						ActualCharge = float.Parse(chr[i].ToString()),
-						AcutalCapa = float.Parse(MachCapa[i].ToString()),
-						BesoinH = float.Parse(MachCapa[i].ToString())- float.Parse(chr[i].ToString()),
+						ChartType = SeriesChartType.Column,
+						Color = Color.FromArgb(93, 138, 168),
+						IsVisibleInLegend = true,
+
+						Name = "Charge",
+						LegendText = "Charge",
+
+					};
+					var series1 = new Series()
+					{
+						ChartType = SeriesChartType.Spline,
+						IsVisibleInLegend = true,
+						BorderDashStyle = ChartDashStyle.Solid,
+
+						Name = "Capa",
+						LegendText = "Capacité",
+						BorderWidth = 3,
+						Color = Color.FromArgb(255, 126, 0),
+					};
+					List<int> Xval = new List<int>();
+					List<double> chr = new List<double>();
+					foreach (var k in LL)
+					{
+						chr.Add(Math.Round((k.Value) + (((il.CRM) / 100) * k.Value), 1));
+						Xval.Add(k.ID);
+					}
+					MachCapa.Clear();
+					foreach (MachineOpenDay k in CapaMach)
+					{
+						MachCapa.Add(k.NumberOfshift * (1 - (ActMach.MachineRejectedRate / 100)) * 7.67f * k.OpenDay);
+					}
+					chart2.Series.Clear();
+					chart2.Series.Add(series);
+					chart2.Series.Add(series1);
+					chart2.Series[0].Points.Clear(); chart2.Series[1].Points.Clear();
+					chart2.ChartAreas[0].AxisX.Interval = 1;
+
+					chart2.Series[0].Points.DataBindXY(Xval, chr);
+					chart2.Series[1].Points.DataBindXY(Xval, MachCapa);
+					List<Besoin> br = new List<Besoin>();
+					Besoin brr;
+					for (int i = 0; i < chr.Count; i++)
+					{
+						PerCV.Add(Math.Round(chr[i] / MachCapa[i], 2) * 100);
+						brr = new Besoin
+						{
+							WeekWork = Xval[i],
+							ActualCharge = float.Parse(chr[i].ToString()),
+							AcutalCapa = float.Parse(MachCapa[i].ToString()),
+							BesoinH = float.Parse(MachCapa[i].ToString()) - float.Parse(chr[i].ToString()),
 
 
-					}; br.Add(brr);
+						}; br.Add(brr);
 
+					}
+					metroLabel11.Text = Math.Round(br.Select(r => r.ActualCharge).Average(), 2).ToString() + "H/semaine";
+					metroLabel12.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() + "H/semaine";
+					metroLabel10.Text = Math.Round(br.Select(r => r.BesoinH).Average(), 2).ToString() + "H/semaine";
+					if (br.Select(r => r.BesoinH).Average() > 0)
+						metroLabel10.ForeColor = System.Drawing.Color.Green;
+					else
+						metroLabel10.ForeColor = System.Drawing.Color.Red;
+					metroGrid2.DataSource = br;
+					setB();
 				}
-				metroLabel11.Text = Math.Round(br.Select(r => r.ActualCharge).Average(), 2).ToString() + "H/semaine";
-				metroLabel12.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() + "H/semaine";
-				metroLabel10.Text = Math.Round(br.Select(r => r.BesoinH).Average(), 2).ToString() + "H/semaine";
-				if (br.Select(r => r.BesoinH).Average() > 0)
-					metroLabel10.ForeColor = System.Drawing.Color.Green;
-				else
-					metroLabel10.ForeColor = System.Drawing.Color.Red;
-				metroGrid2.DataSource = br;
-				setB();
-		//	}
-		//	catch (Exception ex)
-			//{
-			//	MessageBox.Show(ex.Message);
-		//	}
+				catch (Exception ex)
+				{
+					MessageBox.Show(ex.Message);
+				}
+			}
 		}
 
 		private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -374,8 +379,7 @@ namespace SafranCotChargeCapa
 			{
 				MachineList.Items.Add(machine.MachineID);
 			}
-			//List<string> ToolsName = ToolsDBO.ListToolsOfGrp(metroComboBox2.SelectedItem.ToString());
-			//metroComboBox3.Items.AddRange(ToolsName.ToArray());
+			
 			setB();
 		}
 
@@ -397,7 +401,7 @@ namespace SafranCotChargeCapa
 					OneTollsOpen = ToolsDBO.GetToolsOpenDay(tools.ToolsID, System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), Convert.ToInt32(YearSelect.SelectedItem));
 					;
 
-					OnlyOneDem = (ToolsDBO.GetDemandeOPTools(tools.ToolsID));
+					OnlyOneDem = (ToolsDBO.GetDemandeOPTools(tools.ToolsID, System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday)));
 					AllDem.AddRange(OnlyOneDem);
 					AllTollsOpen.Add(OneTollsOpen);
 				}
@@ -439,6 +443,7 @@ namespace SafranCotChargeCapa
 				List<int> inn = new List<int>();
 				int longeurList = AllTollsOpen.Count();
 				int longeurelement = AllTollsOpen[0].Count();
+			ToolsCapa.Clear();
 				for (int k = 0; k < longeurelement; k++)
 				{
 					inn.Clear();
@@ -491,6 +496,132 @@ namespace SafranCotChargeCapa
 				
 					
 					
+			}
+		catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+		public void UpPresse1 ()
+		{
+			try
+			{
+				Machine ActMach = MachineDBO.GetMachine(MachineList.SelectedItem.ToString());
+
+				List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
+				MessageBox.Show(DemO[5].CycleTime.ToString());
+				List<DemandeOP> Cycle1=new List<DemandeOP>();
+				List<DemandeOP> Cycle2= new List<DemandeOP>();
+	
+
+				var DrapagePorteA320D = DemO.Where(person => person.OperationID == "DrapagePorteA320D");
+				var DrapagePorteA320G = DemO.Where(person => person.OperationID == "DrapagePorteA320G");
+				var DrapagePorteOWSA321D = DemO.Where(person => person.OperationID == "DrapagePorteOWSA321D");
+				var DrapagePorteOWSA321G = DemO.Where(person => person.OperationID == "DrapagePorteOWSA321G");
+				DemandeOP Dem1;
+				DemandeOP Dem2;
+				int max1;
+				int max2;
+				for (int i = 0; i < DrapagePorteA320D.ToList().Count; i++)
+				{ max1 = Math.Max(DrapagePorteA320D.ToList()[i].somm, DrapagePorteA320G.ToList()[i].somm);
+					Dem1 = new DemandeOP
+					{ CycleTime = DrapagePorteA320D.ToList()[0].CycleTime ,
+					OperationID = "DrapagePorte",
+					somm=max1,
+					WeekDem= DrapagePorteA320D.ToList()[i].WeekDem
+					}; Cycle1.Add(Dem1);
+					//                                            //                         //
+					max2 = Math.Max(DrapagePorteOWSA321D.ToList()[i].somm, DrapagePorteOWSA321G.ToList()[i].somm);
+					Dem2 = new DemandeOP
+					{
+						CycleTime = DrapagePorteOWSA321G.ToList()[0].CycleTime,
+						OperationID = "DrapagePorteOWS",
+						somm = max2,
+						WeekDem = DrapagePorteOWSA321G.ToList()[i].WeekDem
+					}; Cycle2.Add(Dem2);
+
+
+
+				}
+				List <MachineOpenDay> CapaMach = MachineDBO.GetMachineShiftCalen(MachineList.SelectedItem.ToString(),
+					System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), Convert.ToInt32(YearSelect.SelectedItem));
+				
+
+
+				var Chgarge1 = Cycle1.GroupBy(t => t.WeekDem).Select(t => new { ID = t.Key, Value = t.Sum(u => u.CycleTime * u.somm) }).ToList();
+				var Chgarge2 = Cycle2.GroupBy(t => t.WeekDem).Select(t => new { ID = t.Key, Value = t.Sum(u => u.CycleTime * u.somm) }).ToList();
+
+				var series = new Series()
+				{
+					ChartType = SeriesChartType.Column,
+					Color = Color.FromArgb(93, 138, 168),
+					IsVisibleInLegend = true,
+
+					Name = "Charge",
+					LegendText = "Charge",
+
+				};
+				var series1 = new Series()
+				{
+					ChartType = SeriesChartType.Spline,
+					IsVisibleInLegend = true,
+					BorderDashStyle = ChartDashStyle.Solid,
+
+					Name = "Capa",
+					LegendText = "Capacité",
+					BorderWidth = 3,
+					Color = Color.FromArgb(255, 126, 0),
+				};
+				List<int> Xval = new List<int>();
+				List<double> chr = new List<double>();
+				int ind = 0;
+				for(int i =0; i< Chgarge1.Count;i++)
+				{
+					chr.Add(Math.Round(((Chgarge1[i].Value) + (Chgarge2[i].Value)) + (((il.CRM) / 100) * ((Chgarge1[i].Value) + (Chgarge2[i].Value))), 1));
+					Xval.Add(Chgarge2[i].ID);
+
+				}
+			
+				MachCapa.Clear();
+				foreach (MachineOpenDay k in CapaMach)
+				{
+					MachCapa.Add(k.NumberOfshift * (1 - (ActMach.MachineRejectedRate / 100)) * 7.67f * k.OpenDay);
+				}
+				chart2.Series.Clear();
+				chart2.Series.Add(series);
+				chart2.Series.Add(series1);
+				chart2.Series[0].Points.Clear(); chart2.Series[1].Points.Clear();
+				chart2.ChartAreas[0].AxisX.Interval = 1;
+
+				chart2.Series[0].Points.DataBindXY(Xval, chr);
+				chart2.Series[1].Points.DataBindXY(Xval, MachCapa);
+				List<Besoin> br = new List<Besoin>();
+				Besoin brr;
+				for (int i = 0; i < chr.Count; i++)
+				{
+					PerCV.Add(Math.Round(chr[i] / MachCapa[i], 2) * 100);
+					brr = new Besoin
+					{
+						WeekWork = Xval[i],
+						ActualCharge = float.Parse(chr[i].ToString()),
+						AcutalCapa = float.Parse(MachCapa[i].ToString()),
+						BesoinH = float.Parse(MachCapa[i].ToString()) - float.Parse(chr[i].ToString()),
+
+
+					}; br.Add(brr);
+
+				}
+				metroLabel11.Text = Math.Round(br.Select(r => r.ActualCharge).Average(), 2).ToString() + "H/semaine";
+				metroLabel12.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() + "H/semaine";
+				metroLabel10.Text = Math.Round(br.Select(r => r.BesoinH).Average(), 2).ToString() + "H/semaine";
+				if (br.Select(r => r.BesoinH).Average() > 0)
+					metroLabel10.ForeColor = System.Drawing.Color.Green;
+				else
+					metroLabel10.ForeColor = System.Drawing.Color.Red;
+				metroGrid2.DataSource = br;
+				
+				setB();
+
 			}
 			catch (Exception ex)
 			{
