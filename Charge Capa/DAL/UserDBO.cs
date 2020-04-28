@@ -45,7 +45,23 @@ namespace DAL
 			return ur;
 
 		}
+		public static User Login(string id,string pass)
+		{
+			string requete = String.Format("select * from UserDB where (UserID ='{0}' and UserPassword='{1}');", id,pass);
+			OleDbDataReader rdd = Util.lire(requete);
+			User ur = new User();
+			while (rdd.Read())
+			{
 
+				ur.UserID = rdd.GetString(0);
+				ur.UserPassword = rdd.GetString(1);
+				ur.Type = rdd.GetString(3);
+
+			}
+			Util.Disconnect();
+			return ur;
+
+		}
 		public static List<User> GetAllUSer()
 		{
 			List<User> Lur = new List<User>();

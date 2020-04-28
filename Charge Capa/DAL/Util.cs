@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BEL;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.OleDb;
@@ -11,6 +12,7 @@ namespace DAL
 {
 	public class Util
 	{
+		public static User user;
 		public static OleDbConnection cn;
 		public static OleDbCommand cmd;
 		public static OleDbDataReader rd;

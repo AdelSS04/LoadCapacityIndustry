@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using DAL;
 
 namespace SafranCotChargeCapa
 {
@@ -44,7 +44,8 @@ namespace SafranCotChargeCapa
 
 		private void HomeDashbord_Load(object sender, EventArgs e)
 		{
-
+			if (Util.user.Type == "admin")
+				btn.Enabled = true;
 		}
 		private void hideSubMenu()
 		{
@@ -118,7 +119,7 @@ namespace SafranCotChargeCapa
 		{
 			 FormPanel.Controls.Clear();
 			//openChildFormInPanel(new Off());
-			Off MyForm = new Off();
+			dashboard.live MyForm = new dashboard.live();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
 			MyForm.Parent = FormPanel;
@@ -479,6 +480,16 @@ namespace SafranCotChargeCapa
 		{
 			About about = new About();
 			about.Show();
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void FormPanel_Paint_1(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }

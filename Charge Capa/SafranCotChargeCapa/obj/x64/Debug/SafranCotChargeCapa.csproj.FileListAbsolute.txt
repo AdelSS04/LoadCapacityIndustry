@@ -17,8 +17,10 @@ C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\bin\x
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\bin\x64\Debug\ExcelDataReader.DataSet.xml
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.csprojAssemblyReference.cache
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.csproj.ResolveComReference.cache
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.About.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.AddUser.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.HomeDashbord.resources
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.AddOp.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.ManOp.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.AddPoste.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.ManPoste.resources
@@ -35,5 +37,8 @@ C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.csproj.CopyComplete
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.exe
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.pdb
-C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.AddOp.resources
-C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.About.resources
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.dashboard.live.resources
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\bin\x64\Debug\LiveCharts.WinForms.dll
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\bin\x64\Debug\LiveCharts.WinForms.pdb
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\bin\x64\Debug\LiveCharts.WinForms.xml
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.login.resources

@@ -55,13 +55,14 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.button6 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
+			this.btn = new System.Windows.Forms.Button();
 			this.DashbordPanel = new System.Windows.Forms.Panel();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.Dashbord = new System.Windows.Forms.Button();
 			this.LogoPanel = new System.Windows.Forms.Panel();
 			this.FormPanel = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
 			this.Header.SuspendLayout();
 			this.SideMenu.SuspendLayout();
 			this.MangPanel.SuspendLayout();
@@ -71,6 +72,7 @@
 			this.MachinePanel.SuspendLayout();
 			this.IlotPanel.SuspendLayout();
 			this.DashbordPanel.SuspendLayout();
+			this.FormPanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Header
@@ -153,7 +155,7 @@
 			// 
 			this.SideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
 			this.SideMenu.Controls.Add(this.MangPanel);
-			this.SideMenu.Controls.Add(this.button5);
+			this.SideMenu.Controls.Add(this.btn);
 			this.SideMenu.Controls.Add(this.DashbordPanel);
 			this.SideMenu.Controls.Add(this.Dashbord);
 			this.SideMenu.Controls.Add(this.LogoPanel);
@@ -498,24 +500,25 @@
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
-			// button5
+			// btn
 			// 
-			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button5.FlatAppearance.BorderSize = 0;
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.ForeColor = System.Drawing.Color.Beige;
-			this.button5.Image = global::SafranCotChargeCapa.Properties.Resources.settings_32px;
-			this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button5.Location = new System.Drawing.Point(0, 185);
-			this.button5.Name = "button5";
-			this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.button5.Size = new System.Drawing.Size(145, 48);
-			this.button5.TabIndex = 7;
-			this.button5.Text = "Management";
-			this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.button5_Click);
+			this.btn.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btn.Enabled = false;
+			this.btn.FlatAppearance.BorderSize = 0;
+			this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn.ForeColor = System.Drawing.Color.Beige;
+			this.btn.Image = global::SafranCotChargeCapa.Properties.Resources.settings_32px;
+			this.btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btn.Location = new System.Drawing.Point(0, 185);
+			this.btn.Name = "btn";
+			this.btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.btn.Size = new System.Drawing.Size(145, 48);
+			this.btn.TabIndex = 7;
+			this.btn.Text = "Management";
+			this.btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btn.UseVisualStyleBackColor = true;
+			this.btn.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// DashbordPanel
 			// 
@@ -543,6 +546,7 @@
 			this.button3.Text = "Drapage";
 			this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button2
 			// 
@@ -592,12 +596,24 @@
 			// FormPanel
 			// 
 			this.FormPanel.AutoScroll = true;
+			this.FormPanel.Controls.Add(this.label1);
 			this.FormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.FormPanel.Location = new System.Drawing.Point(145, 32);
 			this.FormPanel.Name = "FormPanel";
 			this.FormPanel.Size = new System.Drawing.Size(985, 484);
 			this.FormPanel.TabIndex = 2;
+			this.FormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FormPanel_Paint_1);
 			this.FormPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormPanel_MouseMove);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(298, 153);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(260, 58);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Welcom !!";
 			// 
 			// HomeDashbord
 			// 
@@ -625,6 +641,8 @@
 			this.MachinePanel.ResumeLayout(false);
 			this.IlotPanel.ResumeLayout(false);
 			this.DashbordPanel.ResumeLayout(false);
+			this.FormPanel.ResumeLayout(false);
+			this.FormPanel.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -641,7 +659,7 @@
 		private System.Windows.Forms.Panel MangPanel;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button btn;
 		private System.Windows.Forms.Button button10;
 		private System.Windows.Forms.Panel IlotPanel;
 		private System.Windows.Forms.Button button1;
@@ -664,5 +682,6 @@
 		private System.Windows.Forms.Button UpButton;
 		private System.Windows.Forms.Button button15;
 		private System.Windows.Forms.Button button18;
+		private System.Windows.Forms.Label label1;
 	}
 }

@@ -283,6 +283,26 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loading_sign_95px {
+            get {
+                object obj = ResourceManager.GetObject("loading_sign_95px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_20px {
+            get {
+                object obj = ResourceManager.GetObject("login_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Safran {
             get {
                 object obj = ResourceManager.GetObject("Logo-Safran", resourceCulture);
@@ -296,6 +316,46 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap pngwave {
             get {
                 object obj = ResourceManager.GetObject("pngwave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap power_plant_100px {
+            get {
+                object obj = ResourceManager.GetObject("power_plant_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap power_plant_120px {
+            get {
+                object obj = ResourceManager.GetObject("power_plant_120px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap power_plant_50px {
+            get {
+                object obj = ResourceManager.GetObject("power_plant_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap power_plant_95px {
+            get {
+                object obj = ResourceManager.GetObject("power_plant_95px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,9 +503,29 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_120px {
+            get {
+                object obj = ResourceManager.GetObject("user_120px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap workflow_32px {
             get {
                 object obj = ResourceManager.GetObject("workflow_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yarn_95px {
+            get {
+                object obj = ResourceManager.GetObject("yarn_95px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
