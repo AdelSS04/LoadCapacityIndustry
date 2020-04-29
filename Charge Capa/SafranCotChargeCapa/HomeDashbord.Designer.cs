@@ -62,7 +62,9 @@
 			this.Dashbord = new System.Windows.Forms.Button();
 			this.LogoPanel = new System.Windows.Forms.Panel();
 			this.FormPanel = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.button5 = new System.Windows.Forms.Button();
 			this.Header.SuspendLayout();
 			this.SideMenu.SuspendLayout();
 			this.MangPanel.SuspendLayout();
@@ -154,6 +156,7 @@
 			// SideMenu
 			// 
 			this.SideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			this.SideMenu.Controls.Add(this.button5);
 			this.SideMenu.Controls.Add(this.MangPanel);
 			this.SideMenu.Controls.Add(this.btn);
 			this.SideMenu.Controls.Add(this.DashbordPanel);
@@ -596,6 +599,7 @@
 			// FormPanel
 			// 
 			this.FormPanel.AutoScroll = true;
+			this.FormPanel.Controls.Add(this.label2);
 			this.FormPanel.Controls.Add(this.label1);
 			this.FormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.FormPanel.Location = new System.Drawing.Point(145, 32);
@@ -605,15 +609,43 @@
 			this.FormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FormPanel_Paint_1);
 			this.FormPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormPanel_MouseMove);
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(301, 228);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(260, 58);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Welcom !!";
+			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(298, 153);
+			this.label1.Location = new System.Drawing.Point(301, 153);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(260, 58);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Welcom !!";
+			// 
+			// button5
+			// 
+			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button5.FlatAppearance.BorderSize = 0;
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button5.ForeColor = System.Drawing.Color.Beige;
+			this.button5.Image = global::SafranCotChargeCapa.Properties.Resources.icons8_dashboard_32;
+			this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button5.Location = new System.Drawing.Point(0, 826);
+			this.button5.Name = "button5";
+			this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.button5.Size = new System.Drawing.Size(145, 48);
+			this.button5.TabIndex = 9;
+			this.button5.Text = "PDP";
+			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.button5_Click_1);
 			// 
 			// HomeDashbord
 			// 
@@ -683,5 +715,7 @@
 		private System.Windows.Forms.Button button15;
 		private System.Windows.Forms.Button button18;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button button5;
 	}
 }

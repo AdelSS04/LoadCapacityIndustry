@@ -33,6 +33,29 @@ namespace DAL
 
 			}
 
+		public static List<Operation> GetOperationDataGrp(string id)
+		{
+			List<Operation> lo = new List<Operation>();
+			string requete = String.Format("select * from Operation where (GroupID ='{0}');", id);
+			OleDbDataReader rdd = Util.lire(requete);
+			Operation ur;
+			while (rdd.Read())
+			{
+				ur = new Operation {
+					OperationID = rdd.GetString(0),
+				GroupID = rdd.GetString(1),
+
+			};lo.Add(ur);
+
+
+			}
+			Util.Disconnect();
+			return lo;
+
+
+		}
+
+
 		public static List<DemandeOP> GetDemandeOP(string id,int ii)
 		{
 			List<DemandeOP> Lur = new List<DemandeOP>();

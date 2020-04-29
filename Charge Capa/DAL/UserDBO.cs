@@ -55,6 +55,7 @@ namespace DAL
 
 				ur.UserID = rdd.GetString(0);
 				ur.UserPassword = rdd.GetString(1);
+				ur.UserName = rdd.GetString(2);
 				ur.Type = rdd.GetString(3);
 
 			}

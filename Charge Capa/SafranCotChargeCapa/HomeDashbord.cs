@@ -44,6 +44,7 @@ namespace SafranCotChargeCapa
 
 		private void HomeDashbord_Load(object sender, EventArgs e)
 		{
+			label2.Text = Util.user.UserName;
 			if (Util.user.Type == "admin")
 				btn.Enabled = true;
 		}
@@ -490,6 +491,20 @@ namespace SafranCotChargeCapa
 		private void FormPanel_Paint_1(object sender, PaintEventArgs e)
 		{
 
+		}
+
+		private void button5_Click_1(object sender, EventArgs e)
+		{
+			FormPanel.Controls.Clear();
+			Test MyForm = new Test();
+			MyForm.TopLevel = false;
+			MyForm.FormBorderStyle = FormBorderStyle.None;
+			MyForm.Parent = FormPanel;
+			MyForm.Top = 0;
+			MyForm.Left = 0;
+			MyForm.Size = FormPanel.ClientSize;
+			MyForm.Dock = DockStyle.Fill;
+			MyForm.BringToFront(); MyForm.Show();
 		}
 	}
 }

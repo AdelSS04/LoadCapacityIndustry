@@ -149,6 +149,12 @@
     <Compile Include="Poste\ManPoste.Designer.cs">
       <DependentUpon>ManPoste.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\ManagTools.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Poste\ManPoste.resx">
       <DependentUpon>ManPoste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ManagTools.resx">
       <DependentUpon>ManagTools.cs</DependentUpon>

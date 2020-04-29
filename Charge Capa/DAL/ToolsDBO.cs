@@ -132,7 +132,7 @@ namespace DAL
 		public static List<Tools> ListToolsOfGrp(string idpostecharge)
 		{
 			string requete = String.Format("SELECT *" +
-				"FROM Tools INNER JOIN((OperationGroupe INNER JOIN Operation ON OperationGroupe.GroupID = Operation.GroupID) INNER JOIN ToolsOccupationTime ON Operation.OperationID = ToolsOccupationTime.OperationID) ON Tools.ToolsID = ToolsOccupationTime.ToolsID where OperationGroupe.GroupID = '{0}';", idpostecharge);
+				"FROM Tools INNER JOIN((OperationGroupe INNER JOIN Operation ON OperationGroupe.GroupID = Operation.GroupID) INNER JOIN ToolsOccupationTime ON Operation.OperationID = ToolsOccupationTime.OperationID) ON Tools.ToolsID = ToolsOccupationTime.ToolsID where Operation.OperationID = '{0}';", idpostecharge);
 			OleDbDataReader rd = Util.lire(requete);
 
 
