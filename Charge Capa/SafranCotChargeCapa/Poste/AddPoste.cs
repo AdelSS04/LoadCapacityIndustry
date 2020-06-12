@@ -45,9 +45,10 @@ namespace SafranCotChargeCapa
 				{
 						GrpName = MAchID.Text,
 						IlotID=metroComboBox1.SelectedItem.ToString(),
+					
 
 
-					};
+				};
 					if (OpGroupeDBO.AddNewPosteCharge(ur))
 
 					{
@@ -55,7 +56,7 @@ namespace SafranCotChargeCapa
 					{
 						OperationID = MAchID.Text,
 						YearT = int.Parse(YeatT.Text),
-						NumberOfOperator = int.Parse(OpenDay.Text),
+						NumberOfOperator = int.Parse(OpenDay.Text),OpenDay=int.Parse(materialSingleLineTextField1.Text)
 
 
 					};

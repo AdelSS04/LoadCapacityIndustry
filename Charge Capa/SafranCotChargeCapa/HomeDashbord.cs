@@ -45,12 +45,18 @@ namespace SafranCotChargeCapa
 		private void HomeDashbord_Load(object sender, EventArgs e)
 		{
 			label2.Text = Util.user.UserName;
-			if (Util.user.Type == "admin")
-				btn.Enabled = true;
+			if (Util.user.Type == "Manager")
+			{ btn.Enabled = true; Utilisateur.Enabled = true;
+					}
+			if (Util.user.Type == "ResAtelier")
+			{
+				button5.Enabled = false;
+			}
+
 		}
 		private void hideSubMenu()
 		{
-			DashbordPanel.Visible = false;
+			
 			MangPanel.Visible = false;
 
 		}
@@ -91,7 +97,19 @@ namespace SafranCotChargeCapa
 		}
 		private void Dashbord_Click(object sender, EventArgs e)
 		{
-			showSubMenu(DashbordPanel);
+			FormPanel.Controls.Clear();
+			//openChildFormInPanel(new Off());
+			dashboard.live MyForm = new dashboard.live();
+			MyForm.TopLevel = false;
+			MyForm.FormBorderStyle = FormBorderStyle.None;
+			MyForm.Parent = FormPanel;
+			MyForm.Top = 0;
+			MyForm.Left = 0;
+			FormPanel.ClientSize = MyForm.Size;
+			MyForm.Dock = DockStyle.Fill;
+			MyForm.BringToFront();
+			MyForm.Show();
+			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
 		}
 
 		private void button5_Click(object sender, EventArgs e)
@@ -497,6 +515,20 @@ namespace SafranCotChargeCapa
 		{
 			FormPanel.Controls.Clear();
 			Test MyForm = new Test();
+			MyForm.TopLevel = false;
+			MyForm.FormBorderStyle = FormBorderStyle.None;
+			MyForm.Parent = FormPanel;
+			MyForm.Top = 0;
+			MyForm.Left = 0;
+			MyForm.Size = FormPanel.ClientSize;
+			MyForm.Dock = DockStyle.Fill;
+			MyForm.BringToFront(); MyForm.Show();
+		}
+
+		private void Utilisateur_Click(object sender, EventArgs e)
+		{
+			FormPanel.Controls.Clear();
+			ManagUser MyForm = new ManagUser();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
 			MyForm.Parent = FormPanel;

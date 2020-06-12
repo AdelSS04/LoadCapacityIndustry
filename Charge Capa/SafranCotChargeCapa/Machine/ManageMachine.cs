@@ -118,7 +118,7 @@ namespace SafranCotChargeCapa
 				MachineOpenDay openDay = new MachineOpenDay
 				{
 					MachineID = metroComboBox1.SelectedItem.ToString(),
-					YearT = 2020,
+					YearT = DateTime.Now.Year,
 					WeekT = int.Parse(WeekT.Text),
 					NumberOfshift = int.Parse(NumberOfshift.Text),
 					OpenDay=int.Parse(openday.Text),

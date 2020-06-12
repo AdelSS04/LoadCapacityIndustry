@@ -130,7 +130,7 @@ namespace SafranCotChargeCapa
 				ToolsOpenDay openDay = new ToolsOpenDay
 				{
 					ToolsID = metroComboBox1.SelectedItem.ToString(),
-					YearT = 2020,
+					YearT = DateTime.Now.Year,
 					WeekT = int.Parse(WeekT.Text),
 					
 					OpenDay=int.Parse(openday.Text),

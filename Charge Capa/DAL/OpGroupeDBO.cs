@@ -95,6 +95,7 @@ namespace DAL
 					YearT = rdd.GetInt32(2),
 					WeekT = rdd.GetInt32(3),
 					NumberOfOperator = rdd.GetInt32(1),
+					OpenDay= rdd.GetInt32(4),
 				};
 				Lur.Add(ur);
 
@@ -105,8 +106,8 @@ namespace DAL
 		}
 		public static bool UpOperatingNumber(OperatorsO op)
 		{
-			string requete = String.Format("update GrpOfOperators set NumberOfOperator={1}" +
-				   " where ((GroupID='{0}' and YearT={2}) and WeekT>={3}) ;", op.OperationID, op.NumberOfOperator, op.YearT, op.WeekT);
+			string requete = String.Format("update GrpOfOperators set NumberOfOperator={1} , OpenDay={4}" +
+				   " where ((GroupID='{0}' and YearT={2}) and WeekT>={3}) ;", op.OperationID, op.NumberOfOperator, op.YearT, op.WeekT,op.OpenDay);
 
 			return Util.miseajour(requete);
 

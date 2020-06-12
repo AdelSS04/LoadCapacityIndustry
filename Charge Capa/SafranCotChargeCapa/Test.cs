@@ -60,85 +60,9 @@ namespace SafranCotChargeCapa
 		
 		private void button1_Click(object sender, EventArgs e)
 		{
-			/*	Microsoft.Office.Interop.Excel.Application xlapp = new Microsoft.Office.Interop.Excel.Application();
-				Workbook myWorkBook = null;
-				Worksheet mySheet = null;
-				Range dataRange = null;
-				string kk="";
-				myWorkBook = xlapp.Workbooks.Open(@"E:\Classeur211223322.xlsx");
-				mySheet = (Worksheet)myWorkBook.Sheets["F1"];
-			//	MessageBox.Show(mySheet.UsedRange.Rows.Count.ToString());
-				for (int row = 1; row < mySheet.UsedRange.Rows.Count; row++) // Count is 1048576 instead of 4
-				{
-					for (int col = 1; col < mySheet.UsedRange.Columns.Count; col++) // Count is 16384 instead of 4
-					{
-						dataRange = (Range)mySheet.Cells[row, col];
-						kk=String.Format(dataRange.Value2.ToString() + " ");
-					}
-					MessageBox.Show(kk);
-				}
-
-
-				//Microsoft.Office.Interop.Excel ex = new Excel(@"E:\Classeur21122332.xlsx");
-
-
-				 //string excelpath = @"E:\Classeur21122332.xlsx";
-			Microsoft.Office.Interop.Excel.Application appp = new Microsoft.Office.Interop.Excel.Application();
-			Workbook wkb = appp.Workbooks.Open(excelpath);
-			Range rng1 = Worksheet.
-
-
-
-			List < List<string> > myList = new List<List<string>>();
-
-
-			List<string> dmm = new List<string>();
-			//string dm;
-			
-			using (OleDbConnection connection = new OleDbConnection(
-	   "Provider=Microsoft.ACE.OLEDB.12.0;data source=E:/Classeur21122332.xlsx;Extended Properties=Excel 12.0; "))
-			using (OleDbCommand cmd = new OleDbCommand("SELECT * FROM [F1$E:G] ", connection))
-			{
-				connection.Open();
-				using (OleDbDataReader reader = cmd.ExecuteReader())
-				{
-					while (reader.Read())
-					{
-						dmm.Add(reader.ToString());
-
-						dm = new Calendrier
-						{
-							WeekT = Convert.ToInt32(reader[3]),
-							YearT = Convert.ToInt32(reader[2]),
-							OpenDayPerWeek = Convert.ToInt32(reader[0]),
-							DateID = Convert.ToInt32(reader[1]),
-
-
-						};
-						dmm.Add(dm);
-
-
-
-						//myList.Add(dmm);
-					}
-				}
-				//	dataGridView1.DataSource = dataTable;
-				//	dataGridView1.DataBind();
-				//dataGridView1.DataSource = myList; 
-				*/
-			OleDbConnection con = new OleDbConnection("	Provider = Microsoft.ACE.OLEDB.12.0; data source = E:/Classeur211223322.xlsx; Extended Properties = Excel 12.0; ");
+			OleDbConnection con = new OleDbConnection("	Provider = Microsoft.ACE.OLEDB.12.0; data source = " + sFileName + "; Extended Properties = Excel 12.0; ");
 			StringBuilder stbQuery = new StringBuilder();
-			//stbQuery.Append("SELECT * FROM[F1$B7:BE183] ");
-			/*stbQuery.Append("SELECT * FROM[F1$E4:BD4] ");
-			OleDbDataAdapter adp = new OleDbDataAdapter(stbQuery.ToString(), con);
-			DataSet dsXLS = new DataSet();
-			adp.Fill(dsXLS);
-
-			MessageBox.Show("yy");
-			DataView dvEmp = new DataView(dsXLS.Tables[0]);
-			DataSet new_ds = FlipDataSet(dsXLS);
-			DataView my_DataView = new_ds.Tables[0].DefaultView;
-			this.dataGridView1.DataSource = my_DataView;*/
+			
 			stbQuery.Append("SELECT * FROM[F1$B6:BD183] ");
 			OleDbDataAdapter adpp = new OleDbDataAdapter(stbQuery.ToString(), con);
 			DataSet dsXLSi = new DataSet();
@@ -185,7 +109,7 @@ namespace SafranCotChargeCapa
 		{
 			try
 			{
-				OleDbConnection con = new OleDbConnection("	Provider = Microsoft.ACE.OLEDB.12.0; data source = E:/Classeur211223322.xlsx; Extended Properties = Excel 12.0; ");
+				OleDbConnection con = new OleDbConnection("	Provider = Microsoft.ACE.OLEDB.12.0; data source = "+ sFileName+"; Extended Properties = Excel 12.0; ");
 				StringBuilder stbQuery = new StringBuilder();
 				stbQuery.Append("SELECT * FROM[F2$A1:C53] ");
 				OleDbDataAdapter adpp = new OleDbDataAdapter(stbQuery.ToString(), con);
@@ -220,6 +144,21 @@ namespace SafranCotChargeCapa
 				MessageBox.Show(ex.Message);
 			}
 				}
+		string sFileName;
+		private void button3_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog choofdlog = new OpenFileDialog();
+			choofdlog.Filter = "Excel Files |*.xls;*.xlsx";
+			choofdlog.FilterIndex = 1;
+			choofdlog.Multiselect = true;
+
+			if (choofdlog.ShowDialog() == DialogResult.OK)
+			{
+				 sFileName = choofdlog.FileName;
+				button1.Enabled = true; button2.Enabled = true;
+
 			}
+		}
+	}
 
 		}

@@ -34,6 +34,7 @@
 			this.button15 = new System.Windows.Forms.Button();
 			this.UpButton = new System.Windows.Forms.Button();
 			this.SideMenu = new System.Windows.Forms.Panel();
+			this.button5 = new System.Windows.Forms.Button();
 			this.MangPanel = new System.Windows.Forms.Panel();
 			this.OperationPanel = new System.Windows.Forms.Panel();
 			this.button16 = new System.Windows.Forms.Button();
@@ -56,15 +57,12 @@
 			this.button6 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.btn = new System.Windows.Forms.Button();
-			this.DashbordPanel = new System.Windows.Forms.Panel();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
 			this.Dashbord = new System.Windows.Forms.Button();
 			this.LogoPanel = new System.Windows.Forms.Panel();
 			this.FormPanel = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.button5 = new System.Windows.Forms.Button();
+			this.Utilisateur = new System.Windows.Forms.Button();
 			this.Header.SuspendLayout();
 			this.SideMenu.SuspendLayout();
 			this.MangPanel.SuspendLayout();
@@ -73,7 +71,6 @@
 			this.ToolsPanel.SuspendLayout();
 			this.MachinePanel.SuspendLayout();
 			this.IlotPanel.SuspendLayout();
-			this.DashbordPanel.SuspendLayout();
 			this.FormPanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -156,10 +153,10 @@
 			// SideMenu
 			// 
 			this.SideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			this.SideMenu.Controls.Add(this.Utilisateur);
 			this.SideMenu.Controls.Add(this.button5);
 			this.SideMenu.Controls.Add(this.MangPanel);
 			this.SideMenu.Controls.Add(this.btn);
-			this.SideMenu.Controls.Add(this.DashbordPanel);
 			this.SideMenu.Controls.Add(this.Dashbord);
 			this.SideMenu.Controls.Add(this.LogoPanel);
 			this.SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -167,6 +164,24 @@
 			this.SideMenu.Name = "SideMenu";
 			this.SideMenu.Size = new System.Drawing.Size(145, 516);
 			this.SideMenu.TabIndex = 0;
+			// 
+			// button5
+			// 
+			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button5.FlatAppearance.BorderSize = 0;
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button5.ForeColor = System.Drawing.Color.Beige;
+			this.button5.Image = global::SafranCotChargeCapa.Properties.Resources.icons8_dashboard_32;
+			this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button5.Location = new System.Drawing.Point(0, 268);
+			this.button5.Name = "button5";
+			this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.button5.Size = new System.Drawing.Size(145, 48);
+			this.button5.TabIndex = 9;
+			this.button5.Text = "PDP";
+			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.button5_Click_1);
 			// 
 			// MangPanel
 			// 
@@ -183,9 +198,9 @@
 			this.MangPanel.Controls.Add(this.IlotPanel);
 			this.MangPanel.Controls.Add(this.button4);
 			this.MangPanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.MangPanel.Location = new System.Drawing.Point(0, 233);
+			this.MangPanel.Location = new System.Drawing.Point(0, 168);
 			this.MangPanel.Name = "MangPanel";
-			this.MangPanel.Size = new System.Drawing.Size(145, 593);
+			this.MangPanel.Size = new System.Drawing.Size(145, 100);
 			this.MangPanel.TabIndex = 8;
 			// 
 			// OperationPanel
@@ -196,7 +211,7 @@
 			this.OperationPanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.OperationPanel.Location = new System.Drawing.Point(0, 265);
 			this.OperationPanel.Name = "OperationPanel";
-			this.OperationPanel.Size = new System.Drawing.Size(145, 10);
+			this.OperationPanel.Size = new System.Drawing.Size(128, 10);
 			this.OperationPanel.TabIndex = 11;
 			// 
 			// button16
@@ -210,7 +225,7 @@
 			this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button16.Location = new System.Drawing.Point(0, 40);
 			this.button16.Name = "button16";
-			this.button16.Size = new System.Drawing.Size(145, 40);
+			this.button16.Size = new System.Drawing.Size(128, 40);
 			this.button16.TabIndex = 8;
 			this.button16.Text = "Modifier";
 			this.button16.UseVisualStyleBackColor = true;
@@ -227,7 +242,7 @@
 			this.button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button17.Location = new System.Drawing.Point(0, 0);
 			this.button17.Name = "button17";
-			this.button17.Size = new System.Drawing.Size(145, 40);
+			this.button17.Size = new System.Drawing.Size(128, 40);
 			this.button17.TabIndex = 7;
 			this.button17.Text = "Ajouter";
 			this.button17.UseVisualStyleBackColor = true;
@@ -245,7 +260,7 @@
 			this.OpButton.Location = new System.Drawing.Point(0, 220);
 			this.OpButton.Name = "OpButton";
 			this.OpButton.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
-			this.OpButton.Size = new System.Drawing.Size(145, 45);
+			this.OpButton.Size = new System.Drawing.Size(128, 45);
 			this.OpButton.TabIndex = 14;
 			this.OpButton.Text = "Operation";
 			this.OpButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -260,7 +275,7 @@
 			this.PostePanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.PostePanel.Location = new System.Drawing.Point(0, 210);
 			this.PostePanel.Name = "PostePanel";
-			this.PostePanel.Size = new System.Drawing.Size(145, 10);
+			this.PostePanel.Size = new System.Drawing.Size(128, 10);
 			this.PostePanel.TabIndex = 10;
 			// 
 			// button13
@@ -274,7 +289,7 @@
 			this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button13.Location = new System.Drawing.Point(0, 40);
 			this.button13.Name = "button13";
-			this.button13.Size = new System.Drawing.Size(145, 40);
+			this.button13.Size = new System.Drawing.Size(128, 40);
 			this.button13.TabIndex = 8;
 			this.button13.Text = "Modifier";
 			this.button13.UseVisualStyleBackColor = true;
@@ -291,7 +306,7 @@
 			this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button14.Location = new System.Drawing.Point(0, 0);
 			this.button14.Name = "button14";
-			this.button14.Size = new System.Drawing.Size(145, 40);
+			this.button14.Size = new System.Drawing.Size(128, 40);
 			this.button14.TabIndex = 7;
 			this.button14.Text = "Ajouter";
 			this.button14.UseVisualStyleBackColor = true;
@@ -308,7 +323,7 @@
 			this.posteCharge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.posteCharge.Location = new System.Drawing.Point(0, 165);
 			this.posteCharge.Name = "posteCharge";
-			this.posteCharge.Size = new System.Drawing.Size(145, 45);
+			this.posteCharge.Size = new System.Drawing.Size(128, 45);
 			this.posteCharge.TabIndex = 13;
 			this.posteCharge.Text = "Poste de charge";
 			this.posteCharge.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -323,7 +338,7 @@
 			this.ToolsPanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.ToolsPanel.Location = new System.Drawing.Point(0, 155);
 			this.ToolsPanel.Name = "ToolsPanel";
-			this.ToolsPanel.Size = new System.Drawing.Size(145, 10);
+			this.ToolsPanel.Size = new System.Drawing.Size(128, 10);
 			this.ToolsPanel.TabIndex = 9;
 			// 
 			// button11
@@ -337,7 +352,7 @@
 			this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button11.Location = new System.Drawing.Point(0, 40);
 			this.button11.Name = "button11";
-			this.button11.Size = new System.Drawing.Size(145, 40);
+			this.button11.Size = new System.Drawing.Size(128, 40);
 			this.button11.TabIndex = 8;
 			this.button11.Text = "Modifier";
 			this.button11.UseVisualStyleBackColor = true;
@@ -354,7 +369,7 @@
 			this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button12.Location = new System.Drawing.Point(0, 0);
 			this.button12.Name = "button12";
-			this.button12.Size = new System.Drawing.Size(145, 40);
+			this.button12.Size = new System.Drawing.Size(128, 40);
 			this.button12.TabIndex = 7;
 			this.button12.Text = "Ajouter";
 			this.button12.UseVisualStyleBackColor = true;
@@ -371,7 +386,7 @@
 			this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button9.Location = new System.Drawing.Point(0, 110);
 			this.button9.Name = "button9";
-			this.button9.Size = new System.Drawing.Size(145, 45);
+			this.button9.Size = new System.Drawing.Size(128, 45);
 			this.button9.TabIndex = 12;
 			this.button9.Text = "Outils";
 			this.button9.UseVisualStyleBackColor = true;
@@ -385,7 +400,7 @@
 			this.MachinePanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.MachinePanel.Location = new System.Drawing.Point(0, 100);
 			this.MachinePanel.Name = "MachinePanel";
-			this.MachinePanel.Size = new System.Drawing.Size(145, 10);
+			this.MachinePanel.Size = new System.Drawing.Size(128, 10);
 			this.MachinePanel.TabIndex = 7;
 			// 
 			// button7
@@ -399,7 +414,7 @@
 			this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button7.Location = new System.Drawing.Point(0, 40);
 			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(145, 40);
+			this.button7.Size = new System.Drawing.Size(128, 40);
 			this.button7.TabIndex = 8;
 			this.button7.Text = "Modifier";
 			this.button7.UseVisualStyleBackColor = true;
@@ -416,7 +431,7 @@
 			this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button8.Location = new System.Drawing.Point(0, 0);
 			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(145, 40);
+			this.button8.Size = new System.Drawing.Size(128, 40);
 			this.button8.TabIndex = 7;
 			this.button8.Text = "Ajouter";
 			this.button8.UseVisualStyleBackColor = true;
@@ -433,7 +448,7 @@
 			this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button10.Location = new System.Drawing.Point(0, 55);
 			this.button10.Name = "button10";
-			this.button10.Size = new System.Drawing.Size(145, 45);
+			this.button10.Size = new System.Drawing.Size(128, 45);
 			this.button10.TabIndex = 11;
 			this.button10.Text = "Machine";
 			this.button10.UseVisualStyleBackColor = true;
@@ -447,7 +462,7 @@
 			this.IlotPanel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.IlotPanel.Location = new System.Drawing.Point(0, 45);
 			this.IlotPanel.Name = "IlotPanel";
-			this.IlotPanel.Size = new System.Drawing.Size(145, 10);
+			this.IlotPanel.Size = new System.Drawing.Size(128, 10);
 			this.IlotPanel.TabIndex = 6;
 			// 
 			// button1
@@ -461,7 +476,7 @@
 			this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button1.Location = new System.Drawing.Point(0, 40);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(145, 40);
+			this.button1.Size = new System.Drawing.Size(128, 40);
 			this.button1.TabIndex = 8;
 			this.button1.Text = "Modifier";
 			this.button1.UseVisualStyleBackColor = true;
@@ -479,7 +494,7 @@
 			this.button6.Location = new System.Drawing.Point(0, 0);
 			this.button6.Name = "button6";
 			this.button6.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-			this.button6.Size = new System.Drawing.Size(145, 40);
+			this.button6.Size = new System.Drawing.Size(128, 40);
 			this.button6.TabIndex = 7;
 			this.button6.Text = "Ajouter";
 			this.button6.UseVisualStyleBackColor = true;
@@ -497,7 +512,7 @@
 			this.button4.Location = new System.Drawing.Point(0, 0);
 			this.button4.Name = "button4";
 			this.button4.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-			this.button4.Size = new System.Drawing.Size(145, 45);
+			this.button4.Size = new System.Drawing.Size(128, 45);
 			this.button4.TabIndex = 5;
 			this.button4.Text = "Ilot";
 			this.button4.UseVisualStyleBackColor = true;
@@ -513,7 +528,7 @@
 			this.btn.ForeColor = System.Drawing.Color.Beige;
 			this.btn.Image = global::SafranCotChargeCapa.Properties.Resources.settings_32px;
 			this.btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btn.Location = new System.Drawing.Point(0, 185);
+			this.btn.Location = new System.Drawing.Point(0, 120);
 			this.btn.Name = "btn";
 			this.btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.btn.Size = new System.Drawing.Size(145, 48);
@@ -522,51 +537,6 @@
 			this.btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btn.UseVisualStyleBackColor = true;
 			this.btn.Click += new System.EventHandler(this.button5_Click);
-			// 
-			// DashbordPanel
-			// 
-			this.DashbordPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-			this.DashbordPanel.Controls.Add(this.button3);
-			this.DashbordPanel.Controls.Add(this.button2);
-			this.DashbordPanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.DashbordPanel.Location = new System.Drawing.Point(0, 120);
-			this.DashbordPanel.Name = "DashbordPanel";
-			this.DashbordPanel.Size = new System.Drawing.Size(145, 65);
-			this.DashbordPanel.TabIndex = 4;
-			// 
-			// button3
-			// 
-			this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button3.FlatAppearance.BorderSize = 0;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.ForeColor = System.Drawing.Color.Beige;
-			this.button3.Location = new System.Drawing.Point(0, 30);
-			this.button3.Name = "button3";
-			this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-			this.button3.Size = new System.Drawing.Size(145, 30);
-			this.button3.TabIndex = 6;
-			this.button3.Text = "Drapage";
-			this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.button3_Click);
-			// 
-			// button2
-			// 
-			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.ForeColor = System.Drawing.Color.Beige;
-			this.button2.Location = new System.Drawing.Point(0, 0);
-			this.button2.Name = "button2";
-			this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-			this.button2.Size = new System.Drawing.Size(145, 30);
-			this.button2.TabIndex = 5;
-			this.button2.Text = "Ilot";
-			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// Dashbord
 			// 
@@ -625,27 +595,28 @@
 			this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(301, 153);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(260, 58);
+			this.label1.Size = new System.Drawing.Size(291, 58);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Welcom !!";
+			this.label1.Text = "Welcome !!";
 			// 
-			// button5
+			// Utilisateur
 			// 
-			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button5.FlatAppearance.BorderSize = 0;
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.ForeColor = System.Drawing.Color.Beige;
-			this.button5.Image = global::SafranCotChargeCapa.Properties.Resources.icons8_dashboard_32;
-			this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button5.Location = new System.Drawing.Point(0, 826);
-			this.button5.Name = "button5";
-			this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.button5.Size = new System.Drawing.Size(145, 48);
-			this.button5.TabIndex = 9;
-			this.button5.Text = "PDP";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.button5_Click_1);
+			this.Utilisateur.Dock = System.Windows.Forms.DockStyle.Top;
+			this.Utilisateur.Enabled = false;
+			this.Utilisateur.FlatAppearance.BorderSize = 0;
+			this.Utilisateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Utilisateur.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Utilisateur.ForeColor = System.Drawing.Color.Beige;
+			this.Utilisateur.Image = global::SafranCotChargeCapa.Properties.Resources.icons8_dashboard_32;
+			this.Utilisateur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Utilisateur.Location = new System.Drawing.Point(0, 316);
+			this.Utilisateur.Name = "Utilisateur";
+			this.Utilisateur.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.Utilisateur.Size = new System.Drawing.Size(145, 48);
+			this.Utilisateur.TabIndex = 10;
+			this.Utilisateur.Text = "Utilisateur";
+			this.Utilisateur.UseVisualStyleBackColor = true;
+			this.Utilisateur.Click += new System.EventHandler(this.Utilisateur_Click);
 			// 
 			// HomeDashbord
 			// 
@@ -672,7 +643,6 @@
 			this.ToolsPanel.ResumeLayout(false);
 			this.MachinePanel.ResumeLayout(false);
 			this.IlotPanel.ResumeLayout(false);
-			this.DashbordPanel.ResumeLayout(false);
 			this.FormPanel.ResumeLayout(false);
 			this.FormPanel.PerformLayout();
 			this.ResumeLayout(false);
@@ -684,9 +654,6 @@
 		private System.Windows.Forms.Panel Header;
 		private System.Windows.Forms.Panel LogoPanel;
 		private System.Windows.Forms.Panel SideMenu;
-		private System.Windows.Forms.Panel DashbordPanel;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button Dashbord;
 		private System.Windows.Forms.Panel MangPanel;
 		private System.Windows.Forms.Button button6;
@@ -717,5 +684,6 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button Utilisateur;
 	}
 }

@@ -35,6 +35,7 @@ namespace DAL
 					IlotID = rdd.GetString(0),
 					YearT = rdd.GetInt32(2),
 					WeekT = rdd.GetInt32(3),
+					DayOfWorking= rdd.GetInt32(4),
 				};
 				ur.Add(o);
 				

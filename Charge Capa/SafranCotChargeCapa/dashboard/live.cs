@@ -178,7 +178,7 @@ namespace SafranCotChargeCapa.dashboard
 				}
 				foreach (Operators opo in op)
 				{
-					Capa.Add(opo.NumberOfOperator * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f * 5);
+					Capa.Add(opo.NumberOfOperator * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f *5);
 
 				}
 				List<Besoin> br = new List<Besoin>();

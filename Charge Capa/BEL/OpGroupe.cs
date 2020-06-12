@@ -13,5 +13,6 @@ namespace DAL
 		public string GrpName { get; set; }
 		
 		public string IlotID { get; set; }
+	
 	}
 }

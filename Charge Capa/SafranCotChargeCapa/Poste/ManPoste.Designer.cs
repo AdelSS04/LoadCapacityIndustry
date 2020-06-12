@@ -28,13 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+			this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
 			this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
 			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,8 +52,7 @@
 			this.UpButton = new System.Windows.Forms.Button();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-			this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+			this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -75,6 +76,42 @@
 			this.panel1.Size = new System.Drawing.Size(889, 47);
 			this.panel1.TabIndex = 40;
 			// 
+			// metroLabel1
+			// 
+			this.metroLabel1.AutoSize = true;
+			this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+			this.metroLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.metroLabel1.Location = new System.Drawing.Point(365, 11);
+			this.metroLabel1.Name = "metroLabel1";
+			this.metroLabel1.Size = new System.Drawing.Size(101, 25);
+			this.metroLabel1.TabIndex = 3;
+			this.metroLabel1.Text = "et une poste";
+			this.metroLabel1.UseCustomBackColor = true;
+			this.metroLabel1.UseCustomForeColor = true;
+			// 
+			// metroComboBox2
+			// 
+			this.metroComboBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.metroComboBox2.Cursor = System.Windows.Forms.Cursors.Default;
+			this.metroComboBox2.DisplayFocus = true;
+			this.metroComboBox2.DropDownHeight = 210;
+			this.metroComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.metroComboBox2.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
+			this.metroComboBox2.ForeColor = System.Drawing.Color.Red;
+			this.metroComboBox2.FormattingEnabled = true;
+			this.metroComboBox2.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.metroComboBox2.IntegralHeight = false;
+			this.metroComboBox2.ItemHeight = 23;
+			this.metroComboBox2.Location = new System.Drawing.Point(488, 9);
+			this.metroComboBox2.Name = "metroComboBox2";
+			this.metroComboBox2.Size = new System.Drawing.Size(160, 29);
+			this.metroComboBox2.TabIndex = 2;
+			this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.metroComboBox2.UseCustomBackColor = true;
+			this.metroComboBox2.UseCustomForeColor = true;
+			this.metroComboBox2.UseSelectable = true;
+			this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+			// 
 			// metroLabel5
 			// 
 			this.metroLabel5.AutoSize = true;
@@ -82,7 +119,7 @@
 			this.metroLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.metroLabel5.Location = new System.Drawing.Point(0, 9);
 			this.metroLabel5.Name = "metroLabel5";
-			this.metroLabel5.Size = new System.Drawing.Size(190, 25);
+			this.metroLabel5.Size = new System.Drawing.Size(186, 25);
 			this.metroLabel5.TabIndex = 1;
 			this.metroLabel5.Text = "Veuillez choisir une ilot ";
 			this.metroLabel5.UseCustomBackColor = true;
@@ -123,34 +160,34 @@
 			// 
 			// dataGridView1
 			// 
-			dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle37.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
-			dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle38.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle38.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
-			dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle38;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
 			this.dataGridView1.EnableHeadersVisualStyles = false;
 			this.dataGridView1.Location = new System.Drawing.Point(3, 17);
 			this.dataGridView1.Name = "dataGridView1";
-			dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle39.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
 			this.dataGridView1.RowHeadersVisible = false;
 			this.dataGridView1.Size = new System.Drawing.Size(231, 160);
 			this.dataGridView1.TabIndex = 0;
@@ -167,46 +204,47 @@
 			// 
 			// dataGridView2
 			// 
-			dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle40.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
-			dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
+			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle41.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle41.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
-			dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle41;
+			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
+			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle11;
 			this.dataGridView2.EnableHeadersVisualStyles = false;
 			this.dataGridView2.Location = new System.Drawing.Point(3, 17);
 			this.dataGridView2.Name = "dataGridView2";
-			dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle42.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
+			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
 			this.dataGridView2.RowHeadersVisible = false;
 			this.dataGridView2.Size = new System.Drawing.Size(452, 160);
 			this.dataGridView2.TabIndex = 0;
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.materialSingleLineTextField1);
 			this.groupBox3.Controls.Add(this.openday);
 			this.groupBox3.Controls.Add(this.UpAll);
 			this.groupBox3.Controls.Add(this.WeekT);
 			this.groupBox3.Location = new System.Drawing.Point(530, 251);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(278, 213);
+			this.groupBox3.Size = new System.Drawing.Size(278, 237);
 			this.groupBox3.TabIndex = 43;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Modifier une sequance";
@@ -236,7 +274,7 @@
 			this.UpAll.ForeColor = System.Drawing.Color.Beige;
 			this.UpAll.Image = global::SafranCotChargeCapa.Properties.Resources.restart_20px;
 			this.UpAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.UpAll.Location = new System.Drawing.Point(59, 161);
+			this.UpAll.Location = new System.Drawing.Point(59, 191);
 			this.UpAll.Name = "UpAll";
 			this.UpAll.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.UpAll.Size = new System.Drawing.Size(134, 30);
@@ -249,7 +287,7 @@
 			// 
 			this.WeekT.Depth = 0;
 			this.WeekT.Hint = "A partir de quelle semaine ?";
-			this.WeekT.Location = new System.Drawing.Point(17, 110);
+			this.WeekT.Location = new System.Drawing.Point(17, 138);
 			this.WeekT.MouseState = MaterialSkin.MouseState.HOVER;
 			this.WeekT.Name = "WeekT";
 			this.WeekT.PasswordChar = '\0';
@@ -342,41 +380,20 @@
 			this.checkedListBox1.TabIndex = 15;
 			this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
 			// 
-			// metroComboBox2
+			// materialSingleLineTextField1
 			// 
-			this.metroComboBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-			this.metroComboBox2.Cursor = System.Windows.Forms.Cursors.Default;
-			this.metroComboBox2.DisplayFocus = true;
-			this.metroComboBox2.DropDownHeight = 210;
-			this.metroComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.metroComboBox2.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
-			this.metroComboBox2.ForeColor = System.Drawing.Color.Red;
-			this.metroComboBox2.FormattingEnabled = true;
-			this.metroComboBox2.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-			this.metroComboBox2.IntegralHeight = false;
-			this.metroComboBox2.ItemHeight = 23;
-			this.metroComboBox2.Location = new System.Drawing.Point(488, 9);
-			this.metroComboBox2.Name = "metroComboBox2";
-			this.metroComboBox2.Size = new System.Drawing.Size(160, 29);
-			this.metroComboBox2.TabIndex = 2;
-			this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.metroComboBox2.UseCustomBackColor = true;
-			this.metroComboBox2.UseCustomForeColor = true;
-			this.metroComboBox2.UseSelectable = true;
-			this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
-			// 
-			// metroLabel1
-			// 
-			this.metroLabel1.AutoSize = true;
-			this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-			this.metroLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.metroLabel1.Location = new System.Drawing.Point(365, 11);
-			this.metroLabel1.Name = "metroLabel1";
-			this.metroLabel1.Size = new System.Drawing.Size(106, 25);
-			this.metroLabel1.TabIndex = 3;
-			this.metroLabel1.Text = "et une poste";
-			this.metroLabel1.UseCustomBackColor = true;
-			this.metroLabel1.UseCustomForeColor = true;
+			this.materialSingleLineTextField1.Depth = 0;
+			this.materialSingleLineTextField1.Hint = "Combien jours ?";
+			this.materialSingleLineTextField1.Location = new System.Drawing.Point(17, 93);
+			this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+			this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+			this.materialSingleLineTextField1.PasswordChar = '\0';
+			this.materialSingleLineTextField1.SelectedText = "";
+			this.materialSingleLineTextField1.SelectionLength = 0;
+			this.materialSingleLineTextField1.SelectionStart = 0;
+			this.materialSingleLineTextField1.Size = new System.Drawing.Size(246, 23);
+			this.materialSingleLineTextField1.TabIndex = 46;
+			this.materialSingleLineTextField1.UseSystemPasswordChar = false;
 			// 
 			// ManPoste
 			// 
@@ -429,5 +446,6 @@
 		private System.Windows.Forms.CheckedListBox checkedListBox1;
 		private MetroFramework.Controls.MetroComboBox metroComboBox2;
 		private MetroFramework.Controls.MetroLabel metroLabel1;
+		private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
 	}
 }

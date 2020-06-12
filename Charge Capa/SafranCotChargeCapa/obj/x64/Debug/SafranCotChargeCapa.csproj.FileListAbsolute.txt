@@ -43,3 +43,4 @@ C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\bin\x
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\bin\x64\Debug\LiveCharts.WinForms.xml
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.login.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.Test.resources
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.ManagUser.resources

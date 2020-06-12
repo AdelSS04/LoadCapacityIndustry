@@ -38,6 +38,7 @@
 			this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
 			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.MAchID = new MaterialSkin.Controls.MaterialSingleLineTextField();
+			this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
 			this.panel1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -80,7 +81,7 @@
 			this.metroLabel8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.metroLabel8.Location = new System.Drawing.Point(12, 9);
 			this.metroLabel8.Name = "metroLabel8";
-			this.metroLabel8.Size = new System.Drawing.Size(254, 25);
+			this.metroLabel8.Size = new System.Drawing.Size(248, 25);
 			this.metroLabel8.TabIndex = 1;
 			this.metroLabel8.Text = "Veuillez remplir tous les champs";
 			this.metroLabel8.UseCustomBackColor = true;
@@ -88,6 +89,7 @@
 			// 
 			// groupBox2
 			// 
+			this.groupBox2.Controls.Add(this.materialSingleLineTextField1);
 			this.groupBox2.Controls.Add(this.OpenDay);
 			this.groupBox2.Controls.Add(this.YeatT);
 			this.groupBox2.Location = new System.Drawing.Point(404, 57);
@@ -180,7 +182,7 @@
 			// MAchID
 			// 
 			this.MAchID.Depth = 0;
-			this.MAchID.Hint = "identifiant  de machine";
+			this.MAchID.Hint = "identifiant  de la poste";
 			this.MAchID.Location = new System.Drawing.Point(51, 151);
 			this.MAchID.MouseState = MaterialSkin.MouseState.HOVER;
 			this.MAchID.Name = "MAchID";
@@ -191,6 +193,21 @@
 			this.MAchID.Size = new System.Drawing.Size(246, 23);
 			this.MAchID.TabIndex = 1;
 			this.MAchID.UseSystemPasswordChar = false;
+			// 
+			// materialSingleLineTextField1
+			// 
+			this.materialSingleLineTextField1.Depth = 0;
+			this.materialSingleLineTextField1.Hint = "Combien jours ?";
+			this.materialSingleLineTextField1.Location = new System.Drawing.Point(17, 215);
+			this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+			this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+			this.materialSingleLineTextField1.PasswordChar = '\0';
+			this.materialSingleLineTextField1.SelectedText = "";
+			this.materialSingleLineTextField1.SelectionLength = 0;
+			this.materialSingleLineTextField1.SelectionStart = 0;
+			this.materialSingleLineTextField1.Size = new System.Drawing.Size(246, 23);
+			this.materialSingleLineTextField1.TabIndex = 8;
+			this.materialSingleLineTextField1.UseSystemPasswordChar = false;
 			// 
 			// AddPoste
 			// 
@@ -204,7 +221,7 @@
 			this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "AddPoste";
-			this.Text = "IlotManag";
+			this.Text = "PosteManag";
 			this.TopMost = true;
 			this.Load += new System.EventHandler(this.IlotManag_Load);
 			this.panel1.ResumeLayout(false);
@@ -227,5 +244,6 @@
 		private MaterialSkin.Controls.MaterialSingleLineTextField OpenDay;
 		private MaterialSkin.Controls.MaterialLabel materialLabel1;
 		private MetroFramework.Controls.MetroComboBox metroComboBox1;
+		private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
 	}
 }

@@ -12,5 +12,6 @@ namespace BEL
         public int NumberOfOperator { get; set; }
         public int YearT { get; set; }
         public int WeekT { get; set; }
+        public int OpenDay { get; set; }
     }
 }

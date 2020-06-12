@@ -114,17 +114,16 @@ namespace SafranCotChargeCapa
 		{
 			try
 			{
-				OperatorsO openDay = new OperatorsO
+				OperatorsO openDayOp = new OperatorsO
 				{
 					OperationID = metroComboBox2.SelectedItem.ToString(),
-					YearT = 2020,
+					YearT = DateTime.Now.Year,
 					WeekT = int.Parse(WeekT.Text),
-
+					OpenDay=int.Parse(materialSingleLineTextField1.Text),
 					NumberOfOperator = int.Parse(openday.Text),
 				};
-				bool state = true;
 
-				if (OpGroupeDBO.UpOperatingNumber(openDay))
+				if (OpGroupeDBO.UpOperatingNumber(openDayOp))
 				{
 					MessageBox.Show("done");
 					List<OperatorsO> CapaMach = OpGroupeDBO.GetAllPosteOpenDay(metroComboBox2.SelectedItem.ToString(), DateTime.Now.Year,
