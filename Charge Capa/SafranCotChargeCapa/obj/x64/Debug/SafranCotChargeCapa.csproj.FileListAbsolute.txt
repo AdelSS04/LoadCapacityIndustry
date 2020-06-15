@@ -30,8 +30,6 @@ C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.IlotManag.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.IlotUpdate.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.ManageMachine.resources
-C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.ManOperation.resources
-C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.Off.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.Properties.Resources.resources
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.csproj.GenerateResource.cache
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\SafranCotChargeCapa\obj\x64\Debug\SafranCotChargeCapa.csproj.CopyComplete

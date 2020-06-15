@@ -283,6 +283,16 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leave_32px {
+            get {
+                object obj = ResourceManager.GetObject("leave_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading_sign_95px {
             get {
                 object obj = ResourceManager.GetObject("loading_sign_95px", resourceCulture);
@@ -506,6 +516,16 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap user_120px {
             get {
                 object obj = ResourceManager.GetObject("user_120px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_32px {
+            get {
+                object obj = ResourceManager.GetObject("user_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -30,7 +31,7 @@ namespace SafranCotChargeCapa.dashboard
 			}
 			DataPick.Items.Add(DateTime.Now.Year);
 			DataPick.Items.Add((DateTime.Now.Year + 1));
-			DataPick.Items.Add((DateTime.Now.Year + 1));
+			DataPick.Items.Add((DateTime.Now.Year + 2));
 		}
 
 		private void IlotPick_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,11 +63,15 @@ namespace SafranCotChargeCapa.dashboard
 			}
 
 		}
-		private void GrpPick_SelectedIndexChanged(object sender, EventArgs e)
+		private async void GrpPick_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (DataPick.SelectedIndex > -1)
 			{
-				upGraph(); setC(dataGridView1);
+				await upGraph();
+				//Thread thread = new Thread(upGraph);thread.Join();
+
+				
+				setC(dataGridView1);
 				sizeDGV(dataGridView1,panel3);
 				OpMach = new List<MachineCycleTime>();
 				List<Machine> MachInfo = new List<Machine>();
@@ -127,7 +132,7 @@ namespace SafranCotChargeCapa.dashboard
 					row.Cells[3].Style.BackColor = System.Drawing.Color.Red;
 			}
 		}
-		public void upGraph()
+		public async Task upGraph()
 		{
 			try
 			{
@@ -391,7 +396,7 @@ namespace SafranCotChargeCapa.dashboard
 				{
 					Machine ActMach = MachineDBO.GetMachine(MachineList.SelectedItem.ToString());
 
-					List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
+					List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), int.Parse(DataPick.SelectedItem.ToString()));
 					List<MachineOpenDay> CapaMach = MachineDBO.GetMachineShiftCalen(MachineList.SelectedItem.ToString(),
 						System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), int.Parse(DataPick.SelectedItem.ToString()));
 
@@ -477,7 +482,7 @@ namespace SafranCotChargeCapa.dashboard
 			{
 				Machine ActMach = MachineDBO.GetMachine(MachineList.SelectedItem.ToString());
 
-				List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
+				List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), int.Parse(DataPick.SelectedItem.ToString()));
 				MessageBox.Show(DemO[5].CycleTime.ToString());
 				List<DemandeOP> Cycle1 = new List<DemandeOP>();
 				List<DemandeOP> Cycle2 = new List<DemandeOP>();

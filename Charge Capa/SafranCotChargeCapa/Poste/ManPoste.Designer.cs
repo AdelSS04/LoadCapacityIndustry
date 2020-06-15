@@ -44,6 +44,7 @@
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.dataGridView2 = new System.Windows.Forms.DataGridView();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
 			this.openday = new MaterialSkin.Controls.MaterialSingleLineTextField();
 			this.UpAll = new System.Windows.Forms.Button();
 			this.WeekT = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -52,7 +53,7 @@
 			this.UpButton = new System.Windows.Forms.Button();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-			this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+			this.DataPick = new MetroFramework.Controls.MetroComboBox();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,7 +74,7 @@
 			this.panel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(889, 47);
+			this.panel1.Size = new System.Drawing.Size(872, 47);
 			this.panel1.TabIndex = 40;
 			// 
 			// metroLabel1
@@ -238,22 +239,38 @@
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.DataPick);
 			this.groupBox3.Controls.Add(this.materialSingleLineTextField1);
 			this.groupBox3.Controls.Add(this.openday);
 			this.groupBox3.Controls.Add(this.UpAll);
 			this.groupBox3.Controls.Add(this.WeekT);
 			this.groupBox3.Location = new System.Drawing.Point(530, 251);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(278, 237);
+			this.groupBox3.Size = new System.Drawing.Size(278, 254);
 			this.groupBox3.TabIndex = 43;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Modifier une sequance";
+			// 
+			// materialSingleLineTextField1
+			// 
+			this.materialSingleLineTextField1.Depth = 0;
+			this.materialSingleLineTextField1.Hint = "Combien jours ?";
+			this.materialSingleLineTextField1.Location = new System.Drawing.Point(17, 118);
+			this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+			this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+			this.materialSingleLineTextField1.PasswordChar = '\0';
+			this.materialSingleLineTextField1.SelectedText = "";
+			this.materialSingleLineTextField1.SelectionLength = 0;
+			this.materialSingleLineTextField1.SelectionStart = 0;
+			this.materialSingleLineTextField1.Size = new System.Drawing.Size(246, 23);
+			this.materialSingleLineTextField1.TabIndex = 46;
+			this.materialSingleLineTextField1.UseSystemPasswordChar = false;
 			// 
 			// openday
 			// 
 			this.openday.Depth = 0;
 			this.openday.Hint = "Combien d\'operateur ?";
-			this.openday.Location = new System.Drawing.Point(17, 53);
+			this.openday.Location = new System.Drawing.Point(17, 78);
 			this.openday.MouseState = MaterialSkin.MouseState.HOVER;
 			this.openday.Name = "openday";
 			this.openday.PasswordChar = '\0';
@@ -274,7 +291,7 @@
 			this.UpAll.ForeColor = System.Drawing.Color.Beige;
 			this.UpAll.Image = global::SafranCotChargeCapa.Properties.Resources.restart_20px;
 			this.UpAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.UpAll.Location = new System.Drawing.Point(59, 191);
+			this.UpAll.Location = new System.Drawing.Point(67, 212);
 			this.UpAll.Name = "UpAll";
 			this.UpAll.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.UpAll.Size = new System.Drawing.Size(134, 30);
@@ -287,7 +304,7 @@
 			// 
 			this.WeekT.Depth = 0;
 			this.WeekT.Hint = "A partir de quelle semaine ?";
-			this.WeekT.Location = new System.Drawing.Point(17, 138);
+			this.WeekT.Location = new System.Drawing.Point(17, 163);
 			this.WeekT.MouseState = MaterialSkin.MouseState.HOVER;
 			this.WeekT.Name = "WeekT";
 			this.WeekT.PasswordChar = '\0';
@@ -332,9 +349,9 @@
 			this.DelButton.Location = new System.Drawing.Point(552, 134);
 			this.DelButton.Name = "DelButton";
 			this.DelButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.DelButton.Size = new System.Drawing.Size(193, 30);
+			this.DelButton.Size = new System.Drawing.Size(179, 30);
 			this.DelButton.TabIndex = 18;
-			this.DelButton.Text = "Supprimer la machine";
+			this.DelButton.Text = "Supprimer la poste";
 			this.DelButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.DelButton.UseVisualStyleBackColor = false;
 			this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
@@ -353,9 +370,9 @@
 			this.UpButton.Name = "UpButton";
 			this.UpButton.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
 			this.UpButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.UpButton.Size = new System.Drawing.Size(193, 30);
+			this.UpButton.Size = new System.Drawing.Size(179, 30);
 			this.UpButton.TabIndex = 19;
-			this.UpButton.Text = "Modifier la machine";
+			this.UpButton.Text = "Modifier la poste";
 			this.UpButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.UpButton.UseVisualStyleBackColor = false;
 			this.UpButton.Click += new System.EventHandler(this.UpButton_Click);
@@ -380,20 +397,28 @@
 			this.checkedListBox1.TabIndex = 15;
 			this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
 			// 
-			// materialSingleLineTextField1
+			// DataPick
 			// 
-			this.materialSingleLineTextField1.Depth = 0;
-			this.materialSingleLineTextField1.Hint = "Combien jours ?";
-			this.materialSingleLineTextField1.Location = new System.Drawing.Point(17, 93);
-			this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-			this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-			this.materialSingleLineTextField1.PasswordChar = '\0';
-			this.materialSingleLineTextField1.SelectedText = "";
-			this.materialSingleLineTextField1.SelectionLength = 0;
-			this.materialSingleLineTextField1.SelectionStart = 0;
-			this.materialSingleLineTextField1.Size = new System.Drawing.Size(246, 23);
-			this.materialSingleLineTextField1.TabIndex = 46;
-			this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+			this.DataPick.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.DataPick.Cursor = System.Windows.Forms.Cursors.Default;
+			this.DataPick.DisplayFocus = true;
+			this.DataPick.DropDownHeight = 210;
+			this.DataPick.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.DataPick.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
+			this.DataPick.ForeColor = System.Drawing.Color.Red;
+			this.DataPick.FormattingEnabled = true;
+			this.DataPick.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.DataPick.IntegralHeight = false;
+			this.DataPick.ItemHeight = 23;
+			this.DataPick.Location = new System.Drawing.Point(36, 32);
+			this.DataPick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.DataPick.Name = "DataPick";
+			this.DataPick.Size = new System.Drawing.Size(186, 29);
+			this.DataPick.TabIndex = 48;
+			this.DataPick.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.DataPick.UseCustomBackColor = true;
+			this.DataPick.UseCustomForeColor = true;
+			this.DataPick.UseSelectable = true;
 			// 
 			// ManPoste
 			// 
@@ -447,5 +472,6 @@
 		private MetroFramework.Controls.MetroComboBox metroComboBox2;
 		private MetroFramework.Controls.MetroLabel metroLabel1;
 		private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+		private MetroFramework.Controls.MetroComboBox DataPick;
 	}
 }

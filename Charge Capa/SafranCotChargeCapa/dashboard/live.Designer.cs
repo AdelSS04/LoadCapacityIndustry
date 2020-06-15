@@ -545,10 +545,12 @@
 			this.metroTabControl2.Location = new System.Drawing.Point(0, 0);
 			this.metroTabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.metroTabControl2.Name = "metroTabControl2";
-			this.metroTabControl2.SelectedIndex = 1;
+			this.metroTabControl2.SelectedIndex = 0;
 			this.metroTabControl2.Size = new System.Drawing.Size(1208, 441);
+			this.metroTabControl2.Style = MetroFramework.MetroColorStyle.Orange;
 			this.metroTabControl2.TabIndex = 1;
 			this.metroTabControl2.UseSelectable = true;
+			this.metroTabControl2.UseStyleColors = true;
 			// 
 			// tabPage4
 			// 

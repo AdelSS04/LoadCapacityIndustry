@@ -30,39 +30,40 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeDashbord));
 			this.Header = new System.Windows.Forms.Panel();
+			this.SideMenu = new System.Windows.Forms.Panel();
+			this.MangPanel = new System.Windows.Forms.Panel();
+			this.OperationPanel = new System.Windows.Forms.Panel();
+			this.PostePanel = new System.Windows.Forms.Panel();
+			this.ToolsPanel = new System.Windows.Forms.Panel();
+			this.MachinePanel = new System.Windows.Forms.Panel();
+			this.IlotPanel = new System.Windows.Forms.Panel();
+			this.FormPanel = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
 			this.button18 = new System.Windows.Forms.Button();
 			this.button15 = new System.Windows.Forms.Button();
 			this.UpButton = new System.Windows.Forms.Button();
-			this.SideMenu = new System.Windows.Forms.Panel();
+			this.Utilisateur = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
-			this.MangPanel = new System.Windows.Forms.Panel();
-			this.OperationPanel = new System.Windows.Forms.Panel();
 			this.button16 = new System.Windows.Forms.Button();
 			this.button17 = new System.Windows.Forms.Button();
 			this.OpButton = new System.Windows.Forms.Button();
-			this.PostePanel = new System.Windows.Forms.Panel();
 			this.button13 = new System.Windows.Forms.Button();
 			this.button14 = new System.Windows.Forms.Button();
 			this.posteCharge = new System.Windows.Forms.Button();
-			this.ToolsPanel = new System.Windows.Forms.Panel();
 			this.button11 = new System.Windows.Forms.Button();
 			this.button12 = new System.Windows.Forms.Button();
 			this.button9 = new System.Windows.Forms.Button();
-			this.MachinePanel = new System.Windows.Forms.Panel();
 			this.button7 = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
 			this.button10 = new System.Windows.Forms.Button();
-			this.IlotPanel = new System.Windows.Forms.Panel();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button6 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.btn = new System.Windows.Forms.Button();
 			this.Dashbord = new System.Windows.Forms.Button();
 			this.LogoPanel = new System.Windows.Forms.Panel();
-			this.FormPanel = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.Utilisateur = new System.Windows.Forms.Button();
+			this.label3 = new System.Windows.Forms.Label();
 			this.Header.SuspendLayout();
 			this.SideMenu.SuspendLayout();
 			this.MangPanel.SuspendLayout();
@@ -77,6 +78,7 @@
 			// Header
 			// 
 			this.Header.AutoScroll = true;
+			this.Header.Controls.Add(this.label3);
 			this.Header.Controls.Add(this.button18);
 			this.Header.Controls.Add(this.button15);
 			this.Header.Controls.Add(this.UpButton);
@@ -87,6 +89,129 @@
 			this.Header.TabIndex = 1;
 			this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.FormPanel_Paint);
 			this.Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Header_MouseDown);
+			// 
+			// SideMenu
+			// 
+			this.SideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			this.SideMenu.Controls.Add(this.Utilisateur);
+			this.SideMenu.Controls.Add(this.button5);
+			this.SideMenu.Controls.Add(this.MangPanel);
+			this.SideMenu.Controls.Add(this.btn);
+			this.SideMenu.Controls.Add(this.Dashbord);
+			this.SideMenu.Controls.Add(this.LogoPanel);
+			this.SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+			this.SideMenu.Location = new System.Drawing.Point(0, 0);
+			this.SideMenu.Name = "SideMenu";
+			this.SideMenu.Size = new System.Drawing.Size(145, 516);
+			this.SideMenu.TabIndex = 0;
+			// 
+			// MangPanel
+			// 
+			this.MangPanel.AutoScroll = true;
+			this.MangPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+			this.MangPanel.Controls.Add(this.OperationPanel);
+			this.MangPanel.Controls.Add(this.OpButton);
+			this.MangPanel.Controls.Add(this.PostePanel);
+			this.MangPanel.Controls.Add(this.posteCharge);
+			this.MangPanel.Controls.Add(this.ToolsPanel);
+			this.MangPanel.Controls.Add(this.button9);
+			this.MangPanel.Controls.Add(this.MachinePanel);
+			this.MangPanel.Controls.Add(this.button10);
+			this.MangPanel.Controls.Add(this.IlotPanel);
+			this.MangPanel.Controls.Add(this.button4);
+			this.MangPanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.MangPanel.Location = new System.Drawing.Point(0, 168);
+			this.MangPanel.Name = "MangPanel";
+			this.MangPanel.Size = new System.Drawing.Size(145, 100);
+			this.MangPanel.TabIndex = 8;
+			// 
+			// OperationPanel
+			// 
+			this.OperationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+			this.OperationPanel.Controls.Add(this.button16);
+			this.OperationPanel.Controls.Add(this.button17);
+			this.OperationPanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.OperationPanel.Location = new System.Drawing.Point(0, 265);
+			this.OperationPanel.Name = "OperationPanel";
+			this.OperationPanel.Size = new System.Drawing.Size(128, 10);
+			this.OperationPanel.TabIndex = 11;
+			// 
+			// PostePanel
+			// 
+			this.PostePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+			this.PostePanel.Controls.Add(this.button13);
+			this.PostePanel.Controls.Add(this.button14);
+			this.PostePanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.PostePanel.Location = new System.Drawing.Point(0, 210);
+			this.PostePanel.Name = "PostePanel";
+			this.PostePanel.Size = new System.Drawing.Size(128, 10);
+			this.PostePanel.TabIndex = 10;
+			// 
+			// ToolsPanel
+			// 
+			this.ToolsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+			this.ToolsPanel.Controls.Add(this.button11);
+			this.ToolsPanel.Controls.Add(this.button12);
+			this.ToolsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.ToolsPanel.Location = new System.Drawing.Point(0, 155);
+			this.ToolsPanel.Name = "ToolsPanel";
+			this.ToolsPanel.Size = new System.Drawing.Size(128, 10);
+			this.ToolsPanel.TabIndex = 9;
+			// 
+			// MachinePanel
+			// 
+			this.MachinePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+			this.MachinePanel.Controls.Add(this.button7);
+			this.MachinePanel.Controls.Add(this.button8);
+			this.MachinePanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.MachinePanel.Location = new System.Drawing.Point(0, 100);
+			this.MachinePanel.Name = "MachinePanel";
+			this.MachinePanel.Size = new System.Drawing.Size(128, 10);
+			this.MachinePanel.TabIndex = 7;
+			// 
+			// IlotPanel
+			// 
+			this.IlotPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
+			this.IlotPanel.Controls.Add(this.button1);
+			this.IlotPanel.Controls.Add(this.button6);
+			this.IlotPanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.IlotPanel.Location = new System.Drawing.Point(0, 45);
+			this.IlotPanel.Name = "IlotPanel";
+			this.IlotPanel.Size = new System.Drawing.Size(128, 10);
+			this.IlotPanel.TabIndex = 6;
+			// 
+			// FormPanel
+			// 
+			this.FormPanel.AutoScroll = true;
+			this.FormPanel.Controls.Add(this.label2);
+			this.FormPanel.Controls.Add(this.label1);
+			this.FormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.FormPanel.Location = new System.Drawing.Point(145, 32);
+			this.FormPanel.Name = "FormPanel";
+			this.FormPanel.Size = new System.Drawing.Size(985, 484);
+			this.FormPanel.TabIndex = 2;
+			this.FormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FormPanel_Paint_1);
+			this.FormPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormPanel_MouseMove);
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(301, 228);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(260, 58);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Welcom !!";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(301, 153);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(291, 58);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Welcome !!";
 			// 
 			// button18
 			// 
@@ -150,20 +275,26 @@
 			this.UpButton.MouseEnter += new System.EventHandler(this.UpButton_MouseEnter);
 			this.UpButton.MouseLeave += new System.EventHandler(this.UpButton_MouseLeave);
 			// 
-			// SideMenu
+			// Utilisateur
 			// 
-			this.SideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
-			this.SideMenu.Controls.Add(this.Utilisateur);
-			this.SideMenu.Controls.Add(this.button5);
-			this.SideMenu.Controls.Add(this.MangPanel);
-			this.SideMenu.Controls.Add(this.btn);
-			this.SideMenu.Controls.Add(this.Dashbord);
-			this.SideMenu.Controls.Add(this.LogoPanel);
-			this.SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
-			this.SideMenu.Location = new System.Drawing.Point(0, 0);
-			this.SideMenu.Name = "SideMenu";
-			this.SideMenu.Size = new System.Drawing.Size(145, 516);
-			this.SideMenu.TabIndex = 0;
+			this.Utilisateur.Dock = System.Windows.Forms.DockStyle.Top;
+			this.Utilisateur.Enabled = false;
+			this.Utilisateur.FlatAppearance.BorderSize = 0;
+			this.Utilisateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Utilisateur.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Utilisateur.ForeColor = System.Drawing.Color.Beige;
+			this.Utilisateur.Image = global::SafranCotChargeCapa.Properties.Resources.user_32px;
+			this.Utilisateur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Utilisateur.Location = new System.Drawing.Point(0, 316);
+			this.Utilisateur.Name = "Utilisateur";
+			this.Utilisateur.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+			this.Utilisateur.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.Utilisateur.Size = new System.Drawing.Size(145, 48);
+			this.Utilisateur.TabIndex = 10;
+			this.Utilisateur.Text = "Utilisateur";
+			this.Utilisateur.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.Utilisateur.UseVisualStyleBackColor = true;
+			this.Utilisateur.Click += new System.EventHandler(this.Utilisateur_Click);
 			// 
 			// button5
 			// 
@@ -172,7 +303,7 @@
 			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button5.ForeColor = System.Drawing.Color.Beige;
-			this.button5.Image = global::SafranCotChargeCapa.Properties.Resources.icons8_dashboard_32;
+			this.button5.Image = global::SafranCotChargeCapa.Properties.Resources.leave_32px;
 			this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button5.Location = new System.Drawing.Point(0, 268);
 			this.button5.Name = "button5";
@@ -182,37 +313,6 @@
 			this.button5.Text = "PDP";
 			this.button5.UseVisualStyleBackColor = true;
 			this.button5.Click += new System.EventHandler(this.button5_Click_1);
-			// 
-			// MangPanel
-			// 
-			this.MangPanel.AutoScroll = true;
-			this.MangPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-			this.MangPanel.Controls.Add(this.OperationPanel);
-			this.MangPanel.Controls.Add(this.OpButton);
-			this.MangPanel.Controls.Add(this.PostePanel);
-			this.MangPanel.Controls.Add(this.posteCharge);
-			this.MangPanel.Controls.Add(this.ToolsPanel);
-			this.MangPanel.Controls.Add(this.button9);
-			this.MangPanel.Controls.Add(this.MachinePanel);
-			this.MangPanel.Controls.Add(this.button10);
-			this.MangPanel.Controls.Add(this.IlotPanel);
-			this.MangPanel.Controls.Add(this.button4);
-			this.MangPanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.MangPanel.Location = new System.Drawing.Point(0, 168);
-			this.MangPanel.Name = "MangPanel";
-			this.MangPanel.Size = new System.Drawing.Size(145, 100);
-			this.MangPanel.TabIndex = 8;
-			// 
-			// OperationPanel
-			// 
-			this.OperationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-			this.OperationPanel.Controls.Add(this.button16);
-			this.OperationPanel.Controls.Add(this.button17);
-			this.OperationPanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.OperationPanel.Location = new System.Drawing.Point(0, 265);
-			this.OperationPanel.Name = "OperationPanel";
-			this.OperationPanel.Size = new System.Drawing.Size(128, 10);
-			this.OperationPanel.TabIndex = 11;
 			// 
 			// button16
 			// 
@@ -267,17 +367,6 @@
 			this.OpButton.UseVisualStyleBackColor = true;
 			this.OpButton.Click += new System.EventHandler(this.button15_Click);
 			// 
-			// PostePanel
-			// 
-			this.PostePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-			this.PostePanel.Controls.Add(this.button13);
-			this.PostePanel.Controls.Add(this.button14);
-			this.PostePanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.PostePanel.Location = new System.Drawing.Point(0, 210);
-			this.PostePanel.Name = "PostePanel";
-			this.PostePanel.Size = new System.Drawing.Size(128, 10);
-			this.PostePanel.TabIndex = 10;
-			// 
 			// button13
 			// 
 			this.button13.Dock = System.Windows.Forms.DockStyle.Top;
@@ -330,17 +419,6 @@
 			this.posteCharge.UseVisualStyleBackColor = true;
 			this.posteCharge.Click += new System.EventHandler(this.posteCharge_Click);
 			// 
-			// ToolsPanel
-			// 
-			this.ToolsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-			this.ToolsPanel.Controls.Add(this.button11);
-			this.ToolsPanel.Controls.Add(this.button12);
-			this.ToolsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.ToolsPanel.Location = new System.Drawing.Point(0, 155);
-			this.ToolsPanel.Name = "ToolsPanel";
-			this.ToolsPanel.Size = new System.Drawing.Size(128, 10);
-			this.ToolsPanel.TabIndex = 9;
-			// 
 			// button11
 			// 
 			this.button11.Dock = System.Windows.Forms.DockStyle.Top;
@@ -392,17 +470,6 @@
 			this.button9.UseVisualStyleBackColor = true;
 			this.button9.Click += new System.EventHandler(this.button9_Click_1);
 			// 
-			// MachinePanel
-			// 
-			this.MachinePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-			this.MachinePanel.Controls.Add(this.button7);
-			this.MachinePanel.Controls.Add(this.button8);
-			this.MachinePanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.MachinePanel.Location = new System.Drawing.Point(0, 100);
-			this.MachinePanel.Name = "MachinePanel";
-			this.MachinePanel.Size = new System.Drawing.Size(128, 10);
-			this.MachinePanel.TabIndex = 7;
-			// 
 			// button7
 			// 
 			this.button7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -453,17 +520,6 @@
 			this.button10.Text = "Machine";
 			this.button10.UseVisualStyleBackColor = true;
 			this.button10.Click += new System.EventHandler(this.button10_Click);
-			// 
-			// IlotPanel
-			// 
-			this.IlotPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(29)))), ((int)(((byte)(33)))));
-			this.IlotPanel.Controls.Add(this.button1);
-			this.IlotPanel.Controls.Add(this.button6);
-			this.IlotPanel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.IlotPanel.Location = new System.Drawing.Point(0, 45);
-			this.IlotPanel.Name = "IlotPanel";
-			this.IlotPanel.Size = new System.Drawing.Size(128, 10);
-			this.IlotPanel.TabIndex = 6;
 			// 
 			// button1
 			// 
@@ -549,10 +605,12 @@
 			this.Dashbord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.Dashbord.Location = new System.Drawing.Point(0, 72);
 			this.Dashbord.Name = "Dashbord";
+			this.Dashbord.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
 			this.Dashbord.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.Dashbord.Size = new System.Drawing.Size(145, 48);
 			this.Dashbord.TabIndex = 3;
-			this.Dashbord.Text = "Dashbord";
+			this.Dashbord.Text = "Dashboard";
+			this.Dashbord.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.Dashbord.UseVisualStyleBackColor = true;
 			this.Dashbord.Click += new System.EventHandler(this.Dashbord_Click);
 			// 
@@ -566,57 +624,15 @@
 			this.LogoPanel.Size = new System.Drawing.Size(145, 72);
 			this.LogoPanel.TabIndex = 0;
 			// 
-			// FormPanel
+			// label3
 			// 
-			this.FormPanel.AutoScroll = true;
-			this.FormPanel.Controls.Add(this.label2);
-			this.FormPanel.Controls.Add(this.label1);
-			this.FormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.FormPanel.Location = new System.Drawing.Point(145, 32);
-			this.FormPanel.Name = "FormPanel";
-			this.FormPanel.Size = new System.Drawing.Size(985, 484);
-			this.FormPanel.TabIndex = 2;
-			this.FormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FormPanel_Paint_1);
-			this.FormPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormPanel_MouseMove);
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(301, 228);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(260, 58);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Welcom !!";
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(301, 153);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(291, 58);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Welcome !!";
-			// 
-			// Utilisateur
-			// 
-			this.Utilisateur.Dock = System.Windows.Forms.DockStyle.Top;
-			this.Utilisateur.Enabled = false;
-			this.Utilisateur.FlatAppearance.BorderSize = 0;
-			this.Utilisateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.Utilisateur.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Utilisateur.ForeColor = System.Drawing.Color.Beige;
-			this.Utilisateur.Image = global::SafranCotChargeCapa.Properties.Resources.icons8_dashboard_32;
-			this.Utilisateur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.Utilisateur.Location = new System.Drawing.Point(0, 316);
-			this.Utilisateur.Name = "Utilisateur";
-			this.Utilisateur.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.Utilisateur.Size = new System.Drawing.Size(145, 48);
-			this.Utilisateur.TabIndex = 10;
-			this.Utilisateur.Text = "Utilisateur";
-			this.Utilisateur.UseVisualStyleBackColor = true;
-			this.Utilisateur.Click += new System.EventHandler(this.Utilisateur_Click);
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(6, 9);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(41, 16);
+			this.label3.TabIndex = 11;
+			this.label3.Text = "label3";
 			// 
 			// HomeDashbord
 			// 
@@ -636,6 +652,7 @@
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomeDashbord_MouseDown);
 			this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomeDashbord_MouseMove);
 			this.Header.ResumeLayout(false);
+			this.Header.PerformLayout();
 			this.SideMenu.ResumeLayout(false);
 			this.MangPanel.ResumeLayout(false);
 			this.OperationPanel.ResumeLayout(false);
@@ -685,5 +702,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button Utilisateur;
+		private System.Windows.Forms.Label label3;
 	}
 }

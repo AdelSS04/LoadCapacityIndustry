@@ -23,8 +23,8 @@ namespace DAL
 		}
 		public static bool SetOperatingNumber(OperatorsO op)
 		{
-			string requete = String.Format("insert into GrpOfOperators (GroupID,YearT,WeekT,NumberOfOperator)  " +
-				"values ('{0}',{1},{2},{3});", op.OperationID, op.YearT, op.WeekT, op.NumberOfOperator);
+			string requete = String.Format("insert into GrpOfOperators (GroupID,YearT,WeekT,NumberOfOperator,OpenDay)  " +
+				"values ('{0}',{1},{2},{3},{4});", op.OperationID, op.YearT, op.WeekT, op.NumberOfOperator,op.OpenDay);
 
 			return Util.miseajour(requete);
 

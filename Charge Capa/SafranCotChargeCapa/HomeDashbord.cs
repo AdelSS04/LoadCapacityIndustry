@@ -44,6 +44,7 @@ namespace SafranCotChargeCapa
 
 		private void HomeDashbord_Load(object sender, EventArgs e)
 		{
+			label3.Text = Util.user.UserName + "|" + DateTime.Now.ToString();
 			label2.Text = Util.user.UserName;
 			if (Util.user.Type == "Manager")
 			{ btn.Enabled = true; Utilisateur.Enabled = true;
@@ -173,7 +174,7 @@ namespace SafranCotChargeCapa
 		private void button1_Click(object sender, EventArgs e)
 		{
 
-			 FormPanel.Controls.Clear();
+			/* FormPanel.Controls.Clear();
 			ManOperation MyForm = new ManOperation();
 			MyForm.TopLevel = false;
 			MyForm.FormBorderStyle = FormBorderStyle.None;
@@ -183,7 +184,7 @@ namespace SafranCotChargeCapa
 			MyForm.Size = FormPanel.ClientSize;
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront();
-			MyForm.Show();this.Width = FormPanel.Width + MangPanel.Width;this.Width = FormPanel.Width + MangPanel.Width;
+			MyForm.Show();this.Width = FormPanel.Width + MangPanel.Width;this.Width = FormPanel.Width + MangPanel.Width;*/
 		}
 
 		private void button6_Click(object sender, EventArgs e)

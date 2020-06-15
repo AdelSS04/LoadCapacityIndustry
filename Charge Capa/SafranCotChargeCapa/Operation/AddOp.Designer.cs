@@ -64,7 +64,7 @@
 			this.metroLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.metroLabel5.Location = new System.Drawing.Point(0, 9);
 			this.metroLabel5.Name = "metroLabel5";
-			this.metroLabel5.Size = new System.Drawing.Size(254, 25);
+			this.metroLabel5.Size = new System.Drawing.Size(248, 25);
 			this.metroLabel5.TabIndex = 1;
 			this.metroLabel5.Text = "Veuillez remplir tous les champs";
 			this.metroLabel5.UseCustomBackColor = true;
@@ -86,7 +86,7 @@
 			this.UpButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.UpButton.Size = new System.Drawing.Size(193, 30);
 			this.UpButton.TabIndex = 19;
-			this.UpButton.Text = "Modifier la machine";
+			this.UpButton.Text = "Ajouter l\'opération";
 			this.UpButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.UpButton.UseVisualStyleBackColor = false;
 			this.UpButton.Click += new System.EventHandler(this.UpButton_Click);

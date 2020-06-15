@@ -36,6 +36,7 @@
 			this.userN = new MaterialSkin.Controls.MaterialSingleLineTextField();
 			this.pass = new MaterialSkin.Controls.MaterialSingleLineTextField();
 			this.UpButton = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -159,12 +160,23 @@
 			this.UpButton.UseVisualStyleBackColor = false;
 			this.UpButton.Click += new System.EventHandler(this.UpButton_Click);
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(169, 428);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(179, 16);
+			this.label2.TabIndex = 21;
+			this.label2.Text = "Safran Composite Tunisie © 2020";
+			// 
 			// login
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
 			this.ClientSize = new System.Drawing.Size(353, 450);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.UpButton);
 			this.Controls.Add(this.pass);
 			this.Controls.Add(this.userN);
@@ -176,6 +188,7 @@
 			this.panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -188,5 +201,6 @@
 		private System.Windows.Forms.Button UpButton;
 		private System.Windows.Forms.Button button18;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label label2;
 	}
 }

@@ -54,10 +54,10 @@ namespace SafranCotChargeCapa
 					{
 					OperatorsO op = new OperatorsO
 					{
-						OperationID = MAchID.Text,
+						OperationID = MAchID.Text,OpenDay=int.Parse(materialSingleLineTextField1.Text),
 						YearT = int.Parse(YeatT.Text),
-						NumberOfOperator = int.Parse(OpenDay.Text),OpenDay=int.Parse(materialSingleLineTextField1.Text)
-
+						NumberOfOperator = int.Parse(OpenDay.Text),
+						
 
 					};
 						DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;

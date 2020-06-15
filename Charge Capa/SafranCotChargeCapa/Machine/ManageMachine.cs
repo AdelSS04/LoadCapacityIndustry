@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,9 @@ namespace SafranCotChargeCapa
 		}
 		private void ManageMachine_Load(object sender, EventArgs e)
 		{
+			DataPick.Items.Add(DateTime.Now.Year);
+			DataPick.Items.Add((DateTime.Now.Year + 1));
+			DataPick.Items.Add((DateTime.Now.Year + 2));
 			List<Machine> machines = MachineDBO.GetAllMachine();
 			dataGridView1.DataSource = machines;
 			foreach (Machine u in machines)
@@ -118,7 +122,7 @@ namespace SafranCotChargeCapa
 				MachineOpenDay openDay = new MachineOpenDay
 				{
 					MachineID = metroComboBox1.SelectedItem.ToString(),
-					YearT = DateTime.Now.Year,
+					YearT = int.Parse(DataPick.SelectedItem.ToString()),
 					WeekT = int.Parse(WeekT.Text),
 					NumberOfshift = int.Parse(NumberOfshift.Text),
 					OpenDay=int.Parse(openday.Text),
@@ -135,7 +139,23 @@ namespace SafranCotChargeCapa
 
 				}
 				else
-					MessageBox.Show("error");
+				{
+					DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
+					DateTime date1 = new DateTime(DateTime.Now.Year, 12, 31);
+					Calendar cal = dfi.Calendar;
+					for (int i = 1; i <= cal.GetWeekOfYear(date1, dfi.CalendarWeekRule, DayOfWeek.Monday); i++)
+					{
+						openDay.WeekT = i;
+						MachineDBO.SetOpenDay(openDay);
+					}
+					MessageBox.Show("Add done");
+					List<MachineOpenDay> CapaMach = MachineDBO.GetMachineShiftCalen(metroComboBox1.SelectedItem.ToString(),
+					System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), DateTime.Now.Year);
+					dataGridView2.DataSource = CapaMach;
+					sizeDGV(dataGridView2, groupBox2);
+				}
+
+
 			}
 			catch (Exception ex)
 			{

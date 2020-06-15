@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,9 @@ namespace SafranCotChargeCapa
 		}
 		private void ManageMachine_Load(object sender, EventArgs e)
 		{
+			DataPick.Items.Add(DateTime.Now.Year);
+			DataPick.Items.Add((DateTime.Now.Year + 1));
+			DataPick.Items.Add((DateTime.Now.Year + 2));
 			List<Ilot> il = IlotDBO.GetAllIlot();
 			foreach (Ilot u in il)
 			{
@@ -89,7 +93,7 @@ namespace SafranCotChargeCapa
 				bool state= true;
 				foreach(OperatorsO openDay in machineOpenDays)
 				{
-					if (!OpGroupeDBO.UpOpenDay(openDay))
+					if (!OpGroupeDBO.UpOperatingNumber(openDay))
 						state = false;
 				}
 				if (state)
@@ -117,7 +121,7 @@ namespace SafranCotChargeCapa
 				OperatorsO openDayOp = new OperatorsO
 				{
 					OperationID = metroComboBox2.SelectedItem.ToString(),
-					YearT = DateTime.Now.Year,
+					YearT = int.Parse(DataPick.SelectedItem.ToString()),
 					WeekT = int.Parse(WeekT.Text),
 					OpenDay=int.Parse(materialSingleLineTextField1.Text),
 					NumberOfOperator = int.Parse(openday.Text),
@@ -133,7 +137,21 @@ namespace SafranCotChargeCapa
 
 				}
 				else
-					MessageBox.Show("error");
+				{
+					DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
+					DateTime date1 = new DateTime(DateTime.Now.Year, 12, 31);
+					Calendar cal = dfi.Calendar;
+					for (int i = 1; i <= cal.GetWeekOfYear(date1, dfi.CalendarWeekRule, DayOfWeek.Monday); i++)
+					{
+						openDayOp.WeekT = i;
+						OperatorsODBO.SetOperatingNumber(openDayOp);
+					}
+					MessageBox.Show("Add done");
+					List<MachineOpenDay> CapaMach = MachineDBO.GetMachineShiftCalen(metroComboBox1.SelectedItem.ToString(),
+					System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), DateTime.Now.Year);
+					dataGridView2.DataSource = CapaMach;
+					sizeDGV(dataGridView2, groupBox2);
+				}
 			}
 			catch (Exception ex)
 			{

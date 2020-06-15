@@ -23,8 +23,7 @@ namespace SafranCotChargeCapa
 		{
 			this.Close();
 		}
-
-		private void UpButton_Click(object sender, EventArgs e)
+		public async Task LoginT()
 		{
 			User user = UserDBO.Login(userN.Text, pass.Text);
 			if (user.UserID != null)
@@ -37,6 +36,10 @@ namespace SafranCotChargeCapa
 
 			else
 				MessageBox.Show("nnnn");
+		}
+		private async void UpButton_Click(object sender, EventArgs e)
+		{
+			await LoginT();
 		}
 	}
 }

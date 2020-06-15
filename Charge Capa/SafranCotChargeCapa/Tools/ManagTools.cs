@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,9 @@ namespace SafranCotChargeCapa
 		}
 		private void ManageMachine_Load(object sender, EventArgs e)
 		{
+			DataPick.Items.Add(DateTime.Now.Year);
+			DataPick.Items.Add((DateTime.Now.Year + 1));
+			DataPick.Items.Add((DateTime.Now.Year + 2));
 			try
 			{
 				List<Tools> mach = ToolsDBO.GetAllTools();
@@ -130,29 +134,48 @@ namespace SafranCotChargeCapa
 				ToolsOpenDay openDay = new ToolsOpenDay
 				{
 					ToolsID = metroComboBox1.SelectedItem.ToString(),
-					YearT = DateTime.Now.Year,
+					YearT = int.Parse(DataPick.SelectedItem.ToString()),
 					WeekT = int.Parse(WeekT.Text),
-					
-					OpenDay=int.Parse(openday.Text),
+
+					OpenDay = int.Parse(openday.Text),
 				};
-				bool state = true;
+
 
 				if (ToolsDBO.UpAllOperatingNumber(openDay))
 				{
-					MessageBox.Show("done");
+
+					MessageBox.Show("Update done");
 					List<ToolsOpenDay> CapaMach = ToolsDBO.GetAllToolsOpenDay(metroComboBox1.SelectedItem.ToString(), DateTime.Now.Year,
 				System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
 					dataGridView2.DataSource = CapaMach;
 					sizeDGV(dataGridView2, groupBox2);
-
 				}
 				else
-					MessageBox.Show("error");
+
+				{
+
+
+					DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
+					DateTime date1 = new DateTime(DateTime.Now.Year, 12, 31);
+					Calendar cal = dfi.Calendar;
+					for (int i = 1; i <= cal.GetWeekOfYear(date1, dfi.CalendarWeekRule, DayOfWeek.Monday); i++)
+					{
+						openDay.WeekT = i;
+						ToolsDBO.SetOpenDay(openDay);
+					}
+					List<ToolsOpenDay> CapaMach = ToolsDBO.GetAllToolsOpenDay(metroComboBox1.SelectedItem.ToString(), DateTime.Now.Year,
+				System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
+					dataGridView2.DataSource = CapaMach;
+					sizeDGV(dataGridView2, groupBox2);
+					MessageBox.Show("Add !!");
+				}
 			}
 			catch (Exception ex)
 			{
+
 				MessageBox.Show(ex.Message);
 			}
+			
 		}
 
 		private void UpButton_Click(object sender, EventArgs e)

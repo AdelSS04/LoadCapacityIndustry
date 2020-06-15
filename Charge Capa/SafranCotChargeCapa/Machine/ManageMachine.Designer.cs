@@ -49,6 +49,7 @@
 			this.UpGrid = new System.Windows.Forms.Button();
 			this.DelButton = new System.Windows.Forms.Button();
 			this.UpButton = new System.Windows.Forms.Button();
+			this.DataPick = new MetroFramework.Controls.MetroComboBox();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -76,7 +77,7 @@
 			this.metroLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.metroLabel5.Location = new System.Drawing.Point(0, 9);
 			this.metroLabel5.Name = "metroLabel5";
-			this.metroLabel5.Size = new System.Drawing.Size(227, 25);
+			this.metroLabel5.Size = new System.Drawing.Size(222, 25);
 			this.metroLabel5.TabIndex = 1;
 			this.metroLabel5.Text = "Veuillez choisir une machine";
 			this.metroLabel5.UseCustomBackColor = true;
@@ -195,13 +196,14 @@
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.DataPick);
 			this.groupBox3.Controls.Add(this.openday);
 			this.groupBox3.Controls.Add(this.UpAll);
 			this.groupBox3.Controls.Add(this.WeekT);
 			this.groupBox3.Controls.Add(this.NumberOfshift);
 			this.groupBox3.Location = new System.Drawing.Point(530, 251);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(278, 213);
+			this.groupBox3.Size = new System.Drawing.Size(278, 243);
 			this.groupBox3.TabIndex = 43;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Modifier une sequance";
@@ -210,7 +212,7 @@
 			// 
 			this.openday.Depth = 0;
 			this.openday.Hint = "Combien de jour ouvrable  ?";
-			this.openday.Location = new System.Drawing.Point(17, 75);
+			this.openday.Location = new System.Drawing.Point(17, 114);
 			this.openday.MouseState = MaterialSkin.MouseState.HOVER;
 			this.openday.Name = "openday";
 			this.openday.PasswordChar = '\0';
@@ -231,7 +233,7 @@
 			this.UpAll.ForeColor = System.Drawing.Color.Beige;
 			this.UpAll.Image = global::SafranCotChargeCapa.Properties.Resources.restart_20px;
 			this.UpAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.UpAll.Location = new System.Drawing.Point(59, 161);
+			this.UpAll.Location = new System.Drawing.Point(59, 202);
 			this.UpAll.Name = "UpAll";
 			this.UpAll.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.UpAll.Size = new System.Drawing.Size(134, 30);
@@ -244,7 +246,7 @@
 			// 
 			this.WeekT.Depth = 0;
 			this.WeekT.Hint = "A partir de quelle semaine ?";
-			this.WeekT.Location = new System.Drawing.Point(17, 119);
+			this.WeekT.Location = new System.Drawing.Point(17, 158);
 			this.WeekT.MouseState = MaterialSkin.MouseState.HOVER;
 			this.WeekT.Name = "WeekT";
 			this.WeekT.PasswordChar = '\0';
@@ -259,7 +261,7 @@
 			// 
 			this.NumberOfshift.Depth = 0;
 			this.NumberOfshift.Hint = "Nomber de shift";
-			this.NumberOfshift.Location = new System.Drawing.Point(17, 30);
+			this.NumberOfshift.Location = new System.Drawing.Point(17, 69);
 			this.NumberOfshift.MouseState = MaterialSkin.MouseState.HOVER;
 			this.NumberOfshift.Name = "NumberOfshift";
 			this.NumberOfshift.PasswordChar = '\0';
@@ -332,6 +334,29 @@
 			this.UpButton.UseVisualStyleBackColor = false;
 			this.UpButton.Click += new System.EventHandler(this.UpButton_Click);
 			// 
+			// DataPick
+			// 
+			this.DataPick.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.DataPick.Cursor = System.Windows.Forms.Cursors.Default;
+			this.DataPick.DisplayFocus = true;
+			this.DataPick.DropDownHeight = 210;
+			this.DataPick.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.DataPick.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
+			this.DataPick.ForeColor = System.Drawing.Color.Red;
+			this.DataPick.FormattingEnabled = true;
+			this.DataPick.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.DataPick.IntegralHeight = false;
+			this.DataPick.ItemHeight = 23;
+			this.DataPick.Location = new System.Drawing.Point(46, 31);
+			this.DataPick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.DataPick.Name = "DataPick";
+			this.DataPick.Size = new System.Drawing.Size(186, 29);
+			this.DataPick.TabIndex = 47;
+			this.DataPick.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.DataPick.UseCustomBackColor = true;
+			this.DataPick.UseCustomForeColor = true;
+			this.DataPick.UseSelectable = true;
+			// 
 			// ManageMachine
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -378,5 +403,6 @@
 		private System.Windows.Forms.Button UpAll;
 		private System.Windows.Forms.Button UpGrid;
 		private MaterialSkin.Controls.MaterialSingleLineTextField openday;
+		private MetroFramework.Controls.MetroComboBox DataPick;
 	}
 }

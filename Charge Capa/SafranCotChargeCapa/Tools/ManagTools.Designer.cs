@@ -48,6 +48,7 @@
 			this.UpGrid = new System.Windows.Forms.Button();
 			this.DelButton = new System.Windows.Forms.Button();
 			this.UpButton = new System.Windows.Forms.Button();
+			this.DataPick = new MetroFramework.Controls.MetroComboBox();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -75,7 +76,7 @@
 			this.metroLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.metroLabel5.Location = new System.Drawing.Point(0, 9);
 			this.metroLabel5.Name = "metroLabel5";
-			this.metroLabel5.Size = new System.Drawing.Size(196, 25);
+			this.metroLabel5.Size = new System.Drawing.Size(193, 25);
 			this.metroLabel5.TabIndex = 1;
 			this.metroLabel5.Text = "Veuillez choisir unn outil";
 			this.metroLabel5.UseCustomBackColor = true;
@@ -194,6 +195,7 @@
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Controls.Add(this.DataPick);
 			this.groupBox3.Controls.Add(this.openday);
 			this.groupBox3.Controls.Add(this.UpAll);
 			this.groupBox3.Controls.Add(this.WeekT);
@@ -208,7 +210,7 @@
 			// 
 			this.openday.Depth = 0;
 			this.openday.Hint = "Combien de jour ouvrable  ?";
-			this.openday.Location = new System.Drawing.Point(17, 50);
+			this.openday.Location = new System.Drawing.Point(17, 68);
 			this.openday.MouseState = MaterialSkin.MouseState.HOVER;
 			this.openday.Name = "openday";
 			this.openday.PasswordChar = '\0';
@@ -242,7 +244,7 @@
 			// 
 			this.WeekT.Depth = 0;
 			this.WeekT.Hint = "A partir de quelle semaine ?";
-			this.WeekT.Location = new System.Drawing.Point(17, 105);
+			this.WeekT.Location = new System.Drawing.Point(17, 118);
 			this.WeekT.MouseState = MaterialSkin.MouseState.HOVER;
 			this.WeekT.Name = "WeekT";
 			this.WeekT.PasswordChar = '\0';
@@ -287,9 +289,9 @@
 			this.DelButton.Location = new System.Drawing.Point(552, 134);
 			this.DelButton.Name = "DelButton";
 			this.DelButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.DelButton.Size = new System.Drawing.Size(193, 30);
+			this.DelButton.Size = new System.Drawing.Size(171, 30);
 			this.DelButton.TabIndex = 18;
-			this.DelButton.Text = "Supprimer la machine";
+			this.DelButton.Text = "Supprimer l\'outil";
 			this.DelButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.DelButton.UseVisualStyleBackColor = false;
 			this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
@@ -308,12 +310,35 @@
 			this.UpButton.Name = "UpButton";
 			this.UpButton.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
 			this.UpButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.UpButton.Size = new System.Drawing.Size(193, 30);
+			this.UpButton.Size = new System.Drawing.Size(171, 30);
 			this.UpButton.TabIndex = 19;
-			this.UpButton.Text = "Modifier la machine";
+			this.UpButton.Text = "Modifier l\'outil";
 			this.UpButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.UpButton.UseVisualStyleBackColor = false;
 			this.UpButton.Click += new System.EventHandler(this.UpButton_Click);
+			// 
+			// DataPick
+			// 
+			this.DataPick.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.DataPick.Cursor = System.Windows.Forms.Cursors.Default;
+			this.DataPick.DisplayFocus = true;
+			this.DataPick.DropDownHeight = 210;
+			this.DataPick.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.DataPick.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
+			this.DataPick.ForeColor = System.Drawing.Color.Red;
+			this.DataPick.FormattingEnabled = true;
+			this.DataPick.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.DataPick.IntegralHeight = false;
+			this.DataPick.ItemHeight = 23;
+			this.DataPick.Location = new System.Drawing.Point(35, 29);
+			this.DataPick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.DataPick.Name = "DataPick";
+			this.DataPick.Size = new System.Drawing.Size(186, 29);
+			this.DataPick.TabIndex = 46;
+			this.DataPick.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.DataPick.UseCustomBackColor = true;
+			this.DataPick.UseCustomForeColor = true;
+			this.DataPick.UseSelectable = true;
 			// 
 			// ManagTools
 			// 
@@ -360,5 +385,6 @@
 		private System.Windows.Forms.Button UpAll;
 		private System.Windows.Forms.Button UpGrid;
 		private MaterialSkin.Controls.MaterialSingleLineTextField openday;
+		private MetroFramework.Controls.MetroComboBox DataPick;
 	}
 }

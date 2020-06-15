@@ -56,14 +56,14 @@ namespace DAL
 		}
 
 
-		public static List<DemandeOP> GetDemandeOP(string id,int ii)
+		public static List<DemandeOP> GetDemandeOP(string id,int ii,int yr)
 		{
 			List<DemandeOP> Lur = new List<DemandeOP>();
 			string requete = String.Format("SELECT sum(DemandeQTE),Operation.OperationID,WeekDem,CycleTime " +
 				"FROM(Operation INNER JOIN MachineCycleTime ON Operation.OperationID = MachineCycleTime.OperationID) INNER JOIN((Product INNER JOIN Demande ON Product.ProductID = Demande.ProductID) " +
 	"INNER JOIN ManuelCycleTime ON Product.ProductID = ManuelCycleTime.ProductID) ON " +
-	"Operation.OperationID = ManuelCycleTime.OperationID where MachineID = '{0}' and WeekDem>= {1}  group by  Operation.OperationID,WeekDem,CycleTime" +
-	"", id,ii);
+	"Operation.OperationID = ManuelCycleTime.OperationID where (MachineID = '{0}' and WeekDem>= {1}) and YearDem={2} group by  Operation.OperationID,WeekDem,CycleTime" +
+	"", id,ii,yr);
 			OleDbDataReader rdd = Util.lire(requete);
 			DemandeOP ur;
 			while (rdd.Read())

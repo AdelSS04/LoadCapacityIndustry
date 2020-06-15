@@ -58,7 +58,7 @@ namespace SafranCotChargeCapa
 			return ds;
 		}
 		
-		private void button1_Click(object sender, EventArgs e)
+		private async void button1_Click(object sender, EventArgs e)
 		{
 			OleDbConnection con = new OleDbConnection("	Provider = Microsoft.ACE.OLEDB.12.0; data source = " + sFileName + "; Extended Properties = Excel 12.0; ");
 			StringBuilder stbQuery = new StringBuilder();

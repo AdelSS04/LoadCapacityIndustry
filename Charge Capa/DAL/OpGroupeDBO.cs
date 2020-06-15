@@ -149,8 +149,8 @@ namespace DAL
 
 		public static bool UpOpenDay(OperatorsO op)
 		{
-			string requete = String.Format("update GrpOfOperators set NumberOfOperator='{2}'" +
-				"where ((GroupID='{0}' and YearT={1}) and WeekT={3}) ;", op.OperationID,op.YearT,op.NumberOfOperator,op.WeekT );
+			string requete = String.Format("update GrpOfOperators set NumberOfOperator={2}, OpenDay={4}" +
+				"where ((GroupID='{0}' and YearT={1}) and WeekT={3}) ;", op.OperationID,op.YearT,op.NumberOfOperator,op.WeekT,op.OpenDay );
 
 			return Util.miseajour(requete);
 			//return requete;
