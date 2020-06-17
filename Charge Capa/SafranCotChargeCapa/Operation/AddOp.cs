@@ -174,8 +174,8 @@ namespace SafranCotChargeCapa
 
 		private void UpButton_Click(object sender, EventArgs e)
 		{
-			//try
-			//{
+			try
+			{
 				Operation operation = new Operation
 				{
 					OperationID = materialSingleLineTextField1.Text,
@@ -210,11 +210,11 @@ namespace SafranCotChargeCapa
 				}
 				MessageBox.Show("done !!");
 				}
-			/*}
+			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
-			}*/
+			}
 		}
 
 		private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -70,31 +70,42 @@ namespace SafranCotChargeCapa
 			DataView dvEmpi = new DataView(dsXLSi.Tables[0]);
 			this.dataGridView1.DataSource = dvEmpi;
 			List<string> lala = dataGridView1.DataSource as List<string>;
-			DemandeDBO.DeletAllOperationTime(Convert.ToDateTime(dataGridView1.Columns[5].Name).Year);
+			DemandeDBO.DeletAllOperationTime(2020);
+			DemandeDBO.DeletAllOperationTime(2021);
+			DemandeDBO.DeletAllOperationTime(2022);
 			//DemandeDBO.Restee();
-			for (int j = 1; j < (dataGridView1.RowCount - 1); j++)
-			{
-				for (int i = 3; i < dataGridView1.ColumnCount; i++)
+			string name;
+				for (int j = 1; j < (dataGridView1.RowCount - 1); j++)
 				{
-					Demande dd = new Demande
-					{ YearDem = Convert.ToDateTime(dataGridView1.Columns[i].Name).Year,
-					WeekDem = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(Convert.ToDateTime(dataGridView1.Columns[i].Name), CalendarWeekRule.FirstDay, DayOfWeek.Monday) ,
-					DemandeQTE = int.Parse(dataGridView1.Rows[j].Cells[i].Value.ToString()),
-					ProductID = dataGridView1.Rows[j].Cells[0].Value.ToString()
-					};
-					try
+					for (int i = 3; i < dataGridView1.ColumnCount; i++)
 					{
 						
-
-						DemandeDBO.AddDemande(dd);
 					
-					}
-					catch (Exception ex)
-					{
-						MessageBox.Show(ex.Message);
-					}
-					}
-			}
+					
+					
+					
+					Demande dd = new Demande
+						{ YearDem = Convert.ToDateTime(dataGridView1.Columns[i].Name).Year,
+						WeekDem = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(Convert.ToDateTime(dataGridView1.Columns[i].Name), CalendarWeekRule.FirstDay, DayOfWeek.Monday) ,
+						DemandeQTE = int.Parse(dataGridView1.Rows[j].Cells[i].Value.ToString()),
+						ProductID = dataGridView1.Rows[j].Cells[0].Value.ToString()
+						};
+
+					name = dd.ProductID;
+
+						try
+						{
+
+
+							DemandeDBO.AddDemande(dd);
+
+						}
+						catch (Exception ex)
+						{
+							MessageBox.Show(ex.Message);
+						}
+						}
+				}
 			MessageBox.Show("done");
 			
 

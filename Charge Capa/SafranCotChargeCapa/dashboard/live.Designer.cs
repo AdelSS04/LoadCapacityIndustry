@@ -195,7 +195,7 @@
 			this.GrpPick.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
 			this.GrpPick.IntegralHeight = false;
 			this.GrpPick.ItemHeight = 23;
-			this.GrpPick.Location = new System.Drawing.Point(520, 12);
+			this.GrpPick.Location = new System.Drawing.Point(565, 12);
 			this.GrpPick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.GrpPick.Name = "GrpPick";
 			this.GrpPick.Size = new System.Drawing.Size(186, 29);
@@ -242,7 +242,7 @@
 			this.IlotPick.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
 			this.IlotPick.IntegralHeight = false;
 			this.IlotPick.ItemHeight = 23;
-			this.IlotPick.Location = new System.Drawing.Point(303, 12);
+			this.IlotPick.Location = new System.Drawing.Point(348, 12);
 			this.IlotPick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.IlotPick.Name = "IlotPick";
 			this.IlotPick.Size = new System.Drawing.Size(186, 29);
@@ -353,7 +353,7 @@
 			this.panel6.Controls.Add(this.label6);
 			this.panel6.Controls.Add(this.pictureBox3);
 			this.panel6.ForeColor = System.Drawing.Color.White;
-			this.panel6.Location = new System.Drawing.Point(469, 230);
+			this.panel6.Location = new System.Drawing.Point(595, 230);
 			this.panel6.Name = "panel6";
 			this.panel6.Size = new System.Drawing.Size(418, 94);
 			this.panel6.TabIndex = 24;
@@ -396,7 +396,7 @@
 			this.panel4.Controls.Add(this.label3);
 			this.panel4.Controls.Add(this.pictureBox2);
 			this.panel4.ForeColor = System.Drawing.Color.White;
-			this.panel4.Location = new System.Drawing.Point(469, 126);
+			this.panel4.Location = new System.Drawing.Point(595, 126);
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(418, 94);
 			this.panel4.TabIndex = 23;
@@ -439,7 +439,7 @@
 			this.panel5.Controls.Add(this.label1);
 			this.panel5.Controls.Add(this.pictureBox1);
 			this.panel5.ForeColor = System.Drawing.Color.White;
-			this.panel5.Location = new System.Drawing.Point(469, 25);
+			this.panel5.Location = new System.Drawing.Point(595, 25);
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(418, 94);
 			this.panel5.TabIndex = 22;

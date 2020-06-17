@@ -12,5 +12,6 @@ namespace BEL
         public float AcutalCapa { get; set; }
         public float ActualCharge { get; set; }
         public float BesoinH { get; set; }
+        public int NbrOp { get; set; }
     }
 }

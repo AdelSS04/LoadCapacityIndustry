@@ -36,12 +36,16 @@ namespace SafranCotChargeCapa.dashboard
 
 		private void IlotPick_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			GrpPick.Items.Clear();
+			 GrpPick.Items.Clear();
+			
 			List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(IlotPick.SelectedItem.ToString());
 			var DistinctItems = IlotGrpOFOP.Select(x => x.GrpName).Distinct();
 			foreach (var o in DistinctItems)
 				GrpPick.Items.Add(o.ToString());
-			
+
+			upGraph1();
+			setC(dataGridView1);
+			sizeDGV(dataGridView1, panel3);
 		}
 		public void sizeDGV(DataGridView dgv,Panel pan)
 		{
@@ -132,12 +136,13 @@ namespace SafranCotChargeCapa.dashboard
 					row.Cells[3].Style.BackColor = System.Drawing.Color.Red;
 			}
 		}
+	
 		public async Task upGraph()
 		{
 			try
 			{
 				il = IlotDBO.GetIlot(IlotPick.SelectedItem.ToString());
-				List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(il.IlotID);
+				//List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(il.IlotID);
 				op = OperatorsDBO.GetOperators(GrpPick.SelectedItem.ToString(), int.Parse(DataPick.SelectedItem.ToString()), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
 				OP = OpGroupeDBO.ListOPParGRP(GrpPick.SelectedItem.ToString());
 
@@ -153,7 +158,7 @@ namespace SafranCotChargeCapa.dashboard
 				List<Charge> ChTot = new List<Charge>();
 				Charge cr;
 				ChargePo = OP;
-
+				dataGridView1.DataSource = OP;
 				foreach (Demande d in dmm1)
 				{
 					float tc = GetTC(ChargePo, d.ProductID);
@@ -168,7 +173,16 @@ namespace SafranCotChargeCapa.dashboard
 					ChTot.Add(cr);
 
 				}
-				var query1 = ChTot.Where(person => person.annee == int.Parse(DataPick.SelectedItem.ToString())).ToList();
+				var newList =
+		(
+		from x in ChTot
+		select new { annee = x.annee, product = x.product, semaine = x.semaine,ChargT=x.ChargT }
+		).Distinct().ToList();
+
+				
+				//	dataGridView1.newList = ChTot;
+				var query1 = newList.Where(person => person.annee == int.Parse(DataPick.SelectedItem.ToString())).ToList();
+				
 				var LL = query1.GroupBy(t => t.semaine).Select(t => new { ID = t.Key, Value = t.Sum(u => u.ChargT) }).ToList();
 				chartStats.Series.Clear();
 				chart1.Series.Clear(); PerCV.Clear();
@@ -183,7 +197,7 @@ namespace SafranCotChargeCapa.dashboard
 				}
 				foreach (Operators opo in op)
 				{
-					Capa.Add(opo.NumberOfOperator * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f *5);
+					Capa.Add(opo.NumberOfOperator * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f *opo.DayOfWorking);
 
 				}
 				List<Besoin> br = new List<Besoin>();
@@ -202,10 +216,11 @@ namespace SafranCotChargeCapa.dashboard
 						AcutalCapa = Capa[i],
 						BesoinH = (Capa[i] - yValues[i]),
 
-
+						NbrOp = op[i].NumberOfOperator ,
 					}; br.Add(brr);
 
 				}
+
 				label4.Text =  Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString()+
 					" H/semaine";
 				label2.Text = Math.Round(br.Select(r => r.ActualCharge).Average(), 2).ToString() + " H/semaine";
@@ -263,12 +278,175 @@ namespace SafranCotChargeCapa.dashboard
 				chartStats.Series[1].Points.DataBindXY(xValues, Capa);
 				dataGridView1.DataSource = br;
 				//setC();
-
+				
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
+		}
+
+		List<Operators> op1 =  new List<Operators>();
+		List<ManuelCycleTime> OP1 = new List<ManuelCycleTime>();
+		public void upGraph1()
+		{
+			
+			
+			try
+			{
+				List<Demande> dmm = new List<Demande>();
+				List<String> OpList = new List<string>();
+			List<Charge> ChTot = new List<Charge>();
+			dmm1 = new List<Demande>();
+			op1.Clear();OP1.Clear();
+				il = IlotDBO.GetIlot(IlotPick.SelectedItem.ToString());
+				foreach (string ccname in GrpPick.Items)
+
+				{
+					op1.AddRange( OperatorsDBO.GetOperators(ccname, int.Parse(DataPick.SelectedItem.ToString()), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday)));
+					OP1.AddRange(OpGroupeDBO.ListOPParGRP(ccname));
+					dmm.Clear();
+					dmm1.Clear();
+					foreach (ManuelCycleTime optest in OP1)
+					{
+						dmm = (DemandeDBO.GetProductDemande(optest.ProductID, int.Parse(DataPick.SelectedItem.ToString()), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday)));
+						dmm1.AddRange(dmm);
+
+					}
+				
+				Charge cr;
+				ChargePo = OP1;
+				
+				foreach (Demande d in dmm1)
+				{
+					float tc = GetTC(ChargePo, d.ProductID);
+					cr = new Charge
+					{
+						annee = d.YearDem,
+						product = d.ProductID,
+						semaine = d.WeekDem,
+						ChargT = (tc * d.DemandeQTE),
+
+					};
+					ChTot.Add(cr);
+
+				}
+			
+
+			}
+			var newList =
+(
+from x in ChTot
+select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT = x.ChargT }
+).Distinct().ToList();
+			var query1 = newList.Where(person => person.annee == int.Parse(DataPick.SelectedItem.ToString())).ToList();
+
+			var LL = query1.GroupBy(t => t.semaine).Select(t => new { ID = t.Key, Value = t.Sum(u => u.ChargT) }).ToList();
+			int hh = 0;
+			xValues.Clear();
+			yValues.Clear();
+			chartStats.Series.Clear();
+			chart1.Series.Clear(); PerCV.Clear();
+			foreach (var item in LL)
+			{
+				xValues.Add(item.ID);
+				yValues.Add(item.Value + ((il.CRM) / 100) * item.Value);
+				
+			}
+
+			Capa.Clear();
+
+			var LL1 = op1.GroupBy(t => t.WeekT).Select(t => new { ID = t.Key, Value = t.Max(u => u.DayOfWorking), Value1 = t.Sum(u => u.NumberOfOperator) }).ToList();
+			foreach (var opo in LL1)
+			{
+				Capa.Add(opo.Value1 * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f * opo.Value);
+
+			}
+			List<Besoin> br = new List<Besoin>();
+			Besoin brr;
+			for (int i = 0; i < yValues.Count; i++)
+			{
+				if (Capa[i] != 0)
+					PerCV.Add(Math.Round(yValues[i] / Capa[i], 2) * 100);
+				else
+					PerCV.Add(0);
+
+					brr = new Besoin
+					{
+						WeekWork = xValues[i],
+						ActualCharge = yValues[i],
+						AcutalCapa = Capa[i],
+						BesoinH = (Capa[i] - yValues[i]),
+						NbrOp = LL1[i].Value1 ,
+
+
+				}; br.Add(brr);
+
+			}
+
+			label4.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() +
+				" H/semaine";
+			label2.Text = Math.Round(br.Select(r => r.ActualCharge).Average(), 2).ToString() + " H/semaine";
+			label5.Text = Math.Round(br.Select(r => r.BesoinH).Average(), 2).ToString() + "H/semaine";
+			if (br.Select(r => r.BesoinH).Average() > 0)
+				label5.ForeColor = System.Drawing.Color.Green;
+			else
+				label5.ForeColor = System.Drawing.Color.Red;
+
+			var series = new Series()
+			{
+				ChartType = SeriesChartType.Column,
+				Color = Color.FromArgb(93, 138, 168),
+				IsVisibleInLegend = true,
+
+				Name = "Charge",
+				LegendText = "Charge",
+
+			};
+			var RatioChargeCapa = new Series()
+			{
+				ChartType = SeriesChartType.Spline,
+				Color = Color.FromArgb(93, 138, 168),
+				IsVisibleInLegend = true,
+				IsValueShownAsLabel = true,
+				Name = "RatioChargeCapa",
+				LegendText = "RatioChargeCapa",
+				BorderWidth = 3,
+
+			};
+			var series1 = new Series()
+			{
+				ChartType = SeriesChartType.Spline,
+				IsVisibleInLegend = true,
+				BorderDashStyle = ChartDashStyle.Solid,
+
+				Name = "Capa",
+				LegendText = "Capacité",
+				BorderWidth = 3,
+				Color = Color.FromArgb(255, 126, 0),
+			};
+
+
+			chartStats.Series.Add(series);
+			chartStats.Series.Add(series1);
+			chart1.Series.Add(RatioChargeCapa);
+			chart1.Series[0].Points.Clear();
+			chart1.ChartAreas[0].AxisX.Interval = 1;
+			chartStats.ChartAreas[0].AxisX.Interval = 1;
+			chartStats.Series[1].Points.Clear();
+
+
+			chart1.Series[0].Points.DataBindXY(xValues, PerCV);
+			chartStats.Series[0].Points.DataBindXY(xValues, yValues);
+			chartStats.Series[1].Points.DataBindXY(xValues, Capa);
+			dataGridView1.DataSource = br;
+
+				
+			}
+			catch (Exception ex)
+		{
+			MessageBox.Show(ex.Message);
+		}
 		}
 
 		public void setTools ()
