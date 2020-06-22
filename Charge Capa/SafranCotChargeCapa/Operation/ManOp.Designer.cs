@@ -28,15 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.DelButton = new System.Windows.Forms.Button();
-			this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
 			this.UpButton = new System.Windows.Forms.Button();
 			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -65,6 +64,8 @@
 			this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
 			this.button4 = new System.Windows.Forms.Button();
 			this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+			this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
+			this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
 			this.panel1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -78,15 +79,16 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+			this.panel1.Controls.Add(this.metroComboBox7);
+			this.panel1.Controls.Add(this.metroComboBox6);
 			this.panel1.Controls.Add(this.DelButton);
-			this.panel1.Controls.Add(this.metroLabel5);
 			this.panel1.Controls.Add(this.UpButton);
 			this.panel1.Controls.Add(this.metroComboBox1);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(889, 47);
+			this.panel1.Size = new System.Drawing.Size(1088, 47);
 			this.panel1.TabIndex = 40;
 			// 
 			// DelButton
@@ -99,7 +101,7 @@
 			this.DelButton.ForeColor = System.Drawing.Color.Beige;
 			this.DelButton.Image = global::SafranCotChargeCapa.Properties.Resources.delete_trash_20px;
 			this.DelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.DelButton.Location = new System.Drawing.Point(691, 8);
+			this.DelButton.Location = new System.Drawing.Point(879, 8);
 			this.DelButton.Name = "DelButton";
 			this.DelButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.DelButton.Size = new System.Drawing.Size(193, 30);
@@ -108,19 +110,6 @@
 			this.DelButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.DelButton.UseVisualStyleBackColor = false;
 			this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
-			// 
-			// metroLabel5
-			// 
-			this.metroLabel5.AutoSize = true;
-			this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-			this.metroLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.metroLabel5.Location = new System.Drawing.Point(0, 9);
-			this.metroLabel5.Name = "metroLabel5";
-			this.metroLabel5.Size = new System.Drawing.Size(235, 25);
-			this.metroLabel5.TabIndex = 1;
-			this.metroLabel5.Text = "Veuillez choisir une opération";
-			this.metroLabel5.UseCustomBackColor = true;
-			this.metroLabel5.UseCustomForeColor = true;
 			// 
 			// UpButton
 			// 
@@ -132,7 +121,7 @@
 			this.UpButton.ForeColor = System.Drawing.Color.Beige;
 			this.UpButton.Image = global::SafranCotChargeCapa.Properties.Resources.restart_20px;
 			this.UpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.UpButton.Location = new System.Drawing.Point(488, 8);
+			this.UpButton.Location = new System.Drawing.Point(676, 8);
 			this.UpButton.Name = "UpButton";
 			this.UpButton.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
 			this.UpButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -156,7 +145,7 @@
 			this.metroComboBox1.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
 			this.metroComboBox1.IntegralHeight = false;
 			this.metroComboBox1.ItemHeight = 23;
-			this.metroComboBox1.Location = new System.Drawing.Point(237, 9);
+			this.metroComboBox1.Location = new System.Drawing.Point(428, 8);
 			this.metroComboBox1.Name = "metroComboBox1";
 			this.metroComboBox1.Size = new System.Drawing.Size(240, 29);
 			this.metroComboBox1.TabIndex = 0;
@@ -336,7 +325,7 @@
 			this.metroTabPage1.Controls.Add(this.materialLabel3);
 			this.metroTabPage1.HorizontalScrollbarBarColor = true;
 			this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-			this.metroTabPage1.HorizontalScrollbarSize = 6;
+			this.metroTabPage1.HorizontalScrollbarSize = 5;
 			this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
 			this.metroTabPage1.Name = "metroTabPage1";
 			this.metroTabPage1.Size = new System.Drawing.Size(857, 182);
@@ -344,7 +333,7 @@
 			this.metroTabPage1.Text = "Machines";
 			this.metroTabPage1.VerticalScrollbarBarColor = true;
 			this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-			this.metroTabPage1.VerticalScrollbarSize = 8;
+			this.metroTabPage1.VerticalScrollbarSize = 7;
 			this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
 			// 
 			// metroComboBox5
@@ -373,34 +362,34 @@
 			// 
 			// MachineGrid
 			// 
-			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
-			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.MachineGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.MachineGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
 			this.MachineGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.MachineGrid.DefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
+			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.MachineGrid.DefaultCellStyle = dataGridViewCellStyle14;
 			this.MachineGrid.EnableHeadersVisualStyles = false;
 			this.MachineGrid.Location = new System.Drawing.Point(2, 3);
 			this.MachineGrid.Name = "MachineGrid";
-			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.MachineGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.MachineGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
 			this.MachineGrid.RowHeadersVisible = false;
 			this.MachineGrid.Size = new System.Drawing.Size(391, 160);
 			this.MachineGrid.TabIndex = 73;
@@ -510,7 +499,7 @@
 			this.metroTabPage2.Controls.Add(this.materialLabel2);
 			this.metroTabPage2.HorizontalScrollbarBarColor = true;
 			this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-			this.metroTabPage2.HorizontalScrollbarSize = 6;
+			this.metroTabPage2.HorizontalScrollbarSize = 5;
 			this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
 			this.metroTabPage2.Name = "metroTabPage2";
 			this.metroTabPage2.Size = new System.Drawing.Size(857, 182);
@@ -518,7 +507,7 @@
 			this.metroTabPage2.Text = "Outils";
 			this.metroTabPage2.VerticalScrollbarBarColor = true;
 			this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-			this.metroTabPage2.VerticalScrollbarSize = 8;
+			this.metroTabPage2.VerticalScrollbarSize = 7;
 			// 
 			// metroComboBox4
 			// 
@@ -546,34 +535,34 @@
 			// 
 			// ToolGrid
 			// 
-			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
-			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.ToolGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.ToolGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
 			this.ToolGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
-			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.ToolGrid.DefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
+			dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.ToolGrid.DefaultCellStyle = dataGridViewCellStyle17;
 			this.ToolGrid.EnableHeadersVisualStyles = false;
 			this.ToolGrid.Location = new System.Drawing.Point(2, 3);
 			this.ToolGrid.Name = "ToolGrid";
-			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.ToolGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.ToolGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
 			this.ToolGrid.RowHeadersVisible = false;
 			this.ToolGrid.Size = new System.Drawing.Size(391, 160);
 			this.ToolGrid.TabIndex = 66;
@@ -663,14 +652,60 @@
 			this.materialLabel2.AutoSize = true;
 			this.materialLabel2.BackColor = System.Drawing.Color.White;
 			this.materialLabel2.Depth = 0;
-			this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+			this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
 			this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 			this.materialLabel2.Location = new System.Drawing.Point(503, 15);
 			this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
 			this.materialLabel2.Name = "materialLabel2";
-			this.materialLabel2.Size = new System.Drawing.Size(56, 19);
+			this.materialLabel2.Size = new System.Drawing.Size(54, 18);
 			this.materialLabel2.TabIndex = 25;
 			this.materialLabel2.Text = "Outils :";
+			// 
+			// metroComboBox6
+			// 
+			this.metroComboBox6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.metroComboBox6.Cursor = System.Windows.Forms.Cursors.Default;
+			this.metroComboBox6.DisplayFocus = true;
+			this.metroComboBox6.DropDownHeight = 210;
+			this.metroComboBox6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.metroComboBox6.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
+			this.metroComboBox6.ForeColor = System.Drawing.Color.Red;
+			this.metroComboBox6.FormattingEnabled = true;
+			this.metroComboBox6.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.metroComboBox6.IntegralHeight = false;
+			this.metroComboBox6.ItemHeight = 23;
+			this.metroComboBox6.Location = new System.Drawing.Point(19, 5);
+			this.metroComboBox6.Name = "metroComboBox6";
+			this.metroComboBox6.Size = new System.Drawing.Size(160, 29);
+			this.metroComboBox6.TabIndex = 21;
+			this.metroComboBox6.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.metroComboBox6.UseCustomBackColor = true;
+			this.metroComboBox6.UseCustomForeColor = true;
+			this.metroComboBox6.UseSelectable = true;
+			this.metroComboBox6.SelectedIndexChanged += new System.EventHandler(this.metroComboBox6_SelectedIndexChanged);
+			// 
+			// metroComboBox7
+			// 
+			this.metroComboBox7.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.metroComboBox7.Cursor = System.Windows.Forms.Cursors.Default;
+			this.metroComboBox7.DisplayFocus = true;
+			this.metroComboBox7.DropDownHeight = 210;
+			this.metroComboBox7.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.metroComboBox7.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
+			this.metroComboBox7.ForeColor = System.Drawing.Color.Red;
+			this.metroComboBox7.FormattingEnabled = true;
+			this.metroComboBox7.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+			this.metroComboBox7.IntegralHeight = false;
+			this.metroComboBox7.ItemHeight = 23;
+			this.metroComboBox7.Location = new System.Drawing.Point(221, 5);
+			this.metroComboBox7.Name = "metroComboBox7";
+			this.metroComboBox7.Size = new System.Drawing.Size(160, 29);
+			this.metroComboBox7.TabIndex = 25;
+			this.metroComboBox7.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.metroComboBox7.UseCustomBackColor = true;
+			this.metroComboBox7.UseCustomForeColor = true;
+			this.metroComboBox7.UseSelectable = true;
+			this.metroComboBox7.SelectedIndexChanged += new System.EventHandler(this.metroComboBox7_SelectedIndexChanged);
 			// 
 			// ManOp
 			// 
@@ -678,7 +713,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(889, 500);
+			this.ClientSize = new System.Drawing.Size(1088, 500);
 			this.Controls.Add(this.metroTabControl1);
 			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox2);
@@ -689,7 +724,6 @@
 			this.Text = "Gestion des machines";
 			this.Load += new System.EventHandler(this.ManageMachine_Load);
 			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
@@ -708,7 +742,6 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Button UpButton;
 		private System.Windows.Forms.Button DelButton;
-		private MetroFramework.Controls.MetroLabel metroLabel5;
 		private MetroFramework.Controls.MetroComboBox metroComboBox1;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.CheckedListBox checkedListBox1;
@@ -736,5 +769,7 @@
 		private System.Windows.Forms.DataGridView ToolGrid;
 		private MetroFramework.Controls.MetroComboBox metroComboBox5;
 		private MetroFramework.Controls.MetroComboBox metroComboBox4;
+		private MetroFramework.Controls.MetroComboBox metroComboBox7;
+		private MetroFramework.Controls.MetroComboBox metroComboBox6;
 	}
 }

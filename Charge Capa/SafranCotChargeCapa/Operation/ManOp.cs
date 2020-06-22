@@ -50,20 +50,14 @@ namespace SafranCotChargeCapa
 		{
 			try
 			{
-				List<Operation> op = OperationDBO.GetAllOperationName();
-				var DistinctItems = op.Select(x => x.OperationID).Distinct();
-
-				foreach (var opp in DistinctItems)
-				{
-					metroComboBox1.Items.Add(opp.ToString());
-				}
+				
 				List<Product> ur = ProductDBO.GetAllProduct();
 				foreach (Product u in ur)
 				{ checkedListBox1.Items.Add(u.ProductID); }
 				List<Ilot> il = IlotDBO.GetAllIlot();
 				foreach (Ilot u in il)
 				{
-
+					metroComboBox6.Items.Add(u.IlotID);
 					metroComboBox2.Items.Add(u.IlotID);
 				}
 				List<Machine> mach = MachineDBO.GetAllMachine();
@@ -560,6 +554,27 @@ namespace SafranCotChargeCapa
 			button7.Enabled = true;
 			if (materialSingleLineTextField1.Text != "")
 				button6.Enabled = true;
+		}
+
+		private void metroComboBox6_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			metroComboBox7.Items.Clear();
+			List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(metroComboBox6.SelectedItem.ToString());
+			var DistinctItems = IlotGrpOFOP.Select(x => x.GrpName).Distinct();
+			foreach (var o in DistinctItems)
+				metroComboBox7.Items.Add(o.ToString());
+		}
+
+		private void metroComboBox7_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			metroComboBox1.Items.Clear();
+			List<Operation> op = OperationDBO.GetOperationDataGrp(metroComboBox7.SelectedItem.ToString());
+			var DistinctItems = op.Select(x => x.OperationID).Distinct();
+
+			foreach (var opp in DistinctItems)
+			{
+				metroComboBox1.Items.Add(opp.ToString());
+			}
 		}
 	}
 }

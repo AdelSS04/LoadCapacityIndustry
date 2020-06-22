@@ -71,11 +71,10 @@ namespace SafranCotChargeCapa.dashboard
 		{
 			if (DataPick.SelectedIndex > -1)
 			{
-				await upGraph();
-				//Thread thread = new Thread(upGraph);thread.Join();
-
 				
-				setC(dataGridView1);
+
+				await upGraph();
+                setC(dataGridView1);
 				sizeDGV(dataGridView1,panel3);
 				OpMach = new List<MachineCycleTime>();
 				List<Machine> MachInfo = new List<Machine>();
@@ -142,7 +141,7 @@ namespace SafranCotChargeCapa.dashboard
 			try
 			{
 				il = IlotDBO.GetIlot(IlotPick.SelectedItem.ToString());
-				//List<OpGroupe> IlotGrpOFOP = IlotDBO.IlotOpgrp(il.IlotID);
+				
 				op = OperatorsDBO.GetOperators(GrpPick.SelectedItem.ToString(), int.Parse(DataPick.SelectedItem.ToString()), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday));
 				OP = OpGroupeDBO.ListOPParGRP(GrpPick.SelectedItem.ToString());
 
@@ -200,24 +199,49 @@ namespace SafranCotChargeCapa.dashboard
 					Capa.Add(opo.NumberOfOperator * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f *opo.DayOfWorking);
 
 				}
-				List<Besoin> br = new List<Besoin>();
-				Besoin brr;
+				List<BesoinOP> br = new List<BesoinOP>();
+				BesoinOP brr; List<int> NbrEff = new List<int>();
+				NbrEff.Clear();
+			
 				for (int i = 0; i < yValues.Count; i++)
 				{
 					if (Capa[i] != 0)
 						PerCV.Add(Math.Round(yValues[i] / Capa[i], 2) * 100);
 					else
 						PerCV.Add(0);
+					if (!(op[i].NumberOfOperator == 0))
+						brr = new BesoinOP
+						{
+							WeekWork = xValues[i],
+							ActualCharge = Math.Round(yValues[i], 2),
+							AcutalCapa = Math.Round(Capa[i], 2),
+							BesoinH = Math.Round((Capa[i] - yValues[i]), 2),
+							NbrOp = op[i].NumberOfOperator,
 
-					brr = new Besoin
-					{
-						WeekWork = xValues[i],
-						ActualCharge = yValues[i],
-						AcutalCapa = Capa[i],
-						BesoinH = (Capa[i] - yValues[i]),
+							OpNeed = Math.Round(yValues[i] / (op[i].DayOfWorking * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f), 2),
 
-						NbrOp = op[i].NumberOfOperator ,
-					}; br.Add(brr);
+						};
+					else
+						brr = new BesoinOP
+						{
+							WeekWork = xValues[i],
+							ActualCharge = yValues[i],
+							AcutalCapa = Capa[i],
+							BesoinH = (Math.Round((Capa[i] - yValues[i]), 2)),
+							NbrOp = op[i].NumberOfOperator,
+
+							OpNeed = 0,
+						};
+
+
+					br.Add(brr);
+					if (brr.OpNeed <= 0)
+						NbrEff.Add(0);
+
+					else if (brr.OpNeed > 0)
+						NbrEff.Add((int)Math.Truncate(brr.OpNeed) + 1);
+					else
+						NbrEff.Add(0);
 
 				}
 
@@ -262,7 +286,19 @@ namespace SafranCotChargeCapa.dashboard
 					BorderWidth = 3,
 					Color = Color.FromArgb(255, 126, 0),
 				};
+				var seriesEff = new Series()
+				{
+					ChartType = SeriesChartType.Column,
+					Color = Color.FromArgb(93, 138, 168),
+					IsVisibleInLegend = true,
+					IsValueShownAsLabel = true,
+					Name = "Eff",
+					LegendText = "Eff",
 
+				};
+				chart4.Series.Clear();
+				chart4.Series.Add(seriesEff);
+				chart4.Series[0].Points.DataBindXY(xValues, NbrEff);
 
 				chartStats.Series.Add(series);
 				chartStats.Series.Add(series1);
@@ -362,27 +398,50 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 				Capa.Add(opo.Value1 * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f * opo.Value);
 
 			}
-			List<Besoin> br = new List<Besoin>();
-			Besoin brr;
+			List<BesoinOP> br = new List<BesoinOP>();
+			BesoinOP brr;
+				List<int> NbrEff = new List<int>();
+				NbrEff.Clear();
+				
 			for (int i = 0; i < yValues.Count; i++)
 			{
 				if (Capa[i] != 0)
 					PerCV.Add(Math.Round(yValues[i] / Capa[i], 2) * 100);
 				else
 					PerCV.Add(0);
-
-					brr = new Besoin
+				if (!(LL1[i].Value==0 ))
+					brr = new BesoinOP
 					{
 						WeekWork = xValues[i],
-						ActualCharge = yValues[i],
-						AcutalCapa = Capa[i],
-						BesoinH = (Capa[i] - yValues[i]),
+						ActualCharge = Math.Round(yValues[i],2),
+						AcutalCapa = Math.Round(Capa[i],2),
+						BesoinH = Math.Round((Capa[i] - yValues[i]),2),
 						NbrOp = LL1[i].Value1 ,
+						
+						OpNeed = Math.Round(yValues[i] / (LL1[i].Value * (il.Efficiency / 100) * (1 - (il.IlotRejectedRate / 100)) * (1 - (il.TruancyRate / 100)) * 7.67f),2)
 
+					};
+					else
+						brr = new BesoinOP
+						{
+							WeekWork = xValues[i],
+							ActualCharge = yValues[i],
+							AcutalCapa = Capa[i],
+							BesoinH = (Math.Round((Capa[i] - yValues[i]),2)),
+							NbrOp = LL1[i].Value1,
 
-				}; br.Add(brr);
+							OpNeed =0,
+						};
+					br.Add(brr);
+					if (brr.OpNeed <= 0)
+						NbrEff.Add(0);
 
-			}
+					else if (brr.OpNeed > 0)
+						NbrEff.Add((int)Math.Truncate(brr.OpNeed) + 1);
+					else
+						NbrEff.Add(0);
+
+				}
 
 			label4.Text = Math.Round(br.Select(r => r.AcutalCapa).Average(), 2).ToString() +
 				" H/semaine";
@@ -403,7 +462,18 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 				LegendText = "Charge",
 
 			};
-			var RatioChargeCapa = new Series()
+				chart4.Series.Clear();
+				var seriesEff = new Series()
+				{
+					ChartType = SeriesChartType.Column,
+					Color = Color.FromArgb(93, 138, 168),
+					IsVisibleInLegend = true,
+					IsValueShownAsLabel = true,
+					Name = "Eff",
+					LegendText = "Eff",
+
+				};
+				var RatioChargeCapa = new Series()
 			{
 				ChartType = SeriesChartType.Spline,
 				Color = Color.FromArgb(93, 138, 168),
@@ -419,7 +489,7 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 				ChartType = SeriesChartType.Spline,
 				IsVisibleInLegend = true,
 				BorderDashStyle = ChartDashStyle.Solid,
-
+				
 				Name = "Capa",
 				LegendText = "Capacité",
 				BorderWidth = 3,
@@ -430,13 +500,14 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 			chartStats.Series.Add(series);
 			chartStats.Series.Add(series1);
 			chart1.Series.Add(RatioChargeCapa);
+				chart4.Series.Add(seriesEff);
 			chart1.Series[0].Points.Clear();
 			chart1.ChartAreas[0].AxisX.Interval = 1;
 			chartStats.ChartAreas[0].AxisX.Interval = 1;
 			chartStats.Series[1].Points.Clear();
-
-
-			chart1.Series[0].Points.DataBindXY(xValues, PerCV);
+				chart4.ChartAreas[0].AxisX.Interval = 1;
+				chart4.Series[0].Points.DataBindXY(xValues, NbrEff);
+				chart1.Series[0].Points.DataBindXY(xValues, PerCV);
 			chartStats.Series[0].Points.DataBindXY(xValues, yValues);
 			chartStats.Series[1].Points.DataBindXY(xValues, Capa);
 			dataGridView1.DataSource = br;
@@ -629,9 +700,9 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 						brr = new Besoin
 						{
 							WeekWork = Xval[i],
-							ActualCharge = float.Parse(chr[i].ToString()),
-							AcutalCapa = float.Parse(MachCapa[i].ToString()),
-							BesoinH = float.Parse(MachCapa[i].ToString()) - float.Parse(chr[i].ToString()),
+							ActualCharge = Math.Round(float.Parse(chr[i].ToString()),2),
+							AcutalCapa = Math.Round(float.Parse(MachCapa[i].ToString()),2),
+							BesoinH = Math.Round(float.Parse(MachCapa[i].ToString()) - float.Parse(chr[i].ToString()),2)
 
 
 						}; br.Add(brr);
@@ -656,20 +727,20 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 		}
 		public void UpPresse1()
 		{
-			try
-			{
+			
 				Machine ActMach = MachineDBO.GetMachine(MachineList.SelectedItem.ToString());
 
 				List<DemandeOP> DemO = OperationDBO.GetDemandeOP(MachineList.SelectedItem.ToString(), System.Globalization.CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(DateTime.Now, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday), int.Parse(DataPick.SelectedItem.ToString()));
-				MessageBox.Show(DemO[5].CycleTime.ToString());
+				
 				List<DemandeOP> Cycle1 = new List<DemandeOP>();
 				List<DemandeOP> Cycle2 = new List<DemandeOP>();
+			dataGridView2.DataSource = DemO;
+			
 
-
-				var DrapagePorteA320D = DemO.Where(person => person.OperationID == "DrapagePorteA320D");
-				var DrapagePorteA320G = DemO.Where(person => person.OperationID == "DrapagePorteA320G");
-				var DrapagePorteOWSA321D = DemO.Where(person => person.OperationID == "DrapagePorteOWSA321D");
-				var DrapagePorteOWSA321G = DemO.Where(person => person.OperationID == "DrapagePorteOWSA321G");
+				var DrapagePorteA320D = DemO.Where(person => person.OperationID == "PolymPorteA320G");
+				var DrapagePorteA320G = DemO.Where(person => person.OperationID == "PolymPorteA320D");
+				var DrapagePorteOWSA321D = DemO.Where(person => person.OperationID == "PolymPorteOWSD");
+				var DrapagePorteOWSA321G = DemO.Where(person => person.OperationID == "PolymPorteOWSG");
 				DemandeOP Dem1;
 				DemandeOP Dem2;
 				int max1;
@@ -684,7 +755,7 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 						somm = max1,
 						WeekDem = DrapagePorteA320D.ToList()[i].WeekDem
 					}; Cycle1.Add(Dem1);
-					//                                            //                         //
+
 					max2 = Math.Max(DrapagePorteOWSA321D.ToList()[i].somm, DrapagePorteOWSA321G.ToList()[i].somm);
 					Dem2 = new DemandeOP
 					{
@@ -757,9 +828,9 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 					brr = new Besoin
 					{
 						WeekWork = Xval[i],
-						ActualCharge = float.Parse(chr[i].ToString()),
-						AcutalCapa = float.Parse(MachCapa[i].ToString()),
-						BesoinH = float.Parse(MachCapa[i].ToString()) - float.Parse(chr[i].ToString()),
+						ActualCharge =Math.Round( float.Parse(chr[i].ToString()),2),
+						AcutalCapa = Math.Round(float.Parse(MachCapa[i].ToString()),2),
+						BesoinH = Math.Round(float.Parse(MachCapa[i].ToString()) - float.Parse(chr[i].ToString()),2)
 
 
 					}; br.Add(brr);
@@ -775,12 +846,9 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 				dataGridView2.DataSource = br;
 				sizeDGV(dataGridView2, panel11);
 				setC(dataGridView2);
+		
 
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
+
 		}
 		private void materialFlatButton1_Click(object sender, EventArgs e)
 		{
@@ -791,6 +859,8 @@ select new { annee = x.annee, product = x.product, semaine = x.semaine, ChargT =
 		{
 			setTools();
 		}
+
+		
 	}
 
 }

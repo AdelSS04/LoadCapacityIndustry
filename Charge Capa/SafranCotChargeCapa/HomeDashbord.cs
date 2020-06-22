@@ -539,5 +539,20 @@ namespace SafranCotChargeCapa
 			MyForm.Dock = DockStyle.Fill;
 			MyForm.BringToFront(); MyForm.Show();
 		}
+
+		private void button2_Click_1(object sender, EventArgs e)
+		{
+			
+			FormPanel.Controls.Clear();
+			dashboard.RuGlobal MyForm = new dashboard.RuGlobal();
+			MyForm.TopLevel = false;
+			MyForm.FormBorderStyle = FormBorderStyle.None;
+			MyForm.Parent = FormPanel;
+			MyForm.Top = 0;
+			MyForm.Left = 0;
+			MyForm.Size = FormPanel.ClientSize;
+			MyForm.Dock = DockStyle.Fill;
+			MyForm.BringToFront(); MyForm.Show();
+		}
 	}
 }

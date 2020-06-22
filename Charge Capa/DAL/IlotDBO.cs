@@ -46,7 +46,8 @@ namespace DAL
 				ur.IlotRejectedRate = rdd.GetFloat(5);
 				ur.TruancyRate = rdd.GetFloat(4);
 				ur.UserID = rdd.GetString(6);
-				
+				ur.Atelier = rdd.GetString(7);
+
 
 			}
 			Util.Disconnect();
@@ -62,8 +63,8 @@ namespace DAL
 		}
 		public static bool AddIlot(Ilot ur)
 		{
-			string requete = String.Format("insert into Ilot(IlotID, IlotName, Efficiency,CRM,TruancyRate,IlotRejectRate,UserID)" +
-				" values ('{0}','{1}',{2},{3},{4},{5},'{6}');", ur.IlotID, ur.IlotName, ur.Efficiency, ur.CRM,ur.TruancyRate,ur.IlotRejectedRate,ur.UserID);
+			string requete = String.Format("insert into Ilot(IlotID, IlotName, Efficiency,CRM,TruancyRate,IlotRejectRate,UserID,Atelier)" +
+				" values ('{0}','{1}',{2},{3},{4},{5},'{6}','{7}');", ur.IlotID, ur.IlotName, ur.Efficiency, ur.CRM,ur.TruancyRate,ur.IlotRejectedRate,ur.UserID,ur.Atelier);
 
 			return Util.miseajour(requete);
 			
@@ -92,6 +93,7 @@ namespace DAL
 				TruancyRate = rdd.GetFloat(4),
 				UserID = rdd.GetString(6),
 				IlotID= rdd.GetString(0),
+				Atelier = rdd.GetString(7),
 
 				};
 				Lur.Add(ur);
@@ -101,6 +103,32 @@ namespace DAL
 			return Lur;
 
 		}
+		public static List<Ilot> GetAllIlotAtelier(string kk)
+		{
+			List<Ilot> Lur = new List<Ilot>();
+			string requete = String.Format("select * from Ilot where Atelier='{0}';",kk);
+			OleDbDataReader rdd = Util.lire(requete);
+			Ilot ur;
+			while (rdd.Read())
+			{
+				ur = new Ilot
+				{
+					CRM = rdd.GetFloat(3),
+					Efficiency = rdd.GetFloat(2),
+					IlotName = rdd.GetString(1),
+					IlotRejectedRate = rdd.GetFloat(5),
+					TruancyRate = rdd.GetFloat(4),
+					UserID = rdd.GetString(6),
+					IlotID = rdd.GetString(0),
+					Atelier = rdd.GetString(7),
 
+				};
+				Lur.Add(ur);
+
+			}
+			Util.Disconnect();
+			return Lur;
+
+		}
 	}
 }

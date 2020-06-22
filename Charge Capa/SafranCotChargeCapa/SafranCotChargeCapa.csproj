@@ -61,6 +61,9 @@
     <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts.WinForms">
       <HintPath>..\..\..\..\source\repos\pfewf\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
     </Reference>
@@ -113,6 +116,12 @@
     <Compile Include="dashboard\live.Designer.cs">
       <DependentUpon>live.cs</DependentUpon>
     </Compile>
+    <Compile Include="dashboard\RuGlobal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard\RuGlobal.Designer.cs">
+      <DependentUpon>RuGlobal.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeDashbord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +163,12 @@
     </Compile>
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ManagOpera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ManagOpera.Designer.cs">
+      <DependentUpon>ManagOpera.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\ManagTools.cs">
       <SubType>Form</SubType>
@@ -210,6 +225,9 @@
     <EmbeddedResource Include="dashboard\live.resx">
       <DependentUpon>live.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dashboard\RuGlobal.resx">
+      <DependentUpon>RuGlobal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeDashbord.resx">
       <DependentUpon>HomeDashbord.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ManagOpera.resx">
+      <DependentUpon>ManagOpera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ManagTools.resx">
       <DependentUpon>ManagTools.cs</DependentUpon>

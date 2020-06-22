@@ -1,0 +1,3043 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilateur Microsoft (R) Visual C#",
+        "version": "3.4.0.0",
+        "fileVersion": "3.4.1-beta4-19614-01 (16504609)",
+        "semanticVersion": "3.4.0",
+        "language": "fr-FR"
+      },
+      "results": [
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'AvialabilityToolsDBO' to match pascal case naming rules, consider using 'AvialabilityToolsDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/AvailabilityToolsDBO.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 15,
+                  "endLine": 12,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OpGroupeDBO.cs",
+                "region": {
+                  "startLine": 156,
+                  "startColumn": 4,
+                  "endLine": 156,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ManuelCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 4,
+                  "endLine": 22,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 71,
+                  "startColumn": 4,
+                  "endLine": 71,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 4,
+                  "endLine": 79,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 5,
+                  "endLine": 36,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 4,
+                  "endLine": 44,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsOccupationTimeDBO.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 4,
+                  "endLine": 27,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsOccupationTimeDBO.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 4,
+                  "endLine": 35,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/UserDBO.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 4,
+                  "endLine": 21,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 143,
+                  "startColumn": 4,
+                  "endLine": 143,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotOpDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotOpDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotOpDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotOpDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 146,
+                  "startColumn": 1,
+                  "endLine": 146,
+                  "endColumn": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineDBO.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 4,
+                  "endLine": 20,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ManuelCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OpGroupeDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'ManuelCycleTimeDBO' to match pascal case naming rules, consider using 'ManuelCycleTimeDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ManuelCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OpGroupeDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/UserDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OpGroupeDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OpGroupeDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'UserDBO' to match pascal case naming rules, consider using 'UserDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/UserDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'OperatorsDBO' to match pascal case naming rules, consider using 'OperatorsDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/AvailabilityToolsDBO.cs",
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/AvailabilityToolsDBO.cs",
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 2,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/AvailabilityToolsDBO.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/AvailabilityToolsDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/AvailabilityToolsDBO.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/AvailabilityToolsDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/AvailabilityToolsDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ManuelCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ManuelCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ManuelCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ManuelCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotOpDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'IlotOpDBO' to match pascal case naming rules, consider using 'IlotOpDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotOpDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsODBO.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsODBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsODBO.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsODBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsODBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsODBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'ToolsDBO' to match pascal case naming rules, consider using 'ToolsDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MachineCycleTimeDBO' to match pascal case naming rules, consider using 'MachineCycleTimeDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineCycleTimeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ProductDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ProductDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ProductDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ProductDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ProductDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'ProductDBO' to match pascal case naming rules, consider using 'ProductDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ProductDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsODBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'OperatorsODBO' to match pascal case naming rules, consider using 'OperatorsOdbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperatorsODBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/DemandeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'DemandeDBO' to match pascal case naming rules, consider using 'DemandeDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/DemandeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsOccupationTimeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'ToolsOccupationTimeDBO' to match pascal case naming rules, consider using 'ToolsOccupationTimeDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsOccupationTimeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsOccupationTimeDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsOccupationTimeDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsOccupationTimeDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsOccupationTimeDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/UserDBO.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/UserDBO.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/UserDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/UserDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/DemandeDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/DemandeDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/DemandeDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/DemandeDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/CalendrierDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'CalendrierDBO' to match pascal case naming rules, consider using 'CalendrierDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/CalendrierDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/CalendrierDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/CalendrierDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/CalendrierDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/CalendrierDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OpGroupeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'OpGroupeDBO' to match pascal case naming rules, consider using 'OpGroupeDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OpGroupeDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'MachineDBO' to match pascal case naming rules, consider using 'MachineDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'OperationDBO' to match pascal case naming rules, consider using 'OperationDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'IlotDBO' to match pascal case naming rules, consider using 'IlotDbo'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotDBO.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 15,
+                  "endLine": 13,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2223",
+          "level": "warning",
+          "message": "Change the visibility of 'user' or make it 'const' or 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 22,
+                  "endLine": 15,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2223",
+          "level": "warning",
+          "message": "Change the visibility of 'cn' or make it 'const' or 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 33,
+                  "endLine": 16,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 22,
+                  "endLine": 15,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 33,
+                  "endLine": 16,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2223",
+          "level": "warning",
+          "message": "Change the visibility of 'cmd' or make it 'const' or 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 30,
+                  "endLine": 17,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2223",
+          "level": "warning",
+          "message": "Change the visibility of 'rd' or make it 'const' or 'readonly'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 33,
+                  "endLine": 18,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 30,
+                  "endLine": 17,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 33,
+                  "endLine": 18,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotDBO.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotDBO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotDBO.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotDBO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4144",
+          "level": "warning",
+          "message": "Update this method so that its implementation is not identical to 'lire'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 33,
+                  "endLine": 35,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 33,
+                  "endLine": 28,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 2,
+                  "endColumn": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Util.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1128",
+          "level": "warning",
+          "message": "Remove this unnecessary 'using'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/Properties/AssemblyInfo.cs",
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 2,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "The format string might be wrong, the following item indexes are missing: '1'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 21,
+                  "endLine": 40,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OpGroupeDBO.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 21,
+                  "endLine": 17,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ToolsDBO.cs",
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 21,
+                  "endLine": 73,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/ProductDBO.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 21,
+                  "endLine": 18,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/DemandeDBO.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 21,
+                  "endLine": 32,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/UserDBO.cs",
+                "region": {
+                  "startLine": 69,
+                  "startColumn": 21,
+                  "endLine": 69,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/IlotDBO.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 21,
+                  "endLine": 83,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/OperationDBO.cs",
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 21,
+                  "endLine": 90,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3457",
+          "level": "warning",
+          "message": "Remove this formatting call and simply use the input string.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/adela/Desktop/SafranCotChargeCapa/Charge%20Capa/DAL/MachineDBO.cs",
+                "region": {
+                  "startLine": 60,
+                  "startColumn": 21,
+                  "endLine": 60,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in PascalCase",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently. This rule checks whether or not type names are using PascalCase. To reduce noise, two consecutive upper case characters are allowed unless they form the whole type name. So, MyXClass is compliant, but XC on its own is not.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1104": {
+          "id": "S1104",
+          "shortDescription": "Fields should not have public accessibility",
+          "fullDescription": "Public fields in public classes do not respect the encapsulation principle and has three main disadvantages:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1104",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Utility classes, which are collections of static members, are not meant to be instantiated.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1118",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1128": {
+          "id": "S1128",
+          "shortDescription": "Unused \"using\" should be removed",
+          "fullDescription": "Although unnecessary using won't change anything to the produced application, removing them:",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1128",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Programmers should not comment out code as it bloats programs and reduces readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S2223": {
+          "id": "S2223",
+          "shortDescription": "Non-constant static fields should not be visible",
+          "fullDescription": "A static field that is neither constant nor read-only is not thread-safe. Correctly accessing these fields from different threads needs synchronization with locks. Improper synchronization may lead to unexpected results, thus publicly visible static fields are best suited for storing non-changing data shared by many consumers. To enforce this intent, these fields should be marked readonly or converted to constants.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2223",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope"
+            ]
+          }
+        },
+        "S3457": {
+          "id": "S3457",
+          "shortDescription": "Composite format strings should be used correctly",
+          "fullDescription": "Because composite format strings are interpreted at runtime, rather than validated by the compiler, they can contain errors that lead to unexpected behaviors or runtime errors. This rule statically validates the good behavior of composite formats when calling the methods of String.Format, StringBuilder.AppendFormat, Console.Write, Console.WriteLine, TextWriter.Write, TextWriter.WriteLine, Debug.WriteLine(String, Object[]), Trace.TraceError(String, Object[]), Trace.TraceInformation(String, Object[]), Trace.TraceWarning(String, Object[]) and TraceSource.TraceInformation(String, Object[]). ",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3457",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S4144": {
+          "id": "S4144",
+          "shortDescription": "Methods should not have identical implementations",
+          "fullDescription": "When two methods have the same implementation, either it was a mistake - something else was intended - or the duplication was intentional, but may be confusing to maintainers. In the latter case, one implementation should invoke the other.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4144",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

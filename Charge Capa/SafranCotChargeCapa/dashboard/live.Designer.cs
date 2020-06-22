@@ -28,24 +28,27 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
 			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -55,10 +58,6 @@
 			this.IlotPick = new MetroFramework.Controls.MetroComboBox();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.chartStats = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.label5 = new System.Windows.Forms.Label();
@@ -74,6 +73,12 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.chartStats = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.tabPage10 = new System.Windows.Forms.TabPage();
+			this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.panel8 = new System.Windows.Forms.Panel();
 			this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
@@ -123,10 +128,6 @@
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.metroTabControl1.SuspendLayout();
-			this.tabPage1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.chartStats)).BeginInit();
-			this.tabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
 			this.tabPage3.SuspendLayout();
 			this.panel6.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -136,6 +137,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.tabPage1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.chartStats)).BeginInit();
+			this.tabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+			this.tabPage10.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
 			this.panel8.SuspendLayout();
 			this.metroTabControl2.SuspendLayout();
 			this.tabPage4.SuspendLayout();
@@ -266,71 +273,18 @@
 			// 
 			// metroTabControl1
 			// 
+			this.metroTabControl1.Controls.Add(this.tabPage3);
 			this.metroTabControl1.Controls.Add(this.tabPage1);
 			this.metroTabControl1.Controls.Add(this.tabPage2);
-			this.metroTabControl1.Controls.Add(this.tabPage3);
+			this.metroTabControl1.Controls.Add(this.tabPage10);
 			this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
 			this.metroTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.metroTabControl1.Name = "metroTabControl1";
-			this.metroTabControl1.SelectedIndex = 2;
+			this.metroTabControl1.SelectedIndex = 0;
 			this.metroTabControl1.Size = new System.Drawing.Size(1208, 372);
 			this.metroTabControl1.TabIndex = 0;
 			this.metroTabControl1.UseSelectable = true;
-			// 
-			// tabPage1
-			// 
-			this.tabPage1.Controls.Add(this.chartStats);
-			this.tabPage1.Location = new System.Drawing.Point(4, 38);
-			this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Size = new System.Drawing.Size(1200, 330);
-			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Text = "                        Charge/Capa H                         ";
-			// 
-			// chartStats
-			// 
-			chartArea1.Name = "ChartArea1";
-			this.chartStats.ChartAreas.Add(chartArea1);
-			this.chartStats.Dock = System.Windows.Forms.DockStyle.Fill;
-			legend1.Name = "Legend1";
-			this.chartStats.Legends.Add(legend1);
-			this.chartStats.Location = new System.Drawing.Point(0, 0);
-			this.chartStats.Name = "chartStats";
-			series1.ChartArea = "ChartArea1";
-			series1.Legend = "Legend1";
-			series1.Name = "Series1";
-			this.chartStats.Series.Add(series1);
-			this.chartStats.Size = new System.Drawing.Size(1200, 330);
-			this.chartStats.TabIndex = 21;
-			this.chartStats.Text = "chartStats";
-			// 
-			// tabPage2
-			// 
-			this.tabPage2.Controls.Add(this.chart1);
-			this.tabPage2.Location = new System.Drawing.Point(4, 38);
-			this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Size = new System.Drawing.Size(1200, 330);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "                           Charge/Capa %Ratio                           ";
-			// 
-			// chart1
-			// 
-			chartArea2.Name = "ChartArea1";
-			this.chart1.ChartAreas.Add(chartArea2);
-			this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-			legend2.Name = "Legend1";
-			this.chart1.Legends.Add(legend2);
-			this.chart1.Location = new System.Drawing.Point(0, 0);
-			this.chart1.Name = "chart1";
-			series2.ChartArea = "ChartArea1";
-			series2.Legend = "Legend1";
-			series2.Name = "Series1";
-			this.chart1.Series.Add(series2);
-			this.chart1.Size = new System.Drawing.Size(1200, 330);
-			this.chart1.TabIndex = 21;
-			this.chart1.Text = "chart1";
 			// 
 			// tabPage3
 			// 
@@ -353,7 +307,7 @@
 			this.panel6.Controls.Add(this.label6);
 			this.panel6.Controls.Add(this.pictureBox3);
 			this.panel6.ForeColor = System.Drawing.Color.White;
-			this.panel6.Location = new System.Drawing.Point(595, 230);
+			this.panel6.Location = new System.Drawing.Point(661, 230);
 			this.panel6.Name = "panel6";
 			this.panel6.Size = new System.Drawing.Size(418, 94);
 			this.panel6.TabIndex = 24;
@@ -374,9 +328,9 @@
 			this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.Location = new System.Drawing.Point(137, 13);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(221, 23);
+			this.label6.Size = new System.Drawing.Size(216, 23);
 			this.label6.TabIndex = 6;
-			this.label6.Text = "Besoin moyen estimatif";
+			this.label6.Text = "Besoin moyen estimée";
 			// 
 			// pictureBox3
 			// 
@@ -396,7 +350,7 @@
 			this.panel4.Controls.Add(this.label3);
 			this.panel4.Controls.Add(this.pictureBox2);
 			this.panel4.ForeColor = System.Drawing.Color.White;
-			this.panel4.Location = new System.Drawing.Point(595, 126);
+			this.panel4.Location = new System.Drawing.Point(661, 126);
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(418, 94);
 			this.panel4.TabIndex = 23;
@@ -417,9 +371,9 @@
 			this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.Location = new System.Drawing.Point(119, 10);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(255, 23);
+			this.label3.Size = new System.Drawing.Size(250, 23);
 			this.label3.TabIndex = 4;
-			this.label3.Text = "Charge moyenne estimatif";
+			this.label3.Text = "Charge moyenne estimée";
 			// 
 			// pictureBox2
 			// 
@@ -439,7 +393,7 @@
 			this.panel5.Controls.Add(this.label1);
 			this.panel5.Controls.Add(this.pictureBox1);
 			this.panel5.ForeColor = System.Drawing.Color.White;
-			this.panel5.Location = new System.Drawing.Point(595, 25);
+			this.panel5.Location = new System.Drawing.Point(661, 25);
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(418, 94);
 			this.panel5.TabIndex = 22;
@@ -460,9 +414,9 @@
 			this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(118, 5);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(274, 23);
+			this.label1.Size = new System.Drawing.Size(269, 23);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "Capacité moyenne estimatif";
+			this.label1.Text = "Capacité moyenne estimée";
 			// 
 			// pictureBox1
 			// 
@@ -519,6 +473,86 @@
 			this.dataGridView1.Size = new System.Drawing.Size(405, 330);
 			this.dataGridView1.TabIndex = 1;
 			// 
+			// tabPage1
+			// 
+			this.tabPage1.Controls.Add(this.chartStats);
+			this.tabPage1.Location = new System.Drawing.Point(4, 38);
+			this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.tabPage1.Name = "tabPage1";
+			this.tabPage1.Size = new System.Drawing.Size(1200, 330);
+			this.tabPage1.TabIndex = 0;
+			this.tabPage1.Text = "                        Charge/Capa H                         ";
+			// 
+			// chartStats
+			// 
+			chartArea1.Name = "ChartArea1";
+			this.chartStats.ChartAreas.Add(chartArea1);
+			this.chartStats.Dock = System.Windows.Forms.DockStyle.Fill;
+			legend1.Name = "Legend1";
+			this.chartStats.Legends.Add(legend1);
+			this.chartStats.Location = new System.Drawing.Point(0, 0);
+			this.chartStats.Name = "chartStats";
+			series1.ChartArea = "ChartArea1";
+			series1.Legend = "Legend1";
+			series1.Name = "Series1";
+			this.chartStats.Series.Add(series1);
+			this.chartStats.Size = new System.Drawing.Size(1200, 330);
+			this.chartStats.TabIndex = 21;
+			this.chartStats.Text = "chartStats";
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Controls.Add(this.chart1);
+			this.tabPage2.Location = new System.Drawing.Point(4, 38);
+			this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Size = new System.Drawing.Size(1200, 330);
+			this.tabPage2.TabIndex = 1;
+			this.tabPage2.Text = "                           Charge/Capa %Ratio                           ";
+			// 
+			// chart1
+			// 
+			chartArea2.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea2);
+			this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+			legend2.Name = "Legend1";
+			this.chart1.Legends.Add(legend2);
+			this.chart1.Location = new System.Drawing.Point(0, 0);
+			this.chart1.Name = "chart1";
+			series2.ChartArea = "ChartArea1";
+			series2.Legend = "Legend1";
+			series2.Name = "Series1";
+			this.chart1.Series.Add(series2);
+			this.chart1.Size = new System.Drawing.Size(1200, 330);
+			this.chart1.TabIndex = 21;
+			this.chart1.Text = "chart1";
+			// 
+			// tabPage10
+			// 
+			this.tabPage10.Controls.Add(this.chart4);
+			this.tabPage10.Location = new System.Drawing.Point(4, 38);
+			this.tabPage10.Name = "tabPage10";
+			this.tabPage10.Size = new System.Drawing.Size(1200, 330);
+			this.tabPage10.TabIndex = 3;
+			this.tabPage10.Text = "Personnel";
+			// 
+			// chart4
+			// 
+			chartArea3.Name = "ChartArea1";
+			this.chart4.ChartAreas.Add(chartArea3);
+			this.chart4.Dock = System.Windows.Forms.DockStyle.Fill;
+			legend3.Name = "Legend1";
+			this.chart4.Legends.Add(legend3);
+			this.chart4.Location = new System.Drawing.Point(0, 0);
+			this.chart4.Name = "chart4";
+			series3.ChartArea = "ChartArea1";
+			series3.Legend = "Legend1";
+			series3.Name = "Series1";
+			this.chart4.Series.Add(series3);
+			this.chart4.Size = new System.Drawing.Size(1200, 330);
+			this.chart4.TabIndex = 22;
+			this.chart4.Text = "chart4";
+			// 
 			// panel7
 			// 
 			this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
@@ -545,7 +579,7 @@
 			this.metroTabControl2.Location = new System.Drawing.Point(0, 0);
 			this.metroTabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.metroTabControl2.Name = "metroTabControl2";
-			this.metroTabControl2.SelectedIndex = 0;
+			this.metroTabControl2.SelectedIndex = 1;
 			this.metroTabControl2.Size = new System.Drawing.Size(1208, 441);
 			this.metroTabControl2.Style = MetroFramework.MetroColorStyle.Orange;
 			this.metroTabControl2.TabIndex = 1;
@@ -590,17 +624,17 @@
 			// 
 			// chart2
 			// 
-			chartArea3.Name = "ChartArea1";
-			this.chart2.ChartAreas.Add(chartArea3);
+			chartArea4.Name = "ChartArea1";
+			this.chart2.ChartAreas.Add(chartArea4);
 			this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-			legend3.Name = "Legend1";
-			this.chart2.Legends.Add(legend3);
+			legend4.Name = "Legend1";
+			this.chart2.Legends.Add(legend4);
 			this.chart2.Location = new System.Drawing.Point(0, 0);
 			this.chart2.Name = "chart2";
-			series3.ChartArea = "ChartArea1";
-			series3.Legend = "Legend1";
-			series3.Name = "Series1";
-			this.chart2.Series.Add(series3);
+			series4.ChartArea = "ChartArea1";
+			series4.Legend = "Legend1";
+			series4.Name = "Series1";
+			this.chart2.Series.Add(series4);
 			this.chart2.Size = new System.Drawing.Size(1192, 317);
 			this.chart2.TabIndex = 21;
 			this.chart2.Text = "chart2";
@@ -648,9 +682,9 @@
 			this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label8.Location = new System.Drawing.Point(137, 13);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(221, 23);
+			this.label8.Size = new System.Drawing.Size(216, 23);
 			this.label8.TabIndex = 6;
-			this.label8.Text = "Besoin moyen estimatif";
+			this.label8.Text = "Besoin moyen estimée";
 			// 
 			// pictureBox4
 			// 
@@ -691,9 +725,9 @@
 			this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label10.Location = new System.Drawing.Point(119, 10);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(255, 23);
+			this.label10.Size = new System.Drawing.Size(250, 23);
 			this.label10.TabIndex = 4;
-			this.label10.Text = "Charge moyenne estimatif";
+			this.label10.Text = "Charge moyenne estimée";
 			// 
 			// pictureBox5
 			// 
@@ -734,9 +768,9 @@
 			this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label12.Location = new System.Drawing.Point(118, 5);
 			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(274, 23);
+			this.label12.Size = new System.Drawing.Size(269, 23);
 			this.label12.TabIndex = 1;
-			this.label12.Text = "Capacité moyenne estimatif";
+			this.label12.Text = "Capacité moyenne estimée";
 			// 
 			// pictureBox6
 			// 
@@ -870,17 +904,17 @@
 			// 
 			// chart3
 			// 
-			chartArea4.Name = "ChartArea1";
-			this.chart3.ChartAreas.Add(chartArea4);
+			chartArea5.Name = "ChartArea1";
+			this.chart3.ChartAreas.Add(chartArea5);
 			this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
-			legend4.Name = "Legend1";
-			this.chart3.Legends.Add(legend4);
+			legend5.Name = "Legend1";
+			this.chart3.Legends.Add(legend5);
 			this.chart3.Location = new System.Drawing.Point(0, 0);
 			this.chart3.Name = "chart3";
-			series4.ChartArea = "ChartArea1";
-			series4.Legend = "Legend1";
-			series4.Name = "Series1";
-			this.chart3.Series.Add(series4);
+			series5.ChartArea = "ChartArea1";
+			series5.Legend = "Legend1";
+			series5.Name = "Series1";
+			this.chart3.Series.Add(series5);
 			this.chart3.Size = new System.Drawing.Size(1192, 317);
 			this.chart3.TabIndex = 21;
 			this.chart3.Text = "chart3";
@@ -928,9 +962,9 @@
 			this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label14.Location = new System.Drawing.Point(137, 13);
 			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(221, 23);
+			this.label14.Size = new System.Drawing.Size(216, 23);
 			this.label14.TabIndex = 6;
-			this.label14.Text = "Besoin moyen estimatif";
+			this.label14.Text = "Besoin moyen estimée";
 			// 
 			// pictureBox7
 			// 
@@ -971,9 +1005,9 @@
 			this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label16.Location = new System.Drawing.Point(119, 10);
 			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(255, 23);
+			this.label16.Size = new System.Drawing.Size(250, 23);
 			this.label16.TabIndex = 4;
-			this.label16.Text = "Charge moyenne estimatif";
+			this.label16.Text = "Charge moyenne estimée";
 			// 
 			// pictureBox8
 			// 
@@ -1014,9 +1048,9 @@
 			this.label18.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label18.Location = new System.Drawing.Point(118, 5);
 			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(274, 23);
+			this.label18.Size = new System.Drawing.Size(269, 23);
 			this.label18.TabIndex = 1;
-			this.label18.Text = "Capacité moyenne estimatif";
+			this.label18.Text = "Capacité moyenne estimée";
 			// 
 			// pictureBox9
 			// 
@@ -1148,10 +1182,6 @@
 			this.panel1.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
 			this.metroTabControl1.ResumeLayout(false);
-			this.tabPage1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.chartStats)).EndInit();
-			this.tabPage2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
 			this.tabPage3.ResumeLayout(false);
 			this.panel6.ResumeLayout(false);
 			this.panel6.PerformLayout();
@@ -1164,6 +1194,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.panel3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.tabPage1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.chartStats)).EndInit();
+			this.tabPage2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+			this.tabPage10.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
 			this.panel8.ResumeLayout(false);
 			this.metroTabControl2.ResumeLayout(false);
 			this.tabPage4.ResumeLayout(false);
@@ -1278,5 +1314,7 @@
 		private System.Windows.Forms.Panel panel10;
 		private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
 		private MetroFramework.Controls.MetroComboBox metroComboBox1;
+		private System.Windows.Forms.TabPage tabPage10;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
 	}
 }

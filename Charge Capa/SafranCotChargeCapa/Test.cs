@@ -63,7 +63,7 @@ namespace SafranCotChargeCapa
 			OleDbConnection con = new OleDbConnection("	Provider = Microsoft.ACE.OLEDB.12.0; data source = " + sFileName + "; Extended Properties = Excel 12.0; ");
 			StringBuilder stbQuery = new StringBuilder();
 			
-			stbQuery.Append("SELECT * FROM[F1$B6:BD183] ");
+			stbQuery.Append("SELECT * FROM[F1$B6:CI220] ");
 			OleDbDataAdapter adpp = new OleDbDataAdapter(stbQuery.ToString(), con);
 			DataSet dsXLSi = new DataSet();
 			adpp.Fill(dsXLSi);

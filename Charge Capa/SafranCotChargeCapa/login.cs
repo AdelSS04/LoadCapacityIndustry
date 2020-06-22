@@ -39,7 +39,15 @@ namespace SafranCotChargeCapa
 		}
 		private async void UpButton_Click(object sender, EventArgs e)
 		{
+			
+
+
+			
+
 			await LoginT();
+
+			
+
 		}
 	}
 }

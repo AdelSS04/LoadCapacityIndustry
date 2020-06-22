@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IlotOpDBO.cs" />
     <Compile Include="OpGroupeDBO.cs" />
     <Compile Include="AvailabilityToolsDBO.cs" />
     <Compile Include="ManuelCycleTimeDBO.cs" />

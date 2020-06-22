@@ -15,5 +15,6 @@ namespace BEL
         public float TruancyRate   { get; set; }
         public float IlotRejectedRate { get; set; }
         public string UserID { get; set; }
+        public string Atelier { get; set; }
     }
 }
