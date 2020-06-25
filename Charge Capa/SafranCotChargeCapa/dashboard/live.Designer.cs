@@ -53,6 +53,7 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.button1 = new System.Windows.Forms.Button();
 			this.GrpPick = new MetroFramework.Controls.MetroComboBox();
 			this.DataPick = new MetroFramework.Controls.MetroComboBox();
 			this.IlotPick = new MetroFramework.Controls.MetroComboBox();
@@ -91,17 +92,18 @@
 			this.label7 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
-			this.panel13 = new System.Windows.Forms.Panel();
-			this.label9 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
-			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.panel14 = new System.Windows.Forms.Panel();
 			this.label11 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
 			this.pictureBox6 = new System.Windows.Forms.PictureBox();
 			this.panel11 = new System.Windows.Forms.Panel();
 			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.panel13 = new System.Windows.Forms.Panel();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.panel9 = new System.Windows.Forms.Panel();
+			this.button2 = new System.Windows.Forms.Button();
 			this.MachineList = new MetroFramework.Controls.MetroComboBox();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
 			this.metroTabControl4 = new MetroFramework.Controls.MetroTabControl();
@@ -152,12 +154,12 @@
 			this.tabPage7.SuspendLayout();
 			this.panel12.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-			this.panel13.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			this.panel14.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			this.panel11.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			this.panel13.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			this.panel9.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.metroTabControl4.SuspendLayout();
@@ -178,6 +180,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+			this.panel1.Controls.Add(this.button1);
 			this.panel1.Controls.Add(this.GrpPick);
 			this.panel1.Controls.Add(this.DataPick);
 			this.panel1.Controls.Add(this.IlotPick);
@@ -188,6 +191,26 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(1208, 53);
 			this.panel1.TabIndex = 18;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.Color.Beige;
+			this.button1.Image = global::SafranCotChargeCapa.Properties.Resources.add_32px;
+			this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button1.Location = new System.Drawing.Point(811, 11);
+			this.button1.Name = "button1";
+			this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+			this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.button1.Size = new System.Drawing.Size(208, 30);
+			this.button1.TabIndex = 49;
+			this.button1.Text = "Exporter vers Excel ";
+			this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// GrpPick
 			// 
@@ -397,6 +420,7 @@
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(418, 94);
 			this.panel5.TabIndex = 22;
+			this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
 			// 
 			// label4
 			// 
@@ -579,7 +603,7 @@
 			this.metroTabControl2.Location = new System.Drawing.Point(0, 0);
 			this.metroTabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.metroTabControl2.Name = "metroTabControl2";
-			this.metroTabControl2.SelectedIndex = 1;
+			this.metroTabControl2.SelectedIndex = 0;
 			this.metroTabControl2.Size = new System.Drawing.Size(1208, 441);
 			this.metroTabControl2.Style = MetroFramework.MetroColorStyle.Orange;
 			this.metroTabControl2.TabIndex = 1;
@@ -642,9 +666,9 @@
 			// tabPage7
 			// 
 			this.tabPage7.Controls.Add(this.panel12);
-			this.tabPage7.Controls.Add(this.panel13);
 			this.tabPage7.Controls.Add(this.panel14);
 			this.tabPage7.Controls.Add(this.panel11);
+			this.tabPage7.Controls.Add(this.panel13);
 			this.tabPage7.Location = new System.Drawing.Point(4, 38);
 			this.tabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.tabPage7.Name = "tabPage7";
@@ -661,7 +685,7 @@
 			this.panel12.Controls.Add(this.label8);
 			this.panel12.Controls.Add(this.pictureBox4);
 			this.panel12.ForeColor = System.Drawing.Color.White;
-			this.panel12.Location = new System.Drawing.Point(475, 217);
+			this.panel12.Location = new System.Drawing.Point(649, 217);
 			this.panel12.Name = "panel12";
 			this.panel12.Size = new System.Drawing.Size(418, 94);
 			this.panel12.TabIndex = 27;
@@ -696,49 +720,6 @@
 			this.pictureBox4.TabIndex = 0;
 			this.pictureBox4.TabStop = false;
 			// 
-			// panel13
-			// 
-			this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(176)))), ((int)(((byte)(71)))));
-			this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel13.Controls.Add(this.label9);
-			this.panel13.Controls.Add(this.label10);
-			this.panel13.Controls.Add(this.pictureBox5);
-			this.panel13.ForeColor = System.Drawing.Color.White;
-			this.panel13.Location = new System.Drawing.Point(475, 112);
-			this.panel13.Name = "panel13";
-			this.panel13.Size = new System.Drawing.Size(418, 94);
-			this.panel13.TabIndex = 26;
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(173, 41);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(111, 23);
-			this.label9.TabIndex = 5;
-			this.label9.Text = "H/semaine";
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(119, 10);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(250, 23);
-			this.label10.TabIndex = 4;
-			this.label10.Text = "Charge moyenne estimée";
-			// 
-			// pictureBox5
-			// 
-			this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBox5.Image = global::SafranCotChargeCapa.Properties.Resources.loading_sign_95px;
-			this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.Size = new System.Drawing.Size(100, 92);
-			this.pictureBox5.TabIndex = 0;
-			this.pictureBox5.TabStop = false;
-			// 
 			// panel14
 			// 
 			this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(199)))), ((int)(((byte)(196)))));
@@ -747,7 +728,7 @@
 			this.panel14.Controls.Add(this.label12);
 			this.panel14.Controls.Add(this.pictureBox6);
 			this.panel14.ForeColor = System.Drawing.Color.White;
-			this.panel14.Location = new System.Drawing.Point(475, 12);
+			this.panel14.Location = new System.Drawing.Point(649, 12);
 			this.panel14.Name = "panel14";
 			this.panel14.Size = new System.Drawing.Size(418, 94);
 			this.panel14.TabIndex = 25;
@@ -830,10 +811,54 @@
 			this.dataGridView2.Size = new System.Drawing.Size(367, 315);
 			this.dataGridView2.TabIndex = 2;
 			// 
+			// panel13
+			// 
+			this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(176)))), ((int)(((byte)(71)))));
+			this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel13.Controls.Add(this.label9);
+			this.panel13.Controls.Add(this.label10);
+			this.panel13.Controls.Add(this.pictureBox5);
+			this.panel13.ForeColor = System.Drawing.Color.White;
+			this.panel13.Location = new System.Drawing.Point(649, 112);
+			this.panel13.Name = "panel13";
+			this.panel13.Size = new System.Drawing.Size(418, 94);
+			this.panel13.TabIndex = 26;
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(173, 41);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(111, 23);
+			this.label9.TabIndex = 5;
+			this.label9.Text = "H/semaine";
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(119, 10);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(250, 23);
+			this.label10.TabIndex = 4;
+			this.label10.Text = "Charge moyenne estimée";
+			// 
+			// pictureBox5
+			// 
+			this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
+			this.pictureBox5.Image = global::SafranCotChargeCapa.Properties.Resources.loading_sign_95px;
+			this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.Size = new System.Drawing.Size(100, 92);
+			this.pictureBox5.TabIndex = 0;
+			this.pictureBox5.TabStop = false;
+			// 
 			// panel9
 			// 
 			this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
 			this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel9.Controls.Add(this.button2);
 			this.panel9.Controls.Add(this.MachineList);
 			this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel9.ForeColor = System.Drawing.Color.White;
@@ -841,6 +866,26 @@
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new System.Drawing.Size(1200, 40);
 			this.panel9.TabIndex = 23;
+			// 
+			// button2
+			// 
+			this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button2.ForeColor = System.Drawing.Color.Beige;
+			this.button2.Image = global::SafranCotChargeCapa.Properties.Resources.add_32px;
+			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button2.Location = new System.Drawing.Point(495, 4);
+			this.button2.Name = "button2";
+			this.button2.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+			this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.button2.Size = new System.Drawing.Size(208, 30);
+			this.button2.TabIndex = 51;
+			this.button2.Text = "Exporter vers Excel ";
+			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click_1);
 			// 
 			// MachineList
 			// 
@@ -1210,14 +1255,14 @@
 			this.panel12.ResumeLayout(false);
 			this.panel12.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-			this.panel13.ResumeLayout(false);
-			this.panel13.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
 			this.panel14.ResumeLayout(false);
 			this.panel14.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			this.panel11.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			this.panel13.ResumeLayout(false);
+			this.panel13.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
 			this.panel9.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.metroTabControl4.ResumeLayout(false);
@@ -1278,21 +1323,6 @@
 		private MetroFramework.Controls.MetroTabControl metroTabControl3;
 		private System.Windows.Forms.TabPage tabPage6;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-		private System.Windows.Forms.TabPage tabPage7;
-		private System.Windows.Forms.Panel panel12;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.PictureBox pictureBox4;
-		private System.Windows.Forms.Panel panel13;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.PictureBox pictureBox5;
-		private System.Windows.Forms.Panel panel14;
-		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.PictureBox pictureBox6;
-		private System.Windows.Forms.Panel panel11;
-		private System.Windows.Forms.DataGridView dataGridView2;
 		private MetroFramework.Controls.MetroTabControl metroTabControl4;
 		private System.Windows.Forms.TabPage tabPage8;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
@@ -1316,5 +1346,22 @@
 		private MetroFramework.Controls.MetroComboBox metroComboBox1;
 		private System.Windows.Forms.TabPage tabPage10;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.TabPage tabPage7;
+		private System.Windows.Forms.Panel panel12;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.PictureBox pictureBox4;
+		private System.Windows.Forms.Panel panel14;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.PictureBox pictureBox6;
+		private System.Windows.Forms.Panel panel11;
+		private System.Windows.Forms.DataGridView dataGridView2;
+		private System.Windows.Forms.Panel panel13;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.Button button2;
 	}
 }

@@ -28,18 +28,18 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend21 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.UpButton = new System.Windows.Forms.Button();
 			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
@@ -56,6 +56,7 @@
 			this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.tabPage10 = new System.Windows.Forms.TabPage();
 			this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.button1 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.metroTabControl1.SuspendLayout();
@@ -100,7 +101,7 @@
 			this.UpButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.UpButton.Size = new System.Drawing.Size(208, 30);
 			this.UpButton.TabIndex = 46;
-			this.UpButton.Text = "Gestion des operateur";
+			this.UpButton.Text = "Gestion des operateurs";
 			this.UpButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.UpButton.UseVisualStyleBackColor = false;
 			this.UpButton.Click += new System.EventHandler(this.UpButton_Click);
@@ -197,6 +198,7 @@
 			// 
 			// tabPage3
 			// 
+			this.tabPage3.Controls.Add(this.button1);
 			this.tabPage3.Controls.Add(this.panel3);
 			this.tabPage3.Location = new System.Drawing.Point(4, 38);
 			this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -216,35 +218,35 @@
 			// 
 			// dataGridView1
 			// 
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle19.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(32)))), ((int)(((byte)(68)))));
+			dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle20.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(106)))), ((int)(((byte)(130)))));
+			dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.EnableHeadersVisualStyles = false;
 			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView1.Name = "dataGridView1";
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			dataGridViewCellStyle21.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.Info;
+			dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
 			this.dataGridView1.RowHeadersVisible = false;
 			this.dataGridView1.Size = new System.Drawing.Size(405, 555);
 			this.dataGridView1.TabIndex = 1;
@@ -261,17 +263,17 @@
 			// 
 			// chartStats
 			// 
-			chartArea1.Name = "ChartArea1";
-			this.chartStats.ChartAreas.Add(chartArea1);
+			chartArea19.Name = "ChartArea1";
+			this.chartStats.ChartAreas.Add(chartArea19);
 			this.chartStats.Dock = System.Windows.Forms.DockStyle.Fill;
-			legend1.Name = "Legend1";
-			this.chartStats.Legends.Add(legend1);
+			legend19.Name = "Legend1";
+			this.chartStats.Legends.Add(legend19);
 			this.chartStats.Location = new System.Drawing.Point(0, 0);
 			this.chartStats.Name = "chartStats";
-			series1.ChartArea = "ChartArea1";
-			series1.Legend = "Legend1";
-			series1.Name = "Series1";
-			this.chartStats.Series.Add(series1);
+			series19.ChartArea = "ChartArea1";
+			series19.Legend = "Legend1";
+			series19.Name = "Series1";
+			this.chartStats.Series.Add(series19);
 			this.chartStats.Size = new System.Drawing.Size(1217, 555);
 			this.chartStats.TabIndex = 21;
 			this.chartStats.Text = "chartStats";
@@ -288,17 +290,17 @@
 			// 
 			// chart1
 			// 
-			chartArea2.Name = "ChartArea1";
-			this.chart1.ChartAreas.Add(chartArea2);
+			chartArea20.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea20);
 			this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-			legend2.Name = "Legend1";
-			this.chart1.Legends.Add(legend2);
+			legend20.Name = "Legend1";
+			this.chart1.Legends.Add(legend20);
 			this.chart1.Location = new System.Drawing.Point(0, 0);
 			this.chart1.Name = "chart1";
-			series2.ChartArea = "ChartArea1";
-			series2.Legend = "Legend1";
-			series2.Name = "Series1";
-			this.chart1.Series.Add(series2);
+			series20.ChartArea = "ChartArea1";
+			series20.Legend = "Legend1";
+			series20.Name = "Series1";
+			this.chart1.Series.Add(series20);
 			this.chart1.Size = new System.Drawing.Size(1217, 555);
 			this.chart1.TabIndex = 21;
 			this.chart1.Text = "chart1";
@@ -314,20 +316,40 @@
 			// 
 			// chart4
 			// 
-			chartArea3.Name = "ChartArea1";
-			this.chart4.ChartAreas.Add(chartArea3);
+			chartArea21.Name = "ChartArea1";
+			this.chart4.ChartAreas.Add(chartArea21);
 			this.chart4.Dock = System.Windows.Forms.DockStyle.Fill;
-			legend3.Name = "Legend1";
-			this.chart4.Legends.Add(legend3);
+			legend21.Name = "Legend1";
+			this.chart4.Legends.Add(legend21);
 			this.chart4.Location = new System.Drawing.Point(0, 0);
 			this.chart4.Name = "chart4";
-			series3.ChartArea = "ChartArea1";
-			series3.Legend = "Legend1";
-			series3.Name = "Series1";
-			this.chart4.Series.Add(series3);
+			series21.ChartArea = "ChartArea1";
+			series21.Legend = "Legend1";
+			series21.Name = "Series1";
+			this.chart4.Series.Add(series21);
 			this.chart4.Size = new System.Drawing.Size(1217, 555);
 			this.chart4.TabIndex = 22;
 			this.chart4.Text = "chart4";
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.Color.Beige;
+			this.button1.Image = global::SafranCotChargeCapa.Properties.Resources.add_32px;
+			this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button1.Location = new System.Drawing.Point(741, 1);
+			this.button1.Name = "button1";
+			this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+			this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.button1.Size = new System.Drawing.Size(198, 30);
+			this.button1.TabIndex = 48;
+			this.button1.Text = "Exporter vers Excel ";
+			this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// RuGlobal
 			// 
@@ -377,5 +399,6 @@
 		private MetroFramework.Controls.MetroLabel metroLabel5;
 		private MetroFramework.Controls.MetroComboBox metroComboBox1;
 		private System.Windows.Forms.Button UpButton;
+		private System.Windows.Forms.Button button1;
 	}
 }

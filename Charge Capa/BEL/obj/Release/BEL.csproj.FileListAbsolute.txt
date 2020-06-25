@@ -1,0 +1,4 @@
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\bin\Release\BEL.dll
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\bin\Release\BEL.pdb
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\obj\Release\BEL.dll
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\obj\Release\BEL.pdb

@@ -1,0 +1,9 @@
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\bin\Release\DAL.dll
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\bin\Release\DAL.pdb
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\bin\Release\BEL.dll
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\bin\Release\BEL.pdb
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\obj\Release\DAL.csproj.ResolveComReference.cache
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\obj\Release\DAL.dll
+C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\DAL\obj\Release\DAL.pdb

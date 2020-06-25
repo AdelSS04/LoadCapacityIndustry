@@ -193,6 +193,16 @@ namespace SafranCotChargeCapa.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap first {
+            get {
+                object obj = ResourceManager.GetObject("first", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fit_to_width_32px {
             get {
                 object obj = ResourceManager.GetObject("fit_to_width_32px", resourceCulture);
@@ -206,6 +216,16 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap full_screen_32px {
             get {
                 object obj = ResourceManager.GetObject("full_screen_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap help_32px {
+            get {
+                object obj = ResourceManager.GetObject("help_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +296,16 @@ namespace SafranCotChargeCapa.Properties {
         internal static System.Drawing.Bitmap info_32px {
             get {
                 object obj = ResourceManager.GetObject("info_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap last {
+            get {
+                object obj = ResourceManager.GetObject("last", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

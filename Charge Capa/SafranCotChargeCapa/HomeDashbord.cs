@@ -47,11 +47,11 @@ namespace SafranCotChargeCapa
 			label3.Text = Util.user.UserName + "|" + DateTime.Now.ToString();
 			label2.Text = Util.user.UserName;
 			if (Util.user.Type == "Manager")
-			{ btn.Enabled = true; Utilisateur.Enabled = true;
+			{ btn.Enabled = true; Utilisateur.Enabled = true; OpButton.Enabled = true;
 					}
 			if (Util.user.Type == "ResAtelier")
 			{
-				button5.Enabled = false;
+				button5.Enabled = false; btn.Enabled = true;
 			}
 
 		}

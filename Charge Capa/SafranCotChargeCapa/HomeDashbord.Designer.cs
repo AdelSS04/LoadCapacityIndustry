@@ -35,6 +35,7 @@
 			this.button15 = new System.Windows.Forms.Button();
 			this.UpButton = new System.Windows.Forms.Button();
 			this.SideMenu = new System.Windows.Forms.Panel();
+			this.button2 = new System.Windows.Forms.Button();
 			this.Utilisateur = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
 			this.MangPanel = new System.Windows.Forms.Panel();
@@ -64,7 +65,6 @@
 			this.FormPanel = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
 			this.Header.SuspendLayout();
 			this.SideMenu.SuspendLayout();
 			this.MangPanel.SuspendLayout();
@@ -179,6 +179,26 @@
 			this.SideMenu.Size = new System.Drawing.Size(145, 516);
 			this.SideMenu.TabIndex = 0;
 			// 
+			// button2
+			// 
+			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button2.ForeColor = System.Drawing.Color.Beige;
+			this.button2.Image = global::SafranCotChargeCapa.Properties.Resources.icons8_dashboard_32;
+			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button2.Location = new System.Drawing.Point(0, 364);
+			this.button2.Name = "button2";
+			this.button2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+			this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.button2.Size = new System.Drawing.Size(145, 48);
+			this.button2.TabIndex = 11;
+			this.button2.Text = "RU Global";
+			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click_1);
+			// 
 			// Utilisateur
 			// 
 			this.Utilisateur.Dock = System.Windows.Forms.DockStyle.Top;
@@ -286,6 +306,7 @@
 			// OpButton
 			// 
 			this.OpButton.Dock = System.Windows.Forms.DockStyle.Top;
+			this.OpButton.Enabled = false;
 			this.OpButton.FlatAppearance.BorderSize = 0;
 			this.OpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.OpButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -635,26 +656,6 @@
 			this.label1.Size = new System.Drawing.Size(291, 58);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Welcome !!";
-			// 
-			// button2
-			// 
-			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.ForeColor = System.Drawing.Color.Beige;
-			this.button2.Image = global::SafranCotChargeCapa.Properties.Resources.icons8_dashboard_32;
-			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button2.Location = new System.Drawing.Point(0, 364);
-			this.button2.Name = "button2";
-			this.button2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-			this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.button2.Size = new System.Drawing.Size(145, 48);
-			this.button2.TabIndex = 11;
-			this.button2.Text = "RU Global";
-			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.button2_Click_1);
 			// 
 			// HomeDashbord
 			// 

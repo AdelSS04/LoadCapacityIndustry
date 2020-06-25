@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BesoinM.cs" />
     <Compile Include="BesoinOP.cs" />
+    <Compile Include="GetDATA.cs" />
     <Compile Include="IlotOp.cs" />
     <Compile Include="DemandeOP.cs" />
     <Compile Include="Besoin.cs" />

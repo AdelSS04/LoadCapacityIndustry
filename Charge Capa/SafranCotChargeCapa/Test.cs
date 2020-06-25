@@ -63,7 +63,7 @@ namespace SafranCotChargeCapa
 			OleDbConnection con = new OleDbConnection("	Provider = Microsoft.ACE.OLEDB.12.0; data source = " + sFileName + "; Extended Properties = Excel 12.0; ");
 			StringBuilder stbQuery = new StringBuilder();
 			
-			stbQuery.Append("SELECT * FROM[F1$B6:CI220] ");
+			stbQuery.Append("SELECT * FROM[Moulage$" + TcInput.Text.ToString()+"]");
 			OleDbDataAdapter adpp = new OleDbDataAdapter(stbQuery.ToString(), con);
 			DataSet dsXLSi = new DataSet();
 			adpp.Fill(dsXLSi);
@@ -74,6 +74,7 @@ namespace SafranCotChargeCapa
 			DemandeDBO.DeletAllOperationTime(2021);
 			DemandeDBO.DeletAllOperationTime(2022);
 			//DemandeDBO.Restee();
+			
 			string name;
 				for (int j = 1; j < (dataGridView1.RowCount - 1); j++)
 				{
@@ -91,7 +92,7 @@ namespace SafranCotChargeCapa
 						ProductID = dataGridView1.Rows[j].Cells[0].Value.ToString()
 						};
 
-					name = dd.ProductID;
+				//	MessageBox.Show(dd.YearDem.ToString() + "//" + dd.WeekDem.ToString());
 
 						try
 						{
@@ -169,6 +170,12 @@ namespace SafranCotChargeCapa
 				button1.Enabled = true; button2.Enabled = true;
 
 			}
+		}
+
+		private void UpButton_Click(object sender, EventArgs e)
+		{
+			help1 cc = new help1();
+				cc.ShowDialog();
 		}
 	}
 
