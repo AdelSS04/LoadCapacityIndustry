@@ -21,8 +21,6 @@ namespace SafranCotChargeCapa
         {
 
         }
-        DataTableCollection tableCollection;
-        DataSet ds = null;
         public DataSet FlipDataSet(DataSet my_DataSet)
         {
             DataSet ds = new DataSet();
@@ -50,7 +48,9 @@ namespace SafranCotChargeCapa
             return ds;
         }
 
+#pragma warning disable CS1998 // Cette méthode async n'a pas d'opérateur 'await' et elle s'exécutera de façon synchrone. Utilisez l'opérateur 'await' pour attendre les appels d'API non bloquants ou 'await Task.Run(…)' pour effectuer un travail utilisant le processeur sur un thread d'arrière-plan.
         private async void button1_Click(object sender, EventArgs e)
+#pragma warning restore CS1998 // Cette méthode async n'a pas d'opérateur 'await' et elle s'exécutera de façon synchrone. Utilisez l'opérateur 'await' pour attendre les appels d'API non bloquants ou 'await Task.Run(…)' pour effectuer un travail utilisant le processeur sur un thread d'arrière-plan.
         {
             OleDbConnection con = new OleDbConnection("	Provider = Microsoft.ACE.OLEDB.12.0; data source = " + sFileName + "; Extended Properties = Excel 12.0; ");
             StringBuilder stbQuery = new StringBuilder();
@@ -67,7 +67,9 @@ namespace SafranCotChargeCapa
             DemandeDBO.DeletAllOperationTime(2022);
             //DemandeDBO.Restee();
 
+#pragma warning disable CS0168 // La variable 'name' est déclarée, mais jamais utilisée
             string name;
+#pragma warning restore CS0168 // La variable 'name' est déclarée, mais jamais utilisée
             for (int j = 1; j < (dataGridView1.RowCount - 1); j++)
             {
                 for (int i = 3; i < dataGridView1.ColumnCount; i++)
@@ -123,7 +125,9 @@ namespace SafranCotChargeCapa
                 DataView dvEmpi = new DataView(dsXLSi.Tables[0]);
                 this.dataGridView1.DataSource = dvEmpi;
                 List<Calendrier> lala = new List<Calendrier>();
+#pragma warning disable CS0168 // La variable 'cl' est déclarée, mais jamais utilisée
                 Calendrier cl;
+#pragma warning restore CS0168 // La variable 'cl' est déclarée, mais jamais utilisée
                 //MessageBox.Show(dataGridView1.Rows[1].Cells[1].Value.ToString());
                 CalendrierDBO.DeletAllCall(int.Parse(dataGridView1.Rows[1].Cells[1].Value.ToString()));
                 for (int j = 0; j < (dataGridView1.RowCount - 1); j++)

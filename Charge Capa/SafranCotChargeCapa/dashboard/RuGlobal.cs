@@ -60,12 +60,8 @@ namespace SafranCotChargeCapa.dashboard
         List<double> MachCapa = new List<double>();
         List<double> ToolsCapa = new List<double>(); List<GetDATA> GetDATA = new List<GetDATA>();
         List<BesoinOP> br = new List<BesoinOP>();
-        List<Operators> op;
-        List<ManuelCycleTime> OP;
         List<Demande> dmm1;
-        Ilot il;
         List<ManuelCycleTime> ChargePo;
-        List<MachineCycleTime> OpMach;
         public float GetTC(List<ManuelCycleTime> ChargePo, string id)
         {
             float C = 0;
@@ -168,7 +164,9 @@ namespace SafranCotChargeCapa.dashboard
                     var query1 = newList.Where(person => person.annee == int.Parse(DataPick.SelectedItem.ToString())).ToList();
 
                     var LL = query1.GroupBy(t => t.semaine).Select(t => new { ID = t.Key, Value = t.Sum(v => v.ChargT) }).ToList();
+#pragma warning disable CS0219 // La variable 'hh' est assignée, mais sa valeur n'est jamais utilisée
                     int hh = 0;
+#pragma warning restore CS0219 // La variable 'hh' est assignée, mais sa valeur n'est jamais utilisée
                     xValues.Clear();
                     yValues.Clear();
                     ; PerCV.Clear();
@@ -544,7 +542,9 @@ namespace SafranCotChargeCapa.dashboard
                     var query1 = newList.Where(person => person.annee == int.Parse(DataPick.SelectedItem.ToString())).ToList();
 
                     var LL = query1.GroupBy(t => t.semaine).Select(t => new { ID = t.Key, Value = t.Sum(v => v.ChargT) }).ToList();
+#pragma warning disable CS0219 // La variable 'hh' est assignée, mais sa valeur n'est jamais utilisée
                     int hh = 0;
+#pragma warning restore CS0219 // La variable 'hh' est assignée, mais sa valeur n'est jamais utilisée
                     xValues.Clear();
                     yValues.Clear();
                     ; PerCV.Clear();

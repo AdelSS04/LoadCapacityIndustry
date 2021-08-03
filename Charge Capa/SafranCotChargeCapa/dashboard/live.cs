@@ -135,7 +135,9 @@ namespace SafranCotChargeCapa.dashboard
             }
         }
 
+#pragma warning disable CS1998 // Cette méthode async n'a pas d'opérateur 'await' et elle s'exécutera de façon synchrone. Utilisez l'opérateur 'await' pour attendre les appels d'API non bloquants ou 'await Task.Run(…)' pour effectuer un travail utilisant le processeur sur un thread d'arrière-plan.
         public async Task upGraph()
+#pragma warning restore CS1998 // Cette méthode async n'a pas d'opérateur 'await' et elle s'exécutera de façon synchrone. Utilisez l'opérateur 'await' pour attendre les appels d'API non bloquants ou 'await Task.Run(…)' pour effectuer un travail utilisant le processeur sur un thread d'arrière-plan.
         {
             try
             {
@@ -379,7 +381,9 @@ namespace SafranCotChargeCapa.dashboard
                 var query1 = newList.Where(person => person.annee == int.Parse(DataPick.SelectedItem.ToString())).ToList();
 
                 var LL = query1.GroupBy(t => t.semaine).Select(t => new { ID = t.Key, Value = t.Sum(u => u.ChargT) }).ToList();
+#pragma warning disable CS0219 // La variable 'hh' est assignée, mais sa valeur n'est jamais utilisée
                 int hh = 0;
+#pragma warning restore CS0219 // La variable 'hh' est assignée, mais sa valeur n'est jamais utilisée
                 xValues.Clear();
                 yValues.Clear();
                 chartStats.Series.Clear();
@@ -807,7 +811,9 @@ namespace SafranCotChargeCapa.dashboard
             };
             List<int> Xval = new List<int>();
             List<double> chr = new List<double>();
+#pragma warning disable CS0219 // La variable 'ind' est assignée, mais sa valeur n'est jamais utilisée
             int ind = 0;
+#pragma warning restore CS0219 // La variable 'ind' est assignée, mais sa valeur n'est jamais utilisée
             for (int i = 0; i < Chgarge1.Count; i++)
             {
                 chr.Add(Math.Round(((Chgarge1[i].Value) + (Chgarge2[i].Value)) + (((il.CRM) / 100) * ((Chgarge1[i].Value) + (Chgarge2[i].Value))), 1));

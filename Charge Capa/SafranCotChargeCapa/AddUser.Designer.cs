@@ -59,7 +59,9 @@
 			this.LoginInput.MaxLength = 32767;
 			this.LoginInput.Name = "LoginInput";
 			this.LoginInput.PasswordChar = '\0';
+#pragma warning disable CS0618 // 'MetroTextBox.PromptText' est obsolète : 'Use watermark'
 			this.LoginInput.PromptText = "Login";
+#pragma warning restore CS0618 // 'MetroTextBox.PromptText' est obsolète : 'Use watermark'
 			this.LoginInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
 			this.LoginInput.SelectedText = "";
 			this.LoginInput.SelectionLength = 0;
@@ -190,7 +192,9 @@
 			this.UserNameInput.MaxLength = 32767;
 			this.UserNameInput.Name = "UserNameInput";
 			this.UserNameInput.PasswordChar = '\0';
+#pragma warning disable CS0618 // 'MetroTextBox.PromptText' est obsolète : 'Use watermark'
 			this.UserNameInput.PromptText = "UserName";
+#pragma warning restore CS0618 // 'MetroTextBox.PromptText' est obsolète : 'Use watermark'
 			this.UserNameInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
 			this.UserNameInput.SelectedText = "";
 			this.UserNameInput.SelectionLength = 0;

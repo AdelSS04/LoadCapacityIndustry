@@ -4,7 +4,7 @@ C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\obj\Release\BEL.dll
 C:\Users\adela\Desktop\SafranCotChargeCapa\Charge Capa\BEL\obj\Release\BEL.pdb
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\BEL\bin\Release\BEL.dll
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\BEL\bin\Release\BEL.pdb
-C:\Users\ADEL\Source\Repos\PFE\Charge Capa\BEL\obj\Release\BEL.csproj.AssemblyReference.cache
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\BEL\obj\Release\BEL.csproj.CoreCompileInputs.cache
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\BEL\obj\Release\BEL.dll
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\BEL\obj\Release\BEL.pdb
+C:\Users\ADEL\Source\Repos\PFE\Charge Capa\BEL\obj\Release\BEL.csproj.AssemblyReference.cache

@@ -72,8 +72,6 @@ C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\bin\Release\Excel
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\bin\Release\ExcelDataReader.xml
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\bin\Release\ExcelDataReader.DataSet.pdb
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\bin\Release\ExcelDataReader.DataSet.xml
-C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\bin\Release\LiveCharts.WinForms.pdb
-C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\bin\Release\LiveCharts.WinForms.xml
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\bin\Release\System.IO.Packaging.xml
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\obj\Release\SafranCotChargeCapa.csproj.AssemblyReference.cache
 C:\Users\ADEL\Source\Repos\PFE\Charge Capa\SafranCotChargeCapa\obj\Release\SafranCotChargeCapa.csproj.ResolveComReference.cache

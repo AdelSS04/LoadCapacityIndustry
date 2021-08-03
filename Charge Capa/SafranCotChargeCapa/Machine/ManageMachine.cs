@@ -122,7 +122,9 @@ namespace SafranCotChargeCapa
                     NumberOfshift = int.Parse(NumberOfshift.Text),
                     OpenDay = int.Parse(openday.Text),
                 };
+#pragma warning disable CS0219 // La variable 'state' est assignée, mais sa valeur n'est jamais utilisée
                 bool state = true;
+#pragma warning restore CS0219 // La variable 'state' est assignée, mais sa valeur n'est jamais utilisée
 
                 if (MachineDBO.UpdateAllMachineOpenDay(openDay))
                 {
