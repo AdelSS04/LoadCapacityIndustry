@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BEL
+﻿namespace BEL
 {
     public class Besoin
     {
@@ -12,7 +6,7 @@ namespace BEL
         public double AcutalCapa { get; set; }
         public double ActualCharge { get; set; }
         public double BesoinH { get; set; }
-     
+
 
     }
 }
