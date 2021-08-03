@@ -8,10 +8,6 @@ namespace BEL
 {
     public class BesoinM : Besoin
     {
-        public int WeekWork { get; set; }
-        public double AcutalCapa { get; set; }
-        public double ActualCharge { get; set; }
-        public double BesoinH { get; set; }
         public int Shift { get; set; }
         public double OpenDay { get; set; }
     }
